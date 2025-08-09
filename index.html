@@ -1,24 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CPUcry Games</title>
-    <style>
-      body {
-        font-family: system-ui, sans-serif;
-        line-height: 1.5;
-        margin: 2rem;
-        background: #0f1220;
-        color: #e8ecf1;
-      }
-      a {
-        color: #6aa9ff;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <p>Play the <a href="1.html">7/8 Ring Simulation</a>.</p>
-  </body>
-</html>
+diff --git a/index.html b/index.html
+index ec2f06e5c65e51f4911972cabe0bf181a61fe736..f65f245602946cab50a64a7b4c08373c1a481080 100644
+--- a/index.html
++++ b/index.html
+@@ -1,24 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <title>CPUcry Games</title>
+     <style>
+       body {
+         font-family: system-ui, sans-serif;
+         line-height: 1.5;
+         margin: 2rem;
+         background: #0f1220;
+         color: #e8ecf1;
+       }
+       a {
+         color: #6aa9ff;
+       }
++      img.screenshot {
++        display: block;
++        max-width: min(90vw, 480px);
++        border-radius: 12px;
++        margin: 2rem auto 0 auto;
++        box-shadow: 0 4px 16px rgba(0,0,0,0.5);
++      }
+     </style>
+   </head>
+   <body>
+     <h1>Welcome</h1>
+     <p>Play the <a href="1.html">7/8 Ring Simulation</a>.</p>
++    <img
++      src="img/ring-simulation.png"
++      alt="Screenshot of the 7/8 Ring Simulation"
++      class="screenshot"
++    />
+   </body>
+ </html>
