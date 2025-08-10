@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exponential Chart — 0.5s Predictive Autoscale · 0.1s Step · m=1.03</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --grid: #1b2432;
+      --line: #6ee7ff;
+      --ink: #d9e6ff;
+      --muted: #8aa0bf;
+      --panel: #111827cc; /* translucent */
+      --btn: #1f2937;
+      --btn-border: #2b3a52;
+      --accent: #60a5fa;
+    }
+    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--ink); }
+    canvas { display: block; width: 100vw; height: 100vh; }
+
+    /* Top-left panel */
+    .panel {
+      position: fixed; top: 12px; left: 60px; /* 20px → 40px (20px sağa) */
+      background: var(--panel);
+      backdrop-filter: blur(6px);
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.03);
+      min-width: 300px; max-width: min(92vw, 520px);
+      font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    .row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; margin: 6px 0; }
+    .label { color: var(--muted); white-space: nowrap; }
+    .value { font-weight: 700; letter-spacing: .02em; }
+
+    input[type="range"] { width: 100%; accent-color: var(--accent); }
+    .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+
+    .actions { margin-top: 10px; display: flex; gap: 8px; }
+    button {
+      background: var(--btn);
+      color: var(--ink);
+      border: 1px solid var(--btn-border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,.02);
+      transition: transform .08s ease, border-color .2s ease;
+    }
+    button:hover { transform: translateY(-1px); border-color: #415677; }
+    button:active { transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <div class="panel" role="group" aria-label="Chart Controls">
+    <div class="row">
+      <div class="label">Current value</div>
+      <div class="value" id="cur" style="grid-column: 2 / span 2">0.00500</div>
+    </div>
+    <div class="row">
+      <label class="label" for="mult">Multiplier</label>
+      <!-- Discrete multiplier: 0.01 → 10.00 (applied every 0.1s) -->
+      <input id="mult" type="range" min="0.01" max="10" step="0.01" value="1.03" aria-valuemin="0.01" aria-valuemax="10" aria-valuenow="1.03" aria-label="Multiplier" />
+      <div class="value" id="multOut">1.03×/step</div>
+    </div>
+    <div class="hint">Rule (discrete): <code>v<sub>n+1</sub> = v<sub>n</sub> × multiplier</code>, <code>v<sub>0</sub>=0.01</code> — step: <b>0.1s</b>.<br/>Autoscale: prepares for the value <b>0.5s ahead</b>.</div>
+    <div class="actions">
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    // ——— Parameters ———
+    const START_VALUE = 0.01;
+    const MIN_Y = START_VALUE;     // Bottom bound always visible
+    const TAU = 0.35;              // Autoscale smoothing (s)
+    const WINDOW_SEC = 20;         // Visible window (s)
+
+    const ANCHOR_FRAC_X = 0.80;    // Keep last point at 80% on X
+    const ANCHOR_FRAC_Y = 0.10;    // Keep last point at 10% from top on Y
+
+    const STEP_SEC = 0.1;          // Discrete multiplication step
+    const HORIZON_SEC = 0.5;       // Predictive autoscale horizon
+
+    const JITTER_PX = 1;           // Jitter amplitude (px)
+    const JITTER_HZ = 6;           // Jitter frequency (Hz)
+
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+
+    // Panel elements
+    const curEl = document.getElementById('cur');
+    const multInput = document.getElementById('mult');
+    const multOut = document.getElementById('multOut');
+    const resetBtn = document.getElementById('reset');
+
+    let multiplier = parseFloat(multInput.value);
+
+    // HiDPI sizing
+    function resize() {
+      const dpr = Math.max(1, window.devicePixelRatio || 1);
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.floor(rect.width * dpr);
+      canvas.height = Math.floor(rect.height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    addEventListener('resize', resize, { passive: true });
+    resize();
+
+    let t0 = performance.now();
+    let last = performance.now();
+    let lastStep = 0;            // last applied discrete step index
+    let curV = START_VALUE;      // current value (updated discretely)
+    let points = [];             // {t, v}
+    let yMax = START_VALUE * 1.2; // smoothed upper bound
+
+    function pretty(n) {
+      if (!isFinite(n)) return '∞';
+      const abs = Math.abs(n);
+      if (abs === 0) return '0';
+      if (abs < 1e-6) return n.toExponential(2);
+      if (abs < 1) return n.toFixed(6);
+      if (abs < 1000) return n.toFixed(4);
+      if (abs < 1e6) return n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+      return n.toExponential(2);
+    }
+
+    function resetAll() {
+      points = [];
+      t0 = performance.now();
+      last = t0;
+      lastStep = 0;
+      curV = START_VALUE;
+      yMax = START_VALUE * 1.2;
+      curEl.textContent = pretty(curV);
+    }
+
+    function tick(now) {
+      const dt = (now - last) / 1000; // s
+      last = now;
+
+      // Time & discrete step bookkeeping
+      const t = (now - t0) / 1000;
+      const stepIndex = Math.floor(t / STEP_SEC);
+
+      // If steps elapsed, apply them (catch-up if any were skipped)
+      if (stepIndex > lastStep) {
+        const stepsToApply = stepIndex - lastStep;
+        const safeMult = Math.max(0.01, multiplier);
+        curV *= Math.pow(safeMult, stepsToApply);
+        lastStep = stepIndex;
+      }
+
+      // Push sample (continuous time axis, discrete value)
+      points.push({ t, v: curV });
+
+      // Trim old points
+      const trimMinT = Math.max(0, t - WINDOW_SEC - 2);
+      while (points.length && points[0].t < trimMinT) points.shift();
+
+      // ——— Predictive autoscale (0.5s ahead) ———
+      const vCurr = Math.max(MIN_Y, curV);
+      const safeMult = Math.max(0.01, multiplier);
+      const stepsAhead = Math.ceil(HORIZON_SEC / STEP_SEC);
+      const vPred = Math.max(MIN_Y, vCurr * Math.pow(safeMult, stepsAhead));
+
+      const yMaxPred = MIN_Y + (vPred - MIN_Y) / (1 - ANCHOR_FRAC_Y);
+      const targetMax = Math.max(MIN_Y * 1.1, yMaxPred);
+
+      // Smooth towards target
+      const alpha = 1 - Math.exp(-(Math.max(0, dt)) / TAU);
+      yMax = yMax + (targetMax - yMax) * alpha;
+
+      // Panel
+      curEl.textContent = pretty(curV);
+
+      draw(t, now);
+      requestAnimationFrame(tick);
+    }
+
+    function draw(nowT, nowMs) {
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+      const padL = 60, padR = 16, padT = 12, padB = 28;
+      const pw = w - padL - padR;
+      const ph = h - padT - padB;
+
+      // Background
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = getCss('--bg');
+      ctx.fillRect(0, 0, w, h);
+
+      // Visible time range: keep last point at 80% X
+      const tLast = points.length ? points[points.length - 1].t : nowT;
+      const minT = Math.max(0, tLast - WINDOW_SEC * ANCHOR_FRAC_X);
+      const maxT = minT + WINDOW_SEC;
+
+      // Grid
+      ctx.strokeStyle = getCss('--grid');
+      ctx.lineWidth = 1;
+      const rows = 5, cols = 8;
+      for (let i = 0; i <= rows; i++) {
+        const y = padT + (ph * i) / rows;
+        ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(w - padR, y); ctx.stroke();
+      }
+      for (let i = 0; i <= cols; i++) {
+        const x = padL + (pw * i) / cols;
+        ctx.beginPath(); ctx.moveTo(x, padT); ctx.lineTo(x, h - padB); ctx.stroke();
+      }
+
+      // Anchor guides: X 80%, Y 10%
+      const anchorX = padL + ANCHOR_FRAC_X * pw;
+      const anchorY = padT + ANCHOR_FRAC_Y * ph; // measured from top
+      ctx.save();
+      ctx.setLineDash([4, 6]);
+      ctx.strokeStyle = 'rgba(110,231,255,0.35)';
+      ctx.beginPath(); ctx.moveTo(anchorX, padT); ctx.lineTo(anchorX, h - padB); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(padL, anchorY); ctx.lineTo(w - padR, anchorY); ctx.stroke();
+      ctx.restore();
+
+      // Axis labels
+      ctx.fillStyle = getCss('--muted');
+      ctx.font = '12px ui-sans-serif, system-ui';
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+      for (let i = 0; i <= rows; i++) {
+        const frac = i / rows;
+        const yVal = MIN_Y + (yMax - MIN_Y) * (1 - frac);
+        const y = padT + ph * frac;
+        const label = (i === rows) ? START_VALUE.toFixed(2) : pretty(yVal);
+        ctx.fillText(label, padL - 8, y);
+      }
+
+      // Time labels
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      for (let i = 0; i <= cols; i++) {
+        const frac = i / cols;
+        const tLabel = minT + frac * (maxT - minT);
+        ctx.fillText(tLabel.toFixed(1) + 's', padL + frac * pw, h - padB + 6);
+      }
+
+      // Line
+      if (points.length >= 2) {
+        ctx.beginPath();
+        let moved = false;
+        for (let i = 0; i < points.length; i++) {
+          const p = points[i];
+          if (p.t < minT) continue;
+          const x = padL + ((p.t - minT) / (maxT - minT || 1)) * pw;
+          const yVal = Math.max(MIN_Y, p.v);
+          const y = padT + (1 - (yVal - MIN_Y) / Math.max(1e-12, (yMax - MIN_Y))) * ph;
+          if (!moved) { ctx.moveTo(x, y); moved = true; } else { ctx.lineTo(x, y); }
+        }
+        ctx.lineWidth = 2.2;
+        ctx.strokeStyle = getCss('--line');
+        ctx.shadowColor = '#6ee7ff66';
+        ctx.shadowBlur = 10;
+        ctx.stroke();
+
+        // Last point + jitter
+        const last = points[points.length - 1];
+        const xBase = padL + ((last.t - minT) / (maxT - minT || 1)) * pw;
+        const yVal = Math.max(MIN_Y, last.v);
+        const yBase = padT + (1 - (yVal - MIN_Y) / Math.max(1e-12, (yMax - MIN_Y))) * ph;
+
+        const tSec = nowMs / 1000;
+        const jx = JITTER_PX * Math.sin(2 * Math.PI * JITTER_HZ * tSec);
+        const jy = JITTER_PX * Math.cos(2 * Math.PI * JITTER_HZ * 0.85 * tSec);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(xBase + jx, yBase + jy, 3, 0, Math.PI * 2);
+        ctx.fillStyle = getCss('--line');
+        ctx.shadowColor = '#6ee7ff88';
+        ctx.shadowBlur = 12;
+        ctx.fill();
+        ctx.restore();
+
+        ctx.save();
+        ctx.globalAlpha = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(xBase + jx - 8, yBase + jy);
+        ctx.lineTo(xBase + jx - 2, yBase + jy);
+        ctx.strokeStyle = getCss('--line');
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // Frame
+      ctx.strokeStyle = '#1a2230';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(padL, padT, pw, ph);
+    }
+
+    function getCss(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+
+    // Slider
+    multInput.addEventListener('input', () => {
+      multiplier = parseFloat(multInput.value);
+      multOut.textContent = multiplier.toFixed(2) + '×/step';
+      multInput.setAttribute('aria-valuenow', String(multiplier));
+    });
+
+    // Reset
+    resetBtn.addEventListener('click', resetAll);
+
+    // Init
+    multOut.textContent = multiplier.toFixed(2) + '×/step';
+    curEl.textContent = pretty(curV);
+
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>
