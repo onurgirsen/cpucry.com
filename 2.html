@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Bouncing Ball with Infinite Speed is an interactive browser simulation where you control a ball's gain and maximum speed inside a circular arena." />
+  <meta name="keywords" content="bouncing ball, infinite speed, computer crashing game, speed gain control, browser physics simulation" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Bouncing Ball with Infinite Speed" />
+  <meta property="og:description" content="Interactive bouncing ball game with dynamic speed controls and limitless acceleration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cpucry.com/2.html" />
+  <link rel="canonical" href="https://www.cpucry.com/2.html" />
+  <title>Bouncing Ball with Infinite Speed</title>
+  <style>
+    :root { --bg: #0f1220; --ring: #e2e8f0; --ball: #60a5fa; --hud: #94a3b8; }
+    html, body { height: 100%; margin: 0; background: radial-gradient(1200px 800px at 70% 20%, #151933 0%, #0f1220 70%); color: white; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    #wrap { position: relative; height: 100%; width: 100%; }
+    canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+    .hud { position: absolute; top: 12px; left: 12px; padding: 8px 10px; background: rgba(15,18,32,0.6); border: 1px solid rgba(226,232,240,0.15); border-radius: 10px; font-size: 12px; color: var(--hud); user-select: none; backdrop-filter: blur(6px); z-index: 2; }
+    .hud strong { color: #e5e7eb; }
+
+    /* Right controls */
+    .btns { position: absolute; right: 12px; top: 12px; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; flex-wrap: wrap; z-index: 2; }
+    .row { display: flex; align-items: center; gap: 8px; }
+    button { cursor: pointer; padding: 6px 10px; background: rgba(96,165,250,0.15); border: 1px solid rgba(96,165,250,0.35); color: #e5e7eb; border-radius: 8px; font-weight: 600; letter-spacing: .2px; }
+    button:hover { background: rgba(96,165,250,0.25); }
+    input[type="number"], input[type="range"] { padding: 5px; border-radius: 6px; border: 1px solid rgba(226,232,240,0.35); background: rgba(15,18,32,0.6); color: #e5e7eb; }
+    input[type="range"] { width: 150px; }
+    #gainValue { display: inline-block; width: 7ch; text-align: right; padding-left: 4px; }
+
+    /* Left speed panel (below HUD) */
+    .leftSpeedPanel { position: absolute; left: 12px; width: 280px; display: flex; flex-direction: column; gap: 6px; z-index: 2; }
+    /* Move chart DOWN by ~20px */
+    #speedChart { width: 280px; height: 110px; border: 1px solid rgba(226,232,240,0.15); border-radius: 8px; background: rgba(15,18,32,0.45); display: block; box-sizing: border-box; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="c"></canvas>
+
+    <!-- HUD (top-left) -->
+    <div class="hud" id="hud">speed: <strong>—</strong> px/s · bounces: <strong>0</strong></div>
+
+    <!-- Speed graph panel: positioned directly under HUD via JS -->
+    <div class="leftSpeedPanel" id="leftPanel">
+      <canvas id="speedChart"></canvas>
+      <!-- başlık kaldırıldı -->
+    </div>
+
+    <!-- Right controls -->
+    <div class="btns">
+      <div class="row">
+        <button id="reset">Reset</button>
+        <button id="randomize">Randomize Direction</button>
+        <input type="number" id="maxSpeedInput" placeholder="Max" />
+        <button id="setMax">Set Max Speed</button>
+        <button id="removeMax">Remove Max</button>
+      </div>
+      <div class="row" style="justify-content: flex-end; width: 100%;">
+        <label for="gainSlider">Gain %:</label>
+        <input type="range" id="gainSlider" min="-100" max="100" step="0.1" value="5" />
+        <span id="gainValue">5%</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (() => {
+    'use strict';
+
+    const canvas = document.getElementById('c');
+    const hud = document.getElementById('hud');
+    const leftPanel = document.getElementById('leftPanel');
+    const btnReset = document.getElementById('reset');
+    const btnRand = document.getElementById('randomize');
+    const btnSetMax = document.getElementById('setMax');
+    const btnRemoveMax = document.getElementById('removeMax');
+    const inputMaxSpeed = document.getElementById('maxSpeedInput');
+    const gainSlider = document.getElementById('gainSlider');
+    const gainValue = document.getElementById('gainValue');
+
+    const chart = document.getElementById('speedChart');
+    const ctxChart = chart.getContext('2d');
+
+    const ctx = canvas.getContext('2d');
+
+    let cx = 0, cy = 0, R = 0, rBall = 10;
+    let p = {x: 0, y: 0}, v = {x: 0, y: 0};
+    let bounces = 0, trail = [], hue = Math.floor(Math.random() * 360);
+    const TRAIL_MAX_POINTS = 360, HUE_RATE = 90;
+    const SPEED_INITIAL = 220, MAX_COLLISIONS_PER_FRAME = 6;
+    let baseSpeedGain = 1 + (parseFloat(gainSlider.value) / 100);
+    let maxSpeed = null;
+
+    // ---- Speed graph state ----
+    const WINDOW_SECONDS = 30;
+    const speedHistory = []; // { t: seconds, v: speed }
+
+    function nowSeconds() { return performance.now() / 1000; }
+
+    function positionLeftPanel() {
+      // Place the speed panel right under the HUD
+      const top = 12 + hud.offsetHeight + 8; // hud top + its height + small gap
+      leftPanel.style.top = top + 'px';
+    }
+
+    function fitCanvasToDisplay() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cx = rect.width / 2; cy = rect.height / 2; R = Math.min(rect.width, rect.height) * 0.42;
+      rBall = Math.max(6, Math.round(R * 0.03));
+
+      // size chart with DPR
+      const crect = chart.getBoundingClientRect();
+      chart.width = Math.max(1, Math.floor(crect.width * dpr));
+      chart.height = Math.max(1, Math.floor(crect.height * dpr));
+      ctxChart.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      positionLeftPanel();
+    }
+
+    function randomPointInCircle(radius) {
+      const t = Math.random() * 2 * Math.PI;
+      const u = Math.random() + Math.random();
+      const r = u > 1 ? 2 - u : u;
+      return { x: Math.cos(t) * r * radius, y: Math.sin(t) * r * radius };
+    }
+
+    function resetBall(randomDir = true) {
+      const offset = randomPointInCircle(R - rBall);
+      p.x = cx + offset.x;
+      p.y = cy + offset.y;
+      const angle = randomDir ? Math.random() * Math.PI * 2 : Math.PI * 0.25;
+      v.x = Math.cos(angle) * SPEED_INITIAL;
+      v.y = Math.sin(angle) * SPEED_INITIAL;
+      bounces = 0; trail.length = 0; hue = Math.floor(Math.random() * 360);
+      speedHistory.length = 0; // clear graph
+    }
+
+    function reflect(vx, vy, nx, ny) {
+      const dot = vx * nx + vy * ny;
+      return { x: vx - 2 * dot * nx, y: vy - 2 * dot * ny };
+    }
+
+    function solveCollisionTime(px, py, vx, vy, R_eff) {
+      const sx = px - cx, sy = py - cy;
+      const a = vx * vx + vy * vy, b = 2 * (sx * vx + sy * vy), c = sx * sx + sy * sy - R_eff * R_eff;
+      const disc = b * b - 4 * a * c, EPS = 1e-9;
+      if (disc < 0 || a < EPS) return null;
+      const root = Math.sqrt(disc);
+      const t1 = (-b - root) / (2 * a), t2 = (-b + root) / (2 * a);
+      let t = null; if (t1 > EPS) t = t1; if (t2 > EPS) t = t === null ? t2 : Math.min(t, t2);
+      return t;
+    }
+
+    function clampSpeed() {
+      if (maxSpeed === null) return;
+      const speed = Math.hypot(v.x, v.y);
+      if (speed > maxSpeed) {
+        const factor = maxSpeed / speed; v.x *= factor; v.y *= factor;
+      }
+    }
+
+    function step(dt) {
+      let timeLeft = dt, guard = 0, R_eff = R - rBall;
+      while (timeLeft > 0 && guard++ < MAX_COLLISIONS_PER_FRAME) {
+        const tHit = solveCollisionTime(p.x, p.y, v.x, v.y, R_eff);
+        if (tHit !== null && tHit <= timeLeft) {
+          p.x += v.x * tHit; p.y += v.y * tHit;
+          const nx = (p.x - cx) / R_eff, ny = (p.y - cy) / R_eff;
+          const vr = reflect(v.x, v.y, nx, ny);
+          const speed = Math.hypot(v.x, v.y);
+          const gain = baseSpeedGain - Math.min(speed / 10000, 0.03);
+          v.x = vr.x * gain; v.y = vr.y * gain;
+          clampSpeed(); bounces++; timeLeft -= tHit;
+        } else {
+          p.x += v.x * timeLeft; p.y += v.y * timeLeft; timeLeft = 0;
+        }
+      }
+      hue = (hue + HUE_RATE * dt) % 360;
+      trail.push({ x: p.x, y: p.y, hue });
+      if (trail.length > TRAIL_MAX_POINTS) trail.shift();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2);
+      ctx.lineWidth = 3; ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--ring').trim() || '#e2e8f0'; ctx.stroke();
+      if (trail.length > 1) {
+        ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+        for (let i = 1; i < trail.length; i++) {
+          const a = i / (trail.length - 1), prev = trail[i - 1], curr = trail[i];
+          ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(curr.x, curr.y);
+          ctx.lineWidth = 1 + a * Math.max(2, rBall * 0.9);
+          ctx.strokeStyle = `hsla(${prev.hue}, 100%, 60%, ${Math.pow(a, 1.25).toFixed(3)})`;
+          ctx.stroke();
+        }
+      }
+      ctx.beginPath(); ctx.arc(p.x, p.y, rBall, 0, Math.PI * 2);
+      ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--ball').trim() || '#60a5fa'; ctx.fill();
+      const speed = Math.hypot(v.x, v.y);
+      const speedColor = speed > 1500 ? 'red' : '#e5e7eb';
+      hud.innerHTML = `speed: <strong style="color:${speedColor}">${speed.toFixed(1)}</strong> px/s · bounces: <strong>${bounces}</strong> · trail: <strong>${trail.length}</strong>`;
+
+      // graph
+      recordSpeed(nowSeconds(), speed);
+      drawChart();
+    }
+
+    // ---- Chart helpers ----
+    function recordSpeed(t, v) {
+      speedHistory.push({ t, v });
+      const cutoff = t - WINDOW_SECONDS;
+      while (speedHistory.length && speedHistory[0].t < cutoff) speedHistory.shift();
+    }
+
+    function drawChart() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = chart.getBoundingClientRect();
+      chart.width = Math.max(1, Math.floor(rect.width * dpr));
+      chart.height = Math.max(1, Math.floor(rect.height * dpr));
+      ctxChart.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctxChart.clearRect(0, 0, rect.width, rect.height);
+
+      const w = rect.width, h = rect.height;
+      if (speedHistory.length < 2) return;
+      const tNow = speedHistory[speedHistory.length - 1].t;
+      const tStart = tNow - WINDOW_SECONDS;
+
+      let maxV = 1;
+      for (const p of speedHistory) if (p.v > maxV) maxV = p.v;
+
+      const padL = 6, padR = 6, padT = 6, padB = 16;
+      const x0 = padL, y0 = padT, cw = w - padL - padR, ch = h - padT - padB;
+
+      // grid
+      ctxChart.lineWidth = 1;
+      ctxChart.strokeStyle = 'rgba(226,232,240,0.15)';
+      for (let i = 0; i <= 3; i++) {
+        const y = y0 + (i / 3) * ch;
+        ctxChart.beginPath();
+        ctxChart.moveTo(x0, y);
+        ctxChart.lineTo(x0 + cw, y);
+        ctxChart.stroke();
+      }
+
+      // line
+      ctxChart.lineWidth = 2;
+      ctxChart.lineJoin = 'round';
+      ctxChart.lineCap = 'round';
+      ctxChart.strokeStyle = '#60a5fa';
+      ctxChart.beginPath();
+      for (let i = 0; i < speedHistory.length; i++) {
+        const s = speedHistory[i];
+        const xt = (s.t - tStart) / WINDOW_SECONDS; // 0..1
+        const yt = (s.v / maxV);                    // 0..1
+        const x = x0 + xt * cw;
+        const y = y0 + (1 - yt) * ch;
+        if (i === 0) ctxChart.moveTo(x, y); else ctxChart.lineTo(x, y);
+      }
+      ctxChart.stroke();
+
+      // labels (sadece max hızı göster, zaman etiketlerini kaldır)
+      ctxChart.fillStyle = 'rgba(226,232,240,0.6)';
+      ctxChart.font = '10px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial)';
+      ctxChart.textAlign = 'left';
+      ctxChart.fillText(Math.round(maxV) + ' px/s', x0 + 4, y0 + 10);
+    }
+
+    let last = performance.now();
+    function loop(now) {
+      const dt = Math.min(0.033, (now - last) / 1000);
+      last = now; step(dt); draw(); requestAnimationFrame(loop);
+    }
+
+    function positionAndResize() { fitCanvasToDisplay(); positionLeftPanel(); }
+
+    gainSlider.addEventListener('input', () => {
+      gainValue.textContent = gainSlider.value + '%';
+      baseSpeedGain = 1 + (parseFloat(gainSlider.value) / 100);
+      positionLeftPanel();
+    });
+
+    window.addEventListener('resize', positionAndResize);
+    btnReset.addEventListener('click', () => resetBall(true));
+    btnRand.addEventListener('click', () => {
+      const speed = Math.hypot(v.x, v.y) || SPEED_INITIAL;
+      const angle = Math.random() * Math.PI * 2;
+      v.x = Math.cos(angle) * speed; v.y = Math.sin(angle) * speed;
+    });
+    btnSetMax.addEventListener('click', () => {
+      const val = parseFloat(inputMaxSpeed.value);
+      if (!isNaN(val) && val > 0) maxSpeed = val;
+    });
+    btnRemoveMax.addEventListener('click', () => { maxSpeed = null; });
+
+    positionAndResize(); resetBall(true); requestAnimationFrame(loop);
+  })();
+  </script>
+</body>
+</html>

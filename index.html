@@ -40,6 +40,12 @@
       margin-bottom: 2rem;
       line-height: 1.6;
     }
+    .games {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
     a.button {
       display: inline-block;
       background: var(--accent);
@@ -60,7 +66,10 @@
   <main>
     <h1>CPUcry Games</h1>
     <p>Fun browser-based experiments and simulations, including computer crashing games.</p>
-    <a class="button" href="1.html">7/8 Ring Simulation</a>
+    <div class="games">
+      <a class="button" href="1.html">7/8 Ring Simulation</a>
+      <a class="button" href="2.html">Bouncing Ball with Infinite Speed</a>
+    </div>
   </main>
 </body>
 </html>
