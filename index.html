@@ -42,19 +42,21 @@
     }
     .games {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 1rem;
-      align-items: center;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
     .game {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       align-items: center;
+      width: 96px;
     }
     .game img {
       width: 100%;
-      max-width: 320px;
+      max-width: 96px;
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.25);
     }
