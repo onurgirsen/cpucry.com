@@ -22,15 +22,19 @@
       font-family: system-ui, sans-serif;
       background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
       color: #e8ecf1;
+
+      /* İçerik üstte kalsın, yatayda esnesin */
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      flex-direction: column;
+      align-items: stretch;       /* <- center'dan stretch'e */
+      justify-content: flex-start;
+      text-align: center;         /* başlık & paragraf ortada kalır */
       min-height: 100vh;
     }
     main {
       padding: 2rem;
-      max-width: 480px;
+      width: 100%;                /* <- tam genişlik */
+      max-width: none;            /* <- sınırı kaldır */
     }
     h1 {
       font-size: 2.5rem;
@@ -45,19 +49,21 @@
       flex-wrap: wrap;
       gap: 1rem;
       align-items: flex-start;
-      justify-content: flex-start;
+      justify-content: flex-start; /* kartlar soldan başlasın */
     }
     .game {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       align-items: center;
-      width: 96px;
+
+      /* 2× büyütme */
+      width: 192px;
     }
     .game img {
       width: 100%;
-      max-width: 96px;
-      border-radius: 8px;
+      max-width: 192px;   /* 96px → 192px */
+      border-radius: 6px; /* 8px → 6px (biraz az) */
       box-shadow: 0 4px 16px rgba(0,0,0,0.25);
     }
     a.button {
