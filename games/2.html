@@ -9,13 +9,26 @@
   <meta property="og:title" content="Bouncing Ball with Infinite Speed" />
   <meta property="og:description" content="Interactive bouncing ball game with dynamic speed controls and limitless acceleration." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.cpucry.com/games/2.html" />
-  <link rel="canonical" href="https://www.cpucry.com/games/2.html" />
-  <title>Bouncing Ball with Infinite Speed</title>
-  <style>
-    :root { --bg: #0f1220; --ring: #e2e8f0; --ball: #60a5fa; --hud: #94a3b8; }
-    html, body { height: 100%; margin: 0; background: radial-gradient(1200px 800px at 70% 20%, #151933 0%, #0f1220 70%); color: white; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-    #wrap { position: relative; height: 100%; width: 100%; }
+    <meta property="og:url" content="https://www.cpucry.com/games/2.html" />
+    <link rel="canonical" href="https://www.cpucry.com/games/2.html" />
+    <title>Bouncing Ball with Infinite Speed</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Bouncing Ball with Infinite Speed",
+      "url": "https://www.cpucry.com/games/2.html",
+      "applicationCategory": "BrowserGame",
+      "operatingSystem": "Web",
+      "genre": "Arcade, Physics",
+      "author": {"@type": "Person", "name": "Onur Girşen"},
+      "description": "Interactive bouncing ball game with dynamic speed controls and limitless acceleration."
+    }
+    </script>
+    <style>
+      :root { --bg: #0f1220; --ring: #e2e8f0; --ball: #60a5fa; --hud: #94a3b8; }
+      html, body { height: 100%; margin: 0; background: radial-gradient(1200px 800px at 70% 20%, #151933 0%, #0f1220 70%); color: white; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+      #wrap { position: relative; height: 100%; width: 100%; }
     canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 
     .hud { position: absolute; top: 12px; left: 12px; padding: 8px 10px; background: rgba(15,18,32,0.6); border: 1px solid rgba(226,232,240,0.15); border-radius: 10px; font-size: 12px; color: var(--hud); user-select: none; backdrop-filter: blur(6px); z-index: 2; }
