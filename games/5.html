@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixel Particle Game</title>
+  <style>
+    :root {
+      --bg: #090c10;
+      --panel: rgba(20, 24, 31, 0.8);
+      --text: #d7e2f1;
+      --muted: #9fb2cc;
+      --accent: #6aa9ff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 30% 30%, #0d1219, var(--bg));
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      overflow: hidden;
+      user-select: none;
+    }
+
+    /* Canvas layers */
+    #border, #game {
+      position: fixed;
+      inset: 0;
+      width: 100vw; height: 100vh;
+      display: block;
+    }
+
+    /* Bottom-left: control panel */
+    .panel {
+      position: fixed;
+      background: var(--panel);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    .panel h3 { margin: 0 0 8px; font-size: 14px; font-weight: 700; letter-spacing: .2px; color: #e7f0ff; }
+    .kpis { display: grid; grid-template-columns: auto auto; gap: 6px 10px; align-items: center; margin-bottom: 10px; }
+    .kpis .label { color: var(--muted); }
+    .kpis .val { font-variant-numeric: tabular-nums; font-weight: 700; }
+    .slider-row { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; }
+    .slider-row label { color: var(--muted); }
+    input[type="range"] {
+      width: 220px; height: 6px; border-radius: 999px; appearance: none; background: rgba(255,255,255,0.12);
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 1px 8px rgba(106,169,255,0.6);
+      cursor: pointer;
+    }
+
+    /* Bottom-right: chart panel */
+    .chart-panel {
+      position: fixed; right: 12px; bottom: 12px;
+      width: 320px; max-width: calc(100vw - 24px); height: 200px;
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 10px;
+      box-shadow: var(--shadow);
+      display: grid; grid-template-rows: auto 1fr; gap: 6px;
+    }
+    .chart-title { font-size: 12px; color: var(--muted); letter-spacing: .2px; }
+    #chart { width: 100%; height: 100%; display: block; border-radius: 10px; }
+
+    /* Positioning */
+    .panel.left { left: 12px; bottom: 12px; min-width: 280px; }
+    .actions { margin-top: 10px; display: flex; gap: 8px; }
+    .btn { appearance: none; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.06); color: var(--text); padding: 8px 12px; border-radius: 10px; font-weight: 600; cursor: pointer; box-shadow: var(--shadow); }
+    .btn:hover { background: rgba(255,255,255,0.12); }
+    .btn:active { transform: translateY(1px); }
+    .max-row { margin-top: 10px; display: grid; grid-template-columns: auto 100px auto auto; gap: 8px; align-items: center; }
+    .panel label.small { color: var(--muted); font-size: 12px; }
+    .num { appearance: textfield; width: 100%; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.06); color: var(--text); }
+    .num::-webkit-outer-spin-button, .num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .btn.sm { padding: 6px 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <!-- Separate canvas to draw the border pixels -->
+  <canvas id="border"></canvas>
+  <!-- Canvas for moving particles -->
+  <canvas id="game"></canvas>
+
+  <!-- Control panel (bottom-left) -->
+  <section class="panel left" aria-label="Controls">
+    <h3>Control Panel</h3>
+    <div class="kpis">
+      <div class="label">FPS</div><div class="val" id="fps">0.0</div>
+      <div class="label">Particles</div><div class="val" id="count">1</div>
+    </div>
+    <div class="slider-row">
+      <label for="speed">Speed</label>
+      <input id="speed" type="range" min="10" max="600" step="1" value="120"/>
+      <div class="val"><span id="speedVal">120</span> px/s</div>
+    </div>
+    <div class="max-row">
+      <label for="maxInput" class="small">Max Particles</label>
+      <input id="maxInput" class="num" type="number" placeholder="300" min="1" />
+      <button id="setCap" type="button" class="btn sm">Set Max Particles</button>
+      <button id="resetCap" type="button" class="btn sm">Reset Max Particles</button>
+    </div>
+    <div class="actions">
+      <button id="reset" type="button" class="btn">Reset</button>
+    </div>
+  </section>
+
+  <!-- Particle count chart (bottom-right) -->
+  <section class="chart-panel" aria-label="Chart">
+    <div class="chart-title">Live Particle Count</div>
+    <canvas id="chart"></canvas>
+  </section>
+
+  <script>
+  // Single-file game – HTML5 Canvas
+  (function() {
+    const dpr = Math.max(1, window.devicePixelRatio || 1);
+
+    const borderCanvas = document.getElementById('border');
+    const gameCanvas   = document.getElementById('game');
+    const bctx = borderCanvas.getContext('2d', { alpha: true, desynchronized: true });
+    const gctx = gameCanvas.getContext('2d', { alpha: true, desynchronized: true });
+
+    const fpsEl = document.getElementById('fps');
+    const countEl = document.getElementById('count');
+    const speedInput = document.getElementById('speed');
+    const speedVal = document.getElementById('speedVal');
+
+    const chartCanvas = document.getElementById('chart');
+    const cctx = chartCanvas.getContext('2d', { alpha: true, desynchronized: true });
+
+    let W = 0, H = 0; // canvas (in device pixels)
+    let CSSW = 0, CSSH = 0; // CSS sizes
+
+    const removedBorderPixels = new Set(); // "x,y" keys
+
+    const SAFE_HARD_LIMIT = 100000; // internal safety hard cap
+    let maxCap = Infinity; // user-defined cap
+    const particles = [];
+
+    function setCanvasSize(canvas, cssW, cssH) {
+      canvas.style.width = cssW + 'px';
+      canvas.style.height = cssH + 'px';
+      canvas.width = Math.floor(cssW * dpr);
+      canvas.height = Math.floor(cssH * dpr);
+    }
+
+    function resizeAll() {
+      CSSW = window.innerWidth; CSSH = window.innerHeight;
+      W = Math.floor(CSSW * dpr); H = Math.floor(CSSH * dpr);
+      setCanvasSize(gameCanvas, CSSW, CSSH);
+      setCanvasSize(borderCanvas, CSSW, CSSH);
+      initBorder();
+      resizeChart();
+    }
+
+    function initBorder() {
+      removedBorderPixels.clear();
+      bctx.clearRect(0, 0, W, H);
+      bctx.fillStyle = '#ffffff';
+      // Top/Bottom edges (draw once)
+      for (let x = 0; x < W; x++) {
+        bctx.fillRect(x, 0, 1, 1);
+        bctx.fillRect(x, H - 1, 1, 1);
+      }
+      // Left/Right edges
+      for (let y = 1; y < H - 1; y++) {
+        bctx.fillRect(0, y, 1, 1);
+        bctx.fillRect(W - 1, y, 1, 1);
+      }
+    }
+
+    // Particle (1 px) model
+    class Particle {
+      constructor(x, y, angle) {
+        this.x = x; this.y = y;
+        this.setAngle(angle !== undefined ? angle : Math.random() * Math.PI * 2);
+        this.color = randColor();
+      }
+      setAngle(a) { this.vx = Math.cos(a); this.vy = Math.sin(a); }
+    }
+
+    function randColor() {
+      const h = Math.floor(Math.random() * 360);
+      return `hsl(${h} 80% 60%)`;
+    }
+
+    function spawnAtCenter(n = 1) {
+      const cx = Math.floor(W / 2), cy = Math.floor(H / 2);
+      const cap = Math.min(maxCap, SAFE_HARD_LIMIT);
+      const canSpawn = Math.max(0, Math.min(n, cap - particles.length));
+      for (let i = 0; i < canSpawn; i++) {
+        particles.push(new Particle(cx, cy));
+      }
+    }
+
+    function applyCap() {
+      const cap = Math.min(maxCap, SAFE_HARD_LIMIT);
+      if (particles.length > cap) particles.length = cap;
+    }
+
+    function resetGame() {
+      particles.length = 0;
+      spawnAtCenter(1);
+      series.length = 0; // reset chart
+      drawChart();
+      initBorder();
+      last = performance.now();
+    }
+
+    // Start: 1 particle at center
+    spawnAtCenter(1);
+
+    // Speed control (px/s) – computed in device pixels
+    let baseSpeed = 120 * dpr;
+    speedInput.value = 120;
+    speedVal.textContent = '120';
+    speedInput.addEventListener('input', () => {
+      baseSpeed = Number(speedInput.value) * dpr;
+      speedVal.textContent = speedInput.value;
+    });
+
+    const resetBtn = document.getElementById('reset');
+    resetBtn.addEventListener('click', resetGame);
+
+    const maxInput = document.getElementById('maxInput');
+    document.getElementById('setCap').addEventListener('click', () => {
+      const v = parseInt(maxInput.value, 10);
+      if (!Number.isFinite(v) || v <= 0) return;
+      maxCap = Math.min(v, SAFE_HARD_LIMIT);
+      applyCap();
+    });
+    document.getElementById('resetCap').addEventListener('click', () => {
+      maxCap = Infinity;
+    });
+
+    // Main loop
+    let last = performance.now();
+    let smoothedFPS = 0;
+
+    function step(now) {
+      const dt = Math.min(0.05, (now - last) / 1000); // s
+      last = now;
+      const instFPS = 1 / Math.max(1e-6, dt);
+      smoothedFPS = smoothedFPS ? (smoothedFPS * 0.9 + instFPS * 0.1) : instFPS;
+
+      // Update + draw
+      gctx.clearRect(0, 0, W, H);
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.x += p.vx * baseSpeed * dt;
+        p.y += p.vy * baseSpeed * dt;
+
+        let hitX = null, hitY = null; // collision point (edge)
+
+        // Edge collisions + bounce
+        if (p.x < 0) { p.x = 0; p.vx = Math.abs(p.vx); hitX = 0; hitY = Math.round(p.y); }
+        else if (p.x > W - 1) { p.x = W - 1; p.vx = -Math.abs(p.vx); hitX = W - 1; hitY = Math.round(p.y); }
+
+        if (p.y < 0) { p.y = 0; p.vy = Math.abs(p.vy); hitX = Math.round(p.x); hitY = 0; }
+        else if (p.y > H - 1) { p.y = H - 1; p.vy = -Math.abs(p.vy); hitX = Math.round(p.x); hitY = H - 1; }
+
+        // On edge hit: always spawn 2 new particles at center
+        if (hitX !== null && hitY !== null) {
+          spawnAtCenter(2);
+          const x = Math.max(0, Math.min(W - 1, hitX|0));
+          const y = Math.max(0, Math.min(H - 1, hitY|0));
+          const key = x + ',' + y;
+          if (!removedBorderPixels.has(key)) {
+            removedBorderPixels.add(key);
+            // border pixel deletion disabled (frame stays)
+          }
+        }
+
+        // Draw (1x1 px)
+        gctx.fillStyle = p.color;
+        gctx.fillRect(p.x | 0, p.y | 0, 1, 1);
+      }
+
+      // HUD
+      fpsEl.textContent = smoothedFPS.toFixed(1);
+      countEl.textContent = String(particles.length);
+
+      requestAnimationFrame(step);
+    }
+
+    // Chart: particle count
+    const series = []; // {t, n}
+    const GRAPH_MS = 30000; // 30 s visible window
+    const SAMPLE_EVERY = 200; // ms
+
+    function resizeChart() {
+      const rect = chartCanvas.getBoundingClientRect();
+      chartCanvas.width = Math.max(1, Math.floor(rect.width * dpr));
+      chartCanvas.height = Math.max(1, Math.floor(rect.height * dpr));
+      drawChart();
+    }
+
+    function drawChart() {
+      const w = chartCanvas.width, h = chartCanvas.height;
+      cctx.clearRect(0, 0, w, h);
+
+      // Background grid
+      cctx.lineWidth = 1;
+      cctx.globalAlpha = 0.7;
+      cctx.strokeStyle = 'rgba(255,255,255,0.07)';
+      const gridY = 4, gridX = 6;
+      for (let i = 1; i < gridY; i++) {
+        const y = Math.round((h * i) / gridY) + 0.5;
+        cctx.beginPath(); cctx.moveTo(0, y); cctx.lineTo(w, y); cctx.stroke();
+      }
+      for (let i = 1; i < gridX; i++) {
+        const x = Math.round((w * i) / gridX) + 0.5;
+        cctx.beginPath(); cctx.moveTo(x, 0); cctx.lineTo(x, h); cctx.stroke();
+      }
+      cctx.globalAlpha = 1;
+
+      if (series.length < 2) return;
+
+      const now = performance.now();
+      const startT = now - GRAPH_MS;
+      const visible = series.filter(s => s.t >= startT);
+      if (visible.length < 2) return;
+
+      const minN = 0;
+      const maxN = Math.max(10, ...visible.map(s => s.n));
+
+      // Line
+      cctx.lineWidth = 2;
+      cctx.strokeStyle = '#8ec5ff';
+      cctx.beginPath();
+      for (let i = 0; i < visible.length; i++) {
+        const s = visible[i];
+        const x = ((s.t - startT) / GRAPH_MS) * (w - 8) + 4; // 4px padding
+        const y = (1 - (s.n - minN) / (maxN - minN)) * (h - 8) + 4;
+        if (i === 0) cctx.moveTo(x, y); else cctx.lineTo(x, y);
+      }
+      cctx.stroke();
+    }
+
+    setInterval(() => {
+      series.push({ t: performance.now(), n: particles.length });
+      // Drop old samples
+      const cutoff = performance.now() - GRAPH_MS - 1000;
+      while (series.length && series[0].t < cutoff) series.shift();
+      drawChart();
+    }, SAMPLE_EVERY);
+
+    // Simple self-tests (state is restored; does not affect the game)
+    function runSelfTests() {
+      try {
+        const snapshot = particles.slice();
+        const capSnapshot = maxCap;
+        const seriesSnapshotLen = series.length;
+
+        particles.length = 0; maxCap = Infinity;
+        spawnAtCenter(1);
+        console.assert(particles.length === 1, 'spawnAtCenter should create 1 particle');
+
+        particles.length = 0; maxCap = 3; spawnAtCenter(5);
+        console.assert(particles.length === 3, 'cap limits spawn count');
+
+        maxCap = 2; applyCap();
+        console.assert(particles.length === 2, 'applyCap truncates the array');
+
+        // Restore state
+        particles.length = 0; Array.prototype.push.apply(particles, snapshot);
+        maxCap = capSnapshot; series.length = seriesSnapshotLen;
+      } catch (e) {
+        console.error('Self-tests failed', e);
+      }
+    }
+
+    window.addEventListener('resize', resizeAll);
+    resizeAll();
+    runSelfTests();
+    requestAnimationFrame(step);
+  })();
+  </script>
+</body>
+</html>
