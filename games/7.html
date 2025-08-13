@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neutron Chain Reaction — HTML Simulation</title>
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --grid: #12161b;
+      --rod: #5ee06a;
+      --rod-2: #57c95f;
+      --neutron: #eaf2ff;
+      --ui: #1b222b;
+      --accent: #ffd166;
+      --text: #d7dee8;
+    }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      overflow: hidden;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Layered canvases: static rods + dynamic neutrons/effects */
+    #wrap { position: fixed; inset: 0; }
+    canvas { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+
+    /* Minimal control panel */
+    .hud {
+      position: fixed; left: 16px; bottom: 16px; background: color-mix(in oklab, var(--ui) 85%, transparent);
+      border: 1px solid #243041; border-radius: 12px; padding: 10px 12px; display: flex; gap: 10px; align-items: center; backdrop-filter: blur(6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    .hud .stat { font-variant-numeric: tabular-nums; opacity: .9; }
+    .hud .controls { display: flex; gap: 8px; align-items: center; }
+    .btn {
+      background: linear-gradient(180deg, #273142, #1b2431);
+      color: var(--text); border: 1px solid #2a3749; border-radius: 10px; padding: 8px 12px; cursor: pointer; font-weight: 600;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .btn:active { transform: translateY(1px); }
+    .btn.alt { background: linear-gradient(180deg, #37485f, #2a394d); }
+
+    .title {
+      position: fixed; top: 16px; left: 16px; font-weight: 700; letter-spacing:.2px; background: rgba(0,0,0,.25); padding: 6px 10px; border-radius: 10px; border: 1px solid #243041;
+    }
+
+    .centerLabel {
+      position: fixed; inset: 0; display: grid; place-items: center; pointer-events: none; transition: opacity .35s ease; 
+    }
+    .centerLabel .badge { pointer-events: auto; border-radius: 999px; padding: 10px 14px; border: 1px dashed #3a4b63; color: #0b0d10; font-weight: 800; text-transform: uppercase;
+      background: radial-gradient(600px 600px at center, rgba(255, 209, 102, .15), transparent 70%), var(--accent);
+      text-shadow: 0 1px 0 rgba(255,255,255,.3);
+      box-shadow: 0 18px 60px rgba(255,209,102,.15), inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .centerLabel .hint { margin-top: 8px; display: block; color: #aab6c7; font-weight: 600; text-align: center; }
+
+    /* Tooltip top-right */
+    .help { position: fixed; right:16px; top: 16px; background: rgba(4,7,10,.45); border: 1px solid #243041; padding: 8px 12px; border-radius: 12px; font-size: 12px; opacity: .85; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; background: #111722; border: 1px solid #2a3647; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="grid"></canvas>
+    <canvas id="fx"></canvas>
+  </div>
+
+  <div class="title">Neutron Chain Reaction</div>
+
+  <div id="label" class="centerLabel">
+    <div>
+      <div class="badge" id="triggerBadge" role="button" aria-label="Neutron Trigger" title="Click to trigger a burst">NEUTRON TRIGGER</div>
+      <span class="hint">Click badge or press <span class="kbd">T</span>. Click anywhere to fire local bursts. <span class="kbd">R</span> reset, <span class="kbd">Space</span> pause.</span>
+    </div>
+  </div>
+
+  <div class="help">Rods remaining: <span id="rodsLeft">0</span> · Neutrons: <span id="nCount">0</span> · FPS: <span id="fps">0</span></div>
+
+  <div class="hud">
+    <div class="controls">
+      <button class="btn" id="btnTrigger">Trigger</button>
+      <button class="btn alt" id="btnPause">Pause</button>
+      <button class="btn" id="btnReset">Reset</button>
+    </div>
+    <div class="stat">Cell size: <span id="cellSizeLabel">4</span> px</div>
+    <input id="cellSize" type="range" min="2" max="8" step="1" value="4" />
+  </div>
+
+  <script>
+  (() => {
+    // ---------- Canvas setup ----------
+    const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1)); // cap DPR for perf
+    const gridCanvas = document.getElementById('grid');
+    const fxCanvas   = document.getElementById('fx');
+    const gtx = gridCanvas.getContext('2d', { alpha: false });
+    const ftx = fxCanvas.getContext('2d');
+
+    // HUD
+    const rodsLeftEl = document.getElementById('rodsLeft');
+    const nCountEl   = document.getElementById('nCount');
+    const fpsEl      = document.getElementById('fps');
+
+    const badge = document.getElementById('triggerBadge');
+    const label = document.getElementById('label');
+
+    const btnTrigger = document.getElementById('btnTrigger');
+    const btnPause   = document.getElementById('btnPause');
+    const btnReset   = document.getElementById('btnReset');
+
+    const cellSizeInput = document.getElementById('cellSize');
+    const cellSizeLabel = document.getElementById('cellSizeLabel');
+
+    // ---------- Simulation state ----------
+    let W = 0, H = 0; // CSS pixels
+    let cols = 0, rows = 0;
+    let cellSize = parseInt(cellSizeInput.value, 10) || 4; // CSS px per grid cell (each 'rod')
+    let grid; // Uint8Array: 0 empty, 1 rod present
+    let rodsLeft = 0;
+
+    // Neutron particles
+    /** @type {{x:number,y:number,vx:number,vy:number}[]} */
+    const neutrons = [];
+
+    const SPEED = 1.6; // px per frame at ~60fps; keep < cellSize to reduce tunneling
+    const MAX_NEUTRONS = 120000; // hard cap for perf safety
+    const BURST_INITIAL = 256;   // initial trigger neutrons around center
+    const BURST_PER_FISSION = 8; // per-rod emission (cardinal + diagonals)
+
+    let running = true;
+
+    // ---------- Helpers ----------
+    function resize(reset = true) {
+      W = Math.floor(window.innerWidth);
+      H = Math.floor(window.innerHeight);
+      for (const c of [gridCanvas, fxCanvas]) {
+        c.width  = Math.floor(W * dpr);
+        c.height = Math.floor(H * dpr);
+        const ctx = c.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0); // 1 unit == 1 css pixel
+      }
+      if (reset) initWorld();
+    }
+
+    function idx(x, y) { return y * cols + x; }
+
+    function drawRod(x, y) {
+      // Each rod appears as a tiny "few pixels" stripe within its cell for visual texture
+      const cs = cellSize; const px = x * cs; const py = y * cs;
+      // background tile
+      gtx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--grid');
+      gtx.fillRect(px, py, cs, cs);
+      // pseudo-rod: a 1–2 px stripe with random orientation seeded by coords
+      const seed = (x * 73856093) ^ (y * 19349663);
+      const orient = seed & 1; // 0 vertical, 1 horizontal
+      const thick = (seed >> 1) % 2 ? 2 : 1;
+      gtx.fillStyle = (seed & 4) ? getComputedStyle(document.documentElement).getPropertyValue('--rod') : getComputedStyle(document.documentElement).getPropertyValue('--rod-2');
+      if (orient) {
+        const y0 = py + ((cs - thick) >> 1);
+        gtx.fillRect(px + 1, y0, cs - 2, thick);
+      } else {
+        const x0 = px + ((cs - thick) >> 1);
+        gtx.fillRect(x0, py + 1, thick, cs - 2);
+      }
+    }
+
+    function eraseCell(x, y) {
+      const cs = cellSize; const px = x * cs; const py = y * cs;
+      gtx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--grid');
+      gtx.fillRect(px, py, cs, cs);
+    }
+
+    function initWorld() {
+      cols = Math.max(1, Math.floor(W / cellSize));
+      rows = Math.max(1, Math.floor(H / cellSize));
+      grid = new Uint8Array(cols * rows);
+
+      // paint background grid first for clear contrast
+      gtx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--grid');
+      gtx.fillRect(0, 0, W, H);
+
+      // Fill entire screen with rods (each cell is a "rod")
+      rodsLeft = 0;
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          grid[idx(x,y)] = 1; rodsLeft++;
+          drawRod(x, y);
+        }
+      }
+
+      // clear neutrons & fx layer
+      neutrons.length = 0;
+      ftx.clearRect(0, 0, W, H);
+      // draw center badge reticle
+      drawCenterReticle();
+      updateHud();
+    }
+
+    function drawCenterReticle() {
+      const cx = (cols >> 1) * cellSize + (cellSize >> 1);
+      const cy = (rows >> 1) * cellSize + (cellSize >> 1);
+      const r = Math.max(10, Math.min(40, Math.floor(Math.min(W, H) * 0.05)));
+      ftx.save();
+      ftx.beginPath();
+      ftx.arc(cx, cy, r, 0, Math.PI * 2);
+      ftx.strokeStyle = 'rgba(255,209,102,.8)';
+      ftx.lineWidth = 2;
+      ftx.setLineDash([6,6]);
+      ftx.stroke();
+      ftx.setLineDash([]);
+      // crosshair
+      ftx.lineWidth = 1;
+      ftx.beginPath(); ftx.moveTo(cx - r - 6, cy); ftx.lineTo(cx + r + 6, cy); ftx.stroke();
+      ftx.beginPath(); ftx.moveTo(cx, cy - r - 6); ftx.lineTo(cx, cy + r + 6); ftx.stroke();
+      ftx.restore();
+    }
+
+    function updateHud(fps) {
+      rodsLeftEl.textContent = String(rodsLeft);
+      nCountEl.textContent   = String(neutrons.length);
+      if (fps !== undefined) fpsEl.textContent = String(Math.round(fps));
+    }
+
+    // ---------- Neutron logic ----------
+    function spawnBurst(x, y, count, speed) {
+      if (!running) return;
+      const TWO_PI = Math.PI * 2;
+      const jitter = Math.random() * Math.PI * 2;
+      for (let i = 0; i < count; i++) {
+        if (neutrons.length >= MAX_NEUTRONS) break;
+        const a = i / count * TWO_PI + jitter;
+        neutrons.push({ x, y, vx: Math.cos(a) * speed, vy: Math.sin(a) * speed });
+      }
+    }
+
+    function spawnOctet(x, y, speed) {
+      // 8 directions (N,E,S,W + diagonals)
+      const dirs = [
+        [ 1, 0], [-1, 0], [0, 1], [0,-1],
+        [ 1, 1], [ 1,-1], [-1, 1], [-1,-1]
+      ];
+      for (let i = 0; i < dirs.length; i++) {
+        if (neutrons.length >= MAX_NEUTRONS) break;
+        const [dx, dy] = dirs[i];
+        const mag = Math.hypot(dx, dy) || 1;
+        neutrons.push({ x, y, vx: dx / mag * SPEED, vy: dy / mag * SPEED });
+      }
+    }
+
+    function step() {
+      if (!running) return;
+      // Clear FX canvas each frame
+      ftx.clearRect(0, 0, W, H);
+
+      // Draw current neutrons and advance them
+      ftx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--neutron');
+
+      for (let i = neutrons.length - 1; i >= 0; i--) {
+        const n = neutrons[i];
+        // draw as 1px neutron
+        ftx.fillRect(n.x | 0, n.y | 0, 1, 1);
+
+        // move
+        n.x += n.vx; n.y += n.vy;
+
+        // out of bounds? remove
+        if (n.x < 0 || n.y < 0 || n.x >= W || n.y >= H) {
+          removeNeutron(i);
+          continue;
+        }
+
+        // collision with a rod cell?
+        const gx = (n.x / cellSize) | 0;
+        const gy = (n.y / cellSize) | 0;
+        const id = idx(gx, gy);
+        if (grid[id] === 1) {
+          grid[id] = 0; // rod consumed -> becomes a fission site
+          rodsLeft--;
+          eraseCell(gx, gy);
+
+          // small flash on fx layer
+          ftx.fillStyle = 'rgba(255,209,102,.8)';
+          ftx.fillRect(gx * cellSize, gy * cellSize, cellSize, cellSize);
+          ftx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--neutron');
+
+          // this rod now emits neutrons in each direction (octet for perf)
+          const cx = gx * cellSize + (cellSize >> 1);
+          const cy = gy * cellSize + (cellSize >> 1);
+          spawnOctet(cx, cy, SPEED);
+
+          // absorb the current neutron that caused the hit
+          removeNeutron(i);
+        }
+      }
+    }
+
+    function removeNeutron(i) {
+      const last = neutrons.pop();
+      if (i < neutrons.length) neutrons[i] = last;
+    }
+
+    // ---------- Animation loop ----------
+    let last = performance.now();
+    let accum = 0, frames = 0, fps = 0;
+    function loop(t) {
+      const dt = t - last; last = t;
+      // fps meter
+      accum += dt; frames++;
+      if (accum >= 500) { // update twice a second
+        fps = frames * 1000 / accum;
+        accum = 0; frames = 0;
+        updateHud(fps);
+      }
+      step();
+      requestAnimationFrame(loop);
+    }
+
+    // ---------- Input & controls ----------
+    function triggerFromCenter() {
+      label.style.opacity = '0';
+      const cx = (cols >> 1) * cellSize + (cellSize >> 1);
+      const cy = (rows >> 1) * cellSize + (cellSize >> 1);
+      spawnBurst(cx, cy, BURST_INITIAL, SPEED);
+      updateHud();
+    }
+
+    fxCanvas.addEventListener('click', (e) => {
+      // Fire a local micro-burst at click position
+      const rect = fxCanvas.getBoundingClientRect();
+      const x = e.clientX - rect.left; const y = e.clientY - rect.top;
+      spawnBurst(x, y, 32, SPEED);
+      updateHud();
+    });
+
+    badge.addEventListener('click', () => triggerFromCenter());
+    btnTrigger.addEventListener('click', () => triggerFromCenter());
+
+    btnPause.addEventListener('click', () => {
+      running = !running;
+      btnPause.textContent = running ? 'Pause' : 'Resume';
+    });
+
+    btnReset.addEventListener('click', () => { label.style.opacity = '1'; initWorld(); });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); btnPause.click(); }
+      else if (e.key === 'r' || e.key === 'R') { btnReset.click(); }
+      else if (e.key === 't' || e.key === 'T') { triggerFromCenter(); }
+    });
+
+    cellSizeInput.addEventListener('input', (e) => {
+      cellSize = parseInt(cellSizeInput.value, 10) || 4;
+      cellSizeLabel.textContent = String(cellSize);
+      initWorld();
+    });
+
+    window.addEventListener('resize', () => resize(true));
+
+    // ---------- Kick things off ----------
+    resize(true);
+    requestAnimationFrame(loop);
+
+    // auto-fire after a moment so users see it without clicking
+    setTimeout(() => { if (neutrons.length === 0) triggerFromCenter(); }, 900);
+  })();
+  </script>
+</body>
+</html>
