@@ -1,0 +1,56 @@
+<!doctype html>
+      if (i === 0) chartCtx.moveTo(x, y); else chartCtx.lineTo(x, y);
+    }
+    chartCtx.lineWidth = 2 * DPR; chartCtx.strokeStyle = '#86efac'; chartCtx.stroke();
+
+    // Sağ üstte değer
+    chartCtx.fillStyle = '#cfcfcf';
+    chartCtx.font = `${12 * DPR}px ui-monospace, monospace`;
+    const latest = series[series.length - 1];
+    chartCtx.fillText(`n=${latest}`, w - 60 * DPR, 14 * DPR);
+  }
+
+  let paused = false;
+  function loop(now) {
+    const rawDt = (now - lastTime) / 1000; const dt = Math.min(rawDt, MAX_DT); lastTime = now;
+    if (!paused) {
+      step(dt);
+      draw();
+
+      // Örnekleme 10Hz
+      sampleAccumulator += dt;
+      if (sampleAccumulator >= 0.1) { pushSample(); sampleAccumulator = 0; drawChart(); }
+
+      // FPS UI
+      frames++; if (now - lastFpsUpdate >= 500) {
+        const fps = Math.round((frames * 1000) / (now - lastFpsUpdate));
+        fpsEl.textContent = `pixel: ${pixels.length} | fps: ${fps} | x${speedScale.toFixed(1)}`;
+        frames = 0; lastFpsUpdate = now;
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame((t) => { lastTime = t; loop(t); });
+
+  // Kontroller
+  startBtn.addEventListener('click', () => { paused = false; });
+  pauseBtn.addEventListener('click', () => { paused = true; });
+  panicBtn.addEventListener('click', () => {
+    // Panik: sahneyi sıfırla, hız çarpanını 1.0'a getir
+    paused = false;
+    speedScale = 1.0; speedRange.value = '1'; speedVal.textContent = '1.0x';
+    series = []; drawChart();
+    seedInitial(3);
+  });
+  speedRange.addEventListener('input', () => {
+    speedScale = parseFloat(speedRange.value);
+    speedVal.textContent = speedScale.toFixed(1) + 'x';
+  });
+
+  // Klavye: Space = toggle pause
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space') { e.preventDefault(); paused = !paused; }
+  });
+  </script>
+</body>
+</html>
