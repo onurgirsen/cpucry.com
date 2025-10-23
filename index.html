@@ -10,64 +10,97 @@
   <meta property="og:description" content="Browser-based experiments and computer crashing games that push your hardware to the limit."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://www.cpucry.com/"/>
+  <meta property="og:image" content="https://www.cpucry.com/images/og-default.svg"/>
   <link rel="canonical" href="https://www.cpucry.com/" />
-  <meta property="og:image" content="https://www.cpucry.com/images/1.png" />
   <title>CPUcry Games</title>
-  <link rel="icon" href="/images/favicon.png" type="image/png" />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
   <style>
     :root {
       --bg-start: #0f1220;
       --bg-end: #1b2735;
       --accent: #6aa9ff;
     }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, rgba(58, 81, 134, 0.08), transparent 60%), linear-gradient(135deg, var(--bg-start), var(--bg-end));
       color: #e8ecf1;
-
-      /* İçerik üstte kalsın, yatayda esnesin */
       display: flex;
       flex-direction: column;
-      align-items: stretch;       /* <- center'dan stretch'e */
-      justify-content: flex-start;
-      text-align: center;         /* başlık & paragraf ortada kalır */
+      align-items: stretch;
       min-height: 100vh;
     }
     main {
-      padding: 2rem;
-      width: 100%;                /* <- tam genişlik */
-      max-width: none;            /* <- sınırı kaldır */
+      padding: clamp(2rem, 6vw, 4rem);
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
       margin-bottom: 1rem;
+      text-align: center;
     }
-    p {
-      margin-bottom: 2rem;
+    p.lead {
+      margin: 0 auto 2.5rem;
       line-height: 1.6;
+      max-width: 720px;
+      text-align: center;
+      color: rgba(232, 236, 241, 0.85);
     }
     .games {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: flex-start;
-      justify-content: flex-start; /* kartlar soldan başlasın */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      align-items: start;
     }
     .game {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: center;
-
-      /* 2× büyütme */
-      width: 192px;
+      display: grid;
+      gap: 0.85rem;
+      justify-items: center;
     }
-    .game img {
+    a.thumb {
+      position: relative;
+      display: grid;
+      place-items: center;
       width: 100%;
-      max-width: 192px;   /* 96px → 192px */
-      border-radius: 6px; /* 8px → 6px (biraz az) */
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      aspect-ratio: 16 / 10;
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16), transparent 55%), linear-gradient(135deg, hsl(var(--hue, 220) 82% 58%), hsl(calc((var(--hue, 220) + 45) % 360) 76% 45%));
+      box-shadow: 0 18px 32px rgba(6, 12, 26, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      isolation: isolate;
+    }
+    a.thumb::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.22), transparent 40%);
+      mix-blend-mode: screen;
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+    a.thumb:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px rgba(6, 12, 26, 0.45);
+    }
+    a.thumb:hover::after {
+      opacity: 1;
+    }
+    .thumb-label {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(10, 12, 26, 0.16);
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+      mix-blend-mode: screen;
     }
     a.button {
       display: inline-block;
@@ -75,115 +108,48 @@
       color: #000;
       text-decoration: none;
       padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+      border-radius: 999px;
       font-weight: 600;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-      transition: background 0.3s;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+      transition: background 0.3s, transform 0.2s ease;
+      text-align: center;
+      width: fit-content;
+      max-width: 100%;
     }
     a.button:hover {
       background: #8cc0ff;
+      transform: translateY(-2px);
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
 <body>
   <main>
     <h1>CPUcry Games</h1>
-    <p>Fun browser-based experiments and simulations, including computer crashing games.</p>
-    <div class="games">
-      <div class="game">
-        <a href="games/1.html">
-          <img src="images/1.png" alt="7/8 Ring Simulation screenshot" />
-        </a>
-        <a class="button" href="games/1.html">7/8 Ring Simulation</a>
-      </div>
-      <div class="game">
-        <a href="games/2.html">
-          <img src="images/2.png" alt="Bouncing Ball with Infinite Speed screenshot" />
-        </a>
-        <a class="button" href="games/2.html">Bouncing Ball with Infinite Speed</a>
-      </div>
-      <div class="game">
-        <a href="games/3.html">
-          <img src="images/3.png" alt="Exponential Chart screenshot" />
-        </a>
-        <a class="button" href="games/3.html">Exponential Chart</a>
-      </div>
-      <div class="game">
-        <a href="games/4.html">
-          <img src="images/4.png" alt="Reflective Laser – Ultra Fast screenshot" />
-        </a>
-        <a class="button" href="games/4.html">Reflective Laser – Ultra Fast</a>
-      </div>
-      <div class="game">
-        <a href="games/5.html">
-          <img src="images/5.png" alt="Pixel Particle Game screenshot" />
-        </a>
-        <a class="button" href="games/5.html">Pixel Particle Game</a>
-      </div>
-      <div class="game">
-        <a href="games/6.html">
-          <img src="images/6.png" alt="Circular Bounce Simulation screenshot" />
-        </a>
-        <a class="button" href="games/6.html">Circular Bounce Simulation</a>
-      </div>
-      <div class="game">
-        <a href="games/7.html">
-          <img src="images/7.png" alt="Neutron Chain Reaction screenshot" />
-        </a>
-        <a class="button" href="games/7.html">Neutron Chain Reaction</a>
-      </div>
-      <div class="game">
-        <a href="games/8.html">
-          <img src="images/8.png" alt="Pixel Water — Raindrop Cascade screenshot" />
-        </a>
-        <a class="button" href="games/8.html">Pixel Water — Raindrop Cascade</a>
-      </div>
-      <div class="game">
-        <a href="games/9.html">
-          <img src="images/9.png" alt="Particle Rain — O(n²) Collisions screenshot" />
-        </a>
-        <a class="button" href="games/9.html">Particle Rain — O(n²) Collisions</a>
-      </div>
-      <div class="game">
-        <a href="games/10.html">
-          <img src="images/10.png" alt="Replicating Pixels — Crashy Demo screenshot" />
-        </a>
-        <a class="button" href="games/10.html">Replicating Pixels — Crashy Demo</a>
-      </div>
-      <div class="game">
-        <a href="games/11.html">
-          <img src="images/11.png" alt="Growing Numbers — Fibonacci Crash Demo screenshot" />
-        </a>
-        <a class="button" href="games/11.html">Growing Numbers — Fibonacci Crash Demo</a>
-      </div>
-      <div class="game">
-        <a href="games/12.html">
-          <img src="images/12.png" alt="Chaos Snowflakes — DOM Split Demo screenshot" />
-        </a>
-        <a class="button" href="games/12.html">Chaos Snowflakes — DOM Split Demo</a>
-      </div>
-      <div class="game">
-        <a href="games/13.html">
-          <img src="images/13.png" alt="Pixel Collision Simulation screenshot" />
-        </a>
-        <a class="button" href="games/13.html">Pixel Collision Simulation</a>
-      </div>
-      <div class="game">
-        <a href="games/14.html">
-          <img src="images/14.png" alt="Rotating Disk Game – Elastic Rope + Solid Disk screenshot" />
-        </a>
-        <a class="button" href="games/14.html">Rotating Disk Game – Elastic Rope + Solid Disk</a>
-      </div>
-    </div>
-    <div class="games" style="margin-top: 2rem;">
-      <div class="game">
-        <a class="button" href="model-v12.html">BTC 15dk Olasılık Paneli</a>
-        <p style="text-align:center; max-width: 18rem; font-size: 0.9rem; color: #cfd8ff;">
-          Pyodide ile tarayıcı üzerinde çalışan, başlangıç zamanı otomatik ayarlanan BTC yön
-          olasılığı modeli.
-        </p>
-      </div>
-    </div>
+    <p class="lead">Fun browser-based experiments and simulations, including computer crashing games.</p>
+    <div class="games" data-games-grid></div>
   </main>
+
+  <template id="game-card">
+    <article class="game">
+      <a class="thumb" href="#">
+        <span class="thumb-label"></span>
+        <span class="visually-hidden thumb-alt"></span>
+      </a>
+      <a class="button" href="#"></a>
+    </article>
+  </template>
+
+  <script type="module" src="scripts/index-page.js"></script>
 </body>
 </html>
