@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CPUcry | BTC 15dk Olasılık Paneli</title>
+  <meta name="description" content="Pyodide ile tarayıcı üzerinden çalışan BTC 15 dakikalık yön olasılığı paneli." />
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+    body {
+      margin: 0;
+      font-family: "Fira Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #101728, #05070d 65%);
+      color: #f0f4ff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem 1rem 4rem;
+    }
+    main {
+      width: min(960px, 100%);
+      background: rgba(8, 12, 24, 0.92);
+      border-radius: 18px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+      padding: 2.5rem clamp(1.5rem, 4vw, 3rem);
+      border: 1px solid rgba(80, 130, 255, 0.25);
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: 0.02em;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    #status {
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      background: rgba(34, 58, 102, 0.35);
+      border: 1px solid rgba(120, 165, 255, 0.35);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    pre {
+      margin: 0;
+      padding: 1rem;
+      border-radius: 12px;
+      background: rgba(4, 8, 18, 0.85);
+      border: 1px solid rgba(70, 110, 200, 0.25);
+      max-height: min(600px, 60vh);
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
+      font-size: 0.85rem;
+      line-height: 1.45;
+    }
+    .link-list {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .link-list a {
+      color: #8fb4ff;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>BTC 15 Dakika Yön Olasılığı (v12)</h1>
+    <p>
+      Bu sayfa, Pyodide kullanarak orijinal hibrit (Decay + Mean Reversion + GARCH + Jump Risk)
+      modelini doğrudan tarayıcı üzerinde çalıştırır. Sayfa açıldığında model otomatik olarak
+      başlatılır ve başlangıç zamanı Europe/Berlin saat dilimindeki içinde bulunulan 15 dakikalık
+      dilimin başına ayarlanır.
+    </p>
+    <div id="status">Pyodide bileşenleri yükleniyor…</div>
+    <pre id="output" aria-live="polite"></pre>
+    <div class="link-list">
+      <strong>Not:</strong> Binance ve Coinbase API çağrıları tarayıcı tarafından gerçekleştirildiğinden
+      CORS kısıtlamaları veya bağlantı limitleri modeli etkileyebilir. Bu durumda çıktı alanında hata
+      mesajları görünebilir.
+    </div>
+  </main>
+  <script type="module">
+    const statusEl = document.getElementById('status');
+    const outputEl = document.getElementById('output');
+
+    const appendOutput = (text) => {
+      outputEl.textContent += text + '\n';
+      outputEl.scrollTop = outputEl.scrollHeight;
+    };
+
+    const computeStartTime = (tz) => {
+      const fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: tz,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hourCycle: 'h23'
+      });
+      const parts = Object.fromEntries(fmt.formatToParts(new Date()).map(p => [p.type, p.value]));
+      const minute = parseInt(parts.minute, 10);
+      const quarterMinute = Math.floor(minute / 15) * 15;
+      const minuteStr = String(quarterMinute).padStart(2, '0');
+      return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${minuteStr}:00`;
+    };
+
+    const start = async () => {
+      try {
+        statusEl.textContent = 'Pyodide başlatılıyor…';
+        const pyodide = await loadPyodide({
+          stdout: (msg) => appendOutput(String(msg)),
+          stderr: (msg) => appendOutput(String(msg))
+        });
+
+        statusEl.textContent = 'Gerekli Python paketleri yükleniyor…';
+        await pyodide.loadPackage(['micropip']);
+        try {
+          await pyodide.runPythonAsync(`
+import micropip
+try:
+    await micropip.install('pyodide-http')
+except Exception as exc:
+    print('pyodide-http yüklenemedi:', exc)
+`);
+        } catch (installErr) {
+          appendOutput(`pyodide-http kurulumu başarısız: ${installErr}`);
+        }
+
+        const response = await fetch('scripts/model_v12.py');
+        if (!response.ok) {
+          throw new Error(`Python betiği yüklenemedi: ${response.status}`);
+        }
+        let code = await response.text();
+        const startTime = computeStartTime('Europe/Berlin');
+        code = code.replace(/START_TIME_LOCAL\s*=\s*"[^"]*"/, `START_TIME_LOCAL = "${startTime}"`);
+
+        await pyodide.runPython(`
+import builtins
+builtins.exit = lambda *args, **kwargs: None
+`);
+
+        statusEl.textContent = `Model başlatılıyor… (Başlangıç: ${startTime} Europe/Berlin)`;
+        await pyodide.runPythonAsync(code);
+        statusEl.textContent = 'Model çalışıyor. Güncel çıktılar aşağıdadır.';
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'Model çalıştırılırken bir hata oluştu.';
+        appendOutput(`HATA: ${err.message || err}`);
+      }
+    };
+
+    window.addEventListener('pyodideLoaded', start);
+    if (window.loadPyodide) {
+      start();
+    }
+  </script>
+</body>
+</html>
