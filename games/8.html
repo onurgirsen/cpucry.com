@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pixel-based water simulation where cascading raindrops multiply on impact and quickly flood the screen." />
+  <meta name="keywords" content="pixel water simulation, raindrop cascade, browser game, computer crashing games, hardware stress test" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Pixel Water — Raindrop Cascade" />
+  <meta property="og:description" content="Pixel-based water simulation where cascading raindrops multiply on impact and quickly flood the screen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cpucry.com/games/8.html" />
+  <meta property="og:image" content="https://www.cpucry.com/images/og-default.svg" />
+  <link rel="canonical" href="https://www.cpucry.com/games/8.html" />
+  <title>Pixel Water — Raindrop Cascade</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Pixel Water — Raindrop Cascade",
+    "url": "https://www.cpucry.com/games/8.html",
+    "applicationCategory": "BrowserGame",
+    "operatingSystem": "Web",
+    "genre": "Simulation",
+    "author": {"@type": "Person", "name": "Onur Girşen"},
+    "description": "Pixel-based water simulation where cascading raindrops multiply on impact and quickly flood the screen."
+  }
+  </script>
+  <style>
+    :root{
+      --bg:#0a0d14; /* deep night */
+      --panel:#0f1524cc;
+      --muted:#94a3b8;
+      --accent:#5bb8ff;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:white;font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Inter,Arial}
+    canvas{display:block;position:fixed;inset:0}
+    .hud{position:fixed;left:12px;top:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:var(--panel);backdrop-filter: blur(6px); border:1px solid #1e293b80; padding:10px 12px; border-radius:14px; box-shadow:0 10px 30px #0006}
+    .hud .g{display:flex;align-items:center;gap:6px}
+    .hud label{font-size:12px;color:var(--muted)}
+    .hud input[type="range"]{width:160px}
+    .btn{appearance:none;border:none;background:#172033;color:#e2e8f0;border:1px solid #26344e; padding:8px 12px;border-radius:12px;cursor:pointer}
+    .btn:hover{background:#1c2943}
+    .count{min-width:80px;text-align:right;color:#cbd5e1;font-variant-numeric:tabular-nums}
+    .tag{font-size:11px;color:#9fb3ce;background:#0b1223;border:1px solid #1b2a47; padding:2px 8px;border-radius:999px}
+    .link{color:#a5b4fc;text-decoration:none}
+    .chip{padding:4px 8px;background:#0b1223;border:1px solid #1b2a47;border-radius:10px;color:#cbd5e1;font-size:12px}
+    .footer{position:fixed;right:12px;bottom:10px;color:#7d90a8;font-size:12px;opacity:.8}
+  </style>
+</head>
+<body>
+  <canvas id="sim"></canvas>
+  <div class="hud" role="group" aria-label="Simulation controls">
+    <span class="tag">Pixel‑Water Rain</span>
+
+    <div class="g">
+      <label for="mult">trigger x</label>
+      <input id="mult" type="range" min="1" max="5" step="1" value="2" />
+      <span class="count" id="multVal">2×</span>
+    </div>
+
+    <div class="g">
+      <label for="size">pixel size</label>
+      <input id="size" type="range" min="0.01" max="10" step="0.01" value="6" />
+      <span class="count" id="sizeVal">6 px</span>
+    </div>
+
+    <div class="g">
+      <label for="speed">speed</label>
+      <input id="speed" type="range" min="1" max="4" step="1" value="2" />
+      <span class="count" id="speedVal">2×</span>
+    </div>
+
+    <button class="btn" id="pauseBtn">Pause</button>
+    <button class="btn" id="resetBtn">Reset</button>
+    <span class="chip" id="stat">cells: 0</span>
+  </div>
+  <div class="footer">Start: single raindrop → on hitting <b>ground</b> or <b>another drop</b>, spawn <b>x</b> new drops. Fills fast ✨</div>
+
+  <script>
+  (()=>{
+    const canvas = document.getElementById('sim');
+    const ctx = canvas.getContext('2d', { alpha:false });
+
+    const multSlider = document.getElementById('mult');
+    const sizeSlider = document.getElementById('size');
+    const speedSlider = document.getElementById('speed');
+    const multVal = document.getElementById('multVal');
+    const sizeVal = document.getElementById('sizeVal');
+    const speedVal = document.getElementById('speedVal');
+    const stat = document.getElementById('stat');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    // Persistent UI
+    const store = (k,v)=>localStorage.setItem(k,v);
+    const read = (k,d)=>localStorage.getItem(k) ?? d;
+    multSlider.value = read('pw_mult','2');
+    sizeSlider.value = read('pw_size','6');
+    speedSlider.value = read('pw_speed','2');
+
+    // Simulation state
+    let cellSize = parseFloat(sizeSlider.value); // pixels per cell
+    let W=0,H=0;               // grid dimensions in cells
+    let grid;                  // Uint8Array; 0=empty, 1=water
+    let collided;              // Uint8Array; 0=no recent hit, 1=hit last time when blocked below
+    const EMPTY=0, WATER=1;
+
+    let running = true;
+    let pendingSpawns = 0;     // queued top spawns triggered by ground hits
+    let totalWater = 0;        // number of water cells present
+
+    // Resize canvas & (re)build grid
+    function setup(resetAll=true){
+      const dpr = Math.max(1, Math.floor(window.devicePixelRatio || 1));
+      canvas.width = Math.floor(window.innerWidth * dpr);
+      canvas.height = Math.floor(window.innerHeight * dpr);
+      canvas.style.width = '100vw';
+      canvas.style.height = '100vh';
+      ctx.setTransform(1,0,0,1,0,0);
+      ctx.scale(dpr,dpr);
+      ctx.imageSmoothingEnabled = false;
+
+      const simUnit = Math.max(1, Math.floor(cellSize));
+      W = Math.max(10, Math.floor(window.innerWidth / simUnit));
+      H = Math.max(10, Math.floor(window.innerHeight / simUnit));
+      if(resetAll || !grid){
+        grid = new Uint8Array(W*H);
+        collided = new Uint8Array(W*H);
+        totalWater = 0;
+        pendingSpawns = 0;
+        // start with a single raindrop
+        spawnDrops(1);
+      }else{
+        // If keeping state (not used in this version)
+        grid = new Uint8Array(W*H);
+        collided = new Uint8Array(W*H);
+        totalWater = 0;
+      }
+    }
+
+    // Utility
+    const I = (x,y)=> y*W + x;
+    const inBounds = (x,y)=> x>=0 && x<W && y>=0 && y<H;
+
+    function setCell(x,y,val){
+      const i = I(x,y);
+      const was = grid[i];
+      if(was===EMPTY && val===WATER) totalWater++;
+      else if(was===WATER && val===EMPTY) totalWater--;
+      grid[i] = val;
+      if (collided) collided[i] = 0;
+    }
+
+    function isEmpty(x,y){ return inBounds(x,y) && grid[I(x,y)]===EMPTY; }
+
+    // Drop spawner — places water at random x in the top row (y=0)
+    function spawnDrops(n){
+      // Cap per-frame to avoid huge spikes; carry remainder
+      const maxPerFrame = Math.min(W*4, n);
+      let placed = 0;
+      for(let k=0; k<maxPerFrame; k++){
+        // Try a few random columns to avoid early blockage
+        let tries = 8;
+        let placedHere = false;
+        while(tries-- > 0 && !placedHere){
+          const x = Math.floor(Math.random()*W);
+          if(isEmpty(x,0)){
+            setCell(x,0,WATER);
+            placed++; placedHere=true;
+          }
+        }
+      }
+      const remaining = n - placed;
+      if(remaining>0) pendingSpawns += remaining; // try in later frames
+    }
+
+    // The core pixel-water rules
+    function step(speed){
+      let newSpawns = 0;
+      // iterate bottom-up so a cell moved down isn't processed again this frame
+      for(let y=H-2; y>=0; y--){
+        // alternate scan direction per row for less bias
+        const leftToRight = (y % 2) === 0;
+        if(leftToRight){
+          for(let x=0; x<W; x++) moveCell(x,y);
+        }else{
+          for(let x=W-1; x>=0; x--) moveCell(x,y);
+        }
+      }
+
+      function moveCell(x,y){
+        if(grid[I(x,y)]!==WATER) return;
+        const idx = I(x,y);
+        // Try to flow down; then down-left or down-right (random order); then lateral seep
+        const below = [x, y+1];
+        const dl = [x-1, y+1];
+        const dr = [x+1, y+1];
+        const lateral = Math.random()<0.5 ? [[x-1,y],[x+1,y]] : [[x+1,y],[x-1,y]];
+
+        if(isEmpty(below[0], below[1])){
+          setCell(x,y,EMPTY); setCell(below[0],below[1],WATER);
+          if(below[1]===H-1) newSpawns += currentMultiplier();
+          return;
+        } else {
+          // below blocked: if it's water, count as a 'hit' (trigger spawns once until this cell moves)
+          if(inBounds(below[0], below[1]) && grid[I(below[0],below[1])]===WATER && collided[idx]===0){
+            newSpawns += currentMultiplier();
+            collided[idx]=1;
+          }
+        }
+        // randomly choose diagonal order to reduce bias
+        const diag1 = Math.random()<0.5 ? dl : dr;
+        const diag2 = (diag1===dl) ? dr : dl;
+        if(isEmpty(diag1[0],diag1[1])){
+          setCell(x,y,EMPTY); setCell(diag1[0],diag1[1],WATER);
+          if(diag1[1]===H-1) newSpawns += currentMultiplier();
+          return;
+        }
+        if(isEmpty(diag2[0],diag2[1])){
+          setCell(x,y,EMPTY); setCell(diag2[0],diag2[1],WATER);
+          if(diag2[1]===H-1) newSpawns += currentMultiplier();
+          return;
+        }
+        // lateral seep if there is room and the cell below that lateral spot is open-ish
+        for(const [lx,ly] of lateral){
+          if(!inBounds(lx,ly) || !isEmpty(lx,ly)) continue;
+          // encourage movement towards open space beneath
+          const under = [lx, ly+1];
+          if(inBounds(under[0],under[1]) && (isEmpty(under[0],under[1]) || Math.random()<0.25)){
+            setCell(x,y,EMPTY); setCell(lx,ly,WATER);
+            if(ly===H-1) newSpawns += currentMultiplier();
+            return;
+          }
+        }
+        // else stay
+      }
+
+      // speed > 1 means run additional micro-steps (without re-rendering)
+      if(speed>1){ for(let i=1;i<speed;i++) step(1); }
+
+      // queue spawns arising this frame
+      pendingSpawns += newSpawns;
+    }
+
+    function draw(){
+      // Clear background
+      ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--bg');
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+
+      // Draw water cells as crisp blocks
+      ctx.fillStyle = '#5bb8ff';
+      // subtle per-row shimmer to give life
+      for(let y=0; y<H; y++){
+        // compute y position once
+        const drawSize = Math.max(0.01, parseFloat(sizeSlider.value));
+        const py = y * drawSize;
+        for(let x=0; x<W; x++){
+          if(grid[I(x,y)]===WATER){
+            const px = x * drawSize;
+            // slight brightness jitter per cell for watery feel
+            const jitter = ((x*73856093 ^ y*19349663) & 7); // deterministic hash
+            const alpha = 0.85 + (jitter/100);
+            ctx.globalAlpha = alpha;
+            ctx.fillRect(px, py, drawSize, drawSize);
+          }
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function currentMultiplier(){
+      return Math.min(5, Math.max(1, parseInt(multSlider.value,10) || 2));
+    }
+
+    // Main loop
+    let lastTime = 0;
+    function loop(t){
+      if(!running){ requestAnimationFrame(loop); return; }
+      // Update
+      step(parseInt(speedSlider.value,10));
+      // Spawn from queue (limited per frame)
+      if(pendingSpawns>0){
+        const take = Math.min(pendingSpawns, W*4);
+        spawnDrops(take);
+        pendingSpawns -= take;
+      }
+      // Render
+      draw();
+      // HUD
+      stat.textContent = `cells: ${totalWater.toLocaleString()}  •  queued: ${pendingSpawns.toLocaleString()}`;
+      requestAnimationFrame(loop);
+    }
+
+    // UI wiring
+    function syncLabels(){
+      multVal.textContent = currentMultiplier()+"×";
+      sizeVal.textContent = Math.max(0.01, parseFloat(sizeSlider.value)).toFixed(2)+" px";
+      speedVal.textContent = parseInt(speedSlider.value,10)+"×";
+    }
+
+    multSlider.addEventListener('input', ()=>{
+      store('pw_mult', multSlider.value); syncLabels();
+    });
+
+    sizeSlider.addEventListener('change', ()=>{
+      store('pw_size', sizeSlider.value);
+      cellSize = parseFloat(sizeSlider.value);
+      setup(true); // rebuild grid
+      syncLabels();
+    });
+    sizeSlider.addEventListener('input', syncLabels);
+
+    speedSlider.addEventListener('input', ()=>{
+      store('pw_speed', speedSlider.value); syncLabels();
+    });
+
+    pauseBtn.addEventListener('click', ()=>{
+      running = !running;
+      pauseBtn.textContent = running ? 'Pause' : 'Resume';
+    });
+
+    resetBtn.addEventListener('click', ()=>{
+      setup(true);
+    });
+
+    window.addEventListener('resize', ()=>{
+      // Rebuild & reset on resize to keep things simple (and fast)
+      setup(true);
+    });
+
+    // Kick off
+    syncLabels();
+    setup(true);
+    requestAnimationFrame(loop);
+  })();
+  </script>
+</body>
+</html>

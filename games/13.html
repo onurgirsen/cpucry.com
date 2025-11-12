@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixel Collision Simulation</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #0b0b0b; overflow: hidden; }
+    #wrap { display: flex; width: 100vw; height: 100vh; }
+    #stage { flex: 1 1 auto; position: relative; }
+    #panel {
+      width: 10vw; min-width: 220px; background: #121212; color: #eaeaea;
+      font: 14px/1.3 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      box-shadow: inset 1px 0 0 #222;
+      display: flex; flex-direction: column;
+    }
+    #panel header { padding: 12px; border-bottom: 1px solid #222; font-weight: 600; }
+    #panel .section { padding: 12px; border-bottom: 1px solid #1b1b1b; }
+    #panel .row { display: flex; align-items: center; gap: 8px; }
+    #panel button { border: 0; border-radius: 10px; padding: 8px 12px; cursor: pointer;
+      background: #1f2937; color: #eaeaea; box-shadow: 0 1px 0 #000 inset, 0 1px 2px rgba(0,0,0,.2); }
+    #panel button:hover { filter: brightness(1.1); }
+    #panel button:active { transform: translateY(1px); }
+    #panel button.panic { background: #7f1d1d; }
+    #panel label { color: #c0c0c0; }
+    #panel input[type=range] { width: 100%; }
+    #panel output { min-width: 54px; text-align: right; font-variant-numeric: tabular-nums; }
+    #sim { display: block; width: 100%; height: 100%; }
+    #chart { width: 100%; height: 140px; display: block; }
+    #fps { position: absolute; top: 8px; left: 10px; font: 12px/1 ui-monospace, monospace; color: #8cf; opacity: .75; user-select: none; pointer-events: none; }
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="stage">
+    <canvas id="sim"></canvas>
+    <div id="fps"></div>
+  </div>
+  <aside id="panel">
+    <header>Control Panel</header>
+    <div class="section">
+      <div class="row" style="justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="panicBtn" class="panic">Panic</button>
+      </div>
+    </div>
+    <div class="section">
+      <div style="display:flex; align-items:center; justify-content: space-between; margin-bottom:8px;">
+        <label for="speedRange">Speed Multiplier</label>
+        <output id="speedVal">1.0x</output>
+      </div>
+      <input id="speedRange" type="range" min="0.1" max="10" step="0.1" value="1" />
+      <div style="display:flex; justify-content: space-between; color:#8a8a8a; font-size:12px;">
+        <span>0.1x</span><span>10x</span>
+      </div>
+    </div>
+    <div class="section" style="border-bottom:0;">
+      <div style="margin-bottom:6px; font-weight:600;">Particle Count</div>
+      <canvas id="chart"></canvas>
+    </div>
+  </aside>
+</div>
+<script>
+const canvas = document.getElementById('sim'), ctx = canvas.getContext('2d');
+const fpsEl = document.getElementById('fps'), stageEl = document.getElementById('stage');
+const startBtn = document.getElementById('startBtn'), pauseBtn = document.getElementById('pauseBtn'), panicBtn = document.getElementById('panicBtn');
+const speedRange = document.getElementById('speedRange'), speedVal = document.getElementById('speedVal');
+const chartCanvas = document.getElementById('chart'), chartCtx = chartCanvas.getContext('2d');
+
+const DPR = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
+function resize() {
+  const rect = stageEl.getBoundingClientRect();
+  canvas.style.width = rect.width + 'px';
+  canvas.style.height = rect.height + 'px';
+  canvas.width = rect.width * DPR;
+  canvas.height = rect.height * DPR;
+  chartCanvas.width = chartCanvas.clientWidth * DPR;
+  chartCanvas.height = chartCanvas.clientHeight * DPR;
+}
+window.addEventListener('resize', resize); resize();
+
+const R_CSS = 3, R = R_CSS * DPR;
+const SPEED_MIN = 40, SPEED_MAX = 140, MAX_DT = 0.05;
+const MAX_PARTICLES = 200000, MAX_BIRTHS_PER_FRAME = 50;
+const CELL_SIZE = R * 4;
+let speedScale = 1.0;
+const rand = (a,b)=>Math.random()*(b-a)+a;
+const clamp = (v,a,b)=>Math.max(a,Math.min(b,v));
+function randUnitVector(){const t=Math.random()*Math.PI*2;return{x:Math.cos(t),y:Math.sin(t)}}
+function cssToDeviceSpeed(s){return s*DPR}
+function hsl(h,s=100,l=60){return`hsl(${h} ${s}% ${l}%)`}
+let nextId=0;class Pixel{constructor(x,y,vx,vy,color){this.id=nextId++;this.x=x;this.y=y;this.vx=vx;this.vy=vy;this.color=color;}}
+const pixels=[];
+function createRandomPixel(color){const m=R+2;const x=rand(m,canvas.width-m),y=rand(m,canvas.height-m);const d=randUnitVector(),s=cssToDeviceSpeed(rand(SPEED_MIN,SPEED_MAX));return new Pixel(x,y,d.x*s,d.y*s,color||hsl(rand(0,360),100,60));}
+function seedInitial(n=3){pixels.length=0;const baseHue=rand(0,360),hues=[baseHue,(baseHue+120)%360,(baseHue+240)%360];for(let i=0;i<n;i++)pixels.push(createRandomPixel(hsl(hues[i],100,60)));}
+seedInitial(3);
+function gridKey(cx,cy){return cx+','+cy}
+let collidingPairs=new Set();
+function step(dt){const w=canvas.width,h=canvas.height,sdt=dt*speedScale;for(const p of pixels){p.x+=p.vx*sdt;p.y+=p.vy*sdt;if(p.x<=R&&p.vx<0){p.vx*=-1;p.x=R;}if(p.x>=w-R&&p.vx>0){p.vx*=-1;p.x=w-R;}if(p.y<=R&&p.vy<0){p.vy*=-1;p.y=R;}if(p.y>=h-R&&p.vy>0){p.vy*=-1;p.y=h-R;}}
+  const grid=new Map();for(let i=0;i<pixels.length;i++){const p=pixels[i];const minCx=Math.floor((p.x-R)/CELL_SIZE),maxCx=Math.floor((p.x+R)/CELL_SIZE),minCy=Math.floor((p.y-R)/CELL_SIZE),maxCy=Math.floor((p.y+R)/CELL_SIZE);for(let cx=minCx;cx<=maxCx;cx++){for(let cy=minCy;cy<=maxCy;cy++){const k=gridKey(cx,cy);if(!grid.has(k))grid.set(k,[]);grid.get(k).push(i);}}}
+  const pairsThisFrame=new Set(),spawnedThisFrame=new Set(),testedPairs=new Set(),spawnedClusters=new Set();let births=0;const R2=(R+R)*(R+R);
+  for(const [key,idxs] of grid){const [cxStr,cyStr]=key.split(','),cx=+cxStr,cy=+cyStr;const neighborhood=[];for(let dx=-1;dx<=1;dx++){for(let dy=-1;dy<=1;dy++){const arr=grid.get(gridKey(cx+dx,cy+dy));if(arr)neighborhood.push(arr);}}
+    const flat=idxs.slice();for(const arr of neighborhood)for(const j of arr)flat.push(j);const seen=new Set(),unique=[];for(const v of flat)if(!seen.has(v)){seen.add(v);unique.push(v);}
+    for(let a=0;a<unique.length;a++){const i=unique[a],p=pixels[i];for(let b=a+1;b<unique.length;b++){const j=unique[b],q=pixels[j];const lo=Math.min(p.id,q.id),hi=Math.max(p.id,q.id),pairKey=lo+':'+hi;if(testedPairs.has(pairKey))continue;testedPairs.add(pairKey);const dx=p.x-q.x,dy=p.y-q.y;if(dx*dx+dy*dy<=R2){pairsThisFrame.add(pairKey);const clusterKey=Math.floor((p.x+q.x)/2/CELL_SIZE)+','+Math.floor((p.y+q.y)/2/CELL_SIZE);if(!collidingPairs.has(pairKey)&&!spawnedThisFrame.has(pairKey)&&!spawnedClusters.has(clusterKey)&&births<MAX_BIRTHS_PER_FRAME&&pixels.length<MAX_PARTICLES){const mx=(p.x+q.x)/2,my=(p.y+q.y)/2,jitter=R*0.2,spawnX=clamp(mx+rand(-jitter,jitter),R,w-R),spawnY=clamp(my+rand(-jitter,jitter),R,h-R);const dir=randUnitVector(),speed=cssToDeviceSpeed(rand(SPEED_MIN,SPEED_MAX));const child=new Pixel(spawnX,spawnY,dir.x*speed,dir.y*speed,hsl(rand(0,360),100,60));pixels.push(child);child.x+=dir.x*R*1.5;child.y+=dir.y*R*1.5;spawnedThisFrame.add(pairKey);spawnedClusters.add(clusterKey);births++;}}}}}
+  collidingPairs=pairsThisFrame;}
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);for(const p of pixels){ctx.beginPath();ctx.arc(p.x,p.y,R,0,Math.PI*2);ctx.fillStyle=p.color;ctx.fill();}}
+let lastTime=performance.now(),lastFpsUpdate=lastTime,frames=0,SERIES_MAX=600,series=[],sampleAccumulator=0;function pushSample(){series.push(pixels.length);if(series.length>SERIES_MAX)series.shift();}function drawChart(){const w=chartCanvas.width,h=chartCanvas.height;chartCtx.clearRect(0,0,w,h);if(series.length<2)return;const maxVal=Math.max(10,...series);chartCtx.beginPath();for(let i=0;i<series.length;i++){const x=i*(w/(SERIES_MAX-1)),y=h-(series[i]/maxVal)*(h-2)-1;if(i===0)chartCtx.moveTo(x,y);else chartCtx.lineTo(x,y);}chartCtx.strokeStyle='#86efac';chartCtx.lineWidth=2*DPR;chartCtx.stroke();chartCtx.fillStyle='#cfcfcf';chartCtx.font=`${12*DPR}px monospace`;chartCtx.fillText(`n=${series.at(-1)}`,w-60*DPR,14*DPR);}
+let paused=false;function loop(now){const rawDt=(now-lastTime)/1000,dt=Math.min(rawDt,MAX_DT);lastTime=now;if(!paused){step(dt);draw();sampleAccumulator+=dt;if(sampleAccumulator>=0.1){pushSample();sampleAccumulator=0;drawChart();}frames++;if(now-lastFpsUpdate>=500){const fps=Math.round((frames*1000)/(now-lastFpsUpdate));fpsEl.textContent=`pixel: ${pixels.length} | fps: ${fps} | x${speedScale.toFixed(1)}`;frames=0;lastFpsUpdate=now;}}requestAnimationFrame(loop);}requestAnimationFrame(t=>{lastTime=t;loop(t);});
+startBtn.onclick=()=>paused=false;pauseBtn.onclick=()=>paused=true;panicBtn.onclick=()=>{paused=false;speedScale=1;speedRange.value='1';speedVal.textContent='1.0x';series=[];drawChart();seedInitial(3);};speedRange.oninput=()=>{speedScale=parseFloat(speedRange.value);speedVal.textContent=speedScale.toFixed(1)+'x';};function addPixelAtCss(x,y){x=clamp(x*DPR,R,canvas.width-R);y=clamp(y*DPR,R,canvas.height-R);const dir=randUnitVector(),speed=cssToDeviceSpeed(rand(SPEED_MIN,SPEED_MAX));if(pixels.length<MAX_PARTICLES)pixels.push(new Pixel(x,y,dir.x*speed,dir.y*speed,hsl(rand(0,360),100,60)));}
+canvas.addEventListener('click',e=>{const r=canvas.getBoundingClientRect();addPixelAtCss(e.clientX-r.left,e.clientY-r.top);});
+</script>
+</body>
+</html>
