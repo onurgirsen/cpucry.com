@@ -92,35 +92,50 @@ const API = {
         if (!companyConfig) return null;
 
         try {
-            const url = `${CONFIG.YAHOO_API}/${ticker}?interval=1d&range=5d`;
+            // Use 3 months of data for proper volatility calculation (matching Python version)
+            const url = `${CONFIG.YAHOO_API}/${ticker}?interval=1d&range=3mo`;
             const data = await this.fetchWithProxy(url);
 
             if (data && data.chart && data.chart.result && data.chart.result[0]) {
                 const meta = data.chart.result[0].meta;
                 const price = meta.regularMarketPrice;
 
-                // Calculate historical volatility from closes
+                // Calculate historical volatility from closes (matching Python's 90-day approach)
                 const closes = data.chart.result[0].indicators?.quote?.[0]?.close || [];
                 let volatility = companyConfig.defaultVolatility;
 
-                if (closes.length >= 2) {
+                // Need at least 20 data points for reliable volatility
+                if (closes.length >= 20) {
                     const returns = [];
                     for (let i = 1; i < closes.length; i++) {
-                        if (closes[i] && closes[i - 1]) {
+                        if (closes[i] && closes[i - 1] && closes[i - 1] > 0) {
                             returns.push((closes[i] - closes[i - 1]) / closes[i - 1]);
                         }
                     }
-                    if (returns.length > 0) {
-                        const mean = returns.reduce((a, b) => a + b, 0) / returns.length;
-                        const variance = returns.reduce((sum, r) => sum + Math.pow(r - mean, 2), 0) / returns.length;
-                        const dailyVol = Math.sqrt(variance);
-                        volatility = dailyVol * Math.sqrt(252);  // Annualize
 
-                        // Sanity check
-                        if (volatility < 0.1 || volatility > 2.0) {
+                    if (returns.length >= 15) {
+                        // Calculate mean
+                        const mean = returns.reduce((a, b) => a + b, 0) / returns.length;
+
+                        // Calculate variance using sample variance (n-1 denominator, matching Python)
+                        const variance = returns.reduce((sum, r) => sum + Math.pow(r - mean, 2), 0) / (returns.length - 1);
+                        const dailyVol = Math.sqrt(variance);
+
+                        // Annualize
+                        volatility = dailyVol * Math.sqrt(252);
+
+                        console.log(`[VOL] ${ticker}: ${(volatility * 100).toFixed(1)}% (from ${returns.length} days of data)`);
+
+                        // Sanity check - volatility should be reasonable
+                        if (volatility < 0.10 || volatility > 2.0) {
+                            console.warn(`[VOL] ${ticker}: Calculated vol ${(volatility * 100).toFixed(1)}% out of range, using default ${(companyConfig.defaultVolatility * 100).toFixed(1)}%`);
                             volatility = companyConfig.defaultVolatility;
                         }
+                    } else {
+                        console.warn(`[VOL] ${ticker}: Only ${returns.length} valid returns, using default volatility`);
                     }
+                } else {
+                    console.warn(`[VOL] ${ticker}: Only ${closes.length} data points, using default volatility`);
                 }
 
                 const stockData = {
@@ -142,6 +157,7 @@ const API = {
         }
 
         // Return defaults if API fails
+        console.warn(`[VOL] ${ticker}: API failed, using default values`);
         return {
             price: companyConfig.defaultPrice,
             volatility: companyConfig.defaultVolatility,
