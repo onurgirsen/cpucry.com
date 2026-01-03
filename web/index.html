@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymarket Stock Markets - January 2026</title>
+    <meta name="description" content="Real-time Polymarket stock market analysis with Black-Scholes pricing">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading market data...</div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="home-btn" onclick="showTopOpportunities()">
+                    🏠 Home - All Markets
+                </button>
+            </div>
+            <h2>Markets</h2>
+            <div id="companyList" class="company-list">
+                <!-- Companies will be rendered here -->
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-left">
+                    <h1 id="companyTitle">Top Opportunities</h1>
+                    <p id="companySubtitle">Best risk-adjusted returns across all markets</p>
+                </div>
+                <div class="header-right">
+                    <div class="header-actions">
+                        <span id="lastUpdated" class="last-updated">Updated: --:--:--</span>
+                        <button class="refresh-btn" onclick="manualRefresh()">
+                            <span class="refresh-icon">↻</span>
+                            Refresh
+                        </button>
+                    </div>
+                    <div class="filter-badge">January 2026</div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Markets</div>
+                    <div class="stat-value" id="totalMarkets">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Current Price</div>
+                    <div class="stat-value" id="currentPrice">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Volatility</div>
+                    <div class="stat-value" id="volatility">-</div>
+                </div>
+            </div>
+
+            <!-- Markets Table -->
+            <div class="table-container">
+                <table class="market-table">
+                    <thead id="marketTableHead">
+                        <tr>
+                            <th>Company</th>
+                            <th>Strike</th>
+                            <th>BS Prob (YES)</th>
+                            <th>Market YES</th>
+                            <th>ROI (1$)</th>
+                            <th>Kelly %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marketTableBody">
+                        <!-- Data rows will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <footer class="content-footer">
+                <p>Data from Polymarket • Black-Scholes pricing model • Pure frontend - no backend required</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- JavaScript modules -->
+    <script src="api.js"></script>
+    <script src="blackscholes.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
