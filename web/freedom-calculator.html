@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finansal Özgürlük Hesaplayıcı</title>
+    <meta name="description" content="Birikim projeksiyonu ve Monte Carlo simülasyonu ile finansal özgürlük hesaplayıcı">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="freedom-calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="fc-body">
+    <div class="fc-container">
+        <!-- Header -->
+        <header class="fc-header">
+            <a href="index.html" class="fc-back-link">← Polymarket Dashboard</a>
+            <div class="fc-header-title">
+                <h1>💸 Finansal Özgürlük Hesaplayıcı</h1>
+                <p>Birikim planınızı projekte edin, binlerce senaryoyu Monte Carlo simülasyonu ile test edin</p>
+            </div>
+            <div class="fc-header-spacer"></div>
+        </header>
+
+        <main class="fc-main">
+            <!-- Input Panel -->
+            <section class="fc-card fc-panel">
+                <h2 class="fc-card-title">🎛️ Girdiler</h2>
+                <div class="fc-grid">
+                    <div class="fc-field">
+                        <label for="startingCapital">Başlangıç Sermayesi</label>
+                        <div class="fc-input-group">
+                            <span class="fc-currency" id="currencyPrefix1">₺</span>
+                            <input type="number" id="startingCapital" value="100000" min="0" step="1000">
+                        </div>
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="monthlyContribution">Aylık Ekleme</label>
+                        <div class="fc-input-group">
+                            <span class="fc-currency" id="currencyPrefix2">₺</span>
+                            <input type="number" id="monthlyContribution" value="15000" min="0" step="500">
+                        </div>
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="targetAmount">Hedef Tutar (Finansal Özgürlük)</label>
+                        <div class="fc-input-group">
+                            <span class="fc-currency" id="currencyPrefix3">₺</span>
+                            <input type="number" id="targetAmount" value="10000000" min="0" step="100000">
+                        </div>
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="currencySelect">Para Birimi</label>
+                        <select id="currencySelect">
+                            <option value="₺" selected>₺ Türk Lirası</option>
+                            <option value="$">$ ABD Doları</option>
+                            <option value="€">€ Euro</option>
+                        </select>
+                    </div>
+
+                    <div class="fc-field fc-field-wide">
+                        <label for="returnPreset">Getiri Profili</label>
+                        <select id="returnPreset">
+                            <option value="deposit">🏦 Mevduat / Tahvil — düşük risk (%5 getiri, %5 vol.)</option>
+                            <option value="balanced" selected>⚖️ Dengeli Portföy (%8 getiri, %10 vol.)</option>
+                            <option value="stocks">📈 Hisse Senedi Ortalaması (%10 getiri, %16 vol.)</option>
+                            <option value="sp500">🇺🇸 S&amp;P 500 Tarihsel (%11 getiri, %18 vol.)</option>
+                            <option value="aggressive">🚀 Agresif / Kripto (%20 getiri, %45 vol.)</option>
+                            <option value="custom">🛠️ Manuel</option>
+                        </select>
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="years">Yatırım Süresi <span class="fc-value-badge" id="yearsValue">20 yıl</span></label>
+                        <input type="range" id="years" min="1" max="40" step="1" value="20">
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="annualReturn">Yıllık Getiri Oranı <span class="fc-value-badge" id="annualReturnValue">%8.0</span></label>
+                        <input type="range" id="annualReturn" min="0" max="40" step="0.5" value="8">
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="annualVol">Yıllık Volatilite (Monte Carlo) <span class="fc-value-badge" id="annualVolValue">%10.0</span></label>
+                        <input type="range" id="annualVol" min="0" max="80" step="1" value="10">
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="inflationRate">Enflasyon Oranı <span class="fc-value-badge" id="inflationValue">%3.0</span></label>
+                        <input type="range" id="inflationRate" min="0" max="60" step="0.5" value="3">
+                    </div>
+
+                    <div class="fc-field">
+                        <label for="numSimulations">Monte Carlo Simülasyon Sayısı</label>
+                        <select id="numSimulations">
+                            <option value="1000">1.000 senaryo</option>
+                            <option value="2500">2.500 senaryo</option>
+                            <option value="5000" selected>5.000 senaryo</option>
+                            <option value="10000">10.000 senaryo</option>
+                        </select>
+                    </div>
+
+                    <div class="fc-field fc-field-checkbox">
+                        <label class="fc-checkbox-label">
+                            <input type="checkbox" id="showReal">
+                            Enflasyona göre reel (bugünkü) değerleri göster
+                        </label>
+                    </div>
+                </div>
+
+                <button class="fc-calc-btn" id="calcBtn">📊 Hesapla ve Simüle Et</button>
+            </section>
+
+            <!-- Deterministic Results -->
+            <section class="fc-card">
+                <h2 class="fc-card-title">📐 Beklenen Senaryo (Sabit Getiri Varsayımı)</h2>
+                <div class="fc-stats-grid" id="deterministicStats"></div>
+                <div class="fc-chart-wrap">
+                    <div id="growthChart" class="fc-chart"></div>
+                </div>
+            </section>
+
+            <!-- Monte Carlo Results -->
+            <section class="fc-card">
+                <h2 class="fc-card-title">🎲 Monte Carlo Simülasyonu</h2>
+                <p class="fc-subtle" id="mcSubtitle">Getiriler her ay rastgele dalgalanır; binlerce paralel evren simüle edilir.</p>
+                <div class="fc-stats-grid" id="mcStats"></div>
+
+                <div class="fc-meter-block">
+                    <div class="fc-meter-label">
+                        <span>Hedefe Ulaşma Olasılığı</span>
+                        <span class="fc-meter-value" id="probLabel">–</span>
+                    </div>
+                    <div class="fc-meter-track">
+                        <div class="fc-meter-fill" id="probFill" style="width:0%"></div>
+                    </div>
+                </div>
+
+                <div class="fc-chart-wrap">
+                    <div id="fanChart" class="fc-chart"></div>
+                </div>
+
+                <div class="fc-chart-wrap">
+                    <div id="histChart" class="fc-chart"></div>
+                </div>
+
+                <div class="fc-table-wrap">
+                    <table class="fc-percentile-table" id="percentileTable"></table>
+                </div>
+            </section>
+
+            <footer class="fc-footer">
+                <p>⚠️ Bu araç yalnızca eğitim ve simülasyon amaçlıdır, yatırım tavsiesi değildir. Getiriler her ay
+                    birbirinden bağımsız normal dağılıma sahip aylık getiriler varsayılarak modellenmiştir; gerçek
+                    piyasalar bu varsayımdan (öz. otokorelasyon, kalın kuyruklar) sapabilir.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="freedom-calculator.js"></script>
+</body>
+
+</html>

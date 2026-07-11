@@ -1,0 +1,544 @@
+/**
+ * freedom-calculator.css
+ * Page-specific styles for the Financial Freedom Calculator.
+ * Relies on CSS variables defined in styles.css (loaded first).
+ */
+
+/* Chart-only accent set: darker than the UI badge colors so marks stay
+   within the dark-surface OKLCH lightness band (validated separately from
+   the site's text/badge tokens). */
+:root {
+    --fc-chart-accent: #6366f1;
+    --fc-chart-success: #059669;
+    --fc-chart-danger: #dc2626;
+    --fc-chart-warning: #d97706;
+    --fc-surface: #0a0a0f;
+}
+
+.fc-body {
+    overflow-x: hidden;
+}
+
+.fc-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+/* Header */
+.fc-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.fc-back-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.fc-back-link:hover {
+    color: var(--text-primary);
+    border-color: var(--border-accent);
+}
+
+.fc-header-title h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3rem;
+}
+
+.fc-header-title p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.fc-header-spacer {
+    flex: 1;
+}
+
+/* Main layout */
+.fc-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fc-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+}
+
+.fc-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.fc-subtle {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: -0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Input grid */
+.fc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.fc-field-wide {
+    grid-column: span 3;
+}
+
+.fc-field-checkbox {
+    grid-column: span 3;
+    align-self: center;
+}
+
+.fc-field label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.fc-value-badge {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: none;
+    letter-spacing: normal;
+    font-variant-numeric: tabular-nums;
+}
+
+.fc-input-group {
+    display: flex;
+    align-items: center;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+}
+
+.fc-input-group:focus-within {
+    border-color: var(--border-accent);
+}
+
+.fc-currency {
+    padding: 0 0.5rem 0 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.fc-field input[type="number"],
+.fc-field select {
+    width: 100%;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    padding: 0.65rem 0.85rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.fc-input-group input[type="number"] {
+    border: none;
+    padding-left: 0.25rem;
+    background: transparent;
+}
+
+.fc-field input[type="number"]:focus,
+.fc-field select:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+.fc-field select {
+    cursor: pointer;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+        linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+    background-position: calc(100% - 18px) center, calc(100% - 13px) center;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    padding-right: 2rem;
+}
+
+.fc-field label.fc-checkbox-label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.fc-checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent-primary);
+    cursor: pointer;
+}
+
+/* Range sliders */
+.fc-field input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--bg-tertiary);
+    outline: none;
+    margin-top: 0.35rem;
+}
+
+.fc-field input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    cursor: pointer;
+    box-shadow: 0 0 0 3px var(--surface, var(--bg-secondary));
+}
+
+.fc-field input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    cursor: pointer;
+}
+
+.fc-calc-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--accent-gradient);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.fc-calc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.fc-calc-btn:active {
+    transform: translateY(0);
+}
+
+/* Stat cards */
+.fc-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.fc-stat {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+}
+
+.fc-stat-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.fc-stat-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-variant-numeric: normal;
+}
+
+.fc-stat-value.accent {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fc-stat-value.success {
+    color: var(--success);
+}
+
+.fc-stat-value.danger {
+    color: var(--danger);
+}
+
+.fc-stat-sub {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Meter */
+.fc-meter-block {
+    margin-bottom: 1.75rem;
+}
+
+.fc-meter-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.fc-meter-value {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.fc-meter-track {
+    height: 14px;
+    border-radius: 7px;
+    background: var(--bg-tertiary);
+    overflow: hidden;
+    position: relative;
+}
+
+.fc-meter-fill {
+    height: 100%;
+    border-radius: 7px;
+    transition: width 0.6s ease;
+}
+
+/* Charts */
+.fc-chart-wrap {
+    margin-bottom: 1.25rem;
+}
+
+.fc-chart {
+    width: 100%;
+    position: relative;
+}
+
+.fc-chart svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+
+.fc-chart-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.6rem;
+}
+
+.fc-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.fc-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.fc-legend-swatch {
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.fc-legend-swatch.dashed {
+    background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 9px);
+    height: 2px;
+}
+
+.fc-legend-swatch.area {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+/* Tooltip */
+.fc-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.75rem;
+    font-size: 0.78rem;
+    box-shadow: var(--shadow-md);
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    white-space: nowrap;
+}
+
+.fc-tooltip.visible {
+    opacity: 1;
+}
+
+.fc-tooltip-title {
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.fc-tooltip-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.fc-tooltip-key {
+    display: inline-block;
+    width: 10px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.fc-tooltip-name {
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.fc-tooltip-val {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Table */
+.fc-table-wrap {
+    overflow-x: auto;
+}
+
+.fc-percentile-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.fc-percentile-table th,
+.fc-percentile-table td {
+    padding: 0.7rem 1rem;
+    text-align: right;
+    border-bottom: 1px solid var(--border-color);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.fc-percentile-table th:first-child,
+.fc-percentile-table td:first-child {
+    text-align: left;
+    font-variant-numeric: normal;
+}
+
+.fc-percentile-table th {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.fc-percentile-table tbody tr:hover {
+    background: var(--bg-card-hover);
+}
+
+/* Footer */
+.fc-footer {
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+.fc-footer p {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .fc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fc-field-wide,
+    .fc-field-checkbox {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .fc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fc-field-wide,
+    .fc-field-checkbox {
+        grid-column: span 1;
+    }
+
+    .fc-card {
+        padding: 1.25rem;
+    }
+}
