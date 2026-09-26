@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Yarının Tarihi</title>
+<style>
+  @font-face { font-family: 'Cinzel'; src: url(fonts/Cinzel.ttf) format('truetype'); font-weight: 400 900; }
+  @font-face { font-family: 'Cormorant Garamond'; src: url(fonts/CormorantGaramond-Italic.ttf) format('truetype'); font-weight: 300 700; font-style: italic; }
+  @font-face { font-family: 'JetBrains Mono'; src: url(fonts/JetBrainsMono.ttf) format('truetype'); font-weight: 100 800; }
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  canvas { display: block; width: 100vw; height: auto; max-height: 100vh; object-fit: contain; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<audio id="music" src="build/music.wav" preload="auto"></audio>
+<script src="data/land.js"></script>
+<script src="engine.js"></script>
+<script src="ill_a.js"></script>
+<script src="ill_b.js"></script>
+<script src="ill_c.js"></script>
+<script src="scenes.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
