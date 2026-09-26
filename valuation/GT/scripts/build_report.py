@@ -86,6 +86,7 @@ for k, lab, marg in [('bull', 'Boğa', A['scenarios']['bull']['soi_margin']['203
 w(f"| Sıkıntı / yeniden yapılanma | {pct(PR['distress'], 0)} | ayı + finansman olayı | – | – | {usd(SP['distress'])} |")
 w(f"| **Senaryo ağırlıklı DCF** | %100 | | | | **{usd(R['dcf_probability_weighted'])}** |\n")
 w('![Futbol sahası](GT_football_field.png)\n')
+w('**Ek rapor:** Temel ve teknik analize dayalı dönüş (toparlanma) değerlendirmesi ve olası zamanlama için bkz. [GT_donus_analizi.md](GT_donus_analizi.md).\n')
 
 # ------------------------------------------------------------------ 2
 w('## 2. Şirket, kapsam ve veri\n')
@@ -514,9 +515,10 @@ w("## Ek E — Dosyalar\n")
 w("- `valuation/GT/model/GT_model.xlsx` — canlı formüllü model (Drivers → DCF_Bull/Base/Bear → EPV, Merton, Comps, SOTP, Transactions_Asset → Summary; History, Guidance, Sensitivity, MonteCarlo).\n"
   "- `valuation/GT/data/` — XBRL ham tablo, normalize geçmiş (history.csv), rehberlik kaydı ve skorlar, emsaller, varsayımlar, değerleme sonuçları, denetim sonuçları.\n"
   "- `valuation/GT/scripts/` — veri toplama, normalizasyon, rehberlik takibi, emsal analizi, değerleme motoru, Excel üretimi, denetim ve grafik betikleri (yeniden çalıştırılabilir).\n"
-  "- `valuation/GT/output/` — bu rapor ve grafikler.\n")
+  "- `valuation/GT/output/` — bu rapor ve grafikler; dönüş zamanlaması eki `GT_donus_analizi.md` (teknik veriler `data/technical.json`, senaryo zaman çizelgesi `data/turnaround.json`).\n")
 w("---\n*Bu rapor yalnızca bilgilendirme amaçlı bir analizdir; herhangi bir menkul kıymeti alma veya satma tavsiyesi değildir. Geçmiş performans gelecekteki sonuçların göstergesi değildir. "
   "Hazırlayan lisanslı yatırım danışmanı değildir.*\n")
 
-open('output/GT_degerleme_raporu.md', 'w').write('\n'.join(out))
+# '~' is rendered as strikethrough by GFM renderers when two single tildes pair up; use '≈' for "approximately".
+open('output/GT_degerleme_raporu.md', 'w').write('\n'.join(out).replace('~', '≈'))
 print('report written', sum(len(s) for s in out), 'chars')
