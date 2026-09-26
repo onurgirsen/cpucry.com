@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sinir Uçları · cpucry</title>
+    <meta name="description" content="Kodla bestelenip kodla sentezlenmiş bir elektronik parça: nabız, yalnızlık, panik ve bir gün daha.">
+    <meta name="theme-color" content="#050508">
+    <meta property="og:title" content="Sinir Uçları">
+    <meta property="og:description" content="Nabız, yalnızlık, panik ve bir gün daha. Tek bir hazır ses kullanılmadan, kodla yapıldı.">
+    <meta property="og:type" content="music.song">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050508;
+            --text: #ecebf3;
+            --muted: #a09eb2;
+            --faint: #6c6a7e;
+            --line: rgba(255, 255, 255, 0.09);
+            --card: rgba(14, 13, 22, 0.72);
+            --accent: hsl(200 70% 62%);
+            --accent-soft: hsl(200 70% 62% / 0.16);
+            --radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background: var(--bg);
+            color-scheme: dark;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        #viz {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            display: block;
+        }
+
+        .stage {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: max(16px, env(safe-area-inset-top)) 16px 72px;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pill {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.82rem;
+            padding: 8px 14px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(5, 5, 8, 0.55);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: color .2s, border-color .2s;
+        }
+
+        .pill:hover,
+        .pill:focus-visible {
+            color: var(--text);
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        .hero {
+            min-height: calc(100svh - 70px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 14px;
+            padding: 24px 0 8px;
+        }
+
+        .eyebrow {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+
+        h1 {
+            font-size: clamp(2.6rem, 11vw, 5.2rem);
+            font-weight: 700;
+            letter-spacing: -0.035em;
+            line-height: 1;
+            text-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .lede {
+            color: var(--muted);
+            max-width: 32ch;
+            font-size: 1rem;
+            text-shadow: 0 0 24px rgba(0, 0, 0, 0.9);
+        }
+
+        .core {
+            position: relative;
+            width: 100%;
+            height: min(92vw, 42vh, 400px);
+            min-height: 250px;
+            display: grid;
+            place-items: center;
+        }
+
+        .play {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            border: 1px solid var(--accent);
+            background: radial-gradient(circle at 50% 45%, var(--accent-soft), rgba(5, 5, 8, 0.65) 70%);
+            color: var(--text);
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: transform .25s ease, border-color .6s, box-shadow .6s;
+            box-shadow: 0 0 44px var(--accent-soft), inset 0 0 18px var(--accent-soft);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .play:hover {
+            transform: scale(1.05);
+        }
+
+        .play:active {
+            transform: scale(0.97);
+        }
+
+        .play:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 6px;
+        }
+
+        .play svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+
+        .play .i-pause,
+        .play .i-replay {
+            display: none;
+        }
+
+        .play[data-state="playing"] .i-play {
+            display: none;
+        }
+
+        .play[data-state="playing"] .i-pause {
+            display: block;
+        }
+
+        .play[data-state="ended"] .i-play {
+            display: none;
+        }
+
+        .play[data-state="ended"] .i-replay {
+            display: block;
+        }
+
+        .now {
+            min-height: 5.4em;
+            max-width: 44ch;
+        }
+
+        .sec-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--accent);
+            transition: color .6s;
+        }
+
+        .sec-line {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin-top: 4px;
+            text-shadow: 0 0 18px rgba(0, 0, 0, 0.95);
+        }
+
+        .timeline {
+            width: min(100%, 520px);
+        }
+
+        .bar {
+            position: relative;
+            height: 30px;
+            cursor: pointer;
+            touch-action: none;
+            outline: none;
+        }
+
+        .bar .track,
+        .bar .fill {
+            position: absolute;
+            left: 0;
+            top: 14px;
+            height: 2px;
+            border-radius: 2px;
+        }
+
+        .bar .track {
+            right: 0;
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .bar .fill {
+            width: 0;
+            background: var(--accent);
+            transition: background .6s;
+        }
+
+        .bar .tick {
+            position: absolute;
+            top: 10px;
+            width: 1px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .bar .knob {
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--text);
+            transform: translateX(-50%);
+            box-shadow: 0 0 12px var(--accent);
+        }
+
+        .bar:focus-visible .knob {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .times {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.72rem;
+            color: var(--faint);
+        }
+
+        .hint {
+            font-size: 0.8rem;
+            color: var(--faint);
+        }
+
+        .scroll-cue {
+            font-size: 0.78rem;
+            color: var(--faint);
+            text-decoration: none;
+            margin-top: 6px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 26px 22px;
+            margin-top: 18px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+
+        h2 {
+            font-size: 1.12rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+        }
+
+        .story ol {
+            list-style: none;
+            display: grid;
+            gap: 4px;
+        }
+
+        .story li button {
+            all: unset;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 12px;
+            width: 100%;
+            padding: 10px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        .story li button:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .story li button:focus-visible {
+            outline: 2px solid var(--accent);
+        }
+
+        .story time {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.74rem;
+            color: var(--faint);
+            padding-top: 3px;
+        }
+
+        .story strong {
+            display: block;
+            font-weight: 600;
+            transition: color .4s;
+        }
+
+        .story p {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .story li.active strong {
+            color: var(--accent);
+        }
+
+        .story li.active button {
+            background: var(--accent-soft);
+        }
+
+        .how dl {
+            display: grid;
+            gap: 16px;
+        }
+
+        .how dt {
+            font-weight: 600;
+        }
+
+        .how dd {
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .note {
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.85em;
+            color: var(--text);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--faint);
+            font-size: 0.82rem;
+            margin-top: 28px;
+            display: grid;
+            gap: 10px;
+            justify-items: center;
+        }
+
+        footer a {
+            color: var(--muted);
+        }
+
+        .dl {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text);
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(5, 5, 8, 0.6);
+        }
+
+        .dl:hover,
+        .dl:focus-visible {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .play {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="viz" aria-hidden="true"></canvas>
+
+    <main class="stage">
+        <nav class="top">
+            <a class="pill" href="../">← cpucry</a>
+            <a class="pill" href="sinir-uclari.mp3" download="Sinir Uçları.mp3">MP3 indir</a>
+        </nav>
+
+        <section class="hero">
+            <p class="eyebrow">cpucry · 108 BPM · Fa minör · 3:15</p>
+            <h1>Sinir Uçları</h1>
+            <p class="lede">Kodla bestelendi, kodla sentezlendi. İçinde tek bir hazır ses yok.</p>
+
+            <div class="core">
+                <button id="play" class="play" data-state="paused" aria-label="Çal">
+                    <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.52.85l10.4-6.5a1 1 0 0 0 0-1.7L9.52 4.65A1 1 0 0 0 8 5.5z" /></svg>
+                    <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="5" width="4" height="14" rx="1.2" /><rect x="13.5" y="5" width="4" height="14" rx="1.2" /></svg>
+                    <svg class="i-replay" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7.5 6.5 12 11V7.5a5.5 5.5 0 1 1-5.5 5.5H4a8 8 0 1 0 8-8z" /></svg>
+                </button>
+            </div>
+
+            <div class="now" aria-live="polite">
+                <div id="secName" class="sec-name">Nabız</div>
+                <div id="secLine" class="sec-line">Oynatmaya bas. Kalp zaten atıyor.</div>
+            </div>
+
+            <div class="timeline">
+                <div id="bar" class="bar" role="slider" tabindex="0" aria-label="Şarkıda konum"
+                    aria-valuemin="0" aria-valuemax="195" aria-valuenow="0" aria-valuetext="0:00">
+                    <div class="track"></div>
+                    <div id="fill" class="fill"></div>
+                    <div id="knob" class="knob"></div>
+                </div>
+                <div class="times"><span id="cur">0:00</span><span id="dur">3:15</span></div>
+            </div>
+
+            <p class="hint">🎧 Kulaklıkla ve sesi biraz açarak dinle.</p>
+            <a class="scroll-cue" href="#hikaye">Hikâye ↓</a>
+        </section>
+
+        <section class="card story" id="hikaye">
+            <h2>Hikâye</h2>
+            <ol id="storyList">
+                <li data-start="0.5"><button type="button"><time>0:00</time><span><strong>Nabız</strong>
+                            <p>Bir kalp atışı ve plak cızırtısı. Filtrenin ardından bir akor yavaşça açılıyor. Müzik
+                                kutusu, şarkının sonunda varacağın melodiyi şimdiden mırıldanıyor.</p>
+                        </span></button></li>
+                <li data-start="18.278"><button type="button"><time>0:18</time><span><strong>Tek Başına</strong>
+                            <p>Bas yarım ses yarım ses iniyor: Fa, Mi, Mi♭, Re, Re♭, Do. Bir an Re natürel parlıyor,
+                                sonra yeniden Re♭'ye düşüyor. Robot ses sözsüz şarkı söylüyor.</p>
+                        </span></button></li>
+                <li data-start="53.833"><button type="button"><time>0:54</time><span><strong>Panik</strong>
+                            <p>Bozuk bir 808 ve Do Hicaz'da çalan bir cowbell. Her şey tek bir notanın üstünde asılı
+                                kalıyor. Nabız hızlanıyor, gerilim tırmanıyor ve bant duruyor.</p>
+                        </span></button></li>
+                <li data-start="71.611"><button type="button"><time>1:12</time><span><strong>Bir Gün Daha</strong>
+                            <p>Kulak Fa minöre çözülmeyi bekliyor ama akor Re♭ majöre gidiyor. Melodi basamak basamak
+                                tırmanıyor ve ilk kez La natürele iniyor: Fa majör.</p>
+                        </span></button></li>
+                <li data-start="107.167"><button type="button"><time>1:47</time><span><strong>Nefes</strong>
+                            <p>Işık yeniden sönüyor. Kick kapalı bir filtrenin arkasından yaklaşıyor. Düşüşten önce
+                                yarım saniye var: nefesini tut.</p>
+                        </span></button></li>
+                <li data-start="124.944"><button type="button"><time>2:05</time><span><strong>Işık</strong>
+                            <p>Aynı melodi, bu kez bir oktav yukarıda ve bir koroyla birlikte. Bu sefer yalnız
+                                değil.</p>
+                        </span></button></li>
+                <li data-start="160.5"><button type="button"><time>2:41</time><span><strong>Yavaşla</strong>
+                            <p>Tempo aynı, his yarıya iniyor. 808 son kez kayıyor: Re♭, Mi♭, Fa.</p>
+                        </span></button></li>
+                <li data-start="169.389"><button type="button"><time>2:49</time><span><strong>Sabah</strong>
+                            <p>Başta minör çalan müzik kutusu melodisi şimdi majör: La♭ yerine La. Bir gün daha.</p>
+                        </span></button></li>
+            </ol>
+        </section>
+
+        <section class="card how">
+            <h2>Neden tüylerini diken diken ediyor?</h2>
+            <dl>
+                <div>
+                    <dt>Gecikmeli çözülen notalar</dt>
+                    <dd>Melodi akora ait olmayan bir notaya yaslanıp bir adım aşağı iniyor (<span class="note">Re♭→Do</span>,
+                        <span class="note">Si♭→La</span>). Müzikte ürperti (frisson) üzerine yapılan araştırmalarda en sık
+                        anılan tetikleyicilerden biri bu.</dd>
+                </div>
+                <div>
+                    <dt>Aldatıcı kadans</dt>
+                    <dd>Panik boyunca Do akoru "Fa minöre dön" diye bağırıyor. Drop'ta ise Re♭ majör geliyor. Beklenti
+                        kırılıyor, ama daha sıcak bir yere doğru.</dd>
+                </div>
+                <div>
+                    <dt>Saklanan nota</dt>
+                    <dd>Şarkı boyunca hep <span class="note">La♭</span> çalıyor. <span class="note">La</span> natürel ilk kez
+                        "Bir Gün Daha"nın sekizinci ölçüsünde duyuluyor. Minörden majöre bu kayış (Pikardi üçlüsü),
+                        şarkının en aydınlık anı.</dd>
+                </div>
+                <div>
+                    <dt>Sessizlik</dt>
+                    <dd>İki drop'tan önce de ses kesiliyor: önce bant duruyor, sonra bir nefes tutuluyor. Beklenti,
+                        ardından gelen sesten daha güçlü.</dd>
+                </div>
+                <div>
+                    <dt>Hicaz</dt>
+                    <dd>Panikteki riff, Fa armonik minörün beşinci modunda çalıyor. <span class="note">Re♭–Mi</span> arasındaki
+                        artık ikili, kulağın Hicaz diye tanıdığı renk.</dd>
+                </div>
+                <div>
+                    <dt>Lamento bası</dt>
+                    <dd>Verse'teki kromatik iniş (<span class="note">Fa–Mi–Mi♭–Re–Re♭–Do</span>) yüzyıllardır ağıtlarda
+                        kullanılan bas yürüyüşünün ta kendisi.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <footer>
+            <a class="dl" href="sinir-uclari.mp3" download="Sinir Uçları.mp3">⬇ MP3 indir (6 MB)</a>
+            <p>Her ses Python'da matematikle üretildi: band-limitli osilatörler, sıfır gecikmeli filtreler,
+                sentetik bir salon yankısı. Kaynak kodu depoda, <span class="note">music/sinir-uclari/</span> altında.</p>
+            <p>Claude ile yapıldı · cpucry.com</p>
+        </footer>
+    </main>
+
+    <audio id="audio" src="sinir-uclari.mp3" preload="metadata"></audio>
+    <noscript>
+        <p style="position:relative;z-index:2;text-align:center;padding:16px">
+            <audio controls src="sinir-uclari.mp3"></audio>
+        </p>
+    </noscript>
+
+    <script>
+        (() => {
+            'use strict';
+
+            // ---------------------------------------------------------------
+            // Sections: timing (s), palette (h s l) and the line shown while
+            // each one plays.  Times include the half second of lead-in.
+            // ---------------------------------------------------------------
+            const SECTIONS = [
+                { name: 'Nabız', start: 0, h: 200, s: 70, l: 62, line: 'Bir kalp atışı. Bir makine uyanıyor.' },
+                { name: 'Tek Başına', start: 18.278, h: 228, s: 58, l: 68, line: 'Bas yarım ses yarım ses iniyor. Robot ses sözsüz söylüyor.' },
+                { name: 'Panik', start: 53.833, h: 356, s: 85, l: 60, line: 'Do Hicaz. Nabız hızlanıyor. Her şey tek bir notada asılı.' },
+                { name: 'Bir Gün Daha', start: 71.611, h: 38, s: 92, l: 60, line: 'Beklenen yere değil, Re♭ majöre. Sonra ilk kez La natürel.' },
+                { name: 'Nefes', start: 107.167, h: 272, s: 55, l: 66, line: 'Işık yeniden sönüyor. Düşüşten önce nefesini tut.' },
+                { name: 'Işık', start: 124.944, h: 46, s: 100, l: 68, line: 'Aynı melodi, bir oktav yukarıda. Bu sefer yalnız değil.' },
+                { name: 'Yavaşla', start: 160.5, h: 18, s: 82, l: 63, line: 'Tempo aynı, his yarıya iniyor.' },
+                { name: 'Sabah', start: 169.389, h: 12, s: 70, l: 74, line: 'La♭ yerine La. Bir gün daha.' },
+            ];
+            const TOTAL = 194.67;
+
+            const audio = document.getElementById('audio');
+            const playBtn = document.getElementById('play');
+            const secName = document.getElementById('secName');
+            const secLine = document.getElementById('secLine');
+            const bar = document.getElementById('bar');
+            const fill = document.getElementById('fill');
+            const knob = document.getElementById('knob');
+            const cur = document.getElementById('cur');
+            const dur = document.getElementById('dur');
+            const storyItems = [...document.querySelectorAll('#storyList li')];
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            const fmt = (s) => {
+                s = Math.max(0, Math.floor(s || 0));
+                return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+            };
+            const duration = () => (isFinite(audio.duration) && audio.duration > 0 ? audio.duration : TOTAL);
+            const sectionAt = (t) => {
+                let k = 0;
+                for (let i = 0; i < SECTIONS.length; i++) if (t >= SECTIONS[i].start) k = i;
+                return k;
+            };
+
+            // section ticks on the timeline
+            SECTIONS.slice(1).forEach((s) => {
+                const tick = document.createElement('div');
+                tick.className = 'tick';
+                tick.style.left = (s.start / TOTAL * 100) + '%';
+                bar.insertBefore(tick, fill);
+            });
+
+            // ---------------------------------------------------------------
+            // Transport
+            // ---------------------------------------------------------------
+            let started = false;
+
+            function setState(state) {
+                playBtn.dataset.state = state;
+                playBtn.setAttribute('aria-label', state === 'playing' ? 'Duraklat' : state === 'ended' ? 'Baştan çal' : 'Çal');
+            }
+
+            async function toggle() {
+                if (audio.paused) {
+                    if (audio.ended) audio.currentTime = 0;
+                    try {
+                        await audio.play();
+                    } catch (e) {
+                        secLine.textContent = 'Ses başlatılamadı: tarayıcı oynatmayı engelledi.';
+                    }
+                } else {
+                    audio.pause();
+                }
+            }
+
+            function seek(t, play) {
+                audio.currentTime = Math.max(0, Math.min(duration() - 0.05, t));
+                if (play && audio.paused) toggle();
+            }
+
+            playBtn.addEventListener('click', toggle);
+            audio.addEventListener('play', () => { started = true; setState('playing'); });
+            audio.addEventListener('pause', () => setState(audio.ended ? 'ended' : 'paused'));
+            audio.addEventListener('ended', () => setState('ended'));
+            audio.addEventListener('loadedmetadata', () => { dur.textContent = fmt(duration()); });
+
+            function ratioFromEvent(ev) {
+                const r = bar.getBoundingClientRect();
+                return Math.max(0, Math.min(1, (ev.clientX - r.left) / r.width));
+            }
+            let dragging = false;
+            bar.addEventListener('pointerdown', (ev) => {
+                dragging = true;
+                bar.setPointerCapture(ev.pointerId);
+                seek(ratioFromEvent(ev) * duration(), false);
+            });
+            bar.addEventListener('pointermove', (ev) => { if (dragging) seek(ratioFromEvent(ev) * duration(), false); });
+            bar.addEventListener('pointerup', () => { dragging = false; });
+            bar.addEventListener('pointercancel', () => { dragging = false; });
+            bar.addEventListener('keydown', (ev) => {
+                if (ev.key === 'ArrowRight') { seek(audio.currentTime + 5); ev.preventDefault(); }
+                if (ev.key === 'ArrowLeft') { seek(audio.currentTime - 5); ev.preventDefault(); }
+                if (ev.key === 'Home') { seek(0); ev.preventDefault(); }
+            });
+            document.addEventListener('keydown', (ev) => {
+                if (ev.code === 'Space' && ev.target === document.body) { ev.preventDefault(); toggle(); }
+            });
+            storyItems.forEach((li) => {
+                li.querySelector('button').addEventListener('click', () => {
+                    seek(parseFloat(li.dataset.start), true);
+                    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+                });
+            });
+
+            if ('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: 'Sinir Uçları', artist: 'cpucry', album: 'cpucry.com',
+                });
+                navigator.mediaSession.setActionHandler('play', () => audio.play());
+                navigator.mediaSession.setActionHandler('pause', () => audio.pause());
+                try {
+                    navigator.mediaSession.setActionHandler('seekto', (d) => seek(d.seekTime));
+                } catch (e) { /* not supported */ }
+            }
+
+            // ---------------------------------------------------------------
+            // Visual features, precomputed from the stems (30 fps, 24 bytes a
+            // frame): 0-15 spectrum, 16 kick, 17 bass, 18 drums, 19 lead,
+            // 20 lead pitch, 21 pads, 22 level, 23 keys.
+            // ---------------------------------------------------------------
+            const FPS = 30, STRIDE = 24;
+            let V = null, nFrames = 0;
+            fetch('viz.bin')
+                .then((r) => (r.ok ? r.arrayBuffer() : null))
+                .then((b) => { if (b) { V = new Uint8Array(b); nFrames = Math.floor(V.length / STRIDE); } })
+                .catch(() => { });
+            const F = new Float32Array(STRIDE);
+
+            function sampleFeatures(t) {
+                if (!V || !nFrames) return false;
+                const f = t * FPS, i = Math.floor(f), a = f - i;
+                const i0 = Math.min(nFrames - 1, Math.max(0, i)), i1 = Math.min(nFrames - 1, i0 + 1);
+                const o0 = i0 * STRIDE, o1 = i1 * STRIDE;
+                for (let k = 0; k < STRIDE; k++) F[k] = (V[o0 + k] * (1 - a) + V[o1 + k] * a) / 255;
+                return true;
+            }
+
+            // idle: a slow heartbeat at 54 bpm, like the song's first bars
+            function idleFeatures(now) {
+                const beat = (now / 1000) % (60 / 54);
+                const lub = Math.exp(-beat / 0.09), dub = beat > 0.2 ? 0.6 * Math.exp(-(beat - 0.2) / 0.09) : 0;
+                for (let k = 0; k < 16; k++) F[k] = 0.12 + 0.07 * Math.sin(now / 1400 + k * 0.7);
+                F[16] = Math.min(1, lub + dub) * 0.7;
+                F[17] = F[18] = F[19] = F[20] = F[23] = 0;
+                F[21] = 0.25;
+                F[22] = 0.2;
+            }
+
+            // ---------------------------------------------------------------
+            // Canvas: a nerve cell.  The soma pulses with the kick, dendrites
+            // grow with the spectrum (lows at the bottom, highs on top) and
+            // fork when they fire; the sung melody is a ring that breathes
+            // with its pitch.
+            // ---------------------------------------------------------------
+            const canvas = document.getElementById('viz');
+            const g = canvas.getContext('2d');
+            let W = 0, H = 0, DPR = 1;
+
+            function resize() {
+                DPR = Math.min(2, window.devicePixelRatio || 1);
+                W = canvas.clientWidth;
+                H = canvas.clientHeight;
+                canvas.width = Math.round(W * DPR);
+                canvas.height = Math.round(H * DPR);
+                g.setTransform(DPR, 0, 0, DPR, 0, 0);
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            const N = 76;
+            const nerves = [];
+            for (let i = 0; i < N; i++) {
+                const a = (i / N) * Math.PI * 2 + (Math.random() - 0.5) * 0.05;
+                let d = (a - Math.PI / 2) % (Math.PI * 2);
+                if (d < 0) d += Math.PI * 2;
+                if (d > Math.PI) d = Math.PI * 2 - d;
+                nerves.push({
+                    a,
+                    band: (d / Math.PI) * 15,
+                    bend: (Math.random() - 0.5) * 0.9,
+                    reach: 0.62 + Math.random() * 0.38,
+                    phase: Math.random() * Math.PI * 2,
+                    e: 0,
+                    pts: [0, 0, 0, 0, 0, 0],
+                });
+            }
+            const pulses = [];
+            const sparks = [];
+            const pal = { h: SECTIONS[0].h, s: SECTIONS[0].s, l: SECTIONS[0].l };
+            let prevKick = 0, prevDrums = 0, prevKeys = 0, leadR = 0, lastSec = -1, lastCss = 0;
+
+            function lerpHue(a, b, k) {
+                let d = ((b - a + 540) % 360) - 180;
+                return (a + d * k + 360) % 360;
+            }
+            const hsla = (h, s, l, a) => `hsla(${h.toFixed(1)},${s.toFixed(1)}%,${l.toFixed(1)}%,${a.toFixed(3)})`;
+
+            const coreEl = document.querySelector('.core');
+
+            // centre on the play button; everything stays inside .core so the
+            // text above and below it remains readable
+            function geometry() {
+                const r = playBtn.getBoundingClientRect();
+                const c = coreEl.getBoundingClientRect();
+                return [r.left + r.width / 2, r.top + r.height / 2, r.width / 2, c.height / 2];
+            }
+
+            function bez(p, t) {
+                const u = 1 - t;
+                return [u * u * p[0] + 2 * u * t * p[2] + t * t * p[4], u * u * p[1] + 2 * u * t * p[3] + t * t * p[5]];
+            }
+
+            function frame(now) {
+                const t = audio.currentTime || 0;
+                const live = started && sampleFeatures(t);
+                if (!live) idleFeatures(now);
+                const playing = !audio.paused;
+
+                // ---- palette follows the section
+                const si = started ? sectionAt(t) : 0;
+                const target = SECTIONS[si];
+                const k = reduceMotion ? 1 : 0.035;
+                pal.h = lerpHue(pal.h, target.h, k);
+                pal.s += (target.s - pal.s) * k;
+                pal.l += (target.l - pal.l) * k;
+                if (now - lastCss > 120) {
+                    lastCss = now;
+                    const root = document.documentElement.style;
+                    root.setProperty('--accent', `hsl(${pal.h.toFixed(0)} ${pal.s.toFixed(0)}% ${pal.l.toFixed(0)}%)`);
+                    root.setProperty('--accent-soft', `hsl(${pal.h.toFixed(0)} ${pal.s.toFixed(0)}% ${pal.l.toFixed(0)}% / 0.16)`);
+                }
+                if (started && si !== lastSec) {
+                    lastSec = si;
+                    secName.textContent = target.name;
+                    secLine.textContent = target.line;
+                    storyItems.forEach((li, i) => li.classList.toggle('active', i === si));
+                }
+
+                // ---- transport UI
+                const d = duration();
+                const ratio = Math.min(1, t / d);
+                fill.style.width = (ratio * 100) + '%';
+                knob.style.left = (ratio * 100) + '%';
+                cur.textContent = fmt(t);
+                bar.setAttribute('aria-valuenow', t.toFixed(0));
+                bar.setAttribute('aria-valuetext', fmt(t));
+
+                // ---- scene
+                const [cx, cy, btnR, M] = geometry();
+                const R = btnR + 12;
+                const reachMax = Math.max(24, M * 0.96 - R * 1.1);
+                const kick = F[16], bass = F[17], drums = F[18], lead = F[19], pitch = F[20];
+                const pads = F[21], level = F[22], keys = F[23];
+
+                g.globalCompositeOperation = 'source-over';
+                const bg = g.createRadialGradient(cx, cy, 0, cx, cy, Math.max(W, H) * 0.9);
+                bg.addColorStop(0, hsla(pal.h, pal.s * 0.6, 6 + 7 * pads + 5 * level, 1));
+                bg.addColorStop(0.45, hsla(pal.h, pal.s * 0.35, 3.5 + 2 * pads, 1));
+                bg.addColorStop(1, '#050508');
+                g.fillStyle = bg;
+                g.fillRect(0, 0, W, H);
+                g.globalCompositeOperation = 'lighter';
+
+                const time = now / 1000;
+                const sway = reduceMotion ? 0 : 1;
+
+                // onsets -> action potentials travelling out along the nerves
+                if (live && playing && !reduceMotion) {
+                    if (kick - prevKick > 0.16 && kick > 0.5) {
+                        for (let j = 0; j < 7; j++) {
+                            const idx = Math.floor(Math.random() * N);
+                            if (nerves[idx].band < 9) pulses.push({ n: idx, p: 0, v: 1.6 + Math.random() * 0.8, s: 1 + kick });
+                        }
+                    }
+                    if (drums - prevDrums > 0.2 && drums > 0.45) {
+                        for (let j = 0; j < 3; j++) {
+                            const idx = Math.floor(Math.random() * N);
+                            if (nerves[idx].band > 7) pulses.push({ n: idx, p: 0, v: 2.4 + Math.random(), s: 0.8 });
+                        }
+                    }
+                    if (keys - prevKeys > 0.18 && keys > 0.4) {
+                        for (let j = 0; j < 4; j++) {
+                            const a = Math.random() * Math.PI * 2, r = R * 1.4 + Math.random() * (M - R * 1.4);
+                            sparks.push({ x: cx + Math.cos(a) * r, y: cy + Math.sin(a) * r, life: 1 });
+                        }
+                    }
+                }
+                prevKick = kick; prevDrums = drums; prevKeys = keys;
+
+                // dendrites
+                for (let i = 0; i < N; i++) {
+                    const n = nerves[i];
+                    const b = n.band, b0 = Math.floor(b), b1 = Math.min(15, b0 + 1), fb = b - b0;
+                    let e = F[b0] * (1 - fb) + F[b1] * fb;
+                    e = Math.pow(e, 1.35) * (0.55 + 0.45 * level) + (b < 4 ? 0.25 * bass : 0);
+                    n.e += (e - n.e) * (e > n.e ? 0.45 : 0.1);
+                    const E = n.e;
+                    const L = reachMax * n.reach * (0.22 + 0.78 * E);
+                    const w = sway * 0.07 * Math.sin(time * 0.6 + n.phase);
+                    const a0 = n.a, a1 = n.a + n.bend * 0.22 + w, a2 = n.a + n.bend * 0.45 + w * 1.6;
+                    const r0 = R * (1.02 + 0.12 * kick);
+                    const p = n.pts;
+                    p[0] = cx + Math.cos(a0) * r0; p[1] = cy + Math.sin(a0) * r0;
+                    p[2] = cx + Math.cos(a1) * (r0 + L * 0.55); p[3] = cy + Math.sin(a1) * (r0 + L * 0.55);
+                    p[4] = cx + Math.cos(a2) * (r0 + L); p[5] = cy + Math.sin(a2) * (r0 + L);
+
+                    g.beginPath();
+                    g.moveTo(p[0], p[1]);
+                    g.quadraticCurveTo(p[2], p[3], p[4], p[5]);
+                    g.strokeStyle = hsla(pal.h, pal.s, pal.l, 0.05 + 0.16 * E);
+                    g.lineWidth = 3 + 7 * E;
+                    g.stroke();
+                    g.strokeStyle = hsla(pal.h, pal.s * 0.8, Math.min(92, pal.l + 12 + 18 * E), 0.25 + 0.6 * E);
+                    g.lineWidth = 0.7 + 1.5 * E;
+                    g.stroke();
+
+                    if (E > 0.42) {  // the nerve fires: it forks at the tip
+                        const dirx = p[4] - p[2], diry = p[5] - p[3];
+                        const ang = Math.atan2(diry, dirx), fl = L * 0.26 * E;
+                        g.beginPath();
+                        for (const s of [-0.55, 0.5]) {
+                            g.moveTo(p[4], p[5]);
+                            g.lineTo(p[4] + Math.cos(ang + s) * fl, p[5] + Math.sin(ang + s) * fl);
+                        }
+                        g.strokeStyle = hsla(pal.h, pal.s * 0.7, Math.min(94, pal.l + 20), 0.2 + 0.5 * (E - 0.42));
+                        g.lineWidth = 0.8;
+                        g.stroke();
+                    }
+                }
+
+                // action potentials
+                for (let j = pulses.length - 1; j >= 0; j--) {
+                    const q = pulses[j];
+                    q.p += q.v / 60;
+                    if (q.p >= 1) { pulses.splice(j, 1); continue; }
+                    const [x, y] = bez(nerves[q.n].pts, q.p);
+                    const al = Math.sin(q.p * Math.PI);
+                    g.beginPath();
+                    g.arc(x, y, 1.4 + 1.8 * q.s * al, 0, Math.PI * 2);
+                    g.fillStyle = hsla(pal.h, 60, 88, 0.85 * al);
+                    g.fill();
+                }
+                if (pulses.length > 160) pulses.splice(0, pulses.length - 160);
+
+                // music-box sparks
+                for (let j = sparks.length - 1; j >= 0; j--) {
+                    const s = sparks[j];
+                    s.life -= 0.012;
+                    if (s.life <= 0) { sparks.splice(j, 1); continue; }
+                    g.beginPath();
+                    g.arc(s.x, s.y - (1 - s.life) * 14, 1.2 + s.life, 0, Math.PI * 2);
+                    g.fillStyle = hsla(pal.h, 40, 90, 0.8 * s.life);
+                    g.fill();
+                }
+
+                // soma
+                const glowR = R * (1.5 + 0.5 * kick);
+                const core = g.createRadialGradient(cx, cy, R * 0.2, cx, cy, glowR);
+                core.addColorStop(0, hsla(pal.h, pal.s, pal.l, 0.10 + 0.22 * kick));
+                core.addColorStop(0.6, hsla(pal.h, pal.s, pal.l, 0.05 + 0.10 * kick));
+                core.addColorStop(1, hsla(pal.h, pal.s, pal.l, 0));
+                g.fillStyle = core;
+                g.beginPath();
+                g.arc(cx, cy, glowR, 0, Math.PI * 2);
+                g.fill();
+                g.beginPath();
+                g.arc(cx, cy, R * (1 + 0.1 * kick), 0, Math.PI * 2);
+                g.strokeStyle = hsla(pal.h, pal.s, Math.min(90, pal.l + 10), 0.35 + 0.45 * kick);
+                g.lineWidth = 1.2 + 1.5 * kick;
+                g.stroke();
+
+                // the voice: a ring whose radius follows the sung pitch
+                if (pitch > 0) {
+                    const target = R * 1.3 + (M * 0.92 - R * 1.3) * pitch;
+                    leadR = leadR ? leadR + (target - leadR) * 0.18 : target;
+                }
+                if (lead > 0.05 && leadR) {
+                    g.beginPath();
+                    g.arc(cx, cy, leadR, 0, Math.PI * 2);
+                    g.strokeStyle = hsla(pal.h, pal.s * 0.5, 85, 0.06 + 0.12 * lead);
+                    g.lineWidth = 6 + 10 * lead;
+                    g.stroke();
+                    g.strokeStyle = hsla(pal.h, pal.s * 0.5, 90, 0.2 + 0.5 * lead);
+                    g.lineWidth = 0.8 + 1.4 * lead;
+                    g.stroke();
+                }
+
+                requestAnimationFrame(frame);
+            }
+            requestAnimationFrame(frame);
+        })();
+    </script>
+</body>
+
+</html>
