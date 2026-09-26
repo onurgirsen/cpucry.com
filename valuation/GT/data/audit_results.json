@@ -1,0 +1,170 @@
+{
+ "checks": [
+  {
+   "check": "bull EV matches engine",
+   "ok": true,
+   "detail": "workbook 11,724.0 vs engine 11,724.0"
+  },
+  {
+   "check": "bull value/share matches engine",
+   "ok": true,
+   "detail": "workbook 17.048 vs engine 17.048"
+  },
+  {
+   "check": "bull terminal-value share < 75%",
+   "ok": true,
+   "detail": "TV share 48.3%"
+  },
+  {
+   "check": "base EV matches engine",
+   "ok": true,
+   "detail": "workbook 7,475.3 vs engine 7,475.3"
+  },
+  {
+   "check": "base value/share matches engine",
+   "ok": true,
+   "detail": "workbook 2.002 vs engine 2.002"
+  },
+  {
+   "check": "base terminal-value share < 75%",
+   "ok": true,
+   "detail": "TV share 45.9%"
+  },
+  {
+   "check": "bear EV matches engine",
+   "ok": true,
+   "detail": "workbook 2,933.0 vs engine 2,933.0"
+  },
+  {
+   "check": "bear value/share matches engine",
+   "ok": true,
+   "detail": "workbook 0.000 vs engine 0.000"
+  },
+  {
+   "check": "bear terminal-value share < 75%",
+   "ok": true,
+   "detail": "TV share 45.3%"
+  },
+  {
+   "check": "probability-weighted DCF matches engine",
+   "ok": true,
+   "detail": "3.482 vs 3.482"
+  },
+  {
+   "check": "EPV (6%) matches engine",
+   "ok": true,
+   "detail": "0.154 vs 0.154"
+  },
+  {
+   "check": "Merton matches engine",
+   "ok": true,
+   "detail": "5.609 vs 5.609"
+  },
+  {
+   "check": "Comps central matches engine",
+   "ok": true,
+   "detail": "5.952 vs 5.952"
+  },
+  {
+   "check": "SOTP matches engine",
+   "ok": true,
+   "detail": "6.332 vs 6.332"
+  },
+  {
+   "check": "Transactions (control) matches engine",
+   "ok": true,
+   "detail": "4.492 vs 4.492"
+  },
+  {
+   "check": "Blended value matches engine",
+   "ok": true,
+   "detail": "3.960 vs 3.960"
+  },
+  {
+   "check": "Sensitivity grid centre equals base DCF",
+   "ok": true,
+   "detail": "2.002 vs base 2.002"
+  },
+  {
+   "check": "Scenario probabilities sum to 100%",
+   "ok": true,
+   "detail": "1.0000"
+  },
+  {
+   "check": "Method weights sum to 100%",
+   "ok": true,
+   "detail": "1.0000"
+  },
+  {
+   "check": "Single WACC cell drives every discounting formula",
+   "ok": true,
+   "detail": "all reference Drivers!B21"
+  },
+  {
+   "check": "Per-share formulas divide by Drivers!B5 (diluted shares)",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "No dead driver cells",
+   "ok": true,
+   "detail": "all drivers used"
+  },
+  {
+   "check": "Bull: cumulative levered cash burn within liquidity",
+   "ok": true,
+   "detail": "worst cumulative levered FCF 0 vs liquidity 4,752"
+  },
+  {
+   "check": "Base: cumulative levered cash burn within liquidity",
+   "ok": true,
+   "detail": "worst cumulative levered FCF -85 vs liquidity 4,752"
+  },
+  {
+   "check": "Bear: cumulative levered cash burn within liquidity",
+   "ok": true,
+   "detail": "worst cumulative levered FCF -3,144 vs liquidity 4,752"
+  },
+  {
+   "check": "Bull: implied terminal EV/EBITDA inside peer range [3.5x, 6.2x]",
+   "ok": true,
+   "detail": "5.04x"
+  },
+  {
+   "check": "Base: implied terminal EV/EBITDA inside peer range [3.5x, 6.2x]",
+   "ok": true,
+   "detail": "3.83x"
+  },
+  {
+   "check": "Bear: implied terminal EV/EBITDA inside peer range [3.5x, 6.2x]",
+   "ok": false,
+   "detail": "2.07x"
+  },
+  {
+   "check": "SOTP Americas multiple inside peer range",
+   "ok": true,
+   "detail": "5.00x vs [3.53, 6.19]"
+  },
+  {
+   "check": "SOTP EMEA multiple inside peer range",
+   "ok": true,
+   "detail": "4.00x vs [3.53, 6.19]"
+  },
+  {
+   "check": "SOTP APAC multiple inside peer range",
+   "ok": true,
+   "detail": "6.50x vs [3.53, 6.19]"
+  },
+  {
+   "check": "GT own-history multiple multiple inside peer range",
+   "ok": true,
+   "detail": "4.50x vs [3.53, 6.19]"
+  },
+  {
+   "check": "No formula errors after recalculation",
+   "ok": true,
+   "detail": ""
+  }
+ ],
+ "n_fail": 1
+}

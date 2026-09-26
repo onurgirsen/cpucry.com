@@ -1,0 +1,283 @@
+{
+ "meta": {
+  "company": "The Goodyear Tire & Rubber Company",
+  "ticker": "GT (Nasdaq)",
+  "cik": "0000042582",
+  "valuation_date": "2026-09-26",
+  "balance_sheet_date": "2026-06-30",
+  "price_reference": 5.125,
+  "price_date": "2026-09-25",
+  "currency": "USD millions unless stated",
+  "note": "Price is recorded for the reverse DCF and the final comparison only; every intrinsic input below is set from filings, history, guidance-confidence scores and peer data."
+ },
+ "claims": {
+  "total_debt": 7190,
+  "cash": 861,
+  "net_debt": 6329,
+  "pension_opeb_net_deficit": 369,
+  "asbestos_net": 50,
+  "minority_interest": 162,
+  "operating_lease_liabilities_memo": 1023,
+  "offbalance_factoring_memo": 830,
+  "supplier_finance_memo": 550,
+  "diluted_shares": 290,
+  "sources": "10-Q Q2-2026 balance sheet & liquidity; 10-K 2025 pension note (US +77, non-US -215, OPEB -231) and asbestos note (gross 107 less receivable 57). Op. leases stay in opex in the DCF (not added as debt); factoring cost is deducted in FCFF instead of adding factored receivables as debt."
+ },
+ "wacc": {
+  "risk_free": 0.052,
+  "equity_risk_premium": 0.045,
+  "asset_beta": 1.0,
+  "debt_beta": 0.5,
+  "target_debt_to_value": 0.5,
+  "tax_shield_rate": 0.1,
+  "promised_yield_unsecured": 0.0875,
+  "rationale": "rf = 10y UST 5.18% (2026-09-25). ERP 4.5%. Asset beta 1.0 = tire-peer range 0.9-1.15 (GT's own 2y/3y/5y weekly betas 0.57/0.85/1.38 too noisy, corr<0.45). Expected return on B+/BB- debt = rf + 0.5*ERP = 7.45% (promised ~8.75-8.9% incl. expected default loss). Tax shield only 10% because US and Luxembourg DTAs carry full valuation allowances.",
+  "base_wacc": 0.0925,
+  "range_low": 0.0825,
+  "range_high": 0.1025
+ },
+ "common": {
+  "h2_2026_interest_cash": 225,
+  "corporate_cost_2026": 150,
+  "corporate_inflation": 0.025,
+  "nwc_pct_revenue": 0.115,
+  "financing_fees": 35,
+  "deferred_revenue_noncash": {
+   "2027": 55,
+   "2028": 55,
+   "2029": 55,
+   "2030": 55,
+   "2031": 40
+  },
+  "tax_floor_2026": 150,
+  "tax_floor_growth": 0.025,
+  "tax_rate_to_2032": 0.2,
+  "tax_rate_terminal": 0.24,
+  "da_2027": 900,
+  "revenue_2026": 17450,
+  "forecast_last_year": 2035,
+  "roll_forward_years": 0.24,
+  "financing_fees_note": "Cash cost of receivable factoring/securitization (~$35m of the ~$60m guided financing fees; the rest is revolver commitment fees and non-cash issuance-cost amortization, treated as cost of debt)."
+ },
+ "scenarios": {
+  "bull": {
+   "probability": 0.15,
+   "h2_2026_fcff": 962,
+   "fy2026_levered_fcf": -225,
+   "revenue_growth": {
+    "2027": 0.03,
+    "2028": 0.035,
+    "2029": 0.03,
+    "2030": 0.03,
+    "2031": 0.03,
+    "2032": 0.025,
+    "2033": 0.025,
+    "2034": 0.025,
+    "2035": 0.025
+   },
+   "soi_margin": {
+    "2027": 0.06,
+    "2028": 0.07,
+    "2029": 0.078,
+    "2030": 0.08,
+    "2031": 0.08,
+    "2032": 0.08,
+    "2033": 0.08,
+    "2034": 0.08,
+    "2035": 0.08
+   },
+   "capex_pct": 0.043,
+   "capex_2027": 775,
+   "restructuring": {
+    "2027": 230,
+    "2028": 110,
+    "later": 75
+   },
+   "terminal_growth": 0.02,
+   "ronic": 0.11,
+   "narrative": "Management plan largely delivered: Fayetteville/EMEA savings ~90% retained, replacement volumes recover, pricing holds; SOI margin 8% (still below the retired 10% target and peer ~11%)."
+  },
+  "base": {
+   "probability": 0.45,
+   "h2_2026_fcff": 862,
+   "fy2026_levered_fcf": -325,
+   "revenue_growth": {
+    "2027": 0.02,
+    "2028": 0.025,
+    "2029": 0.025,
+    "2030": 0.025,
+    "2031": 0.025,
+    "2032": 0.02,
+    "2033": 0.02,
+    "2034": 0.02,
+    "2035": 0.02
+   },
+   "soi_margin": {
+    "2027": 0.05,
+    "2028": 0.056,
+    "2029": 0.059,
+    "2030": 0.06,
+    "2031": 0.06,
+    "2032": 0.06,
+    "2033": 0.06,
+    "2034": 0.06,
+    "2035": 0.06
+   },
+   "capex_pct": 0.046,
+   "capex_2027": 775,
+   "restructuring": {
+    "2027": 250,
+    "2028": 150,
+    "later": 100
+   },
+   "terminal_growth": 0.015,
+   "ronic": "wacc",
+   "narrative": "Recovery to the 2021-2025 average SOI margin (~6%): unabsorbed overhead reverses, footprint savings ~50% net of inflation, continued share loss at the low end. Growth adds no value (RONIC = WACC)."
+  },
+  "bear": {
+   "probability": 0.28,
+   "h2_2026_fcff": 737,
+   "fy2026_levered_fcf": -450,
+   "revenue_growth": {
+    "2027": 0.005,
+    "2028": 0.01,
+    "2029": 0.01,
+    "2030": 0.01,
+    "2031": 0.01,
+    "2032": 0.01,
+    "2033": 0.01,
+    "2034": 0.01,
+    "2035": 0.01
+   },
+   "soi_margin": {
+    "2027": 0.038,
+    "2028": 0.04,
+    "2029": 0.04,
+    "2030": 0.04,
+    "2031": 0.04,
+    "2032": 0.04,
+    "2033": 0.04,
+    "2034": 0.04,
+    "2035": 0.04
+   },
+   "capex_pct": 0.048,
+   "capex_2027": 750,
+   "restructuring": {
+    "2027": 275,
+    "2028": 175,
+    "later": 150
+   },
+   "terminal_growth": 0.01,
+   "ronic": 0.07,
+   "narrative": "Low-cost imports keep taking share, savings consumed by inflation (as in 2024-25), EMEA stays near break-even; margins stuck near the 2023-2026 average (~4%)."
+  },
+  "distress": {
+   "probability": 0.12,
+   "equity_value_per_share": 0.2,
+   "narrative": "Bear operations plus a refinancing/liquidity event (8.875% marginal cost of debt, leverage >5x): debt-for-equity exchange or deeply dilutive rescue equity; legacy shareholders keep a residual option only."
+  }
+ },
+ "probability_rationale": "Anchored on (i) GT's own margin record: SOI margin >=8% in 0 of the last 7 years, 6-8% in 4, <6% in 3 (plus H1-26 at 1.6%); (ii) medium-term margin-target confidence score 0/100 -> management-style outcome confined to a 15% bull case; (iii) B+/B1 ratings, negative 2026 FCF and 3.8x LTM leverage vs 5-year cumulative default rates of roughly 10-15% for single-B+ issuers -> 12% distress. Judgment is used for the 45/28 split between base and bear.",
+ "monte_carlo": {
+  "n": 20000,
+  "seed": 42,
+  "lr_margin_mean": 0.057,
+  "lr_margin_sd": 0.014,
+  "lr_margin_min": 0.01,
+  "lr_margin_max": 0.1,
+  "soi_2026_mean": 570,
+  "soi_2026_sd": 45,
+  "recovery_years_min": 2,
+  "recovery_years_max": 4,
+  "growth_mean": 0.02,
+  "growth_sd": 0.01,
+  "corr_margin_growth": 0.4,
+  "capex_pct_mean": 0.046,
+  "capex_pct_sd": 0.003,
+  "restructuring_min": 60,
+  "restructuring_max": 160,
+  "wacc_mean": 0.0925,
+  "wacc_sd": 0.006,
+  "g_min": 0.005,
+  "g_max": 0.02,
+  "ronic_spread_sd": 0.015,
+  "tax_terminal_min": 0.21,
+  "tax_terminal_max": 0.26,
+  "h2_fcff_mean": 862,
+  "h2_fcff_sd": 90,
+  "distress_leverage_trigger": 6.0,
+  "distress_equity_per_share": 0.2
+ },
+ "epv": {
+  "midcycle_soi_margin": 0.06,
+  "revenue_basis": 17600,
+  "restructuring": 100,
+  "tax_rate": 0.23,
+  "seasonal_wc_release_h2_2026": 620
+ },
+ "comps": {
+  "peer_ev_ebitda_p25": 4.32,
+  "peer_ev_ebitda_median": 5.32,
+  "peer_ev_ebitda_p75": 5.68,
+  "gt_hist_ev_ebitda_median": 4.5,
+  "lease_cost_addback": 318,
+  "gt_hist_ev_ebitda_note": "Median of GT year-end EV/adj. EBITDA 2022-2025 (4.66, 6.19, 4.35, 4.17); 2015-2025 median 5.25x reflects a lower-rate, higher-margin era."
+ },
+ "merton": {
+  "asset_vol": 0.22,
+  "maturity_years": 5.0,
+  "risk_free_5y": 0.047
+ },
+ "sotp": {
+  "midcycle": {
+   "americas": {
+    "revenue": 10300,
+    "soi_margin": 0.07,
+    "da": 480,
+    "ev_ebitda": 5.0
+   },
+   "emea": {
+    "revenue": 5700,
+    "soi_margin": 0.025,
+    "da": 290,
+    "ev_ebitda": 4.0
+   },
+   "apac": {
+    "revenue": 1950,
+    "soi_margin": 0.12,
+    "da": 130,
+    "ev_ebitda": 6.5
+   }
+  },
+  "corporate_cost": 155,
+  "corporate_multiple": 5.5,
+  "pv_restructuring_2027_2029": 450,
+  "years_to_midcycle": 1.5
+ },
+ "transactions": {
+  "cooper_2021": {
+   "ev_ebitda": 6.4,
+   "note": "EV ~$2.5bn (equity $2.8bn at $54.36/sh less net cash ~$0.3bn) / 2020 EBITDA $390m (op. income 231 + D&A 159, SEC XBRL)"
+  },
+  "otr_2025": {
+   "ev_ebitda": 7.2,
+   "note": "$905m / est. EBITDA ~$125m (analyst estimate; segment disclosure only)"
+  },
+  "chemical_2025": {
+   "ev_ebitda": 4.3,
+   "note": "$650m / est. EBITDA ~$150m (SOI impact ~$120m + D&A ~$30m)"
+  },
+  "dunlop_brand_2025": {
+   "ev_soi": 9.7,
+   "note": "$631m (brand + transition fee) / $65m annual SOI impact"
+  },
+  "control_multiple_applied": 6.0,
+  "minority_discount": 0.2
+ },
+ "residual_income": {
+  "cost_of_equity": 0.14,
+  "book_equity_jun26": 2839,
+  "terminal_fade": "Ohlson-style: residual income after 2035 persists with factor 0.9 per year",
+  "persistence": 0.9
+ }
+}

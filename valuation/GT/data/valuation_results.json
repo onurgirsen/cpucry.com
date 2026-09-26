@@ -1,0 +1,1474 @@
+{
+ "meta": {
+  "company": "The Goodyear Tire & Rubber Company",
+  "ticker": "GT (Nasdaq)",
+  "cik": "0000042582",
+  "valuation_date": "2026-09-26",
+  "balance_sheet_date": "2026-06-30",
+  "price_reference": 5.125,
+  "price_date": "2026-09-25",
+  "currency": "USD millions unless stated",
+  "note": "Price is recorded for the reverse DCF and the final comparison only; every intrinsic input below is set from filings, history, guidance-confidence scores and peer data."
+ },
+ "wacc_build": {
+  "unlevered_cost": 0.097,
+  "cost_of_debt_expected": 0.0745,
+  "cost_of_debt_promised": 0.0875,
+  "beta_equity_target": 1.45,
+  "cost_of_equity_target": 0.11725,
+  "wacc_computed": 0.09215,
+  "beta_equity_market": 3.092178301093356,
+  "cost_of_equity_market": 0.19114802354920102,
+  "market_de": 4.649285113540791
+ },
+ "claims_0630": 6910,
+ "roll_factor": 1.0269660511999177,
+ "scenarios": {
+  "bull": {
+   "ev": 11724.047049946437,
+   "pv_explicit": 6065.512767679446,
+   "pv_tv": 5658.534282266991,
+   "tv_share": 0.4826434300511309,
+   "tv": 13113.169805030995,
+   "nopat_T1": 1161.9725466124687,
+   "equity_0630": 4814.047049946437,
+   "equity_now": 4943.8628891741055,
+   "per_share": 17.047803066117606,
+   "wacc": 0.0925,
+   "terminal_growth": 0.02,
+   "ronic": 0.11,
+   "implied_tv_ev_ebitda": 5.041845765947402,
+   "leverage_path": [
+    {
+     "year": 2027,
+     "net_debt": 5482.1385,
+     "net_debt_to_ebitda": 3.0044712439577785,
+     "interest": 405.846
+    },
+    {
+     "year": 2028,
+     "net_debt": 5158.69281175,
+     "net_debt_to_ebitda": 2.586405179244607,
+     "interest": 398.9247255
+    },
+    {
+     "year": 2029,
+     "net_debt": 4664.99798293275,
+     "net_debt_to_ebitda": 2.149839290049094,
+     "interest": 378.54764714025004
+    },
+    {
+     "year": 2030,
+     "net_debt": 4096.781393394389,
+     "net_debt_to_ebitda": 1.8159137841536177,
+     "interest": 347.4448729247633
+    },
+    {
+     "year": 2031,
+     "net_debt": 3454.9756135130915,
+     "net_debt_to_ebitda": 1.4924799761511567,
+     "interest": 311.6472277838465
+    },
+    {
+     "year": 2032,
+     "net_debt": 2697.0601967451335,
+     "net_debt_to_ebitda": 1.137958161673255,
+     "interest": 271.2134636513248
+    },
+    {
+     "year": 2033,
+     "net_debt": 1921.6311125456346,
+     "net_debt_to_ebitda": 0.7914508784281236,
+     "interest": 223.4647923949434
+    },
+    {
+     "year": 2034,
+     "net_debt": 1070.9647359285837,
+     "net_debt_to_ebitda": 0.4304507037418744,
+     "interest": 174.612760090375
+    },
+    {
+     "year": 2035,
+     "net_debt": 139.32294256791124,
+     "net_debt_to_ebitda": 0.05463924394330452,
+     "interest": 121.02077836350077
+    }
+   ],
+   "table": [
+    {
+     "year": 2027,
+     "revenue": 17973.5,
+     "soi": 1078.4099999999999,
+     "soi_margin": 0.06,
+     "corporate": 153.75,
+     "ebit": 924.6599999999999,
+     "da": 900,
+     "ebitda": 1824.6599999999999,
+     "capex": 775,
+     "d_nwc": 60.2025,
+     "restructuring": 230,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 153.75,
+     "fcff": 515.7074999999999,
+     "discount_t": 1,
+     "pv_fcff": 472.04347826086945
+    },
+    {
+     "year": 2028,
+     "revenue": 18602.5725,
+     "soi": 1302.180075,
+     "soi_margin": 0.07,
+     "corporate": 157.59375,
+     "ebit": 1144.586325,
+     "da": 849.9553087499999,
+     "ebitda": 1994.5416337499998,
+     "capex": 799.9106174999998,
+     "d_nwc": 72.34333749999982,
+     "restructuring": 110,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 199.91726500000001,
+     "fcff": 722.3704137500001,
+     "discount_t": 2,
+     "pv_fcff": 605.2252784483346
+    },
+    {
+     "year": 2029,
+     "revenue": 19160.649675,
+     "soi": 1494.53067465,
+     "soi_margin": 0.078,
+     "corporate": 161.53359374999994,
+     "ebit": 1332.9970809000001,
+     "da": 836.9316223874998,
+     "ebitda": 2169.9287032875,
+     "capex": 823.9079360249999,
+     "d_nwc": 64.17887512500025,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 244.59941618000005,
+     "fcff": 872.2424759574999,
+     "discount_t": 3,
+     "pv_fcff": 668.9180190216932
+    },
+    {
+     "year": 2030,
+     "revenue": 19735.46916525,
+     "soi": 1578.83753322,
+     "soi_margin": 0.08,
+     "corporate": 165.57193359374992,
+     "ebit": 1413.2655996262502,
+     "da": 842.7783982466249,
+     "ebitda": 2256.043997872875,
+     "capex": 848.6251741057499,
+     "d_nwc": 66.10424137874999,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 260.65311992525005,
+     "fcff": 915.6614624631252,
+     "discount_t": 4,
+     "pv_fcff": 642.7604613565029
+    },
+    {
+     "year": 2031,
+     "revenue": 20327.5332402075,
+     "soi": 1626.2026592166,
+     "soi_margin": 0.08,
+     "corporate": 169.71123193359367,
+     "ebit": 1456.4914272830065,
+     "da": 858.4311637877736,
+     "ebitda": 2314.92259107078,
+     "capex": 874.0839293289224,
+     "d_nwc": 68.08736862011246,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 40,
+     "cash_tax": 269.2982854566013,
+     "fcff": 953.453007665144,
+     "discount_t": 5,
+     "pv_fcff": 612.6212609254043
+    },
+    {
+     "year": 2032,
+     "revenue": 20835.721571212685,
+     "soi": 1666.8577256970148,
+     "soi_margin": 0.08,
+     "corporate": 173.9540127319335,
+     "ebit": 1492.9037129650812,
+     "da": 877.1835956749595,
+     "ebitda": 2370.0873086400406,
+     "capex": 895.9360275621455,
+     "d_nwc": 58.441658065596314,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 276.5807425930163,
+     "fcff": 1029.1288804192827,
+     "discount_t": 6,
+     "pv_fcff": 605.258771629943
+    },
+    {
+     "year": 2033,
+     "revenue": 21356.614610493,
+     "soi": 1708.5291688394402,
+     "soi_margin": 0.08,
+     "corporate": 178.30286305023185,
+     "ebit": 1530.2263057892083,
+     "da": 897.7590119630793,
+     "ebitda": 2427.9853177522873,
+     "capex": 918.334428251199,
+     "d_nwc": 59.90269951723633,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 340.85431338941,
+     "fcff": 998.8938765944422,
+     "discount_t": 7,
+     "pv_fcff": 537.7361473671092
+    },
+    {
+     "year": 2034,
+     "revenue": 21890.529975755326,
+     "soi": 1751.242398060426,
+     "soi_margin": 0.08,
+     "corporate": 182.76043462648758,
+     "ebit": 1568.4819634339385,
+     "da": 919.5259004602791,
+     "ebitda": 2488.0078638942177,
+     "capex": 941.2927889574789,
+     "d_nwc": 61.400267005167315,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 350.03567122414523,
+     "fcff": 1025.279136707426,
+     "discount_t": 8,
+     "pv_fcff": 505.2083907423222
+    },
+    {
+     "year": 2035,
+     "revenue": 22437.793225149206,
+     "soi": 1795.0234580119366,
+     "soi_margin": 0.08,
+     "corporate": 187.32944549214977,
+     "ebit": 1607.6940125197868,
+     "da": 942.1755045708474,
+     "ebitda": 2549.869517090634,
+     "capex": 964.8251086814157,
+     "d_nwc": 62.9352736802962,
+     "restructuring": 75,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 359.44656300474884,
+     "fcff": 1052.6625717241732,
+     "discount_t": 9,
+     "pv_fcff": 474.78410465064485
+    }
+   ]
+  },
+  "base": {
+   "ev": 7475.271323089362,
+   "pv_explicit": 4042.9310418918512,
+   "pv_tv": 3432.3402811975106,
+   "tv_share": 0.4591592910608897,
+   "tv": 7954.155385616715,
+   "nopat_T1": 735.7593731695462,
+   "equity_0630": 565.2713230893623,
+   "equity_now": 580.5144585296352,
+   "per_share": 2.001773994929777,
+   "wacc": 0.0925,
+   "terminal_growth": 0.015,
+   "ronic": 0.0925,
+   "implied_tv_ev_ebitda": 3.826057293021461,
+   "leverage_path": [
+    {
+     "year": 2027,
+     "net_debt": 5776.831,
+     "net_debt_to_ebitda": 3.530638674978609,
+     "interest": 412.146
+    },
+    {
+     "year": 2028,
+     "net_debt": 5748.629803,
+     "net_debt_to_ebitda": 3.3158534972660982,
+     "interest": 417.490353
+    },
+    {
+     "year": 2029,
+     "net_debt": 5621.853706213999,
+     "net_debt_to_ebitda": 3.1117072491155997,
+     "interest": 415.713677589
+    },
+    {
+     "year": 2030,
+     "net_debt": 5467.157632986731,
+     "net_debt_to_ebitda": 2.9428276884548175,
+     "interest": 407.72678349148197
+    },
+    {
+     "year": 2031,
+     "net_debt": 5276.191207603177,
+     "net_debt_to_ebitda": 2.7804192912509595,
+     "interest": 397.9809308781641
+    },
+    {
+     "year": 2032,
+     "net_debt": 5009.2347049133095,
+     "net_debt_to_ebitda": 2.5906181518550735,
+     "interest": 385.9500460790001
+    },
+    {
+     "year": 2033,
+     "net_debt": 4748.0238340531205,
+     "net_debt_to_ebitda": 2.409128361397719,
+     "interest": 369.1317864095385
+    },
+    {
+     "year": 2034,
+     "net_debt": 4456.655942569215,
+     "net_debt_to_ebitda": 2.2182437891062854,
+     "interest": 352.6755015453466
+    },
+    {
+     "year": 2035,
+     "net_debt": 4132.833778965959,
+     "net_debt_to_ebitda": 2.017768691342536,
+     "interest": 334.31932438186055
+    }
+   ],
+   "table": [
+    {
+     "year": 2027,
+     "revenue": 17799.0,
+     "soi": 889.95,
+     "soi_margin": 0.05,
+     "corporate": 153.75,
+     "ebit": 736.2,
+     "da": 900,
+     "ebitda": 1636.2,
+     "capex": 775,
+     "d_nwc": 40.135000000000005,
+     "restructuring": 250,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 153.75,
+     "fcff": 327.31500000000005,
+     "discount_t": 1,
+     "pv_fcff": 299.6018306636156
+    },
+    {
+     "year": 2028,
+     "revenue": 18243.975,
+     "soi": 1021.6625999999999,
+     "soi_margin": 0.056,
+     "corporate": 157.59375,
+     "ebit": 864.0688499999999,
+     "da": 869.6114249999999,
+     "ebitda": 1733.6802749999997,
+     "capex": 839.2228499999999,
+     "d_nwc": 51.17212499999984,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 157.59375,
+     "fcff": 445.69155,
+     "discount_t": 2,
+     "pv_fcff": 373.4147845985474
+    },
+    {
+     "year": 2029,
+     "revenue": 18700.074374999997,
+     "soi": 1103.3043881249998,
+     "soi_margin": 0.059,
+     "corporate": 161.53359374999994,
+     "ebit": 941.7707943749999,
+     "da": 864.9074231249999,
+     "ebitda": 1806.6782174999998,
+     "capex": 860.2034212499998,
+     "d_nwc": 52.451428124999765,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 161.53359374999994,
+     "fcff": 542.4897743750004,
+     "discount_t": 3,
+     "pv_fcff": 416.0324625513101
+    },
+    {
+     "year": 2030,
+     "revenue": 19167.576234374996,
+     "soi": 1150.0545740624998,
+     "soi_margin": 0.06,
+     "corporate": 165.57193359374992,
+     "ebit": 984.4826404687499,
+     "da": 873.3079649531248,
+     "ebitda": 1857.7906054218747,
+     "capex": 881.7085067812498,
+     "d_nwc": 53.76271382812491,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 169.89652809375,
+     "fcff": 562.42285671875,
+     "discount_t": 4,
+     "pv_fcff": 394.8000321969914
+    },
+    {
+     "year": 2031,
+     "revenue": 19646.765640234367,
+     "soi": 1178.805938414062,
+     "soi_margin": 0.06,
+     "corporate": 169.71123193359367,
+     "ebit": 1009.0947064804683,
+     "da": 888.5295922019529,
+     "ebitda": 1897.6242986824213,
+     "capex": 903.7512194507809,
+     "d_nwc": 55.10678167382774,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 40,
+     "cash_tax": 174.81894129609367,
+     "fcff": 588.9473562617189,
+     "discount_t": 5,
+     "pv_fcff": 378.41578883398137
+    },
+    {
+     "year": 2032,
+     "revenue": 20039.700953039053,
+     "soi": 1202.3820571823433,
+     "soi_margin": 0.06,
+     "corporate": 173.9540127319335,
+     "ebit": 1028.4280444504097,
+     "da": 905.1779180208747,
+     "ebitda": 1933.6059624712843,
+     "capex": 921.8262438397965,
+     "d_nwc": 45.18756097253889,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 178.68560889008197,
+     "fcff": 652.9065487688672,
+     "discount_t": 6,
+     "pv_fcff": 383.9921541566191
+    },
+    {
+     "year": 2033,
+     "revenue": 20440.494972099834,
+     "soi": 1226.4296983259899,
+     "soi_margin": 0.06,
+     "corporate": 178.30286305023185,
+     "ebit": 1048.126835275758,
+     "da": 922.7203433687334,
+     "ebitda": 1970.8471786444914,
+     "capex": 940.2627687165923,
+     "d_nwc": 46.091312191989765,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 219.1504404661819,
+     "fcff": 630.3426572697274,
+     "discount_t": 7,
+     "pv_fcff": 339.33337663154845
+    },
+    {
+     "year": 2034,
+     "revenue": 20849.30487154183,
+     "soi": 1250.9582922925097,
+     "soi_margin": 0.06,
+     "corporate": 182.76043462648758,
+     "ebit": 1068.1978576660222,
+     "da": 940.8941837298288,
+     "ebitda": 2009.092041395851,
+     "capex": 959.0680240909242,
+     "d_nwc": 47.01313843582955,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 223.96748583984532,
+     "fcff": 644.0433930292521,
+     "discount_t": 8,
+     "pv_fcff": 317.3536986283013
+    },
+    {
+     "year": 2035,
+     "revenue": 21266.290968972666,
+     "soi": 1275.97745813836,
+     "soi_margin": 0.06,
+     "corporate": 187.32944549214977,
+     "ebit": 1088.6480126462102,
+     "da": 959.5717841512858,
+     "ebitda": 2048.219796797496,
+     "capex": 978.2493845727427,
+     "d_nwc": 47.95340120454612,
+     "restructuring": 100,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 228.87552303509042,
+     "fcff": 658.1414879851167,
+     "discount_t": 9,
+     "pv_fcff": 296.842621272882
+    }
+   ]
+  },
+  "bear": {
+   "ev": 2932.9509075489477,
+   "pv_explicit": 1603.4378664169965,
+   "pv_tv": 1329.5130411319512,
+   "tv_share": 0.45330218030925673,
+   "tv": 3081.032895921903,
+   "nopat_T1": 296.54941623248317,
+   "equity_0630": -3977.0490924510523,
+   "equity_now": 0.0,
+   "per_share": 0.0,
+   "wacc": 0.0925,
+   "terminal_growth": 0.01,
+   "ronic": 0.07,
+   "implied_tv_ev_ebitda": 2.0679545493177605,
+   "leverage_path": [
+    {
+     "year": 2027,
+     "net_debt": 6103.13925,
+     "net_debt_to_ebitda": 4.3203003471097725,
+     "interest": 420.021
+    },
+    {
+     "year": 2028,
+     "net_debt": 6408.14040025,
+     "net_debt_to_ebitda": 4.493742695242234,
+     "interest": 438.04777275000004
+    },
+    {
+     "year": 2029,
+     "net_debt": 6725.05249924075,
+     "net_debt_to_ebitda": 4.732746879304528,
+     "interest": 457.26284521575
+    },
+    {
+     "year": 2030,
+     "net_debt": 7071.446825818167,
+     "net_debt_to_ebitda": 4.9649478347590215,
+     "interest": 477.22830745216726
+    },
+    {
+     "year": 2031,
+     "net_debt": 7430.1599456690265,
+     "net_debt_to_ebitda": 5.189397822503297,
+     "interest": 499.0511500265445
+    },
+    {
+     "year": 2032,
+     "net_debt": 7775.0285149767415,
+     "net_debt_to_ebitda": 5.393894377859422,
+     "interest": 521.6500765771488
+    },
+    {
+     "year": 2033,
+     "net_debt": 8144.283892585106,
+     "net_debt_to_ebitda": 5.608254656249831,
+     "interest": 543.3767964435347
+    },
+    {
+     "year": 2034,
+     "net_debt": 8539.089872248453,
+     "net_debt_to_ebitda": 5.834650248324569,
+     "interest": 566.6398852328617
+    },
+    {
+     "year": 2035,
+     "net_debt": 8960.947923394939,
+     "net_debt_to_ebitda": 6.074632107758695,
+     "interest": 591.5126619516525
+    }
+   ],
+   "table": [
+    {
+     "year": 2027,
+     "revenue": 17537.249999999996,
+     "soi": 666.4154999999998,
+     "soi_margin": 0.038,
+     "corporate": 153.75,
+     "ebit": 512.6654999999998,
+     "da": 900,
+     "ebitda": 1412.6654999999998,
+     "capex": 750,
+     "d_nwc": 10.033749999999582,
+     "restructuring": 275,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 153.75,
+     "fcff": 133.88175000000024,
+     "discount_t": 1,
+     "pv_fcff": 122.54622425629312
+    },
+    {
+     "year": 2028,
+     "revenue": 17712.622499999998,
+     "soi": 708.5048999999999,
+     "soi_margin": 0.04,
+     "corporate": 157.59375,
+     "ebit": 550.9111499999999,
+     "da": 875.10294,
+     "ebitda": 1426.01409,
+     "capex": 850.2058799999999,
+     "d_nwc": 20.16783750000015,
+     "restructuring": 175,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 157.59375,
+     "fcff": 133.0466224999999,
+     "discount_t": 2,
+     "pv_fcff": 111.47076017573524
+    },
+    {
+     "year": 2029,
+     "revenue": 17889.748724999998,
+     "soi": 715.5899489999999,
+     "soi_margin": 0.04,
+     "corporate": 161.53359374999994,
+     "ebit": 554.05635525,
+     "da": 866.9054394,
+     "ebitda": 1420.96179465,
+     "capex": 858.7079387999999,
+     "d_nwc": 20.369515874999998,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 161.53359374999994,
+     "fcff": 140.35074622500025,
+     "discount_t": 3,
+     "pv_fcff": 107.6342252536874
+    },
+    {
+     "year": 2030,
+     "revenue": 18068.646212249998,
+     "soi": 722.74584849,
+     "soi_margin": 0.04,
+     "corporate": 165.57193359374992,
+     "ebit": 557.17391489625,
+     "da": 867.100228794,
+     "ebitda": 1424.2741436902502,
+     "capex": 867.295018188,
+     "d_nwc": 20.57321103375003,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 55,
+     "cash_tax": 165.57193359374992,
+     "fcff": 130.83398087475,
+     "discount_t": 4,
+     "pv_fcff": 91.84061288540774
+    },
+    {
+     "year": 2031,
+     "revenue": 18249.332674372497,
+     "soi": 729.9733069748999,
+     "soi_margin": 0.04,
+     "corporate": 169.71123193359367,
+     "ebit": 560.2620750413062,
+     "da": 871.53409858194,
+     "ebitda": 1431.7961736232462,
+     "capex": 875.9679683698799,
+     "d_nwc": 20.778943144087442,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 40,
+     "cash_tax": 169.71123193359367,
+     "fcff": 140.33803017568522,
+     "discount_t": 5,
+     "pv_fcff": 90.17126204526076
+    },
+    {
+     "year": 2032,
+     "revenue": 18431.826001116224,
+     "soi": 737.273040044649,
+     "soi_margin": 0.04,
+     "corporate": 173.9540127319335,
+     "ebit": 563.3190273127154,
+     "da": 878.1308733177593,
+     "ebitda": 1441.4499006304748,
+     "capex": 884.7276480535787,
+     "d_nwc": 20.98673257552853,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 173.9540127319335,
+     "fcff": 176.78150726943397,
+     "discount_t": 6,
+     "pv_fcff": 103.97002744028971
+    },
+    {
+     "year": 2033,
+     "revenue": 18616.144261127385,
+     "soi": 744.6457704450954,
+     "soi_margin": 0.04,
+     "corporate": 178.30286305023185,
+     "ebit": 566.3429073948636,
+     "da": 885.8528989259369,
+     "ebitda": 1452.1958063208003,
+     "capex": 893.5749245341145,
+     "d_nwc": 21.196599901283555,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 178.30286305023185,
+     "fcff": 174.12141883517052,
+     "discount_t": 7,
+     "pv_fcff": 93.73506348616289
+    },
+    {
+     "year": 2034,
+     "revenue": 18802.30570373866,
+     "soi": 752.0922281495465,
+     "soi_margin": 0.04,
+     "corporate": 182.76043462648758,
+     "ebit": 569.3317935230589,
+     "da": 894.1817863526962,
+     "ebitda": 1463.513579875755,
+     "capex": 902.5106737794557,
+     "d_nwc": 21.40856590029669,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 182.76043462648758,
+     "fcff": 171.8339055695152,
+     "discount_t": 8,
+     "pv_fcff": 84.67150827483931
+    },
+    {
+     "year": 2035,
+     "revenue": 18990.328760776047,
+     "soi": 759.6131504310418,
+     "soi_margin": 0.04,
+     "corporate": 187.32944549214977,
+     "ebit": 572.283704938892,
+     "da": 902.8587834349732,
+     "ebitda": 1475.1424883738653,
+     "capex": 911.5357805172503,
+     "d_nwc": 21.622651559299396,
+     "restructuring": 150,
+     "financing_fees": 35,
+     "deferred_rev_reversal": 0,
+     "cash_tax": 187.32944549214977,
+     "fcff": 169.65461080516587,
+     "discount_t": 9,
+     "pv_fcff": 76.5195938894752
+    }
+   ]
+  }
+ },
+ "scenario_per_share": {
+  "bull": 17.047803066117606,
+  "base": 2.001773994929777,
+  "bear": 0.0,
+  "distress": 0.2
+ },
+ "probabilities": {
+  "bull": 0.15,
+  "base": 0.45,
+  "bear": 0.28,
+  "distress": 0.12
+ },
+ "dcf_probability_weighted": 3.4819687576360403,
+ "sensitivity_wacc_g": {
+  "0.0825|0.005": 5.054498954608418,
+  "0.0825|0.010": 5.152507883212762,
+  "0.0825|0.015": 5.250516811817093,
+  "0.0825|0.020": 5.348525740421424,
+  "0.0825|0.025": 5.446534669025755,
+  "0.0875|0.005": 3.3531246301721227,
+  "0.0875|0.010": 3.4415747878591896,
+  "0.0875|0.015": 3.530024945546257,
+  "0.0875|0.020": 3.618475103233324,
+  "0.0875|0.025": 3.706925260920388,
+  "0.0925|0.005": 1.8415715214080295,
+  "0.0925|0.010": 1.921672758168903,
+  "0.0925|0.015": 2.001773994929777,
+  "0.0925|0.020": 2.081875231690651,
+  "0.0925|0.025": 2.1619764684515244,
+  "0.0975|0.005": 0.4903369193317362,
+  "0.0975|0.010": 0.5631043511429487,
+  "0.0975|0.015": 0.6358717829541547,
+  "0.0975|0.020": 0.7086392147653672,
+  "0.0975|0.025": 0.7814066465765732,
+  "0.1025|0.005": 0.0,
+  "0.1025|0.010": 0.0,
+  "0.1025|0.015": 0.0,
+  "0.1025|0.020": 0.0,
+  "0.1025|0.025": 0.0
+ },
+ "sensitivity_margin": {
+  "0.040": 0.0,
+  "0.045": 0.0,
+  "0.050": 0.0,
+  "0.055": 0.0,
+  "0.060": 1.2917445768702953,
+  "0.065": 4.078270709790871,
+  "0.070": 6.86479684271144,
+  "0.075": 9.651322975632002,
+  "0.080": 12.413463764108466,
+  "0.090": 17.91434325510059,
+  "0.100": 23.415222746092734
+ },
+ "reverse_dcf": {
+  "price": 5.125,
+  "implied_long_run_soi_margin": 0.06687819751238444,
+  "implied_wacc_at_base_cash_flows": 0.08284472559629269,
+  "market_ev_0630": 8357.22408132523,
+  "note": "Base-case path shape (3-yr linear recovery from 2026E 3.3%), base growth/capex/WACC 9.25%, RONIC=WACC."
+ },
+ "epv": {
+  "0.050": {
+   "margin": 0.05,
+   "ebit": 591.25,
+   "nopat": 455.2625,
+   "epv_ev": 5551.935386436365,
+   "equity_0630": -1358.0646135636352,
+   "per_share": 0.0
+  },
+  "0.055": {
+   "margin": 0.055,
+   "ebit": 679.25,
+   "nopat": 523.0225,
+   "epv_ev": 6252.778712066625,
+   "equity_0630": -657.2212879333747,
+   "per_share": 0.0
+  },
+  "0.060": {
+   "margin": 0.06,
+   "ebit": 767.25,
+   "nopat": 590.7825,
+   "epv_ev": 6953.622037696886,
+   "equity_0630": 43.622037696885855,
+   "per_share": 0.15447707516849937
+  },
+  "0.065": {
+   "margin": 0.065,
+   "ebit": 855.25,
+   "nopat": 658.5425,
+   "epv_ev": 7654.4653633271455,
+   "equity_0630": 744.4653633271455,
+   "per_share": 2.636347084245485
+  },
+  "0.070": {
+   "margin": 0.07,
+   "ebit": 943.2500000000002,
+   "nopat": 726.3025000000002,
+   "epv_ev": 8355.308688957408,
+   "equity_0630": 1445.3086889574079,
+   "per_share": 5.11821709332248
+  }
+ },
+ "growth_value_base": 521.6492853924765,
+ "residual_income": {
+  "bull": {
+   "value_0630": 2405.3189940691295,
+   "per_share": 8.517865342121835,
+   "pv_ri": -397.1726883977965,
+   "pv_continuing": -123.21115763068481,
+   "rows": [
+    {
+     "year": 2027,
+     "net_income": 0.06399999999985084,
+     "book_equity_begin": 2928.59,
+     "roe": 2.185351995323717e-05,
+     "residual_income": -409.93860000000024
+    },
+    {
+     "year": 2028,
+     "net_income": 300.7443344999999,
+     "book_equity_begin": 2928.654,
+     "roe": 0.10269029202493703,
+     "residual_income": -109.26722550000011
+    },
+    {
+     "year": 2029,
+     "net_income": 499.85001757975,
+     "book_equity_begin": 3229.3983344999997,
+     "roe": 0.15478115915271276,
+     "residual_income": 47.734250749750004
+    },
+    {
+     "year": 2030,
+     "net_income": 595.1676067762368,
+     "book_equity_begin": 3729.2483520797496,
+     "roe": 0.15959452162640766,
+     "residual_income": 73.07283748507177
+    },
+    {
+     "year": 2031,
+     "net_income": 665.5459140425586,
+     "book_equity_begin": 4324.415958855986,
+     "roe": 0.15390423131696776,
+     "residual_income": 60.127679802720536
+    },
+    {
+     "year": 2032,
+     "net_income": 735.10950672074,
+     "book_equity_begin": 4989.961872898544,
+     "roe": 0.14731766002326852,
+     "residual_income": 36.514844514943775
+    },
+    {
+     "year": 2033,
+     "net_income": 755.907200004855,
+     "book_equity_begin": 5725.071379619284,
+     "roe": 0.13203454592650382,
+     "residual_income": -45.60279314184481
+    },
+    {
+     "year": 2034,
+     "net_income": 833.8335321194184,
+     "book_equity_begin": 6480.9785796241395,
+     "roe": 0.1286585847916467,
+     "residual_income": -73.50346902796127
+    },
+    {
+     "year": 2035,
+     "net_income": 917.2266711515372,
+     "book_equity_begin": 7314.812111743558,
+     "roe": 0.1253930596083222,
+     "residual_income": -106.84702449256088
+    }
+   ]
+  },
+  "base": {
+   "value_0630": 995.5167068486924,
+   "per_share": 3.5253857287446473,
+   "pv_ri": -1630.537020638627,
+   "pv_continuing": -299.64911261029164,
+   "rows": [
+    {
+     "year": 2027,
+     "net_income": -214.69599999999997,
+     "book_equity_begin": 2928.59,
+     "roe": -0.07331036437329909,
+     "residual_income": -624.6986
+    },
+    {
+     "year": 2028,
+     "net_income": 3.9847469999998566,
+     "book_equity_begin": 2713.8940000000002,
+     "roe": 0.0014682765797042392,
+     "residual_income": -375.9604130000002
+    },
+    {
+     "year": 2029,
+     "net_income": 129.523523036,
+     "book_equity_begin": 2717.878747,
+     "roe": 0.047656107977211384,
+     "residual_income": -250.97950154400004
+    },
+    {
+     "year": 2030,
+     "net_income": 171.85932888351797,
+     "book_equity_begin": 2847.402270036,
+     "roe": 0.06035653293250522,
+     "residual_income": -226.77698892152208
+    },
+    {
+     "year": 2031,
+     "net_income": 201.2948343062106,
+     "book_equity_begin": 3019.2615989195183,
+     "roe": 0.06667021975778666,
+     "residual_income": -221.401789542522
+    },
+    {
+     "year": 2032,
+     "net_income": 228.79238948132766,
+     "book_equity_begin": 3220.556433225729,
+     "roe": 0.0710412607960941,
+     "residual_income": -222.08551117027443
+    },
+    {
+     "year": 2033,
+     "net_income": 224.84460840003746,
+     "book_equity_begin": 3449.3488227070566,
+     "roe": 0.06518465367140773,
+     "residual_income": -258.06422677895046
+    },
+    {
+     "year": 2034,
+     "net_income": 256.55487028083024,
+     "book_equity_begin": 3674.193431107094,
+     "roe": 0.06982617412266347,
+     "residual_income": -257.832210074163
+    },
+    {
+     "year": 2035,
+     "net_income": 290.4531652292593,
+     "book_equity_begin": 3930.748301387924,
+     "roe": 0.07389258811781513,
+     "residual_income": -259.85159696505013
+    }
+   ]
+  },
+  "bear": {
+   "value_0630": -769.6455471923621,
+   "per_share": 0.0,
+   "pv_ri": -3182.3951654572793,
+   "pv_continuing": -512.9532218326938,
+   "rows": [
+    {
+     "year": 2027,
+     "net_income": -471.1055000000002,
+     "book_equity_begin": 2928.59,
+     "roe": -0.16086427256802768,
+     "residual_income": -881.1081000000003
+    },
+    {
+     "year": 2028,
+     "net_income": -354.73037275000013,
+     "book_equity_begin": 2457.4845,
+     "roe": -0.1443469420661657,
+     "residual_income": -698.7782027500002
+    },
+    {
+     "year": 2029,
+     "net_income": -349.74008371574996,
+     "book_equity_begin": 2102.75412725,
+     "roe": -0.16632476388152098,
+     "residual_income": -644.12566153075
+    },
+    {
+     "year": 2030,
+     "net_income": -370.62632614966714,
+     "book_equity_begin": 1753.0140435342498,
+     "roe": -0.21142233715506795,
+     "residual_income": -616.0482922444621
+    },
+    {
+     "year": 2031,
+     "net_income": -393.50030691883205,
+     "book_equity_begin": 1382.3877173845826,
+     "roe": -0.2846526354149887,
+     "residual_income": -587.0345873526736
+    },
+    {
+     "year": 2032,
+     "net_income": -417.28506199636684,
+     "book_equity_begin": 988.8874104657506,
+     "roe": -0.4219742890647501,
+     "residual_income": -555.7292994615719
+    },
+    {
+     "year": 2033,
+     "net_income": -440.33675209890293,
+     "book_equity_begin": 571.6023484693837,
+     "roe": -0.7703550436383281,
+     "residual_income": -520.3610808846166
+    },
+    {
+     "year": 2034,
+     "net_income": -465.06852633629046,
+     "book_equity_begin": 131.2655963704808,
+     "roe": -3.542958240357911,
+     "residual_income": -483.44570982815776
+    },
+    {
+     "year": 2035,
+     "net_income": -491.55840250491025,
+     "book_equity_begin": -333.80292996580965,
+     "roe": 1.4726006226346156,
+     "residual_income": -444.8259923096969
+    }
+   ]
+  }
+ },
+ "comps": {
+  "peer_ev_ebitda_p25": {
+   "multiple": 4.315989470865332,
+   "metric": "2027E EBITDA (IFRS-like)",
+   "metric_value": 1954.2,
+   "ev": 7411.306623965031,
+   "per_share": 3.9393791003581233
+  },
+  "peer_ev_ebitda_median": {
+   "multiple": 5.324157376265738,
+   "metric": "2027E EBITDA (IFRS-like)",
+   "metric_value": 1954.2,
+   "ev": 9381.468344698505,
+   "per_share": 10.757589364257525
+  },
+  "peer_ev_ebitda_p75": {
+   "multiple": 5.679452792148121,
+   "metric": "2027E EBITDA (IFRS-like)",
+   "metric_value": 1954.2,
+   "ev": 10075.786646415858,
+   "per_share": 13.160441942988992
+  },
+  "peer_ev_ebit_p25": {
+   "multiple": 7.215798247926592,
+   "metric": "2027E EBIT (SOI - corporate)",
+   "metric_value": 736.2,
+   "ev": 5312.2706701235575,
+   "per_share": 0.0
+  },
+  "peer_ev_ebit_median": {
+   "multiple": 9.825912979632118,
+   "metric": "2027E EBIT (SOI - corporate)",
+   "metric_value": 736.2,
+   "ev": 7233.837135605166,
+   "per_share": 3.325203992634619
+  },
+  "peer_ev_ebit_p75": {
+   "multiple": 10.389137011649005,
+   "metric": "2027E EBIT (SOI - corporate)",
+   "metric_value": 736.2,
+   "ev": 7648.482667975998,
+   "per_share": 4.760182854998425
+  },
+  "gt_own_history_ev_ebitda": {
+   "multiple": 4.5,
+   "metric": "2027E EBITDA (US GAAP)",
+   "metric_value": 1636.2,
+   "ev": 7362.900000000001,
+   "per_share": 3.7718565376741764
+  }
+ },
+ "comps_summary": {
+  "central": 5.951549964855439,
+  "low": 0.0,
+  "high": 13.160441942988992
+ },
+ "sotp": {
+  "segments": {
+   "americas": {
+    "soi": 721.0000000000001,
+    "ebitda": 1201.0,
+    "multiple": 5.0,
+    "value": 6005.0
+   },
+   "emea": {
+    "soi": 142.5,
+    "ebitda": 432.5,
+    "multiple": 4.0,
+    "value": 1730.0
+   },
+   "apac": {
+    "soi": 234.0,
+    "ebitda": 364.0,
+    "multiple": 6.5,
+    "value": 2366.0
+   }
+  },
+  "corporate": -852.5,
+  "pv_restructuring": -450,
+  "ev_midcycle": 8798.5,
+  "ev_0630": 8698.013101799917,
+  "equity_0630": 1788.0131017999174,
+  "per_share": 6.331823291893715
+ },
+ "transactions": {
+  "ev_control_0630": 8178.486723719478,
+  "per_share_control": 4.492044143647286,
+  "per_share_minority": 0.0,
+  "norm_ebitda_2030": 1857.7906054218747
+ },
+ "asset_based": {
+  "book_equity": 2839,
+  "book_per_share": 9.85763888888889,
+  "tangible_book": 2144,
+  "tangible_per_share": 7.444444444444445,
+  "liquidation_proceeds": 8374.2,
+  "liquidation_equity": -7274.799999999999,
+  "liquidation_per_share": 0.0,
+  "note": "Liquidation haircuts: AR 85%, inventory 55%, PP&E 20%, other 25%, brands (Goodyear/Cooper) est. $2.0bn (Dunlop brand alone fetched $526m). Liabilities include AP, debt, leases, benefits."
+ },
+ "merton": {
+  "on_probability_weighted_ev": {
+   "asset_value": 7121.46410501117,
+   "strike_face": 8418.223802902103,
+   "equity": 1583.8829441336552,
+   "per_share": 5.608944871378757,
+   "risk_neutral_pd": 0.5431283653373878
+  },
+  "on_base_ev": {
+   "asset_value": 8336.271323089362,
+   "strike_face": 8418.223802902103,
+   "equity": 2443.143380074146,
+   "per_share": 8.65181141224126,
+   "risk_neutral_pd": 0.41611142988768335
+  },
+  "prob_weighted_ev": 6260.46410501117
+ },
+ "monte_carlo": {
+  "n": 20000,
+  "mean": 3.1939731013295414,
+  "P5": 0.0,
+  "P10": 0.0,
+  "P25": 0.0,
+  "P50": 0.0,
+  "P75": 4.9772633974212095,
+  "P90": 10.860331863664086,
+  "P95": 14.576360823875882,
+  "prob_above_price": 0.24435,
+  "prob_zero_or_distress": 0.56235,
+  "prob_distress_trigger": 0.0047,
+  "ev_mean": 6629.829228301385,
+  "ev_median": 6568.603046922772,
+  "histogram": {
+   "counts": [
+    11506,
+    394,
+    439,
+    385,
+    406,
+    412,
+    358,
+    400,
+    372,
+    349,
+    323,
+    305,
+    293,
+    286,
+    266,
+    270,
+    228,
+    263,
+    206,
+    212,
+    194,
+    170,
+    171,
+    164,
+    133,
+    136,
+    118,
+    110,
+    114,
+    89,
+    96,
+    79,
+    84,
+    79,
+    62,
+    56,
+    48,
+    49,
+    33,
+    33,
+    41,
+    31,
+    30,
+    25,
+    23,
+    22,
+    23,
+    10,
+    13,
+    14,
+    8,
+    8,
+    5,
+    8,
+    12,
+    3,
+    2,
+    3,
+    5,
+    23
+   ],
+   "edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0,
+    10.5,
+    11.0,
+    11.5,
+    12.0,
+    12.5,
+    13.0,
+    13.5,
+    14.0,
+    14.5,
+    15.0,
+    15.5,
+    16.0,
+    16.5,
+    17.0,
+    17.5,
+    18.0,
+    18.5,
+    19.0,
+    19.5,
+    20.0,
+    20.5,
+    21.0,
+    21.5,
+    22.0,
+    22.5,
+    23.0,
+    23.5,
+    24.0,
+    24.5,
+    25.0,
+    25.5,
+    26.0,
+    26.5,
+    27.0,
+    27.5,
+    28.0,
+    28.5,
+    29.0,
+    29.5,
+    30.0
+   ]
+  },
+  "rank_correlations": {
+   "long_run_margin": 0.7867597750233992,
+   "revenue_growth": 0.4255976754634941,
+   "wacc": -0.15511435100478585,
+   "terminal_growth": 0.005514240384285601,
+   "capex_pct": -0.003995567795488918,
+   "restructuring": -0.05533353603033383,
+   "ronic_spread": 0.035977342147443345,
+   "soi_2026": 0.01882357737805894,
+   "recovery_years": -0.05862349874055874
+  }
+ },
+ "tornado": {
+  "Long-run SOI margin 5.0% / 7.0%": [
+   0.0,
+   6.86479684271144
+  ],
+  "WACC 10.25% / 8.25%": [
+   0.0,
+   5.250516811817093
+  ],
+  "Capex 5.0% / 4.2% of sales": [
+   1.7809611520097677,
+   2.222586837849783
+  ],
+  "Terminal growth 0.5% / 2.5%": [
+   1.8415715214080295,
+   2.1619764684515244
+  ],
+  "Revenue growth -1pt / +1pt p.a.": [
+   0.3607550186075312,
+   3.691268475520317
+  ],
+  "Restructuring $150m / $50m p.a.": [
+   0.7288073783581909,
+   3.2118577321209907
+  ],
+  "H2-26 FCFF $737m / $962m": [
+   1.568799074678804,
+   2.3481539311305504
+  ],
+  "Terminal tax 27% / 21%": [
+   1.3752082517575142,
+   2.6283397381020364
+  ]
+ },
+ "methods": {
+  "scenario_dcf": {
+   "value": 3.4819687576360403,
+   "low": 0.0,
+   "high": 17.047803066117606,
+   "weight": 0.35,
+   "why": "Primary: explicit bull/base/bear/distress cash flows; captures leverage and the recovery path."
+  },
+  "monte_carlo_dcf": {
+   "value": 3.1939731013295414,
+   "low": 0.0,
+   "high": 10.860331863664086,
+   "weight": 0.2,
+   "why": "Same engine, 20k draws over margins, growth, capex, WACC, g, RONIC with a leverage-based distress trigger."
+  },
+  "merton_option": {
+   "value": 5.608944871378757,
+   "low": 0.5410493292499837,
+   "high": 21.717423787556445,
+   "weight": 0.1,
+   "why": "Thin equity stub on a large EV: values limited liability / upside optionality the floored DCF misses."
+  },
+  "epv_no_growth": {
+   "value": 0.15447707516849937,
+   "low": 0.0,
+   "high": 5.11821709332248,
+   "weight": 0.1,
+   "why": "Greenwald earnings power at mid-cycle 6% SOI margin, zero growth; isolates the growth bet."
+  },
+  "comparables": {
+   "value": 5.951549964855439,
+   "low": 0.0,
+   "high": 13.160441942988992,
+   "weight": 0.15,
+   "why": "Peer EV/EBITDA & EV/EBIT and GT own-history multiple on 2027E; down-weighted: peers price off EUR/JPY rates and better FCF conversion."
+  },
+  "sotp": {
+   "value": 6.331823291893715,
+   "low": 3.1659116459468577,
+   "high": 9.497734937840573,
+   "weight": 0.1,
+   "why": "Segment multiples on mid-cycle margins; APAC is the most valuable unit per $ of sales."
+  },
+  "residual_income": {
+   "value": 3.5253857287446473,
+   "low": 0.0,
+   "high": 8.517865342121835,
+   "weight": 0.0,
+   "why": "Shown as a cross-check only: book equity is distorted by AOCI pension losses and the 2025 DTA write-off."
+  },
+  "transactions_control": {
+   "value": 0.0,
+   "low": null,
+   "high": 4.492044143647286,
+   "weight": 0.0,
+   "why": "Reference only: control multiples (Cooper 6.4x, OTR ~7x, Chemical ~4.3x) presume a buyer; antitrust limits obvious strategics."
+  },
+  "asset_based": {
+   "value": 0.0,
+   "low": 0,
+   "high": 7.444444444444445,
+   "weight": 0.0,
+   "why": "Floor/ceiling reference: liquidation leaves nothing for equity; tangible book is not economic value (ROIC < WACC)."
+  },
+  "ddm": {
+   "value": null,
+   "low": null,
+   "high": null,
+   "weight": 0.0,
+   "why": "Excluded: no dividend since 2020 and none possible under current leverage."
+  }
+ },
+ "synthesis": {
+  "blended_value": 3.9597407040109354,
+  "weights_total": 1.0,
+  "P10": 0.0,
+  "P25": 0.0,
+  "median": 0.0,
+  "P75": 4.9772633974212095,
+  "P90": 10.860331863664086,
+  "prob_intrinsic_above_price": 0.24435,
+  "price": 5.125,
+  "upside_at_blended": -0.22736766751006143,
+  "upside_at": {
+   "P10": -1.0,
+   "P25": -1.0,
+   "P50": -1.0,
+   "P75": -0.02882665416171526,
+   "P90": 1.1190891441295778
+  }
+ }
+}

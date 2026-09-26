@@ -1,0 +1,11 @@
+# Raw third-party downloads (re-fetch with scripts/fetch_edgar.py, fetch_accn.py, yahoo_*.py)
+filings/
+presentations/
+transcripts/
+data/companyfacts.json
+data/cooper_companyfacts.json
+data/submissions*.json
+data/market/
+model/cell_map.json
+__pycache__/
+scripts/__pycache__/
