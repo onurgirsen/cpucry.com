@@ -1,0 +1,1820 @@
+Summary Basis for Regulatory Action
+Date: August 5, 2026
+(b) (6)
+From: ,
+(b) (6)
+OVRR/
+BLA STN: 125869/0
+Applicant: ModernaTX, Inc.
+Submission Receipt Date: December 5, 2025
+Priority Review (Yes/No) Yes (Priority Review Voucher Redeemed)
+PDUFA*Action Due Date: August 5, 2026
+Proper Name: Influenza Vaccine, mRNA
+Proprietary Name: MFLUSIVA
+Indication: MFLUSIVA is a vaccine indicated for active
+immunization for the prevention of influenza disease
+caused by influenza virus subtypes A and type B
+represented in the vaccine. MFLUSIVA is approved for
+use in persons 50 years of age and older.
+* PDUFA=Prescription Drug User Fee Act
+Recommended Action: The Review Committee recommends approval of this product.
+______________________________________________________________________
+Director, Product Office
+Discipline Reviews Reviewer / Consultant - Office/Division
+CMC
+(b) (6)
+• CMC Product (Product Office and
+(b) (6)
+• Facilities review (b) (6) (b) (6)
+(b) (6)
+• QC, Test Methods, Product Quality
+(b) (6)
+Clinical
+• Clinical (Product Office) (b) (6)
+• Postmarketing safety
+Pharmacovigilance review
+(b) (6)
+• (b) (6)
+Statistical
+• Clinical data (b) (6) (b) (6)
+• Nonclinical data
+Non-clinical/Pharmacology/Toxicology
+(b) (6)
+• Toxicology/Developmental toxicology
+(Product Office)
+• Animal pharmacology (b) (6)
+(b) (6)
+Clinical Pharmacology
+Labeling
+• Promotional (b) (6) (b) (6)
+Other Review (not captured in above
+categories):
+• PNR (b) (6) (b) (6)
+• Data Standards
+• DHT
+• PMR/PMC Coordinator
+• Regulatory Project Management
+(b) (6)
+Advisory Committee Summary
+2
+Table of Contents
+1. Introduction ................................................................................................................. 3
+2. Background ................................................................................................................ 5
+3. Chemistry Manufacturing and Controls (CMC) ........................................................... 7
+a. Product Quality ................................................................................................ 7
+b. Testing Specifications ................................................................................... 14
+c. CBER Lot Release ........................................................................................ 16
+d. Facilities Review / Inspection ........................................................................ 16
+e. Container/Closure System............................................................................. 18
+f. Environmental Assessment ........................................................................... 18
+4. Nonclinical Pharmacology/Toxicology [if applicable] ................................................. 18
+5. Clinical Pharmacology [if applicable] ........................................................................ 25
+6. Clinical/Statistical ...................................................................................................... 25
+a. Clinical Program ............................................................................................ 25
+(b) (6)
+b. – Clinical/Statistical/Pharmacovigilance ...... 36
+c. Pediatrics ....................................................................................................... 36
+d. Other Special Populations ............................................................................. 37
+7. Safety and Pharmacovigilance ................................................................................. 37
+8. Labeling .................................................................................................................... 38
+9. Advisory Committee Meeting .................................................................................... 39
+10. Other Relevant Regulatory Issues ............................................................................ 40
+11. Recommendations and Benefit/Risk Assessment .................................................... 43
+a. Recommended Regulatory Action ................................................................. 43
+b. Benefit/Risk Assessment ............................................................................... 43
+c. Recommendation for Postmarketing Activities .............................................. 44
+12. References ............................................................................................................... 45
+1. Introduction
+MFLUSIVA (Influenza Vaccine, mRNA; mRNA-1010) is a sterile, preservative-free,
+trivalent mRNA-based seasonal influenza vaccine developed and sponsored by
+(b) (4)
+ModernaTX, Inc. ). The drug product is manufactured as a
+single-dose, ready-to-use suspension for intramuscular administration, supplied in a
+prefilled, 1 mL cyclic olefin copolymer syringe. Each dose delivers 12.5 µg of
+hemagglutinin (HA)-encoding mRNA per influenza strain (37.5 µg total mRNA),
+formulated within three monovalent lipid nanoparticles (LNPs) composed of SM-102,
+cholesterol, DSPC, and PEG2000-DMG. MFLUSIVA is indicated for active immunization
+3
+for the prevention of influenza disease caused by influenza virus subtypes A and type B
+represented in the vaccine, in persons 50 years of age and older.
+This Summary Basis of Regulatory Action (SBRA) pertains to Biologics License
+Application (BLA) STN 125869/0, submitted by ModernaTX, Inc. on December 5, 2025.
+The applicant redeemed a priority review voucher (PRV BLA 125685) along with their
+BLA submission, which entitled them to receive a priority review of the submission with a
+PDUFA action due date of August 5, 2026. The application has been reviewed under a
+dual regulatory pathway: Traditional Approval for adults 50 through 64 years of age,
+based on clinical efficacy data demonstrating substantial evidence of effectiveness
+compared with a U.S.-licensed standard-dose (SD) influenza vaccine, and Accelerated
+Approval for adults 65 years of age and older, based on surrogate endpoints
+(hemagglutination inhibition (HAI) antibody titers) reasonably likely to predict clinical
+benefit, as measured against a CDC-preferentially recommended high-dose (HD)
+influenza vaccine comparator
+Traditional Approval in adults 50 through 64 years of age is based on Study mRNA-
+1010-P304 (NCT06602024), a Phase 3, randomized, observer-blind, active-controlled
+efficacy trial which enrolled 40,805 adults ≥50 years of age across 11 countries.
+MFLUSIVA demonstrated statistically significant superiority over the SD comparator in
+preventing RT-PCR–confirmed, protocol-defined influenza-like illness, with an overall
+relative vaccine efficacy (rVE) of 26.6% (95% CI: 16.7, 35.4) and consistent point
+estimates across both age strata (adults 50 through 64 years of age and adults ≥65
+years of age) and as well as both influenza subtypes A and type B, although the
+confidence interval around the rVE for influenza B/Victoria was wide due to the small
+number of cases accrued. The basis for Accelerated Approval in adults ≥65 years of age
+derives from Study mRNA-1010-P303 Part C, a Phase 3 immunogenicity trial in which
+mRNA-1010 (QIV) (Moderna mRNA quadrivalent influenza vaccine)1 demonstrated
+statistically significant superiority over Fluzone High-Dose Quadrivalent (a CDC-
+preferentially recommended vaccine for older adults) across all four vaccine-matched
+strains as measured by GMT ratio and seroconversion rate at Day 29.
+In Study P304 and P303 Part C, reactogenicity of MFLUSIVA and mRNA-1010 (QIV)
+respectively, was elevated relative to comparators but was predominantly mild to
+moderate in severity and transient in duration. No vaccine-related serious safety signals
+were identified. Safety was evaluated in an Integrated Summary of Safety (ISS) across
+four clinical trials including more than 35,000 mRNA-10102 recipients aged 50 years and
+older.
+The Vaccine and Related Biological Products Advisory Committee (VRBPAC)
+unanimously voted on June 18, 2026, that the benefits of MFLUSIVA outweigh its risks
+for both age groups.
+Several issues warranting further discussion in this document include: the regulatory and
+scientific basis for the bifurcated approval pathway, including an initial Refusal to File
+1 An unlicensed Moderna mRNA quadrivalent influenza vaccine manufactured using the same process as
+MFLUSIVA and differs only in the addition of the RNA encoding the B/Yamagata antigen.
+2 The ISS includes recipients of multiple formulations of mRNA-1010, including MFLUSIVA, mRNA-1010
+(QIV), and an earlier formulation of mRNA-1010 with influenza B antigens manufactured differently than
+those in the formulation intended for licensure.
+4
+and subsequent revised regulatory approach; the use of cell-propagated viruses in HAI
+immunogenicity assays and associated positive bias relative to egg-derived
+comparators; residual uncertainty regarding strain-specific effectiveness against
+influenza B/Victoria; an observed numerical imbalance in deaths of unspecified cause in
+the ISS; and postmarketing requirements, including a mandatory confirmatory efficacy
+study in adults ≥65 years of age (Study mRNA-1010-P910), deferred pediatric studies
+under PREA, postmarketing commitment study with active surveillance for death (both
+unspecified and all cause), myocarditis, pericarditis, and Guillain Barre syndrome (GBS),
+a postmarketing commitment study to evaluate microneutralization titers as a correlate of
+risk, and a postmarketing commitment study to further evaluate immune responses using
+both egg- and cell-derived assays in parallel during the 2026–2027 and 2027–2028
+influenza seasons, the latter coinciding with the confirmatory postmarketing requirement
+study (Study mRNA-1010-P910).
+2. Background
+Influenza is responsible for 3 to 5 million cases of severe illness and up to 650,000
+deaths annually worldwide1, with U.S. estimates of up to 710,000 hospitalizations and
+52,000 deaths per season2. The burden falls disproportionately on older adults and those
+with underlying comorbidities: adults ≥65 years of age account for 70–85% of influenza-
+related deaths and 50–70% of influenza-related hospitalizations in the United States,
+while adults 50 through 64 years of age experience hospitalization and mortality rates
+substantially exceeding those in younger adults3. The risk gradient by age is further
+amplified by the high prevalence of chronic conditions, including cardiovascular,
+pulmonary, metabolic, renal, and immunocompromising conditions3, which affect an
+estimated 78.4% of U.S. adults 35 through 64 years of age and 93% of those ≥65 years
+of age4; notably, the co-morbidity burden accumulates most rapidly between 45 and 65
+years of age5. These epidemiological patterns establish a strong public health rationale
+for an efficacious influenza vaccine specifically indicated for adults ≥50 years of age.
+Influenza A and B viruses, both members of the Orthomyxoviridae family, are
+responsible for annual seasonal epidemics. Influenza A viruses are classified into
+subtypes based on their two principal surface glycoproteins, hemagglutinin (HA) and
+neuraminidase (NA), while influenza B viruses circulate as distinct lineages. Continuous
+antigenic drift (minor but cumulative variation in HA and NA sequences) generates novel
+circulating strains each season and necessitates periodic strain-composition updates to
+seasonal influenza vaccines7; influenza A/H3N2 is particularly prone to antigenic drift
+and to egg-adaptive mutations that can alter HA conformation and reduce vaccine
+immunogenicity8. Currently licensed egg-based vaccines, which account for the majority
+of seasonal influenza vaccine supply9, are susceptible to such adaptive mutations during
+manufacture, contributing to variable effectiveness that is generally estimated at up to
+60% under conditions of optimal antigenic match and considerably lower during strain
+mismatch seasons10. These manufacturing constraints, combined with the biological
+imperative for rapid strain reformulation, underscore the unmet need for manufacturing
+technologies capable of scalable, egg-independent production.
+The Applicant submitted Investigational New Drug (IND) 27460 on May 27, 2021, to
+develop an mRNA-based seasonal influenza vaccine, titled “Influenza Virus (HA; mRNA-
+1010; A/H1N1 Strain; A/H3N2 Strain; B/Victoria and B/Yamagata lineages) in Lipid
+5
+Nanoparticles (SM-102; PEG2000-DMG; 1,2-distearoyl-sn-glycero-3 phosphocholine
+(DSPC); Cholesterol)”.
+At a pre-BLA meeting on August 22, 2025, CBER requested that, in their BLA
+submission, the Applicant include a comprehensive benefit-risk assessment for
+MFLUSIVA in adults 50 through 64 years of age and ≥65 years of age, including
+justification for the relative vaccine efficacy (rVE) results given Study P304's use of a
+non-preferentially recommended comparator (Fluarix) in older adults. CBER also
+required final safety data with at least 6 months of follow-up, safety summaries of all
+SAEs, AESIs, and deaths from Phase 3 studies P301–P304 individually and integrated,
+to support a thorough benefit-risk assessment and evaluation of rare adverse events.
+STN 125869/0 was submitted on December 5, 2025.
+On February 3, 2026, CBER issued a Refusal to File Letter (RTF) to the Applicant for
+STN 125869/0. On February 10, 2026, the Applicant requested a post-RTF, Type A
+meeting. On February 17, 2026, the Applicant submitted a meeting package that
+included a proposal for a revised regulatory approach that reflects the benefit–risk
+considerations across the two age strata within the proposed indication for MFLUSIVA
+(adults ≥50 years of age):
+ Traditional Approval for adults 50 through 64 years of age, based on the
+totality of demonstrated clinical efficacy and supportive safety data; and
+ Accelerated Approval for adults ≥65 years of age. Influenza is recognized as
+a serious disease in adults in this age group. The Applicant justified that
+MFLUSIVA provides a meaningful benefit over existing therapies on the basis
+that its manufacturing technology allows for a more rapid ability to update the
+vaccine in response to emerging influenza virus strains and because their
+mRNA manufacturing platform will not be subject to egg-adaptive mutations
+which may alter antigenicity and possibly reduce effectiveness. The Applicant
+proposed demonstrating VE of MFLUSIVA based on surrogate endpoints (HAI
+antibody titers) as measured against a CDC-preferentially recommended high-
+dose comparator. As a postmarketing requirement (PMR) to support an
+Accelerated Approval licensure pathway, the Applicant proposed a pragmatic,
+randomized comparative clinical efficacy study for adults ≥65 years of age,
+with the primary endpoint being rVE against a CDC-preferentially
+recommended high-dose comparator.
+On February 17, 2026, the Applicant presented their proposal for the revised regulatory
+approach to STN 125869/0 at their Type A meeting teleconference. CBER
+subsequently issued a Filing Notification Letter with Deficiencies Identified, which
+outlined concerns regarding the following:
+1. Study P304’s use of Fluarix as the comparator vaccine for participants ≥65 years
+of age, rather than a vaccine preferentially recommended by the Advisory
+Committee on Immunization Practices (ACIP) for use in older adults (e.g., Fluzone
+HD, Flublok, Fluad).
+2. The potential insufficiency of comparing the immunogenicity of MFLUSIVA to an
+ACIP-preferentially recommended vaccine for adults ≥65 years to demonstrate
+substantial evidence of effectiveness for traditional approval, given the absence of
+a validated surrogate endpoint accepted by CBER as evidence of clinical benefit.
+6
+On June 18, 2026, data from this BLA was discussed at a VRBPAC meeting. The
+committee unanimously voted that the benefits of MFLUSIVA outweighed its risks for the
+prevention of influenza disease in adults 50 through 64 years of age and adults 65 years
+of age and older.
+A summary of the regulatory events leading to approval of this BLA is outlined in Table
+1.
+Table 1. Regulatory History
+Regulatory Events / Milestones Date
+1. IND 27460 submission 27-May-2021
+2. Pre-BLA meeting 22-Aug-2025
+3. BLA 125869/0 submission 5-Dec-2025
+4. BLA filed 17-Feb-2026
+5. Mid-Cycle communication 6-April-2026
+6. Late-Cycle meeting 5-June-2026
+7. VRBPAC Meeting 18-June-2026
+8. Action Due Date* 5-Aug-2026
+* a priority review voucher was redeemed with this BLA submission which shortened the
+review clock from 12 months to 8 months.
+3. Chemistry Manufacturing and Controls (CMC)
+a. Product Quality
+Description of Final Product
+The MFLUSIVA (mRNA-1010) Drug Product (DP) is an mRNA-lipid complex suspension
+that contains monovalent lipid nanoparticles (LNPs). The mRNA in each monovalent
+LNP encodes the hemagglutinin (HA) glycoprotein of the seasonal influenza virus strain.
+Each LNP consists of the following four lipids: SM-102 (heptadecan-9-yl 8-((2-
+hydroxyethyl)(6-oxo-6-(undecyloxy)hexyl)amino) octanoate), cholesterol, DSPC (1,2-
+distearoyl-sn-glycero-3-phosphocholine), and PEG2000-DMG (1,2-dimyristoyl-rac-
+glycero-3-methoxypolyethylene glycol-2000). The DP is supplied as a sterile single dose,
+ready-to-use suspension for intramuscular (IM) administration in a 1-mL prefilled syringe
+(PFS). Each PFS delivers 12.5 μg of each seasonal influenza HA surface glycoprotein
+encoding mRNA (37.5 μg of total mRNA) and 759 μg of total lipids as a suspension in
+(b) (4) (b) (4) (b) (4)
+preservative-free buffer containing mM Tris, and g/L sucrose at .
+Manufacturing Overview
+(b) (4)
+The MFLUSIVA manufacturing process involves drug substance (DS)
+(b) (4)
+components, messenger RNA (mRNA) which are
+(b) (4) (b) (4)
+to produce LNPs. Three monovalent LNPs are then to formulate the
+DP.
+(b) (4)
+mRNA Manufacturing: The mRNA DS is
+7
+(b) (4)
+Drug Product: The DP comprises three monovalent LNPs (one per influenza strain)
+formulated as a sterile, single-dose ready-to-use suspension in a prefilled, cyclic olefin
+copolymer syringe containing 12.5 μg of each HA-encoding mRNA and 759 μg total
+lipids.
+Process controls, critical parameters, and in-process testing are implemented at each
+manufacturing stage to ensure robust, consistent production of high-quality vaccine.
+Drug Substance (DS)
+(b) (4)
+8
+2 pages determined to be not releasable: (b)(4)
+(b) (4)
+Drug Product (DP)
+The MFLUSIVA DP is an mRNA-lipid complex dispersion that contains three monovalent
+LNPs; the mRNA in each monovalent LNP encodes for the proteins as listed in Table 2
+below. The LNP consists of four lipids that act as protectants and carriers of the mRNA.
+The four lipids are SM-102, cholesterol, DSPC, and PEG2000-DMG. The buffer
+components and composition of the DP are also listed in Table 2 below. The DP is
+supplied as a sterile single dose, ready-to-use liquid for intramuscular (IM) administration
+in a 1-mL prefilled syringe (PFS). The DP manufacturing process and controls are
+(b) (4)
+designed on the basis of a 37.5-μg dose at mg/mL. Each PFS delivers 12.5 μg of
+each seasonal influenza hemagglutinin surface glycoprotein (HA) encoding mRNA and
+759 μg of total lipids as a white to off-white dispersion in preservative-free buffer
+(b) (4) (b) (4) (b) (4)
+containing mM Tris, and g/L sucrose at
+Use of LNP-100 vs LNP-102 Manufacturing Processes
+While the commercial DP manufacturing process to be licensed is formulated with LNP
+inputs formulated by the LNP-102 process, the clinical trials were conducted with DP
+formulated with LNP-100-derrived LNP inputs. The LNP-102 manufacturing process
+(b) (4) (b) (4)
+incorporates step to
+. Comparability of DP formulated with LNP-102 and LNP-100 inputs was
+demonstrated using a combination of release and extended characterization testing
+against pre-defined acceptance criteria, stability monitoring, and nonclinical
+immunogenicity. DP formulated with LNP-102 inputs will be evaluated in Phase 4 clinical
+studies to generate additional safety and effectiveness data.
+11
+Table 2. MFLUSIVA DP Composition
+Unit Formula Unit Formula
+Component Function (mg/mL) (µg/dose)a
+Total mRNA Contains mRNA encoding (b) (4) 37.5
+glycoprotein hemagglutinin (HA) of the
+seasonal influenza virus strains
+mRNA for Influenza Encodes HA of Influenza A/H1N1 0.033 12.5
+A/H1N1
+mRNA for Influenza Encodes HA of Influenza A/H3N2 0.033 12.5
+A/H3N2
+mRNA for Influenza Encodes HA of Influenza B/Victoria 0.033 12.5
+B/Victoria
+Total Lipids Individual lipids make up the lipid 2 759
+components of the LNP
+SM-102 Component of the LNP (b) (4)
+Cholesterol Component of the LNP
+DSPC Component of the LNP
+PEG2000-DMG Component of the LNP
+Tris Buffer components in Tris buffer (b) (4) 189
+Tris-HCl Buffer components in Tris buffer 934
+Sucrose Cryoprotection 32.6mg
+Water for injection Diluent q.s. to volume q.s. to volume
+mRNA = messenger ribonucleic acid; LNP = lipid nanoparticle; SM-102 = heptadecan-9-yl 8-((2-hydroxyethyl)(6-oxo-6-
+(undecyloxy)hexyl)amino) octanoate; DSPC = 1,2-distearoyl-sn-glycero-3-phosphocholine; PEG2000-DMG = 1,2-dimyristoyl-rac-
+glycero-3-methoxypolyethylene glycol-2000; q.s = quantum sufficit; a The calculation is performed with (b) (4) mL dose volume.
+Manufacturing Process Development – MFLUSIVA DP
+Process Versions A and B supplied early-phase clinical studies using an integrated
+comprehensive manufacturing process, while Versions D–F supplied later clinical studies
+(mRNA-1010-P301/P302, P303 Parts B&C, P304) using a conventional aseptic process
+aligned with the intended commercial process. Specifically, Process Version A-2
+supplied mRNA-1010-P303 Part A, and Versions E/F supplied mRNA-1010-P303 Parts
+B&C and mRNA-1010-P304. The DP process comprises the same unit operations
+regardless of mRNA sequence, with multiple mRNA sequences used across studies to
+match circulating seasonal influenza variants.
+Key manufacturing changes across process versions are as follows:
+DP Containing LNP derived from the LNP-100 Process
+• Version A (mRNA-1010-P101-Ph1/2, P303 Part A): Integrated sequential batch
+(b) (4)
+process;
+.
+• Version B (mRNA-1010-P101-Ph2): Conventional aseptic process; introduced
+(b) (4)
+• Versions D-F (mRNA-1010-P301/P302, P303 Parts B&C, P304): Conventional
+(b) (4)
+aseptic process;
+.
+DP Containing LNP derived from the LNP-102 Process
+12
+• Commercial process (b) (4)
+Comparability Assessment – MFLUSIVA DP
+A comparability assessment was conducted to confirm that MFLUSIVA DP quality
+attributes are comparable across clinical studies through PPQ. Comparability was
+evaluated using release and extended characterization testing against pre-defined
+acceptance criteria, and stability monitoring. To support commercial manufacturing
+(b) (4)
+consistency, -agnostic quality attributes were assessed using tightened
+comparability limits derived from SPIKEVAX (mRNA-1273) DP comparability criteria,
+(b) (4)
+which are based on n = lots spanning multiple scales, sites, and development stages.
+(b) (4) (b) (4) (b) (4)
+was assessed by with
+Stability comparability between LNP-100 and LNP-102 lots stored at
+23–27°C was evaluated by equivalency testing of degradation rates for four quantitative
+(b) (4)
+Critical Quality Attributes (CQAs): mRNA Purity, ,
+(b) (4)
+and Total Lipid Impurities. Equivalence was concluded when two-sided CIs on the
+difference in mean slopes fell within predefined ±EAC bounds.
+Release, extended characterization, and stability results collectively demonstrate that the
+LNP-102 commercial process produces DP comparable to clinical study material, and
+that LNP-102 lots exhibit quality and stability profiles comparable to or superior to LNP-
+(b) (4)
+100 lots. Degradation rates for and Total Lipid Impurities were
+(b) (4)
+equivalent between groups; for mRNA Purity and , statistically significant
+differences were observed, but DP formulated with LNP-102 input demonstrated
+improved accelerated stability performance. Refer to the CMC Review memo for a
+(b) (4)
+discussion of the observed increase in in DP formulated with LNP-102
+inputs relative to LNP-100 inputs.
+In a nonclinical mouse immunogenicity study comparing DP lots formulated with LNP-
+100 input versus LNP-102 input, MFLUSIVA induced robust HA binding antibodies
+against all three encoded influenza strains regardless of LNP process. Overall results
+indicated immunogenicity equivalence between DP lots manufactured with LNP-102 and
+LNP-100 processes for all three influenza strains (NH24/25 season) at the 1-μg and 2-μg
+dose levels at both Day 21 and Day 36 timepoints.
+MFLUSIVA DP Stability Summary and Conclusion
+(b) (4)
+The DP stability program for MFLUSIVA was conducted in accordance with
+(b) (4)
+, with statistical modeling aligned to
+. The proposed shelf life is 12 months at 2°C-8°C, inclusive of up to 12 hours at
+8°C-25°C.
+The shelf-life assessment is primarily supported by stability data from representative
+(b) (4) (b) (4) (b) (4)
+DP lots ), including
+(b) (4)
+Primary Stability Batches (PSBs) and development lots. Direct MFLUSIVA LNP-102
+(b) (4) (b) (4)
+stability data comprising development lots and with data
+up to 9 months at 4°C were also submitted and evaluated.
+(b) (4)
+13
+(b) (4)
+Stability-indicating CQAs include mRNA Purity,
+and Total Lipid Impurities, all of which exhibit degradation trends over time under
+(b) (4) (b) (4)
+refrigerated and accelerated conditions. , and
+are stable across all conditions. Total RNA Content, Lipid Content, and
+(b) (4)
+are not stability-indicating and were not included in the statistical shelf-life model.
+(b) (4)
+photostability testing demonstrated that light exposure caused meaningful
+reductions in mRNA purity and increases in total lipid impurities in the absence of
+(b) (4)
+secondary packaging, necessitating a "Protect from Light" label statement.
+(b) (4) (b) (4)
+studies across showed only minor increases in
+, both well within acceptance criteria, indicating no meaningful impact on
+product quality.
+End-of-shelf-life (EoSL) was established using regression modeling incorporating
+degradation rates, slope uncertainty, and assay variability. The minimum clinically
+(b) (4)
+supported Effective Delivered Dose (EDD) of per strain at EoSL was established
+based on results from clinical trials showing comparable immunogenicity to pivotal
+(b) (4)
+clinical trials. In response to IR#25 and IR#76, the Applicant the RNA Ratio
+(b) (4) (b) (4) (b) (4)
+release specification , the release specification ( ,
+(b) (4)
+and the RNA Purity stability specification to provide additional quality assurance.
+(b) (4)
+CBER accepted the Applicant’s justification for excluding and Lipid
+Content from the EoSL worst-case calculation. In response to IR#35, the Applicant
+(b) (4)
+demonstrated comparable degradation profiles between MFLUSIVA and
+DPs across all three influenza strains under both long-term and accelerated conditions,
+(b) (4)
+supporting the use of data in the original shelf-life justification.
+The available MFLUSIVA LNP-102 stability data, combined with the demonstrated
+(b) (4)
+comparability to , support the proposed 12-month shelf life at 2°C-8°C with
+up to 12 hours at 8°C-25°C. An end-to-end confirmatory stability study is ongoing. The
+Applicant commits to annual stability placement of at least one labeled DP lot, with
+continued trend monitoring.
+b. Testing Specifications
+The analytical methods and/or qualifications reviewed for MFLUSIVA drug substances
+and drug product were found to be adequate for their intended use.
+Release and Stability Specifications
+Release and stability specifications for the DP are detailed in Table 3. These have been
+(b) (4)
+established in accordance with , incorporating critical quality attributes
+(b) (4)
+defined under and are supported by clinical experience, nonclinical
+immunogenicity data, manufacturing process capability, and prior knowledge from
+(b) (4)
+platform mRNA vaccine programs. Specifications for mRNA purity (release: ;
+(b) (4)
+stability:
+, and lipid content and impurity limits are appropriately justified. The
+end-of-shelf-life mRNA purity specification is supported by clinical data demonstrating
+consistent immunogenicity across a range of effective delivered dose (EDD) values.
+Table 3. MFLUSIVA DP Testing Specifications
+14
+Analytical Method Release Release Acceptance Stability Acceptance
+Sampling Criteria Criteria
+Point
+(b) (4)White to off-white White to off-white
+Appearance by Visual Inspection dispersion. May contain dispersion. May contain
+visible, white or visible, white or
+translucent product- translucent product-
+related particulates related particulates
+(b) (4)(b) (4)
+Identity by (b) (4)
+(b) (4)
+Total RNA Content by (b) (4)
+(b) (4)
+mRNA Purity by (b) (4)
+(b) (4)
+(b) (4)
+(b) (4)
+(b) (4)
+Lipid Identity by (b) (4)
+SM-102
+Cholesterol DSPC PEG2000-DMG
+Lipid Content by (b) (4) SM-102
+Cholesterol DSPC PEG2000-DMG
+Lipid Impurities by (b) (4)
+Abbreviations:(b) (4)
+(b) (4) (b) (4)
+analytical methods covering identity (by
+(b) (4)
+, mRNA purity and product-related impurities , total RNA
+(b) (4)
+content
+(b) (4)
+lipid identity/content/impurities
+have been validated or
+(b) (4)
+verified in accordance with at all relevant testing sites, including Moderna
+(b) (4)
+-agnostic platform methods
+were validated using representative mRNA-1273 materials and confirmed applicable to
+15
+(b) (4)
+MFLUSIVA through product-specific verification activities. -specific methods,
+(b) (4)
+including identity, mRNA purity for DP, , have been
+fully validated or supplementally validated with MFLUSIVA materials, including both the
+LNP-100 and LNP-102 manufacturing processes. The LNP-102 process change,
+(b) (4)
+incorporating , was confirmed to have no adverse
+impact on method performance. Successful method transfers have been demonstrated
+at all testing sites, with all acceptance criteria met.
+(b) (4) (b) (4)
+methods for bioburden, sterility, bacterial endotoxin, ,
+(b) (4) (b) (4)
+, and deliverable volume have been qualified in compliance with
+, with method suitability confirmed through
+bacteriostatic/fungistatic studies demonstrating the absence of product inhibition across
+all tested matrices and sites. One pending commitment regarding supplemental
+(b) (4) (b) (4)
+quantitative validation of at the site is expected by September
+(b) (4)
+1, 2026, and does not preclude an overall determination of adequacy. The
+) has been incorporated in the DP release specifications and as
+a report-only stability parameter, with trending and agency notification commitments in
+place.
+Taken together, the analytical methods and their associated validations, transfers, and
+qualifications are considered adequate to support consistent lot release and stability
+monitoring of MFLUSIVA throughout its proposed shelf life, and the overall analytical
+control strategy is acceptable to support biological product approval.
+c. CBER Lot Release
+The lot release protocol template was submitted to CBER for review and found to be
+acceptable after revisions. A lot release testing plan was developed by CBER and will be
+used for routine lot release.
+d. Facilities Review / Inspection
+Facility information and data provided in the BLA were reviewed by CBER and found to
+be sufficient and acceptable. The facilities involved in the manufacture of Influenza
+Vaccine, mRNA are listed in the table below. The activities performed and inspectional
+histories are noted in Table 4.
+Table 4. Manufacturing Facilities for MFLUSIVA (Influenza Vaccine, mRNA; mRNA-1010)
+DUNS Inspection/ Justification
+Name/Address FEI Number
+Number Waiver /Results
+(b) (4)
+(b) (6)
+(b) (4)
+(b) (4) (b) (4) Waiver
+Manufacture of(b) (4) NAI
+ModernaTX, Inc.
+(b) (4)
+(b) (6)
+(b) (4) (b) (4) Waiver (b) (4)
+NAI
+DS intermediates and DS
+manufacturing
+16
+DUNS Inspection/ Justification
+Name/Address FEI Number
+Number Waiver /Results
+(b) (4)
+(b) (6)
+(b) (4) (b) (4) Waiver (b) (4)
+VAI
+DP manufacturing
+(b) (4) MRA(b)(3);(b)(4)
+Assessed by
+(b) (6): VAI
+(b) (4) (b) (4) Waiver
+DP primary labeling, packaging, (b) (6)
+and release testing (b) (4)
+VAI
+(b) (4)
+(b) (6)
+(b) (4) (b) (4) 0 Waiver (b) (4)
+NAI
+DP (b) (4)
+(b) (4)
+(b) (6)
+(b) (4)
+(b) (4) (b) (4) Waiver
+NAI
+DP release testing
+(b) (4)
+(b) (6)
+(b) (4)
+(b) (4) (b) (4) Waiver
+DP batch release and DP NAI
+release testing
+Acronym key:(b) (4)
+DP: drug product; DS: drug substance; DUNS: data universal numbering
+system; FEI: FDA establishment identifier; (b) (4) ; MRA: mutual recognition agreement; NAI: no action indicated; (b) (4)
+VAI: voluntary action indicated
+(b) (6) (b) (4)
+performed a surveillance inspection of . No
+Form FDA 483 was issued, and the inspection was classified as NAI.
+(b) (6) (b) (4)
+performed a surveillance inspection of ModernaTX, Inc. in No
+Form FDA 483 was issued, and the inspection was classified as NAI.
+(b) (6) (b) (4)
+performed a surveillance inspection of . A Form
+FDA 483 Inspectional Observations was issued at the conclusion of the inspection. The
+firm responded to the observations, and the corrective actions were reviewed and found
+to be adequate. All inspectional issues were resolved, and the inspection was classified
+as VAI.
+(b)(3);(b)(4)
+The performed a GMP inspection of
+(b) (4)
+. In accordance with the MRA between the FDA and European
+(b) (6)
+regulators, assessed the inspection report and determined the inspection was
+17
+(b) (6) (b) (4)
+classified as VAI. performed a pre-approval inspection of
+. A Form FDA 483 Inspectional Observations was issued at the conclusion
+of the inspection. The firm responded to the observations, and the corrective actions
+were reviewed and found to be adequate. All inspectional issues were resolved, and the
+inspection was classified as VAI.
+(b) (6) (b) (4)
+performed a surveillance inspection of
+. No Form FDA 483 was issued, and the inspection was classified as NAI.
+(b) (6) (b) (4)
+performed a surveillance inspection of . No Form FDA
+483 was issued, and the inspection was classified as NAI.
+(b) (6) (b) (4)
+performed a surveillance inspection of Moderna
+. No Form FDA 483 was issued, and the inspection was classified as
+NAI.
+e. Container/Closure System
+The prefilled syringe (PFS) container closure system consists of a 1-mL long cyclic olefin
+copolymer syringe barrel with a halobutyl rubber tip cap in a rigid plastic cover
+(b) (4)
+manufactured by , 1-
+mL long halobutyl rubber plunger with fluoropolymer coating on the product contact
+(b) (4)
+surface manufactured by
+(b) (4)
+, and a polypropylene plunger rod manufactured by
+(b) (4)
+performed the container closure integrity testing at the ,
+(b) (4)
+employing a test method; all acceptance criteria were met.
+f. Environmental Assessment
+The BLA included a request for categorical exclusion from an Environmental
+Assessment under 21 CFR 25.31. CBER concluded that this request is justified, and no
+extraordinary circumstances exist that would require an environmental assessment.
+4. Nonclinical Pharmacology/Toxicology
+The Applicant submitted a comprehensive nonclinical package for MFLUSIVA that
+included one developmental and reproductive toxicity (DART) study, one non-GLP
+repeat-dose toxicity study, and one GLP repeat-dose toxicity study using earlier
+formulations of mRNA-1010 manufactured similarly to MFLUSIVA (see Table 5). The
+submission also contained seven additional repeat-dose toxicity studies of other mRNA
+(b) (4)
+vaccines formulated with lipid nanoparticle (LNP), six genotoxicity studies of
+the LNP component, seven nonclinical pharmacology studies, and six pharmacokinetic
+(PK) studies. A summary of these studies is outlined in Table 5.
+18
+Table 5. Summary of Nonclinical Pharmacology and Pharmacokinetic Studies
+Study Type Test Article and Dose (µg) Species, Method of Administration; GLP Report
+Strain Immunization Schedule Number
+Evaluation of in vivo mRNA-1010-SH21 (b) (4) IM; No 2810880
+immunogenicity and (10 µg) mice Prime only (Day 0)
+protective efficacy of
+mRNA-1010 in mice FLUAD Intranasal challenge with 104
+(6 µg) TCID50 H3N2
+A/Hong Kong/1/1968 or
+105 TCID50 of H1N1pdm09
+A/Netherlands/602/2009 virus
+on Day 21
+Evaluation of in vivo mRNA-1010-SH21(100 µg) Mustela putorius IM; No 2810881
+immunogenicity and furo ferrets Prime/Boost (3-
+protective efficacy of FLUAD week interval)
+mRNA-1010 in ferrets (60 µg)
+Intranasal
+(0.3 mL, 105 TCID50) and
+intrathecal
+(3.0 mL, 105 TCID50)
+challenge with H1N1pdm09
+A/Victoria/2570/2019 virus on
+Day 42
+Evaluation of the impact mRNA-1010 NH21/22 or (b) (4) mice IM; No MOD-4731
+of (b) (4) mRNA-1010 NH21/22(b) (4) Prime only
+on the
+(0.5, 1, 2, or 4 µg)
+immunogenicity of
+mRNA-1010 in mice
+Evaluation of in vivo mRNA-1010 mRNA-1010.6 (b) (4) mice IM; No MOD-5814-
+immunogenicity of mRNA-1010.4 Prime/Boost 1010
+different versions of (3-week interval)
+mRNA-1010 in(b) (4) (2 μg)
+mice
+Evaluation of in vivo mRNA-1010 TIV (b) (4) mice IM; No MOD-7512-
+immunogenicity (antibody (1.5 µg) Prime/Boost 1010-TIV
+and T cell responses) of (3-week interval)
+a trivalent mRNA vaccine
+against influenza virus
+Evaluation of in vivo mRNA-1010 TIV LNP-100, (b) (4) mice IM; No MOD-7488-
+immunogenicity of a mRNA-1010 TIV LNP-102 Prime/Boost 1010-TIV
+trivalent mRNA vaccine (3-week interval)
+(0.5, 1, or 2 µg)
+against influenza virus
+comparing 2 LNP
+manufacturing processes
+mRNA-1010 (b) (4) mice IM; No MOD-7776-
+Evaluation of in vivo (0.045, 0.19, or 0.75 µg) Prime/Boost 1010
+immunogenicity of mRNA- (3-week interval)
+1010 encoding for
+hemagglutinin of seasonal
+influenza virusesi
+19
+Study Type Test Article and Dose (µg) Species, Method of Administration; GLP Report
+Strain Immunization Schedule Number
+Single-dose (b) (4) mRNA in SM-102/ (b) (4) Single IM dose No 2308-582
+biodistribution study of rats
+(b) (4) mRNA in PEG2000-DMG-containing Amendment 1
+SM-102/PEG2000-DMG LNPs: 100 µg/dose
+Single- or repeat-dose mRNA-1273: 78 µg/dosea (b) (4) Single- or repeat IM dose on No 20456513
+biodistribution study of rats Days 1 and 28
+Amendment 1
+mRNA-1273
+Identification and NT-FIX mRNA in SM-102- Cryopreserve Incubation of SM-102- No NCS-BA-2022-
+profiling of metabolites containing LNPs: 10 µM d hepatocytes containing LNPs with rat, 010
+of SM-102 in rat, SM-102 from (b) (4) monkey, and human
+monkey, and human rats, hepatocytes
+hepatocytes (b) (4)
+monkey, and
+human
+Metabolite profile and (b) (4) mRNA in SM-102- (b) (4) Single 10- minute IV infusion No QV-0236- DA-
+identification of SM- containing LNPs: rats RE-RPT- 01
+102 in rat plasma,
+urine, and bile following 0.7 mg/kg/dose
+IV infusion of SM-102-
+containing LNPs to
+male (b) (4)
+rats
+PEG2000-DMG in vitro PEG2000-DMG: Rat, monkey, Incubation of PEG2000-DMG No NCS-BMA- 2023-
+metabolite profiling and 122.5 µM and human with rat, monkey, and human 06
+identification serum serum
+Abbreviations: Admin = administration, DP = drug product, FLUAD = adjuvanted influenza vaccine, GLP =Good Laboratory
+Practice, H1N1 = influenza A virus, H3N2 = influenza A virus subtype H3N2, HA = hemagglutinin, (b) (4) , IM =
+intramuscular, IV = intravenous, LNP = lipid nanoparticle, mRNA = messenger RNA, NCS = non-coding sequences, NH =
+Northern Hemisphere(b) (4) , PEG2000-DMG = 1,2-dimyristoyl-rac-glycero-3-
+methylpolyoxyethylene glycol-2000. PK = pharmacokinetic, RNA = ribonucleic acid, SH = Southern Hemisphere, SM-102 =
+heptadecan-9-yl 8-((2-hydroxyethyl)(6-oxo-6-((undecyloxy)hexyl)amino)octanoate), TCID50 = median tissue culture infectious
+dose, TIV = trivalent vaccine, (b) (4) , WHO = World Health Organization
+Pharmacology Studies
+In a ferret efficacy study (Report 2810881), female ferrets received mRNA-1010 (100 μg)
+or FLUAD (15 or 60 μg) on a prime/boost schedule (Days 0/21) and were challenged
+intranasally and intratracheally with H1N1pdm09 A/Victoria/2570/2019 on Day 42.
+mRNA-1010 induced HAI and high neutralization titers comparable to FLUAD.
+Vaccinated ferrets demonstrated reduced viral loads across tissues with complete lung
+protection; MRNA-1010 showed lower viral levels in the nose, throat, and nasal turbinate
+compared to FLUAD.
+(b) (4)
+of each mRNA
+component did not impact immunogenicity, as confirmed by robust IgG anti-HA titers
+(b) (4) (b) (4)
+across dose levels (0.5–4 μg) in mice (Report
+MOD-4731).
+An unlicensed Moderna mRNA quadrivalent influenza vaccine manufactured using the
+same process as MRNA-1010 incorporating revised influenza B HA coding sequences (2
+point substitutions) and updated UTRs induced IgG and HAI antibody titers against all
+four antigens comparable to the original vaccine (Report MOD-5814-1010). The B HA
+20
+substitutions produced a modest increase in binding antibody to B/Austria HA after Dose
+1 but did not affect B/Phuket HA responses. All formulations induced CD4+ Th1 and
+CD8+ T-cell responses.
+A manufacturing process comparison of LNP-100 versus LNP-102 in MRNA-1010
+(Report MOD-7488-1010-TIV) demonstrated immunogenicity equivalence at the 1- and
+2-μg dose levels across all three influenza strains at Days 21 and 36, with slightly higher
+variability at 0.5 μg favoring LNP-102.
+Across all pharmacology studies, MFLUSIVA consistently induced robust IgG binding
+and HAI antibodies, as well as CD4+ Th1 and CD8+ T cell responses against encoded
+influenza HA antigens.
+Pharmacokinetic (PK) studies
+Nonclinical PK evaluations included in vivo distribution, persistence, and clearance of
+mRNAs, SM-102 lipid, and/or expressed proteins using other representative mRNA-LNP
+DPs formulated in the same 4 lipids as MFLUSIVA.
+Biodistribution studies
+The biodistribution of mRNA-based vaccines formulated in LNPs is predicted to be
+driven by the LNP characteristics and route of administration (as opposed the mRNA
+cargo). Consequently, mRNAs are expected to distribute similarly when encapsulated by
+LNPs of the same composition and administered via the same route of administration. A
+summary of the distribution studies and the obtained results is presented below.
+To support the development of MFLUSIVA, 3 biodistribution studies were conducted
+using mRNA-LNP DPs comprised of the same 4 lipids and generally similar lipid:mRNA
+ratios as MFLUSIVA. The biodistribution and kinetics of SM-102 lipid, mRNA, and/or
+(b) (4)
+expressed protein(s) following a single IM administration were evaluated using
+(b) (4)
+mRNA encapsulated in SM-102/PEG2000-DMG-containing LNPs and
+). In the study with mRNA-1273, the biodistribution and kinetics of
+SM-102 lipid, mRNA, and/or expressed protein(s) following a single IM administration.
+Results from the biodistribution studies showed general similarities in exposure tissue
+rank order and kinetics across mRNA-LNP DPs (highest concentrations of mRNA and
+SM-102 were observed at the injection site, spleen, and lymph nodes). Tissue
+distribution of mRNA and SM-102 lipid is similar following 1 or 2 administrations of
+(b) (4)
+mRNA-1273. While expressed protein in tissues was largely not quantifiable,
+expressed SARS-CoV-2 protein was generally higher in tissues than in serum, where
+lymph nodes, injection site, spleen, and/or liver had highest exposures. Exposures of
+expressed SARS-CoV-2 protein in brain, heart, and lung were generally undetectable. In
+(b) (4)
+a single-dose biodistribution study conducted using in male rats, all 6
+(b) (4)
+mRNA constructs contained within were detected in plasma and tissues,
+with the highest concentrations observed at the injection site, lymph nodes, and spleen.
+Only a small fraction of the administered dose reached distant tissues, and mRNA
+concentrations in most tissues became undetectable within 1 to 3 days, except at the
+injection site, lymph nodes, and spleen. A summary of the nonclinical toxicology studies
+is outlined in Table 6.
+Table 6. List of Nonclinical Toxicology Studies
+21
+Study Type Species/ Test Admin. Duration of Doses GLP Testing Report
+Strain Article Route Dosing Facility Number
+Combined Rat, mRNA- IM 4 doses 0 and Yes (b) (4) 20323624
+development (b) (4) 1010 over 100 μg/dose Amendment 1
+al 6 weeks
+and perinatal/ (every
+postnatal 2 weeks)
+reproductive
+toxicity study
+3-week Rat, mRNA- IM 2 doses 0, 30, 60, and No (b) (4) 20287009
+repeat-dose (b) (4) 1010 over 100 μg/dose Amendment 2
+immunogenic 3 weeks
+it (every
+y and toxicity 3 weeks)
+study in rats
+3-week Rat, mRNA- IM 2 doses 0, 5, 10, and Yes (b) (4) 20457846
+repeat-dose (b) (4) 1010.6 over 18 μg/dose Amendment 1
+toxicity study 3 weeks
+in rats with a (every
+2-week 3 weeks)
+recovery
+4-week Rat, (b) (4) IM 3 doses (b) (4) Yes (b) (4) 5002033
+repeat-dose (b) (4) over
+toxicity study 4 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+6-week Rat, (b) (4) IM 4 doses (b) (4) Yes (b) (4) 5002034
+repeat-dose (b) (4) over Amendment 1
+toxicity study 6 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+4-week Rat, (b) (4) IM 3 doses (b) (4) Yes (b) (4) 5002045
+repeat-dose (b) (4) over
+toxicity study 4 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+6-week Rat, (b) (4) IM 4 doses (b) (4) Yes (b) (4) 5002158
+repeat-dose (b) (4) over Amendment 1
+toxicity study 6 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+4-week Rat, (b) (4) IM 3 doses (b) (4) Yes (b) (4) 5002231
+repeat-dose (b) (4) over
+toxicity study 4 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+4-week Rat, (b) (4) IM 3 doses (b) (4) Yes (b) (4) 5002400
+repeat-dose (b) (4) over
+toxicity study 4 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+4-week Rat, (b) (4) IM 3 doses (b) (4) Yes (b) (4) 5002033
+repeat-dose (b) (4) over
+toxicity study 4 weeks
+in rats with a (every
+2-week 2 weeks)
+recovery
+(b) (4) Rat, (b) (4) IV bolus Single dose (b) (4) Yes (b) (4) 9800399
+(b) (4) evaluated
+at
+24 h and
+48 h
+postdose
+22
+Study Type Species/ Test Admin. Duration of Doses GLP Testing Report
+Strain Article Route Dosing Facility Number
+(b) (4) Rat, (b) (4) IV bolus Single dose 0, 0.32/3.3, No (b) (4) AF87FU.1250
+(b) (4) mRNA evaluated 1.07/10.9, 12NGLPICH.
+at 3.21/32.7 BTL
+2 h, 6 h, mg/k Amendment 1
+24 h, and g
+48 h RNA/SM-102,
+postdose respectively
+PEG2000- (b) (4) PEG2000 In vitro 67 h and 0, 1.58, 5.0, Yes (b) (4) 9601035
+DMG - 57 min of 15.8, 50, 158,
+bacterial DMG incubation 500, 1581,
+reverse (b) (4) with or 5000 μg/(b) (4)
+mutation test without (b) (4)
+in
+(b) (4)
+PEG2000- Human PEG2000 In vitro 4 h of 0, 3.25, 5.68, Yes (b) (4) 9601036
+DMG(b) (4) peripheral - incubation 9.95, 17.4,
+blood DMG with or 30.5, 53.3,
+lymphocyte (b) (4) without (b) (4) 93.3, 163,
+s s and 24 286,
+test in human ) h 500 μg/mL
+peripheral of
+blood incubation
+lymphocytes without (b) (4)
+SM-102 (b) (4) SM-102 In vitro 67 h and 0, 1.58, 5, Yes (b) (4) 9601567
+bacterial 29 min of 15.8, 50, 158,
+reverse incubation 500, 1581,
+mutation test with or 5000 μg/(b) (4)
+in without (b) (4)
+(b) (4)
+SM-102 (b) ( 4) Human SM-102 In vitro 4 h of 0, 3.25, 5.68, Yes (b) (4) 9601568
+peripheral incubation 9.95, 17.4,
+blood with or 30.5, 53.3,
+lymphocyte without (b) (4) 93.3, 163,
+s and 24 286,
+test in human h 500 μg/mL
+peripheral of
+blood incubation
+lymphocytes without (b) (4)
+Abbreviations: Admin = administration; (b) (4) ; DSPC = 1,2-distearoyl-sn-
+glycero-3-phosphocholine; DTPA = diethylenetriaminepentaacetic acid; eCTD = electronic common technical document; F = female;
+(b) (4) ; GLP = Good Laboratory Practice; h = hour(s); H1N1 = influenza A
+virus; H3N2 = influenza A virus subtype H3N2; HA = hemagglutinin; (b) (4) ; IM = intramuscular; IV =
+intravenous; (b) (4) ; M = male; min = minute(s); mRNA = messenger RNA; NaCl = sodium chloride; (b) (4)
+; PEG2000-DMG = 1,2-dimyristoyl-rac-glycero-3-methylpolyoxyethylene glycol-2000;(b) (4)
+SM
+102 = heptadecan-9-yl 8-((2-hydroxyethyl)(6- oxo-6-((undecyloxy) hexyl) amino) octanoate); SoA = Summary of Analysis; Tris =
+tris(hydroxymethyl)aminomethane; WHO = World Health Organization; (b) (4) .
+GLP Combined Perinatal/Postnatal Developmental & Reproductive Toxicity Study
+Administration of mRNA-1010 twice during the premating period (28 and 14 days prior to
+mating) and twice during the gestation period (GDs 1 and 13) to female rats was well
+tolerated. It did not result in any effects on estrus cycling, mating and maternal systemic
+toxicity, pregnancy, and fertility index. There was no test article-related effect on fetal
+weight, visceral and skeletal malformations and variations or postnatal development
+reported in the study. Antibody titers were reported in all females receiving the vaccine,
+23
+indicating an active delivery of the test article to the animals. The titers were also
+reported in the fetuses and pups from the dams receiving the test article, indicating
+transfer of immunogenicity in utero. Further, antibody titers were reported in maternal
+milk on LD 13 and LD 21. GLP study deviations or amendments: Minor protocol
+amendments were recorded in the draft report. None of them influenced the quality,
+integrity, or interpretation of the results.
+General Toxicity Studies
+The Applicant submitted one non-GLP and one GLP repeat-dose toxicity study
+evaluating the candidate vaccine MFLUSIVA along with seven additional repeat dose
+toxicity studies evaluating other mRNA vaccines using the same LNP formulation. The
+non-GLP study (Report 20287009 Amendment 2) conducted with MFLUSIVA
+demonstrated transient, dose-dependent edema and erythema at the injection site, along
+with elevated neutrophil and eosinophil counts, decreased lymphocytes, and shifts in
+albumin/globulin ratios reflecting inflammation, with robust HA IgG antibody responses
+confirmed across all dose groups; no necropsy data were collected. The GLP repeat-
+dose toxicity study conducted with MFLUSIVA (Report 20457846 Amendment 1)
+confirmed dose-responsive increases in WBC, neutrophils (up to 5.73×), eosinophils (up
+to 3.92×), and fibrinogen (up to 3.03×), with clinical chemistry changes (decreased
+albumin, increased globulin, increased cholesterol at higher doses) indicative of an
+acute-phase response; microscopic target organs included the injection site (mixed cell
+inflammation), iliac and inguinal lymph nodes (increased lymphocyte cellularity), sciatic
+nerve (perineural mixed cell inflammation representing extension of local inflammation),
+spleen (decreased PALS cellularity, increased extramedullary hematopoiesis), sternum
+bone marrow (increased myeloid hematopoiesis), and adrenal gland (cortical vacuolation
+in males); the NOAEL was established at 18 µg, and all findings were fully or partially
+reversed after the 2-week recovery period.
+(b) (4)
+Across all nine general toxicity studies conducted in rats via
+intramuscular (IM) injection, the overarching toxicological profile of mRNA-LNP vaccines
+(b) (4)
+(mRNA-1010,
+was consistent and most observations were the expected local and
+systemic inflammatory/immune responses. The consistent target organs of toxicity were
+the injection site (local reactogenicity with inflammation, edema, and pain), draining
+lymph nodes (reactive lymphadenopathy), sciatic nerve (perineural inflammation due to
+anatomic proximity), spleen and bone marrow (reactive hematopoietic
+changes), liver (hepatocellular vacuolation and Kupffer cell hypertrophy, particularly
+(b) (4)
+notable with , warranting clinical liver
+function monitoring), and adrenal glands (cortical vacuolation/hypertrophy). Systemic
+inflammatory responses, including marked leukocytosis, elevated fibrinogen, and
+elevated inflammatory cytokines (IP-10, MCP-1, MIP-1α), represent potential clinical
+safety signals, particularly fever, injection-site pain, and systemic reactogenicity. The
+reversibility of most findings within the 2-week recovery period is reassuring,
+(b) (4)
+though hepatic vacuolation and injection-site
+(b) (4)
+changes in particular) were only partially reversible. No mortality, no
+adverse effects on body weight (with minor exceptions), no genotoxicity by IM route, and
+no reproductive toxicity were observed, supporting an acceptable nonclinical safety
+profile for clinical use.
+In vivo and In vitro Genotoxicity Studies
+24
+(b) (4)
+Taken together, the totality of evidence from all six genotoxicology studies (2
+(b) (4)
+assays and four assays evaluating
+(b) (4)
+the LNP excipients SM-102, PEG2K-DMG, and supports an overall negative
+genotoxicity profile for the MFLUSIVA vaccine platform.
+5. Clinical Pharmacology
+The Applicant’s mRNA-based proprietary vaccine platform using SM-102-containing
+LNPs is based on the principle and observation that cells can take up mRNA, translate it,
+and then express viral antigen(s) on the cell surface.
+6. Clinical/Statistical
+a. Clinical Program
+Clinical Diagnostic Assays Used to Support Clinical Endpoints
+Molecular Diagnostic Assay of Respiratory Pathogens
+(b) (4)
+The PCR-based molecular diagnostic assay, , was used for the qualitative
+detection of influenza nucleic acid to determine infection status for the phase 3 study,
+(b) (4) (b) (4)
+mRNA-1010-P304. The is a
+(b) (4)
+The assay
+was developed and validated
+(b) (4)
+by and used in Study P304. The performance characteristics are provided and
+are acceptable. See the CMC Review Memo for additional information on molecular
+diagnostic assays used by The Applicant for other clinical studies submitted under STN
+125869/0.
+Immunological Assays for Antibody Quantification
+Quantification of anti-HA Abs by HAI Assay
+The anti-HA antibody HAI assay, designed for the quantification of functional anti-HA
+antibodies in human serum samples, was used to assess primary endpoints in both
+(b) (4)
+pivotal Phase 3 studies mRNA-1010-P303C and mRNA-1010-P304.
+25
+(b) (4)
+The proprietary serological method “CSP 039-01 Quantification of anti-HA Antibodies by
+(b) (4)
+Hemagglutination Inhibition (HAI) Assay” was initially developed and qualified by
+and was
+applied in Study P101. The proprietary serological methods “(TSOP.119.01032-FDX)
+(b) (4)
+HAI Test for Titrating Influenza Virus A and B Specific Antibodies- ” was
+(b) (4)
+validated by for both influenza A and B strains used in Studies P301, P302, and
+P303 (Part A and B). The following parameters were evaluated: inter-assay precision,
+(b) (4)
+intra-assay precision, linearity, relative accuracy, limits of quantitation (LLOQ
+(b) (4)
+and ULOQ), specificity, matrix interference, and robustness
+The predefined acceptance criteria are acceptable. All parameters evaluated
+met the acceptance criteria showing that the assay is adequate for its intended use.
+Validation parameter results are provided and are acceptable.
+(b) (4)
+HAI assays used in studies mRNA-1010-P303 and mRNA-1010-P304 employed
+. To address this, CBER has
+requested a postmarketing commitment (PMC) to evaluate immune responses in a
+sample subset using egg-derived virus or both egg-derived and cell-derived virus HAI
+assays in parallel.
+(b) (4)
+-Based MN Assay for Quantification of Anti-Influenza Virus Antibodies
+(b) (4)
+The -based MN assay detects and quantifies influenza-specific neutralizing
+(b) (4)
+antibodies in clinical serum samples.
+26
+(b) (4)
+The validation parameter results were provided and are acceptable.
+Antigenic Typing and Other Assays Used to Support Clinical Endpoints
+(b) (4)
+Antigenic typing was performed using an HAI-based assay, in which
+These validation parameter results are provided and
+are acceptable.
+Please refer to the CMC Review Memo for additional information on assessment of T-
+cell activation for an exploratory endpoint in Study mRNA-1010-P304 as well as an
+additional molecular diagnostic assay used in clinical studies P101, P301, P302 and
+P303 Part A.
+Surrogate Marker Reasonably Likely to Predict Clinical Benefit
+The Applicant's CoR analysis supported a statistically meaningful association between
+HAI titers and RT-PCR-confirmed influenza illness caused by A/H1N1 and A/H3N2. For
+B/Victoria, however, the CoR analysis was inconclusive due to low case accrual, and
+non-statistically significant correlation (See Clinical Review Memo). Additionally, the
+strain-specific rVE point estimate, while directionally consistent, had a wide confidence
+interval that crossed zero. Notwithstanding these limitations, the review team concluded
+that HAI remained a surrogate endpoint reasonably likely to predict clinical benefit for
+prevention of influenza disease caused by influenza type B represented in the vaccine,
+supported by the directional consistency of the rVE estimate, the biological plausibility of
+27
+HAI-mediated protection, and methodological constraints inherent to strain-specific
+analyses.
+The Applicant is required to conduct a Phase 4 confirmatory PMR study in adults 65
+years of age and older, incorporating strain-specific rVE as an objective to verify and
+further describe clinical benefit.
+Overview of Clinical Studies
+The clinical development program for MFLUSIVA comprises five studies, as outlined in
+Table 7. Early-phase dose-selection was conducted in Study P101 (Phase 1/2), which,
+along with Studies P301 and P302, evaluated a pre-modified formulation containing
+earlier-generation influenza B antigens. Studies P301 and P302 contribute safety data to
+the ISS only; Studies P301 and P302 are not discussed in further detail in this review, as
+they employed the pre-modified formulation and failed to meet their primary objectives.
+Studies P303 Parts A and B evaluated modified quadrivalent formulations (mRNA-
+1010.6 and mRNA-1010.4, respectively) in adults ≥18 years of age and also contribute to
+the ISS only.
+The pivotal Phase 3 program consists of two studies. Study P304 provides primary
+relative vaccine efficacy and safety data for MFLUSIVA in adults ≥50 years of age and
+serves as the primary evidentiary basis for demonstrating effectiveness for Traditional
+Approval in adults 50 through 64 years of age. Study P303 Part C provides
+immunogenicity and safety data for Moderna mRNA quadrivalent influenza vaccine
+compared with Fluzone HD (QIV) in adults ≥65 years of age and serves as the primary
+evidentiary basis for inferring effectiveness for Accelerated Approval in that population.
+Table 7. Clinical Studies Submitted in Support of Efficacy and Safety Determinations of MFLUSIVA
+Total mRNA-1010 Formulation and
+Recipients Dose Levels of
+Study Number Total Comparator mRNA-1010
+(Country); Study Dates Study Design Recipients Evaluated
+mRNA-1010-P304 Phase 3, randomized, mRNA-1010 (TIV): mRNA-1010.4
+(Belgium, Bulgaria, stratified, observer N=20,350 (TIV)
+Canada, Estonia, Finland, blinded (participant and SD comparator (TIV or 37.5 μg
+Georgia, Germany, South assessor-blind), active- QIV): N=20,353
+Korea, Taiwan, UK, U.S.) controlled, safety,
+September 16, 2024 to efficacy, and
+August 21, 2025 immunogenicity study
+in adults ≥50 years of
+age.
+mRNA-1010-P303 Phase 3, randomized, Part A*: Part A*:
+(U.S.) stratified, observer mRNA-1010 (QIV): N=1220 mRNA-1010.6#
+Part A*: April 17, 2023 to blind, active-controlled, SD comparator (QIV): (QIV)
+November 28, 2023 immunogenicity, N=1180 50 μg
+Part B*: November 13, reactogenicity, and
+2023 to June 20, 2024 safety study. Part B*: Part B*:
+Part C: November 13, mRNA-1010 (QIV): N=1492 mRNA-1010.4
+2023 to June 24, 2024 Part A*: adults SD comparator (QIV): (QIV)
+≥18 years N=1488 50 μg
+Part B*: adults 18 to
+<65 years Part C: Part C:
+Part C: adults mRNA-1010 (QIV): N=1502 mRNA-1010.4
+≥65 years Fluzone HD (QIV): N=1490 (QIV)
+50 μg
+28
+Total mRNA-1010 Formulation and
+Recipients Dose Levels of
+Study Number Total Comparator mRNA-1010
+(Country); Study Dates Study Design Recipients Evaluated
+mRNA-1010-P101* Phase 1/2, randomized, mRNA-1010 (original, QIV): mRNA-1010
+(U.S.) stratified, observer N=736 (original, QIV)
+June 28, 2021 to blind, dose-ranging 6.25 μg
+September 27, 2022 safety, reactogenicity, Afluria (QIV): N=104 12.5 μg
+and immunogenicity 25 μg
+study in healthy adults Placebo: N=45 50 μg
+≥18 years of age. 100 μg
+200 μg
+mRNA-1010-P301* Phase 3, randomized, mRNA-1010 (original, QIV): mRNA-1010
+(Argentina, Australia, stratified, observer N=3035 (original, QIV)
+Colombia, Panama, and blind, active-controlled, 50 μg
+Philippines) immunogenicity, SD comparator (QIV):
+June 6, 2022 to reactogenicity, and N=3048
+September 4, 2023 safety study in adults
+≥18 years of age.
+mRNA-1010-P302* Phase 3, randomized, mRNA-1010 (original, QIV): mRNA-1010
+(Bulgaria, Canada, observer-blind, active- N=11,210 (original, QIV)
+Denmark, Estonia, controlled, safety, 50 μg
+Germany, Poland, Spain, reactogenicity, and SD comparator (QIV):
+Taiwan, UK, U.S.) efficacy, study in adults N=11,200
+September 14, 2022 to ≥50 years of age.
+January 5, 2024
+Source: Adapted from STN 125869/0, Clinical Overview.
+Abbreviations: HD, high dose; QIV, quadrivalent influenza vaccine; SD, standard dose; TIV, trivalent influenza vaccine; UK, United
+Kingdom; U.S., United States
+* P301, P302, and P303 Parts A and B contribute to the Integrated Summary of Safety only and will not be discussed individually in
+this memo.
+^original refers to an earlier formulation of mRNA-1010 with influenza B antigens manufactured differently than those in the
+formulation intended for licensure
+# mRNA-1010.4 and mRNA1010.6 are identical, with the only difference being the scale of manufacturing. They both include
+modified influenza B antigen(s) encoding 2 stabilizing point mutations in non-surface exposed regions that do not impact antigenic
+epitopes.
+Study mRNA-1010-P304 (NCT06602024)
+Study mRNA-1010-P304 (P304) was a Phase 3, randomized, observer-blind, active-
+controlled study evaluating the safety, efficacy, and immunogenicity of trivalent
+MFLUSIVA versus a licensed standard-dose trivalent or quadrivalent inactivated
+influenza vaccine (SD comparator [TIV/QIV]) for prevention of influenza A or B in adults
+≥50 years of age. The study was conducted at 301 sites across 11 countries in North
+America, Europe, and East Asia. A total of 40,805 participants were randomized 1:1 to a
+single intramuscular dose of either MFLUSIVA or SD comparator. The trivalent SD
+comparator was used in North America; the quadrivalent formulation was used in Europe
+and East Asia where the trivalent was unavailable. Strains encoded in MFLUSIVA were
+aligned with CBER recommendations for the 2024–2025 Northern Hemisphere influenza
+vaccine (cell- or recombinant-based). Randomization was stratified by age (50 to <65
+years or ≥65 years of age) and prior-season influenza vaccination status. The study was
+conducted from September 16, 2024, to August 21, 2025. Primary efficacy and
+immunogenicity analyses used a data cutoff of April 30, 2025 (database lock June 3,
+2025); supportive end-of-study analyses used a cutoff of August 21, 2025 (database lock
+September 16, 2025).
+29
+Study mRNA-1010-P304 Objectives
+Primary efficacy objective:
+The primary efficacy objective was to evaluate the relative vaccine efficacy (rVE) of
+MFLUSIVA versus the SD comparator against RT-PCR–confirmed protocol-defined
+influenza-like illness (ILI) (see Clinical Review Memo for case definitions) caused by any
+influenza A or B strain. The clinical endpoint evaluated was the first episode of RT-PCR–
+confirmed protocol-defined ILI with onset at least 14 days after study intervention through
+the end of the influenza season, caused by any influenza A or B strain. Noninferiority (NI)
+was demonstrated if the lower limit (LL) of the two-sided 95% confidence interval (CI) of
+rVE of MFLUSIVA relative to the SD comparator was greater than −10%. Once NI was
+demonstrated, the same endpoint was tested sequentially for superiority (LL of two-sided
+95% CI of rVE >0%) and then “super-superiority” (LL of two-sided 95% CI of rVE >9.1%).
+Definitions and thresholds of superiority and “super-superiority” were defined by the
+Applicant.
+Secondary Objectives:
+The secondary efficacy objectives were to 1) evaluate rVE of MFLUSIVA versus the SD
+comparator against RT-PCR–confirmed modified Centers for Disease Control and
+Prevention (CDC)-defined ILI (see Table 44 in Appendix B of the clinical review memo
+for case definitions) caused by any influenza A or B strain and 2) To evaluate rVE of
+MFLUSIVA versus the SD comparator against RT-PCR–confirmed protocol-defined ILI
+or modified CDC-defined ILI caused by influenza A or B strains with antigenic match to
+the vaccine strains.
+Secondary immunogenicity objectives were to 1) evaluate the humoral immunogenicity
+of MFLUSIVA relative to the SD comparator against vaccine-matched influenza A and B
+strains in a prespecified subset of approximately 2,400 participants and 2) evaluate HAI
+titers as a correlate of risk (CoR) and correlate of protection (CoP) against RT-PCR–
+confirmed protocol-defined ILI for MFLUSIVA and the SD comparator.
+mRNA-1010-P304 Study Results
+Analyses of Primary Efficacy Endpoint
+The primary efficacy analysis was based on the pre-specified interim analysis conducted
+at the end of the NH 2024/2025 influenza season. This analysis includes cases of the
+first RT-PCR–confirmed protocol-defined ILI with onset at least 14 days after study
+vaccination through the data cutoff of April 30, 2025. The median duration of follow-up
+for efficacy was 181 days (approximately 6 months).
+The primary efficacy objective was to demonstrate that MFLUSIVA is noninferior to the
+SD comparator in preventing the first episode of protocol-defined ILI. As shown in Table
+8, MFLUSIVA demonstrated an rVE of 26.6% (95% CI: 16.7, 35.4) in all participants ≥50
+years of age, meeting the prespecified NI criterion (LL of 95% CI of rVE >−10%). The
+case split was 411 cases (2.0%) in the MFLUSIVA group and 557 cases (2.8%) in the
+SD comparator group. Sequential testing for superiority (LL of 95% CI >0%) and “super-
+superiority” (LL of 95% CI >9.1%) were then conducted and both were also
+demonstrated.
+30
+Table 8. Analysis of Primary Efficacy Endpoint of Relative Vaccine Efficacy (rVE) for MFLUSIVA
+Versus SD Comparator Against RT-PCR–Confirmed Protocol-Defined ILI Caused by Any Influenza
+A or B Strains in Participants 50 Years of Age and Older (PP Set), Study P304
+SD Comparator
+MFLUSIVA N=20,179 N=20,124
+Cases Cases rVE (%)
+n (%)a n (%)a (95% CI)b
+411 557 26.6
+(2.0) (2.8) (16.7, 35.4)
+Abbreviations: CI, confidence interval; ILI, influenza-like illness; N, number of participants in the PP analysis set; n: number of
+protocol-defined ILI cases; PP, per protocol; RT-PCR, real-time reverse transcription polymerase chain reaction; rVE, relative vaccine
+efficacy; SD, standard dose
+The case is the first RT-PCR–confirmed protocol-defined ILI that begins at least 14 days after study vaccination through the end of
+influenza season caused by any influenza A or B strains, regardless of vaccine match.
+a Percentages are based on the number of participants in the analysis set.
+b rVE is defined as 100×(1−hazard ratio [MFLUSIVA versus the Active Comparator]). The rVE and the CI are based on a stratified
+Cox proportional hazards model with the study vaccination group as a fixed effect, adjusting by the randomized stratification factors:
+age group (≥50 to <65 years or ≥65 years) and the status of influenza vaccine in the previous influenza season (received or not).
+The time from vaccination to the first RT-PCR–confirmed protocol-defined ILI was similar
+across treatment groups (median of 91.0 days in the MFLUSIVA group and 96.0 days in
+the SD comparator group). More cases accrued in the SD comparator group compared
+with the MFLUSIVA group at all time periods through the study, with the exception of the
+period beyond 6 months postvaccination to the end of the influenza season, during which
+only two cases were observed in each group.
+Table 9 presents a supportive analysis of rVE against RT-PCR–confirmed protocol-
+defined ILI by influenza strain. Point estimates for rVE were consistent across all strains.
+For B/Victoria, the rVE point estimate was consistent with the overall estimate, but the
+95% CI was wide with a LL below zero (LL of 95% CI: −18.5), likely due to the small
+number of influenza B cases. The rVE analysis was primarily driven by results against
+influenza A strains, which accounted for 94.0% of influenza cases across both groups.
+Table 9. Analysis of Primary Efficacy Endpoint of Relative Vaccine Efficacy (rVE) for MFLUSIVA
+Versus SD Comparator Against RT-PCR–Confirmed Protocol-Defined ILI Caused by Influenza
+Strain Type in Participants 50 Years of Age and Older (PP Set), Study P304
+MFLUSIVA SD Comparator
+N=20,179 N=20,124 rVE (%)
+Relative Efficacy Endpoint Cases, n (%)a Cases, n (%)a (95% CI)b
+Any influenza A strain 386 522 26.5
+(1.9) (2.6) (16.1, 35.5)
+Influenza A/H1N1 strain only 223 315 29.6
+(1.1) (1.6) (16.4, 40.7)
+Influenza A/H3N2 strain only 158 202 22.2
+(0.8) (1.0) (4.3, 36.9)
+Influenza B strain only 25 35 29.1
+(0.1) (0.2) (−18.5, 57.5)
+Source: Adapted from STN 125869/0, mRNA-1010 P304 Clinical Study Report, Tables 14.2.1.1.1.1 and 14.2.1.1.3.1. Data cutoff:
+April 30, 2025.
+Abbreviations: CI, confidence interval; ILI, influenza-like illness; N, number of participants in the PP analysis set; n, number of cases
+of RT-PCR confirmed ILI; PP, per protocol; RT-PCR, real-time reverse transcription polymerase chain reaction; rVE, relative vaccine
+efficacy; SD, standard dose
+a Percentages are based on the number of participants in the analysis set. The case is the first RT-PCR–confirmed protocol-defined
+ILI that begins at least 14 days after study vaccination through the end of influenza season caused by any influenza A or B strains,
+regardless of vaccine match. Participants can have more than one influenza strain infection simultaneously.
+b rVE was defined as 100×(1−hazard ratio [MFLUSIVA versus the Active Comparator]). The rVE and the CI are based on a stratified
+Cox proportional hazards model with the study vaccination group as a fixed effect, adjusting by the randomized stratification factors:
+age group (≥50 to <65 years or ≥65 years) and the status of influenza vaccine in the previous influenza season (received or not
+received). Efron´s method is used to handle ties. If there were <20 events total in the two vaccination groups combined, rVE was not
+provided.
+31
+Descriptive analyses of rVE by age subgroup are shown in Table 10. The rVE point
+estimate for each age subgroup was consistent with the overall study population; in
+adults ≥75 years of age, the 95% CI was wide and crossed zero, likely due to the small
+sample size.
+Table 10. Analysis of Primary Efficacy Endpoint of Relative Vaccine Efficacy (rVE) for MFLUSIVA
+Versus SD Comparator Against RT-PCR–Confirmed Protocol-Defined ILI Caused by Any Influenza
+A or B Strains by Age Group (PP Set), Study P304
+MFLUSIVA SD Comparator
+N=20,179 N=20,124 rVE (%)
+Age Group Cases, n/N (%) Cases, n/N (%) (95% CI)b
+≥50 years of agea 411/20,179 557/20,124 26.6
+(2.0) (2.8) (16.7, 35.4)
+50 to <65 years of agec 229/10,542 307/10,501 26.1
+(2.2) (2.9) (12.3, 37.7)
+≥65 years of agec, d 182/9637 250/9623 27.4
+(1.9) (2.6) (12.1, 40.0)
+65 to <75 years of agec 138/7307 191/7289 28.0
+(1.9) (2.6) (10.4, 42.2)
+≥75 years of agec 44/2230 59/2334 25.3
+(1.9) (2.5) (−10.4, 49.5)
+Source: Adapted from STN 125869/0, mRNA-1010 P304 Clinical Study Report, Tables 14.2.1.1.1.1, Table 14.2.1.1.4.1. Data cutoff:
+April 30, 2025.
+Abbreviations: CI, confidence interval; ILI, influenza-like illness; N, number of participants in the analysis set; n, number of cases of
+protocol-defined ILI in the given age subgroup; PP, per protocol; RT-PCR, real-time reverse transcription polymerase chain reaction;
+rVE, relative vaccine efficacy; SD, standard dose
+The case is the first RT-PCR–confirmed protocol-defined ILI that begins at least 14 days after study vaccination through the end of
+influenza season caused by any influenza A or B strains, regardless of vaccine match.
+a Percentages are based on the number of participants in the analysis set.
+b rVE is defined as 100×(1−hazard ratio [MFLUSIVA versus the Active Comparator]). The rVE and the CI are based on a stratified
+Cox proportional hazards model with the study vaccination group as a fixed effect, adjusting by the randomized stratification factors:
+age group (≥50 to <65 years or ≥65 years) and the status of influenza vaccine in the previous influenza season (received or not
+received). Efron´s method is used to handle ties.
+c Percentages are based on the number of participants in the analysis set in each subgroup.
+d Age group ≥65 years includes the age group ≥75 years.
+See the Clinical Review Memo for discussion of additional supportive subgroup analyses
+of the primary efficacy endpoint and analysis of the secondary/exploratory objectives for
+Study P304.
+Study mRNA-1010-P303 Part C (NCT05827978)
+Study mRNA-1010-P303 (P303) was a Phase 3, multicenter, randomized, stratified,
+observer-blind, active-controlled study evaluating the immunogenicity, reactogenicity,
+and safety of Moderna mRNA quadrivalent influenza vaccine.
+The clinical experience with Moderna mRNA quadrivalent influenza vaccine is relevant to
+MFLUSIVA. The Moderna mRNA quadrivalent influenza vaccine (containing 50
+micrograms [mcg] of total RNA, with equal amounts [12.5 mcg] of each of the four RNAs
+encoding the hemagglutinin [HA] glycoproteins of A/Wisconsin/67/2022 pdm09-like virus
+[H1N1], A/Darwin/6/2021-like virus [H3N2], B/Austria/1359417/2021-like virus
+[B/Victoria], and B/Phuket/3073/2013-like virus [B/Yamagata]) is manufactured using the
+same process as MFLUSIVA and differs only in the addition of the RNA encoding the
+B/Yamagata antigen.
+Part C of Study P303 (P303C) compared immunogenicity and safety of Moderna mRNA
+quadrivalent influenza vaccine to Fluzone High Dose Quadrivalent (Fluzone HD [QIV]) in
+adults 65 years of age and older. Fluzone HD (QIV) is one of three influenza vaccines
+32
+preferentially recommended by the CDC for this age group. The study was initiated on
+November 13, 2023, and completed on June 24, 2024. The final database lock date was
+July 22, 2024.
+Study mRNA-1010-P303 Part C Objectives
+Primary Immunogenicity Objective
+The primary immunogenicity objective of Study P303C was to evaluate the humoral
+immunogenicity of Moderna mRNA quadrivalent influenza vaccine for noninferiority
+relative to Fluzone HD (QIV) against four vaccine-matched influenza A and B strains at
+Day 29 in adults ≥65 years of age, as measured by HAI. There were eight coprimary
+endpoints based on Geometric mean titer (GMT) ratio and Seroconversion Rate (SCR)
+difference for the four vaccine-matched strains (assessed at Day 29). Each endpoint was
+evaluated for noninferiority of Moderna mRNA quadrivalent influenza vaccine versus
+Fluzone HD (QIV) at a two-sided alpha level of 0.05. Study success required all eight
+coprimary endpoints to meet the noninferiority criteria. There were eight coprimary
+endpoints based on GMT ratio and SCR difference for the four vaccine-matched strains.
+Study success required all eight coprimary endpoints to meet the noninferiority criteria.
+Noninferiority at Day 29 was demonstrated if, for all four influenza strains:
+• Lower limit (LL) of the 95% CI of the GMT ratio (Moderna mRNA quadrivalent
+influenza vaccine / Fluzone HD [QIV]) was >0.667.
+• LL of the 95% CI of the SCR difference (Moderna mRNA quadrivalent influenza
+vaccine − Fluzone HD [QIV]) was >−10%.
+Superiority testing was conducted upon successful demonstration of noninferiority for all
+eight coprimary endpoints. Superiority at Day 29 was demonstrated if, for each of the
+four influenza strains:
+• LL of the 97.5% CI of the GMT ratio (Moderna mRNA quadrivalent influenza
+vaccine / Fluzone HD [QIV]) was >1.
+• LL of the 97.5% CI of the SCR difference (Moderna mRNA quadrivalent influenza
+vaccine − Fluzone HD [QIV]) was >0.
+Primary Safety Objective
+The primary safety objective of Study P303C was to evaluate the safety and
+reactogenicity of Moderna mRNA quadrivalent influenza vaccine, including: frequency
+and severity of solicited local and systemic adverse reactions (ARs) through Day 7;
+frequency and severity of unsolicited adverse events (AEs) through Day 28; and serious
+adverse events (SAEs), medically attended adverse events (MAAEs), adverse events of
+special interest (AESIs), and AEs leading to study discontinuation through Day 181/end
+of study (EOS).
+mRNA-1010-P303 Part C Study Results
+Analyses of Primary Objective
+Analyses of the primary immunogenicity endpoints, as measured by HAI for vaccine-
+matched influenza strains at Day 29 postvaccination, are shown in Table 11 (GMTs and
+GMT ratios) and Table 12 (SCRs and SCR differences). Baseline GMTs were similar
+33
+across groups. Day 29 GMTs and SCRs were higher in the Moderna mRNA quadrivalent
+influenza vaccine group than in the Fluzone HD (QIV) group for all four influenza strains.
+Noninferiority of Moderna mRNA quadrivalent influenza vaccine compared with Fluzone
+HD (QIV) was demonstrated for all four strains based on GMT ratio (LL of the 95% CI
+>0.667) and SCR difference (LL of the 95% CI >−10%). Protocol-defined superiority was
+also demonstrated for all four strains based on GMT ratio (LL of the 97.5% CI >1) and
+SCR difference (LL of the 97.5% CI >0%).
+Table 11. Analyses of Primary Immunogenicity Endpoint of GMTs as Measured by HAI for Vaccine-
+Matched Influenza Strains at Day 29 Postvaccination, Participants 65 Years of Age and Older, PPIS,
+Study P303 Part C
+GMT Ratio (Moderna
+Moderna mRNA mRNA quadrivalent
+quadrivalent influenza influenza vaccine /
+vaccine Fluzone HD (QIV) Fluzone HD [QIV])
+N=1425 N=1409 (95% CI)
+Endpoint GMT (95% CI) GMT (95% CI) (97.5% CI)
+1.3
+168.3 125.7
+Influenza A/H1N1 (1.3, 1.4)
+(160.4, 176.7) (119.7, 131.9)
+(1.2, 1.4)
+1.2
+137.9 113.8
+Influenza A/H3N2 (1.1, 1.3)
+(130.9, 145.4) (107.9, 120)
+(1.1, 1.3)
+1.3
+242.1 193.7
+Influenza B/Victoria (1.2, 1.3)
+(232.9, 251.6) (186.3, 201.3)
+(1.2, 1.3)
+1.1
+Influenza 102.7 89.8
+(1.1, 1.2)
+B/Yamagata (99.2, 106.2) (86.8, 92.9)
+(1.1, 1.2)
+Source: Adapted from STN 125869/0, mRNA-1010 P303 Clinical Study Report, Table 14.2.1.1.c. Data cutoff: June 24, 2024.
+Abbreviations: ANCOVA, analysis of covariance; CI, confidence interval; GMT, geometric mean titer; HAI, hemagglutination inhibition;
+HD, high dose; LLOQ, lower limit of quantification; N, number of participants with nonmissing HAI data at corresponding visit; PPIS,
+per protocol immunogenicity set; QIV, quadrivalent; ULOQ, upper limit of quantification
+Antibody values reported as below the LLOQ are replaced by 0.5× LLOQ. Values greater than the ULOQ are converted to the ULOQ.
+The log-transformed antibody levels are analyzed using an ANCOVA model with vaccination group as the fixed variable, log
+transformed baseline HAI titers as a fixed covariate, adjusting for the randomization stratification factor: Influenza Vaccine Status
+Since September 2022 to 6 Months Ago (not received seasonal flu vaccine, received seasonal flu vaccine from non mRNA-1010-
+P302, and received seasonal flu vaccine from mRNA-1010-P302).
+The model based GMT and GMT ratio, and its corresponding 95% CI and/or 97.5% CI are obtained by transforming the least square
+mean estimate and its CI back to the original scale for presentation.
+Table 12. Analyses of Primary Immunogenicity Endpoint of SCRs as Measured by HAI for Vaccine-
+Matched Influenza Strains at Day 29 Postvaccination, Participants 65 Years of Age and Older, PPIS,
+Study P303 Part C
+Difference in SCR
+(Moderna mRNA
+Moderna mRNA quadrivalent influenza
+quadrivalent vaccine Fluzone HD
+influenza vaccine Fluzone HD (QIV) [QIV])
+N=1425 N=1409 (95% CI)b
+Endpoint SCR%a (95% CI) SCR%a (95% CI) (97.5%CI)c
+13.4
+49.7 36.3
+Influenza A/H1N1 (9.8, 17)
+(47.1, 52.3) (33.8, 38.8)
+(9.3, 17.5)
+8.6
+56.4 47.8
+Influenza A/H3N2 (4.9, 12.2)
+(53.8, 59) (45.2, 50.5)
+(4.4, 12.8)
+34
+Difference in SCR
+(Moderna mRNA
+Moderna mRNA quadrivalent influenza
+quadrivalent vaccine Fluzone HD
+influenza vaccine Fluzone HD (QIV) [QIV])
+N=1425 N=1409 (95% CI)b
+Endpoint SCR%a (95% CI) SCR%a (95% CI) (97.5%CI)c
+9.7
+29.8 20.2
+Influenza B/Victoria (6.5, 12.8)
+(27.5, 32.3) (18.1, 22.4)
+(6, 13.3)
+5.9
+Influenza 26.0 20.2
+(2.8, 8.9)
+B/Yamagata (23.8, 28.4) (18.1, 22.4)
+(2.3, 9.4)
+Source: Adapted from STN 125869/0, mRNA-1010 P303 Clinical Study Report, Table 14.2.1.1.c. Data cutoff: June 24, 2024
+Abbreviations: CI, confidence interval; HAI, hemagglutination inhibition; HD, high dose; LLOQ, lower limit of quantification; N, number
+of participants with nonmissing HAI data at baseline (Day 1) and the corresponding visit; PPIS, per protocol immunogenicity set; QIV,
+quadrivalent influenza vaccine; SCR, seroconversion rate; ULOQ, upper limit of quantification
+Antibody values reported as below the LLOQ are replaced by 0.5× LLOQ. Values greater than the ULOQ are converted to the ULOQ.
+a Rate of seroconversion is defined as the proportion of participants with either a baseline HAI titer <1:10 and a postbaseline titer
+≥1:40 or a baseline HAI titer ≥1:10 and a minimum 4-fold rise in postbaseline HAI antibody titer.
+b 95% CI is calculated using the Clopper-Pearson method.
+c 95% CI, 97.5% CI are calculated using the Miettinen-Nurminen (score) method.
+Post Hoc Analysis of Moderna mRNA quadrivalent influenza vaccine and MFLUSIVA
+To justify the use of immunogenicity data from the Moderna mRNA quadrivalent
+influenza vaccine evaluated in Study P303 Part C to support licensure of MFLUSIVA in
+adults 65 years of age and older, the Applicant conducted a post hoc analysis comparing
+Day 29 HAI GMTs between the PPISs of Study P304 and Study P303 Part C, restricted
+to participants ≥65 years of age, shown in Table 13, using an ANCOVA model that
+accounted for differences in baseline demographic factors between the two groups,
+including age, race, sex, ethnicity, baseline BMI group, previous influenza vaccine
+status, and baseline high-risk status. Although the analysis was not hypothesis tested,
+noninferiority of the Day 29 HAI GMT ratio (MFLUSIVA / Moderna mRNA quadrivalent
+influenza vaccine) would have been met for all three shared strains using a threshold of
+the LL of the 95% CI >0.667.
+Table 13. Day 29 HAI for Vaccine-Matched Strains Comparing MFLUSIVA (Study iP304) and
+Moderna mRNA quadrivalent influenza vaccine (Study P303 Part C) in Adults ≥65 Years of Age,
+Model 1: ANCOVA With 6 PCA Factors
+Model-Based GMT (95% CI)
+Moderna mRNA
+Model-Based GMT (95% CI) quadrivalent influenza Model-based
+MFLUSIVA vaccine GMT Ratio
+Study P304 Study P303 Part C (TIV/QIV)
+Influenza Type N=586 N=1425 (95% CI)
+159.36 161.13 0.989
+Influenza A/H1N1
+(148.08, 171.50) (153.80, 168.81) (0.906, 1.080)
+158.13 138.85 1.139
+Influenza A/H3N2
+(146.26, 170.95) (132.12, 145.92) (1.037, 1.250)
+289.93 234.78 1.235
+Influenza B/Victoria
+(272.69, 308.25) (225.85, 244.07) (1.148,1.328)
+Source: Adapted from STN 125869/0, Amendment 32, Response to IR Database lock/data extraction dates: July 22, 2024 (P303 Part
+C) and June 3, 2025 (P304).
+Abbreviations: ANCOVA, analysis of covariance; CI, confidence interval; GMT, geometric mean titer; PCA, principal components
+analysis; QIV, quadrivalent influenza vaccine; TIV, trivalent influenza vaccine
+The ANCOVA model includes vaccine (Moderna mRNA quadrivalent influenza vaccine in P303C or MFLUSIVA in P304) as a fixed
+factor, log-transformed baseline HAI titer as a fixed covariate, adjusted for the selected top principal components from the PCA of the
+demographic and baseline characteristics. Model 1 incorporates 6 PCA factors which explained 82% of the total variance
+35
+(b) (6)
+b. – Clinical/Statistical/Pharmacovigilance
+(b) (6)
+Three inspections were issued for two domestic and one
+foreign clinical study investigators that participated in the conduct of clinical study
+mRNA-1010-P304. The inspections are complete but two of the Establishment
+Inspection Reports are pending review and final classification of the inspection. The
+(b) (6)
+review will be updated as soon as all inspections have been reviewed and the
+inspections final classified.
+c. Pediatrics
+Because this application contains a new active ingredient, it is subject to the
+requirements of the Pediatric Research Equity Act (PREA). The Applicant requested a
+partial waiver for infants from birth to less than 6 months of age on the grounds that
+studies are impossible or highly impractical, and a deferral of studies for infants and
+children 6 months to less than 18 years of age pending the completion of additional
+safety and efficacy data in adults.
+(b) (6)
+The Applicant's pediatric study plan was presented to the
+(b) (6)
+on May 12, 2026. agreed with both requests: the partial waiver for infants
+birth to less than 6 months of age was granted because conducting a clinical efficacy
+study in this age group would be operationally impossible or highly impractical, and the
+deferral for infants and children 6 months to less than 18 years of age was granted
+(b) (6)
+pending completion of adult safety and efficacy data. also agreed to the following
+proposed postmarketing requirement (PMR) language and timelines:
+• Study #1: A Phase 1/2 randomized, observer-blind, active-controlled, age de-
+escalation study to evaluate the safety, reactogenicity, and immunogenicity of
+mRNA-1010 TIV in infants, children, and adolescents 6 months to <18 years of
+age.
+Final Protocol Submission: May 31, 2027
+o
+Study Completion: July 31, 2029
+o
+Final Report Submission: December 31, 2029
+o
+• Study #2: A Phase 3 randomized, observer-blind, active-controlled study to
+evaluate the safety and effectiveness of mRNA-1010 TIV in healthy participants 9
+to <18 years of age
+Final Protocol Submission: May 31, 2028
+o
+Study Completion: July 31, 2029
+o
+Final Report Submission: December 31, 2029
+o
+• Study #3: A Phase 3 observer-blind, active-controlled study to evaluate the safety
+and effectiveness of mRNA-1010 TIV vaccine in children 3 to <9 years
+Final Protocol Submission: May 31, 2029
+o
+Study Completion: July 31, 2030
+o
+Final Report Submission: December 31, 2030
+o
+• Study #4: A Phase 3 randomized, observer-blind, inactive-controlled study to
+evaluate safety, efficacy, and immunogenicity of mRNA-1010 TIV vaccine in
+healthy children aged 6 to <36 months
+36
+Final Protocol Submission: May 31, 2029
+o
+Study Completion: July 31, 2031
+o
+Final Report Submission: December 31, 2031
+o
+d. Other Special Populations
+Efficacy and safety have not been established in immunocompromised individuals, very
+frail older adults, pregnant or lactating women, or individuals younger than 18 years of
+age. Caution is warranted in individuals with a prior history of Guillain-Barré syndrome
+(GBS) within 6 weeks of any influenza vaccination. Data on concomitant administration
+with routinely co-administered vaccines (e.g., coronavirus disease 2019 [COVID-19],
+respiratory syncytial virus [RSV], pneumococcal vaccines) are also unavailable.
+7. Safety and Pharmacovigilance
+Clinical Safety
+The safety of MFLUSIVA was evaluated in an ISS encompassing 35,965 vaccine
+recipients 50 years of age and older across four Phase 3 studies (Studies P301, P302,
+P303, and P304). The two primary studies, Study P304 (N=20,350 MFLUSIVA
+recipients; median follow-up 184 days) and Study P303 Part C (N=1,502 Moderna
+mRNA quadrivalent influenza vaccine recipients; median follow-up 171 days),
+contributed the principal safety data supporting licensure.
+Reactogenicity
+Solicited local and systemic adverse reactions (ARs) within 7 days of vaccination were
+reported more frequently among mRNA-10104 recipients than comparator recipients
+across both primary studies. In Study P304, any solicited AR was reported in 75.7% of
+MFLUSIVA recipients versus 46.7% of standard-dose (SD) comparator recipients. The
+most common reactions were injection site pain, fatigue, headache, myalgia, arthralgia,
+and chills. Solicited ARs were predominantly Grade 1-2 in severity, with a median onset
+and resolution of 2 days. Grade 3 solicited ARs occurred in 1.7% (local) and 5.5%
+(systemic) of MFLUSIVA recipients versus 0.1% and 0.9% in the SD comparator group.
+Similar reactogenicity patterns were observed in Study P303 Part C relative to the high-
+dose comparator. Reactogenicity was modestly attenuated in participants 65 years of
+age and older compared with those 50 through 64 years of age, a pattern consistent with
+age-related immune senescence.
+Serious Adverse Events (SAEs) and Adverse Events of Special Interest (AESIs)
+Across both primary studies, SAE rates were balanced between treatment groups: 2.2%
+versus 1.9% in Study P304, and 2.7% versus 2.6% in Study P303 Part C. A single SAE
+(syncope on Day 2 in a 62-year-old MFLUSIVA recipient in Study P304) was assessed
+as likely related to vaccination by the review team. No SAEs were assessed as related to
+Moderna mRNA quadrivalent influenza vaccine in Study P303 Part C.
+In the ISS, rates of SAEs and AESIs were balanced between study groups. No cases of
+myocarditis or pericarditis were reported within 42 days postvaccination in the mRNA-
+4 The ISS includes recipients of multiple formulations of mRNA-1010, including MFLUSIVA, mRNA-1010
+(QIV), and an earlier formulation of mRNA-1010 with influenza B antigens manufactured differently than
+those in the formulation intended for licensure.
+37
+1010 group. Beyond the 42-day risk window and through the completion of all four Phase
+3 studies, 10 (<0.1%) cases of myocarditis, pericarditis, or myopericarditis were reported
+in the mRNA-1010 group compared with 7 (<0.1%) cases in the SD/HD comparator
+group. Cardiac Event Adjudication Committee (CEAC)-confirmed cases were balanced
+across groups (4 in each group). Based on review of event narratives, latency of onset
+postvaccination, and presence of plausible alternative etiologies, none of these events
+were assessed as related to mRNA-1010 by the review team.
+In the ISS, a numerical imbalance was observed for deaths coded to the MedDRA
+preferred term (PT) “death (without further specification)”: 23 events in the mRNA-1010
+group versus 9 events in the SD/HD comparator group. When pooled with the related
+PTs of “sudden death” and “sudden cardiac death,” this imbalance was more
+pronounced: 29 events in the mRNA-1010 group versus 12 in the SD/HD comparator
+group. All-cause mortality through study completion was balanced across groups [102
+(0.3%) vs. 97 (0.3%)], indicating that the imbalance in unspecified-cause deaths is not
+reflected in total mortality. Based on review of event narratives, temporal distribution of
+events across the study period, the absence of clustering within the 28-day
+postvaccination window (3 unspecified deaths in the mRNA-1010 group vs. 2 in the
+SD/HD comparator within 28 days), balance in all-cause mortality, and the high
+prevalence of serious comorbidities among decedents, the review team assesses a
+causal relationship between mRNA-1010 and the observed excess of unspecified-cause
+deaths as unlikely. Nevertheless, definitive causal assessment is precluded by the
+absence of autopsies in all 29 affected mRNA-1010 recipients and lack of systematic
+cause-of-death adjudication. These limitations represent residual uncertainty that cannot
+be resolved from existing trial data. Accordingly, the Applicant has committed, as part of
+the approval, to conduct active postmarketing surveillance for deaths — both unspecified
+and all-cause — in addition to myocarditis/pericarditis (a safety event of interest in
+mRNA vaccines) and Guillain-Barre syndrome (a safety event of interest in influenza
+vaccines) in a proposed Postmarketing Commitment (PMC) study.
+Pharmacovigilance
+(b) (6)
+The CBER reviewer evaluated the supporting clinical trial safety data
+of MFLUSIVA to assess the adequacy of the Applicant’s proposed Pharmacovigilance
+Plan. The reviewer concluded that the proposed activities in the Pharmacovigilance Plan
+were acceptable, including conduct of routine postmarketing pharmacovigilance
+surveillance activities per 21 CFR 600.80, comprising submissions of periodic safety
+reports (Periodic Adverse Experience Reports) to monitor for and assess any emerging
+risks associated with the vaccine.
+The Applicant also plans to provide aggregate safety assessments (based on interval
+and cumulative data) of the following AESIs in their periodic safety reports for the first 3
+years post-approval:
+• Thrombocytopenia
+• Guillain-Barré syndrome
+• Acute disseminated encephalomyelitis
+• Idiopathic peripheral facial nerve palsy (Bell’s palsy)
+• Seizures, including but not limited to febrile seizures and/or generalized seizures/
+convulsions
+• Anaphylaxis
+38
+• Myocarditis, pericarditis, and myopericarditis
+The Applicant has additionally proposed a PMC study using the same study population
+as that of the PMR confirmatory study to expand active surveillance for deaths
+(unspecified and all-cause), myocarditis/pericarditis/myopericarditis, and GBS to the
+indicated population aged 50 years and older as a postmarketing commitment
+(PMC).The Applicant provided the study synopsis of the PMC study (Post-Authorization
+Active Surveillance Safety Study Using Secondary Healthcare Data to Monitor Real-
+World Safety of MFLUSIVA (mRNA-1010) Vaccine for the Prevention of Influenza
+Disease in the United States, fv1.0, July 24, 2026) and the Safety Working group agreed
+to the conduct of the PMC at the July 31, 2026, meeting.
+Please see the Addendum to the Pharmacovigilance Review Memo dated August 5,
+2026, for further details.
+8. Labeling
+(b) (6)
+The proposed proprietary name, MFLUSIVA, was reviewed by the
+on February 23, 2026, and was found acceptable.
+CBER communicated the acceptability of the proprietary name to the Applicant on March
+5, 2026.
+(b) (6)
+Through July 11, 2026, iteratively reviewed the draft PI, the patient package insert
+(b) (6)
+and the package and container labels with the MFLUSIVA Review Team. provided
+additional comments pertaining to the revised prescribing information submitted on
+June 11, 2026, patient package insert submitted on December 5, 2025, and package
+(b) (6)
+and container labels submitted on April 24, 2026, and May 12, 2026. labeling
+review memo was finalized from a promotional and comprehension perspective.
+The Review Committee negotiated revisions to the PI, PPI, and package/container labels
+with ModernaTX Inc. Eight versions of the PI (in the original application and amendments
+9, 18, 73, 96, 108, 113 and 116), four versions of carton labels/ three versions of the
+container labels (submitted in the original application and amendments 18, 38 and
+50), and 3 versions of the PPI (in the original application and amendments 18 and
+110) were submitted to STN 125752 by ModernaTX Inc. during labeling
+negotiations. The PI submitted on August 3, 2026 (amendment 116), the carton labels
+submitted on May 12, 2026 (amendment 50), container labels submitted on April 4,
+2026 (amendment 38) and the PPI submitted on July 30, 2026 (amendment
+110) were considered final for approval.
+9. Advisory Committee Meeting
+The Vaccine and Related Biological Products Advisory Committee convened on June 18,
+2026, to discuss and vote on whether the available efficacy and safety data support a
+favorable benefit-risk profile of MFLUSIVA for use in the prevention of influenza in
+individuals 50 years of age and older. A bifurcated regulatory pathway presented that
+encompassed (1) Traditional Approval requested for use in adults 50 through 64 years of
+age, based on safety, immunogenicity, and clinical efficacy data, and (2) Accelerated
+Approval requested for use in adults ≥65 years of age, based on safety, comparative
+immunogenicity data, as well as supportive evidence (e.g., rVE against a SD
+39
+comparator), and a postmarketing Phase 4 randomized confirmatory study requirement.
+Nine out of the nine committee members voted yes to both voting questions posed:
+1. Do the benefits of MFLUSIVA outweigh its risks for the prevention of influenza
+disease in adults 50 through 64 years of age?
+2. Do the benefits of MFLUSIVA outweigh its risks for the prevention of influenza
+disease in adults 65 years of age and older?
+The committee expressed general concerns regarding recent increases in vaccine
+hesitancy and poor vaccine uptake for the influenza vaccine in some populations. They
+signaled a need to effectively communicate the potential benefits of this vaccine while
+also being transparent about the increased reactogenicity seen with this and other
+mRNA-based vaccines. The committee also acknowledged the discussion of an
+observed imbalance in deaths of an unspecified cause in CBER’s review of the
+Applicant‘s Integrated Summary of Safety (ISS). Although CBER’s review determined
+this imbalance is unlikely to represent a safety signal for MFLUSIVA, the committee
+recommended using the proposed Phase 4 PMR study to gather additional mortality
+data. However, the Applicant asserted that active surveillance for death would infeasible
+in the PMR study design. Therefore, the Applicant proposed a separate Postmarketing
+Commitment Study to conduct active surveillance for death (unspecified cause and all-
+cause), myocarditis and pericarditis, and GBS.
+10. Other Relevant Regulatory Issues
+Priority Review Voucher (PRV)
+A priority review voucher (PRV BLA 125685) was redeemed by the Applicant for this
+submission, which shortened the review timeline from 12 months to 8 months
+Filing Action – Traditional Approval Regulatory Pathway (for Use in Adults 50
+years of age and older)
+The Applicant’s initial request submitted in their December 5, 2026, application was for
+CBER to consider approval of MFLUSIVA under a Traditional Approval regulatory
+pathway with an indication for active immunization for the prevention of influenza disease
+caused by influenza virus subtypes A and type B represented in the vaccine in persons
+50 years of age and older.
+Office of Vaccines Research and Review Office of the Director (OVRR OD) Filing
+Recommendation
+In a January 24, 2026, memorandum addressed to the Center for Biologics Evaluation
+and Research Office of the Center Director (CBER OCD), OVRR OD recommended
+filing BLA 125869 without major deficiencies. This memorandum detailed the findings of
+the review committee and the conclusion that the application meets minimum filing
+standards under SOPP 8404 and contains adequate scientific data for substantive
+review, including complete clinical data from a well-designed, adequately powered study
+demonstrating statistical superiority to an FDA-licensed comparator. OVRR OD
+acknowledged CBER OCD's concerns regarding the use of Fluarix as a comparator in
+participants greater than 65 years of age, where CDC preferentially recommends high-
+dose or adjuvanted vaccines. However, OVRR OD concluded that this comparator
+selection constitutes a review issue rather than a fundamental deficiency that prevents
+meaningful scientific evaluation.
+40
+CBER OCD Non-Concurrence Memorandum and Refusal to File
+On February 2, 2026, the CBER Center Director issued a Refuse to File (RTF)
+determination for BLA 125869. The RTF was based on the determination that the
+Applicant's pivotal randomized trial used a control arm (standard-dose influenza vaccine)
+that did not reflect the U.S. standard of care at the time of study design and conduct,
+given that CBER had previously notified the Applicant in writing to use an ACIP-
+preferentially recommended vaccine for adults ≥65 years of age (Fluzone HD, Flublok, or
+Fluad). In a February 2, 2026, CBER OCD Non-concurrence Memorandum, CBER OCD
+concluded that the application did not contain an adequate and well-controlled study as
+required for filing and that arguments in favor of filing were considered but did not alter
+this determination. An RTF letter was issued to the Applicant on February 3, 2026.
+Filing Action – Dual Regulatory Pathway
+On February 10, 2026, the Applicant requested a post-RTF Type A meeting and on
+February 17, 2026, the Applicant submitted a meeting briefing package that included a
+proposal for a revised regulatory approach that reflects the benefit–risk considerations
+across the two age strata within the proposed indication for MFLUSIVA (adults ≥50 years
+of age):
+ Traditional approval for adults 50 through 64 years of age, based on the totality of
+demonstrated clinical efficacy and supportive safety data; and
+ Accelerated Approval for adults ≥ 65 years of age. The Applicant proposed
+demonstrating VE of MFLUSIVA based on a surrogate immunogenicity endpoint (HAI
+antibody titers) as measured against a CDC-preferentially recommended high-dose
+comparator. As a postmarketing requirement (PMR) to support an Accelerated
+Approval licensure pathway, the Applicant proposed a pragmatic, randomized
+comparative clinical efficacy study for adults ≥65 years of age, with the primary
+endpoint being rVE against a CDC-preferentially recommended high-dose
+comparator.
+On February 17, 2026, the Applicant presented their proposal for the revised regulatory
+approach to STN 125869/0 as part of the Type A meeting teleconference. CBER
+subsequently issued a Filing Notification Letter with Deficiencies Identified, which
+outlined CBER’s concerns regarding:
+1. Pivotal efficacy Study mRNA-1010-P304’s use of Fluarix as the comparator
+vaccine for participants ≥65 years of age, rather than a vaccine preferentially
+recommended by ACIP for use in older adults (e.g., Fluzone HD, Flublok, Fluad).
+2. The potential insufficiency of comparing the immunogenicity of MFLUSIVA to an
+ACIP-preferentially recommended vaccine for adults ≥65 years to demonstrate
+substantial evidence of effectiveness for traditional approval, given the absence of
+a validated surrogate endpoint accepted by CBER as evidence of clinical benefit.
+Basis of Accelerated Approval
+The Accelerated Approval pathway for MFLUSIVA in adults ≥65 years of age (21 CFR §
+601.41) is based primarily on immunogenicity data from Study mRNA-1010-P303 Part C,
+a Phase 3 trial in which HAI titers were compared against a CDC-preferentially
+recommended high-dose influenza vaccine (the established standard of care in this age
+41

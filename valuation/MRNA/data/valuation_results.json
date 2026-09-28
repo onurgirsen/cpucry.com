@@ -1,0 +1,419 @@
+{
+ "market_price": 199.0,
+ "valuation_date": "2026-09-30",
+ "wacc": 0.1043,
+ "scenarios": {
+  "failure": {
+   "per_share": 6.901601255969567,
+   "per_share_unfloored": -12.409451285640577,
+   "ev": -7.804226146578256,
+   "equity": -5.1164167650696095,
+   "pv_tv": -0.867050974120117,
+   "tv_share_of_ev": null,
+   "diluted_shares_m": 412.3,
+   "peak_int_sales_riskadj": 1.2454400000000003,
+   "resp_rev_2030": 2.2470999999999997,
+   "attrib_rev_2030": 2.2668999999999997,
+   "first_positive_ebit_year": null,
+   "sotp": {
+    "Respiratory franchise": 4.952,
+    "Intismeran (50% share, net of dev.)": -1.496,
+    "mRNA-4359": -0.2,
+    "Rare disease & royalties": 0.433,
+    "Corporate G&A": -4.747,
+    "Unallocated R&D (platform/shared/SBC)": -7.001,
+    "Net capex & working capital": -0.313,
+    "Cash taxes (after NOLs)": 0.0,
+    "Q4-2026 stub cash burn": -0.454,
+    "Unidentified future pipeline (option value)": 1.023,
+    "= Enterprise value": -7.804,
+    "+ Cash & investments (est. 9/30/26)": 8.04,
+    "- Term loan": -0.6,
+    "- Convertible notes 2032 (face)": -3.0,
+    "- Finance leases": -0.037,
+    "- Arbutus contingent (expected, PV)": -0.765,
+    "- Other patent litigation (expected)": -1.0,
+    "+ Pfizer/BioNTech litigation option": 0.05,
+    "= Equity value": -5.116
+   },
+   "desc": "ESMO data weak (HR ~0.85) / FDA (CBER) requires OS -> melanoma not approved; readthrough cuts other INT PoS by 60%; respiratory bear."
+  },
+  "bear": {
+   "per_share": 6.901601255969567,
+   "per_share_unfloored": -2.7563363957756275,
+   "ev": -4.024246877486938,
+   "equity": -1.1364374959782912,
+   "pv_tv": -0.4704830142238965,
+   "tv_share_of_ev": null,
+   "diluted_shares_m": 412.3,
+   "peak_int_sales_riskadj": 2.8659900000000005,
+   "resp_rev_2030": 2.57362,
+   "attrib_rev_2030": 2.80857625,
+   "first_positive_ebit_year": 2036,
+   "sotp": {
+    "Respiratory franchise": 7.613,
+    "Intismeran (50% share, net of dev.)": 0.789,
+    "mRNA-4359": -0.2,
+    "Rare disease & royalties": 0.433,
+    "Corporate G&A": -4.747,
+    "Unallocated R&D (platform/shared/SBC)": -9.919,
+    "Net capex & working capital": -0.428,
+    "Cash taxes (after NOLs)": -0.007,
+    "Q4-2026 stub cash burn": -0.454,
+    "Unidentified future pipeline (option value)": 2.898,
+    "= Enterprise value": -4.024,
+    "+ Cash & investments (est. 9/30/26)": 8.04,
+    "- Term loan": -0.6,
+    "- Convertible notes 2032 (face)": -3.0,
+    "- Finance leases": -0.037,
+    "- Arbutus contingent (expected, PV)": -0.765,
+    "- Other patent litigation (expected)": -0.8,
+    "+ Pfizer/BioNTech litigation option": 0.05,
+    "= Equity value": -1.136
+   },
+   "desc": "Melanoma approved 2028 with modest HR (~0.75), price ~$200k US; NSCLC PoS cut; COVID erodes faster; flu/combo half of base."
+  },
+  "base": {
+   "per_share": 26.475739957745645,
+   "per_share_unfloored": 26.475739957745645,
+   "ev": 7.728138203069882,
+   "equity": 10.915947584578529,
+   "pv_tv": 1.4510719729846029,
+   "tv_share_of_ev": 0.18776475457027764,
+   "diluted_shares_m": 412.3,
+   "peak_int_sales_riskadj": 6.719702080000001,
+   "resp_rev_2030": 3.4692,
+   "attrib_rev_2030": 4.2898,
+   "first_positive_ebit_year": 2031,
+   "sotp": {
+    "Respiratory franchise": 13.774,
+    "Intismeran (50% share, net of dev.)": 6.642,
+    "mRNA-4359": -0.191,
+    "Rare disease & royalties": 0.444,
+    "Corporate G&A": -4.829,
+    "Unallocated R&D (platform/shared/SBC)": -11.864,
+    "Net capex & working capital": -0.733,
+    "Cash taxes (after NOLs)": -0.292,
+    "Q4-2026 stub cash burn": -0.454,
+    "Unidentified future pipeline (option value)": 5.233,
+    "= Enterprise value": 7.728,
+    "+ Cash & investments (est. 9/30/26)": 8.04,
+    "- Term loan": -0.6,
+    "- Convertible notes 2032 (face)": -3.0,
+    "- Finance leases": -0.037,
+    "- Arbutus contingent (expected, PV)": -0.765,
+    "- Other patent litigation (expected)": -0.5,
+    "+ Pfizer/BioNTech litigation option": 0.05,
+    "= Equity value": 10.916
+   },
+   "desc": "Assumptions as listed: melanoma launch 2027, US net ~$300k, $2.8B global peak; other indications at stated PoS; respiratory bottom-up."
+  },
+  "bull": {
+   "per_share": 72.17958625823287,
+   "per_share_unfloored": 72.17958625823287,
+   "ev": 27.30504203424952,
+   "equity": 30.692851415758163,
+   "pv_tv": 5.244036262192547,
+   "tv_share_of_ev": 0.19205376998192486,
+   "diluted_shares_m": 425.22897410287266,
+   "peak_int_sales_riskadj": 15.8939214,
+   "resp_rev_2030": 4.631320000000001,
+   "attrib_rev_2030": 6.766870000000002,
+   "first_positive_ebit_year": 2030,
+   "sotp": {
+    "Respiratory franchise": 22.087,
+    "Intismeran (50% share, net of dev.)": 20.647,
+    "mRNA-4359": -0.18,
+    "Rare disease & royalties": 0.457,
+    "Corporate G&A": -4.929,
+    "Unallocated R&D (platform/shared/SBC)": -12.706,
+    "Net capex & working capital": -1.317,
+    "Cash taxes (after NOLs)": -3.828,
+    "Q4-2026 stub cash burn": -0.454,
+    "Unidentified future pipeline (option value)": 7.528,
+    "= Enterprise value": 27.305,
+    "+ Cash & investments (est. 9/30/26)": 8.04,
+    "- Term loan": -0.6,
+    "- Convertible notes 2032 (face)": -3.0,
+    "- Finance leases": -0.037,
+    "- Arbutus contingent (expected, PV)": -0.765,
+    "- Other patent litigation (expected)": -0.3,
+    "+ Pfizer/BioNTech litigation option": 0.05,
+    "= Equity value": 30.693
+   },
+   "desc": "Strong ESMO HR (~0.55) with OS trend; US net ~$420k (William Blair models $475k WAC); melanoma peak $5B; other INT PoS x1.33 incl. future tumours; respiratory ~$5-6B (mgmt path)."
+  },
+  "blue_sky": {
+   "per_share": 272.7219233839291,
+   "per_share_unfloored": 272.7219233839291,
+   "ev": 115.82159219673534,
+   "equity": 119.19218478932792,
+   "pv_tv": 48.00926385268687,
+   "tv_share_of_ev": 0.4145104806635537,
+   "diluted_shares_m": 437.046583239049,
+   "peak_int_sales_riskadj": 52.6397856,
+   "resp_rev_2030": 4.895320000000002,
+   "attrib_rev_2030": 7.996120000000002,
+   "first_positive_ebit_year": 2029,
+   "sotp": {
+    "Respiratory franchise": 36.603,
+    "Intismeran (50% share, net of dev.)": 119.3,
+    "mRNA-4359": 0.029,
+    "Rare disease & royalties": 0.74,
+    "Corporate G&A": -7.045,
+    "Unallocated R&D (platform/shared/SBC)": -17.136,
+    "Net capex & working capital": -3.523,
+    "Cash taxes (after NOLs)": -23.76,
+    "Q4-2026 stub cash burn": -0.456,
+    "Unidentified future pipeline (option value)": 11.069,
+    "= Enterprise value": 115.822,
+    "+ Cash & investments (est. 9/30/26)": 8.04,
+    "- Term loan": -0.6,
+    "- Convertible notes 2032 (face)": -3.0,
+    "- Finance leases": -0.037,
+    "- Arbutus contingent (expected, PV)": -0.782,
+    "- Other patent litigation (expected)": -0.3,
+    "+ Pfizer/BioNTech litigation option": 0.05,
+    "= Equity value": 119.192
+   },
+   "desc": "Ceiling test, NOT weighted: every INT indication succeeds (PoS=100%), peaks x1.5, US net ~$475k (William Blair WAC), 62% margin, respiratory bull, WACC 8.0%, g=2%, R&D fully value-creating."
+  }
+ },
+ "scenario_probabilities": {
+  "failure": 0.1,
+  "bear": 0.25,
+  "base": 0.45,
+  "bull": 0.2
+ },
+ "scenario_weighted_per_share": 28.765560672221465,
+ "monte_carlo": {
+  "n": 20000,
+  "mean": 32.978244027056,
+  "std": 23.839078531778288,
+  "P5": 6.901601255969567,
+  "P10": 6.901601255969567,
+  "P25": 14.11515290048993,
+  "P50": 28.557500697222025,
+  "P75": 45.32586381999894,
+  "P90": 63.635329433800045,
+  "P95": 77.30989341697807,
+  "prob_above_price": 0.00025,
+  "n_above_price": 5,
+  "melanoma_success_rate": 0.87845,
+  "mean_given_melanoma_success": 35.06767188159063,
+  "mean_given_melanoma_failure": 17.87780882495028,
+  "p_nsclc_002_success": 0.44955,
+  "floor_binding_share": 0.14685,
+  "max": 353.3316308068799,
+  "P99": 108.53126260005855,
+  "rank_corr": {
+   "Melanoma approval": 0.276,
+   "Melanoma peak multiplier": 0.411,
+   "Adj. NSCLC (002) success": 0.434,
+   "Stage I NSCLC (014) success": 0.318,
+   "INT price factor": 0.2,
+   "INT mature margin": 0.07,
+   "COVID level": 0.252,
+   "Combo peak": 0.28,
+   "Flu peak": 0.176,
+   "Norovirus success": 0.219,
+   "WACC": -0.119,
+   "Terminal growth": 0.017,
+   "R&D multiplier": -0.059,
+   "Early pipeline factor": 0.155,
+   "Arbutus outcome": -0.057,
+   "Other litigation": -0.032
+  }
+ },
+ "reverse_dcf": {
+  "int_peak_scale": 11.107440154955356,
+  "implied_total_unadjusted_int_peak": 244.36368340901782,
+  "implied_riskadj_int_peak": 81.40642889566782,
+  "implied_melanoma_peak_all_else_base": 67.13535857299112,
+  "implied_wacc": 0.01977713317125169,
+  "certainty_required_unadjusted_int_peak": 93.46681589607508,
+  "certainty_bullterms_required_unadjusted_int_peak": 51.209471841792016,
+  "base_unadjusted_int_peak": 22.0,
+  "base_riskadj_int_peak": 7.329000000000001,
+  "implied_prob_blue_sky_vs_bull": 0.6323872333365619,
+  "bull_value": 72.17958625823287,
+  "blue_sky_value": 272.7219233839291
+ },
+ "epv": {
+  "revenue": 2.04,
+  "gross_margin": 0.72,
+  "ebit": 0.19880000000000003,
+  "nopat": 0.16102800000000003,
+  "epv_ev": 1.5438926174496648,
+  "equity": 4.681701998958312,
+  "per_share": 11.355086099826126
+ },
+ "forward_multiple": {
+  "target_year": 2030,
+  "attrib_revenue": 4.2898,
+  "growth_3y": 0.19051078100299446,
+  "ebit_margin": -0.09347305080267933,
+  "fitted_ev_sales": 4.908271279325012,
+  "ev_at_target": 21.055502134048435,
+  "pv_interim_fcff": -4.461629854828116,
+  "equity": 12.537828950588963,
+  "per_share": 30.409480840623242,
+  "range": [
+   22.034723731777476,
+   38.784237949469
+  ]
+ },
+ "transactions": {
+  "low": 51.96348202881633,
+  "high": 85.65244688321562,
+  "riskadj_peak_attrib_revenue": 7.4334700951232,
+  "mid": 68.80796445601598
+ },
+ "asset_floor": {
+  "equity": 2.755809381508648,
+  "per_share": 6.901601255969567
+ },
+ "tornado": [
+  {
+   "driver": "Flu & combo peaks 0.5x / 1.6x",
+   "low": 15.766835844160635,
+   "high": 37.28957781509019,
+   "swing": 21.522741970929555
+  },
+  {
+   "driver": "Early-pipeline factor 0 / 1",
+   "low": 13.783066120425064,
+   "high": 30.706631236852513,
+   "swing": 16.923565116427447
+  },
+  {
+   "driver": "INT price factor 0.7x / 1.3x",
+   "low": 20.02425342891371,
+   "high": 31.745001150166466,
+   "swing": 11.720747721252756
+  },
+  {
+   "driver": "WACC 12.0% / 9.0%",
+   "low": 21.41314382970417,
+   "high": 32.81805127837475,
+   "swing": 11.404907448670585
+  },
+  {
+   "driver": "Melanoma peak $1.5B / $5.0B",
+   "low": 22.086802924962743,
+   "high": 32.7411014649497,
+   "swing": 10.654298539986957
+  },
+  {
+   "driver": "Respiratory gross margin -5pt / +5pt",
+   "low": 22.470785086874812,
+   "high": 29.67960169529278,
+   "swing": 7.208816608417969
+  },
+  {
+   "driver": "COVID revenue -25% / +15%",
+   "low": 21.826743498614952,
+   "high": 28.699082842460136,
+   "swing": 6.872339343845184
+  },
+  {
+   "driver": "INT mature margin 45% / 62%",
+   "low": 22.522062640017946,
+   "high": 28.47372088298017,
+   "swing": 5.951658242962225
+  },
+  {
+   "driver": "Adj. NSCLC PoS 25% / 65%",
+   "low": 24.2278460289233,
+   "high": 28.102462197814454,
+   "swing": 3.874616168891155
+  },
+  {
+   "driver": "Unallocated R&D +15% / -15%",
+   "low": 24.176264779595222,
+   "high": 27.951706238310077,
+   "swing": 3.7754414587148553
+  },
+  {
+   "driver": "Terminal growth -2% / +2%",
+   "low": 25.321382894670332,
+   "high": 28.1778346545459,
+   "swing": 2.8564517598755685
+  },
+  {
+   "driver": "Arbutus: pay $1.3B / pay 0",
+   "low": 25.47640520720189,
+   "high": 28.331647351612617,
+   "swing": 2.8552421444107274
+  },
+  {
+   "driver": "Melanoma PoS 70% / 95%",
+   "low": 24.542152313932196,
+   "high": 27.227690708117535,
+   "swing": 2.6855383941853397
+  },
+  {
+   "driver": "NOL pool $6B / $16B",
+   "low": 25.416949490802654,
+   "high": 26.475739957745645,
+   "swing": 1.058790466942991
+  }
+ ],
+ "methods": [
+  {
+   "method": "Scenario rNPV/FCFF DCF (prob.-weighted)",
+   "low": 6.901601255969567,
+   "mid": 28.765560672221465,
+   "high": 72.17958625823287,
+   "weight": 0.45,
+   "rationale": "Primary: asset-level pipeline risk made explicit; shares drivers with MC"
+  },
+  {
+   "method": "Monte Carlo (same model, 20k draws)",
+   "low": 6.901601255969567,
+   "mid": 32.978244027056,
+   "high": 63.635329433800045,
+   "weight": 0.25,
+   "rationale": "Distribution rather than 4 points; correlated trial outcomes"
+  },
+  {
+   "method": "Forward peer multiple (EV/Sales 2030E, regression)",
+   "low": 22.034723731777476,
+   "mid": 30.409480840623242,
+   "high": 38.784237949469,
+   "weight": 0.15,
+   "rationale": "Market cross-check; depends on base-case 2030 revenue"
+  },
+  {
+   "method": "Transaction reference (2.5-4.5x risk-adj. peak sales)",
+   "low": 51.96348202881633,
+   "mid": 68.80796445601598,
+   "high": 85.65244688321562,
+   "weight": 0.1,
+   "rationale": "Control-value reference; small acquirer universe at $80B"
+  },
+  {
+   "method": "Earnings power value (no growth)",
+   "low": 11.355086099826126,
+   "mid": 11.355086099826126,
+   "high": 11.355086099826126,
+   "weight": 0.025,
+   "rationale": "What exists today without launches; floor-like"
+  },
+  {
+   "method": "Asset / liquidation floor",
+   "low": 6.901601255969567,
+   "mid": 6.901601255969567,
+   "high": 6.901601255969567,
+   "weight": 0.025,
+   "rationale": "Downside floor if the pipeline is abandoned"
+  }
+ ],
+ "blended_fair_value": 33.08769906485364,
+ "excluded_methods": {
+  "FCFE DCF": "Capital structure is not being deliberately re-levered; 0% convert and small term loan are handled explicitly in the equity bridge, so FCFE adds no information.",
+  "Residual income": "Book equity ($6.8B) reflects expensed R&D and pandemic retained earnings; RI would re-express the same cash flows with a less meaningful anchor.",
+  "Dividend discount": "No dividend and none planned; buyback authorization ($1.7B) is unused.",
+  "Trailing multiples (P/E, EV/EBITDA)": "Negative earnings and EBITDA; trailing EV/Sales on a collapsing COVID base is not comparable."
+ }
+}

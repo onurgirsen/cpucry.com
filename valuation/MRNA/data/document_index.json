@@ -1,0 +1,2805 @@
+{
+ "0000000000-18-030369": {
+  "form": "UPLOAD",
+  "filingDate": "2018-09-26",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/UPLOAD/2018-09-26_0000000000-18-030369/filename1.pdf",
+   "filings/UPLOAD/2018-09-26_0000000000-18-030369/filename2.txt"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000000000018030369/filename1.pdf"
+ },
+ "0000000000-18-032596": {
+  "form": "UPLOAD",
+  "filingDate": "2018-10-17",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/UPLOAD/2018-10-17_0000000000-18-032596/filename1.pdf",
+   "filings/UPLOAD/2018-10-17_0000000000-18-032596/filename2.txt"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000000000018032596/filename1.pdf"
+ },
+ "0000000000-18-034607": {
+  "form": "UPLOAD",
+  "filingDate": "2018-11-06",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/UPLOAD/2018-11-06_0000000000-18-034607/filename1.pdf",
+   "filings/UPLOAD/2018-11-06_0000000000-18-034607/filename2.txt"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000000000018034607/filename1.pdf"
+ },
+ "0001193125-18-323570": {
+  "form": "CORRESP",
+  "filingDate": "2018-11-09",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.htm",
+  "files": [
+   "filings/CORRESP/2018-11-09_0001193125-18-323570/filename1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518323570/filename1.htm"
+ },
+ "0001193125-18-323562": {
+  "form": "S-1",
+  "filingDate": "2018-11-09",
+  "reportDate": "",
+  "items": "",
+  "primary": "d577473ds1.htm",
+  "files": [
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex101.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1010.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1011.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1012.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1013.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1014.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1015.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1016.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1017.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1018.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1019.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex102.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex1020.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex103.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex104.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex105.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex106.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex107.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex108.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex109.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex211.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex231.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex31.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex32.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex33.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex34.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex41.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473dex42.htm",
+   "filings/S-1/2018-11-09_0001193125-18-323562/d577473ds1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518323562/d577473ds1.htm"
+ },
+ "0001193125-18-325348": {
+  "form": "CORRESP",
+  "filingDate": "2018-11-13",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.htm",
+  "files": [
+   "filings/CORRESP/2018-11-13_0001193125-18-325348/filename1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518325348/filename1.htm"
+ },
+ "0001193125-18-335714": {
+  "form": "S-1/A",
+  "filingDate": "2018-11-28",
+  "reportDate": "",
+  "items": "",
+  "primary": "d611137ds1a.htm",
+  "files": [
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137dex1021.htm",
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137dex1022.htm",
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137dex11.htm",
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137dex211.htm",
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137dex231.htm",
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137dex51.htm",
+   "filings/S-1_A/2018-11-28_0001193125-18-335714/d611137ds1a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518335714/d611137ds1a.htm"
+ },
+ "0001193125-18-341958": {
+  "form": "S-1/A",
+  "filingDate": "2018-12-04",
+  "reportDate": "",
+  "items": "",
+  "primary": "d611137ds1a.htm",
+  "files": [
+   "filings/S-1_A/2018-12-04_0001193125-18-341958/d611137dex231.htm",
+   "filings/S-1_A/2018-12-04_0001193125-18-341958/d611137ds1a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518341958/d611137ds1a.htm"
+ },
+ "0001193125-18-341743": {
+  "form": "CORRESP",
+  "filingDate": "2018-12-04",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.htm",
+  "files": [
+   "filings/CORRESP/2018-12-04_0001193125-18-341743/filename1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518341743/filename1.htm"
+ },
+ "0001193125-18-341740": {
+  "form": "CORRESP",
+  "filingDate": "2018-12-04",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.htm",
+  "files": [
+   "filings/CORRESP/2018-12-04_0001193125-18-341740/filename1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518341740/filename1.htm"
+ },
+ "0001193125-18-345002": {
+  "form": "S-8",
+  "filingDate": "2018-12-07",
+  "reportDate": "",
+  "items": "",
+  "primary": "d668694ds8.htm",
+  "files": [
+   "filings/S-8/2018-12-07_0001193125-18-345002/d668694dex231.htm",
+   "filings/S-8/2018-12-07_0001193125-18-345002/d668694dex51.htm",
+   "filings/S-8/2018-12-07_0001193125-18-345002/d668694ds8.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518345002/d668694ds8.htm"
+ },
+ "0001193125-18-344982": {
+  "form": "424B4",
+  "filingDate": "2018-12-07",
+  "reportDate": "",
+  "items": "",
+  "primary": "d611137d424b4.htm",
+  "files": [
+   "filings/424B4/2018-12-07_0001193125-18-344982/d611137d424b4.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518344982/d611137d424b4.htm"
+ },
+ "0001193125-18-349938": {
+  "form": "8-K",
+  "filingDate": "2018-12-14",
+  "reportDate": "2018-12-11",
+  "items": "5.03,9.01",
+  "primary": "d677222d8k.htm",
+  "files": [
+   "filings/8-K/2018-12-14_0001193125-18-349938/d677222d8k.htm",
+   "filings/8-K/2018-12-14_0001193125-18-349938/d677222dex31.htm",
+   "filings/8-K/2018-12-14_0001193125-18-349938/d677222dex32.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312518349938/d677222d8k.htm"
+ },
+ "0001193125-19-004268": {
+  "form": "8-K",
+  "filingDate": "2019-01-08",
+  "reportDate": "2019-01-08",
+  "items": "2.02,7.01,9.01",
+  "primary": "d679424d8k.htm",
+  "files": [
+   "filings/8-K/2019-01-08_0001193125-19-004268/d679424d8k.htm",
+   "filings/8-K/2019-01-08_0001193125-19-004268/d679424dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519004268/d679424d8k.htm"
+ },
+ "0001193125-19-012102": {
+  "form": "8-K",
+  "filingDate": "2019-01-18",
+  "reportDate": "2019-01-17",
+  "items": "5.02,7.01,9.01",
+  "primary": "d690192d8k.htm",
+  "files": [
+   "filings/8-K/2019-01-18_0001193125-19-012102/d690192d8k.htm",
+   "filings/8-K/2019-01-18_0001193125-19-012102/d690192dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519012102/d690192d8k.htm"
+ },
+ "0001193125-19-013399": {
+  "form": "8-K",
+  "filingDate": "2019-01-22",
+  "reportDate": "2019-01-22",
+  "items": "8.01",
+  "primary": "d694513d8k.htm",
+  "files": [
+   "filings/8-K/2019-01-22_0001193125-19-013399/d694513d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519013399/d694513d8k.htm"
+ },
+ "0001193125-19-035877": {
+  "form": "8-K",
+  "filingDate": "2019-02-12",
+  "reportDate": "2019-02-12",
+  "items": "7.01,9.01",
+  "primary": "d707391d8k.htm",
+  "files": [
+   "filings/8-K/2019-02-12_0001193125-19-035877/d707391d8k.htm",
+   "filings/8-K/2019-02-12_0001193125-19-035877/d707391dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519035877/d707391d8k.htm"
+ },
+ "0001682852-19-000004": {
+  "form": "8-K",
+  "filingDate": "2019-03-06",
+  "reportDate": "2019-03-06",
+  "items": "2.02,7.01,9.01",
+  "primary": "moderna8-kx3x6x2019.htm",
+  "files": [
+   "filings/8-K/2019-03-06_0001682852-19-000004/exhibit991pressrelease0306.htm",
+   "filings/8-K/2019-03-06_0001682852-19-000004/exhibit992lettertosharehol.htm",
+   "filings/8-K/2019-03-06_0001682852-19-000004/moderna8-kx3x6x2019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000004/moderna8-kx3x6x2019.htm"
+ },
+ "0001193125-19-073378": {
+  "form": "S-8",
+  "filingDate": "2019-03-13",
+  "reportDate": "",
+  "items": "",
+  "primary": "d719433ds8.htm",
+  "files": [
+   "filings/S-8/2019-03-13_0001193125-19-073378/d719433dex231.htm",
+   "filings/S-8/2019-03-13_0001193125-19-073378/d719433dex51.htm",
+   "filings/S-8/2019-03-13_0001193125-19-073378/d719433ds8.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519073378/d719433ds8.htm"
+ },
+ "0001682852-19-000009": {
+  "form": "10-K",
+  "filingDate": "2019-03-13",
+  "reportDate": "2018-12-31",
+  "items": "",
+  "primary": "moderna10-k12312018.htm",
+  "files": [
+   "filings/10-K/2019-03-13_0001682852-19-000009/0001682852-19-000009-index-headers.html",
+   "filings/10-K/2019-03-13_0001682852-19-000009/0001682852-19-000009-index.html",
+   "filings/10-K/2019-03-13_0001682852-19-000009/exhibit102312312018.htm",
+   "filings/10-K/2019-03-13_0001682852-19-000009/exhibit23112312018.htm",
+   "filings/10-K/2019-03-13_0001682852-19-000009/exhibit31112312018.htm",
+   "filings/10-K/2019-03-13_0001682852-19-000009/exhibit31212312018.htm",
+   "filings/10-K/2019-03-13_0001682852-19-000009/exhibit32112312018.htm",
+   "filings/10-K/2019-03-13_0001682852-19-000009/exhibit32212312018.htm",
+   "filings/10-K/2019-03-13_0001682852-19-000009/moderna10-k12312018.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000009/moderna10-k12312018.htm"
+ },
+ "0001682852-19-000013": {
+  "form": "10-K/A",
+  "filingDate": "2019-04-25",
+  "reportDate": "2018-12-31",
+  "items": "",
+  "primary": "moderna10-ka12312018.htm",
+  "files": [
+   "filings/10-K_A/2019-04-25_0001682852-19-000013/0001682852-19-000013-index-headers.html",
+   "filings/10-K_A/2019-04-25_0001682852-19-000013/0001682852-19-000013-index.html",
+   "filings/10-K_A/2019-04-25_0001682852-19-000013/exhibit102412312018ka.htm",
+   "filings/10-K_A/2019-04-25_0001682852-19-000013/exhibit31312312018ka.htm",
+   "filings/10-K_A/2019-04-25_0001682852-19-000013/exhibit31412312018ka.htm",
+   "filings/10-K_A/2019-04-25_0001682852-19-000013/moderna10-ka12312018.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000013/moderna10-ka12312018.htm"
+ },
+ "0001193125-19-138827": {
+  "form": "8-K",
+  "filingDate": "2019-05-07",
+  "reportDate": "2019-05-07",
+  "items": "7.01,9.01",
+  "primary": "d742416d8k.htm",
+  "files": [
+   "filings/8-K/2019-05-07_0001193125-19-138827/d742416d8k.htm",
+   "filings/8-K/2019-05-07_0001193125-19-138827/d742416dex991.htm",
+   "filings/8-K/2019-05-07_0001193125-19-138827/d742416dex992.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519138827/d742416d8k.htm"
+ },
+ "0001682852-19-000018": {
+  "form": "8-K",
+  "filingDate": "2019-05-08",
+  "reportDate": "2019-05-08",
+  "items": "1.01,2.02,9.01",
+  "primary": "moderna8-kx1q195x9x2019.htm",
+  "files": [
+   "filings/8-K/2019-05-08_0001682852-19-000018/exhibit9911q19pressrelease.htm",
+   "filings/8-K/2019-05-08_0001682852-19-000018/moderna8-kx1q195x9x2019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000018/moderna8-kx1q195x9x2019.htm"
+ },
+ "0001682852-19-000023": {
+  "form": "10-Q",
+  "filingDate": "2019-05-09",
+  "reportDate": "2019-03-31",
+  "items": "",
+  "primary": "moderna10-q3312019.htm",
+  "files": [
+   "filings/10-Q/2019-05-09_0001682852-19-000023/0001682852-19-000023-index-headers.html",
+   "filings/10-Q/2019-05-09_0001682852-19-000023/0001682852-19-000023-index.html",
+   "filings/10-Q/2019-05-09_0001682852-19-000023/exhibit101amendedandrestat.htm",
+   "filings/10-Q/2019-05-09_0001682852-19-000023/exhibit3113312019.htm",
+   "filings/10-Q/2019-05-09_0001682852-19-000023/exhibit3123312019.htm",
+   "filings/10-Q/2019-05-09_0001682852-19-000023/exhibit3213312019.htm",
+   "filings/10-Q/2019-05-09_0001682852-19-000023/moderna10-q3312019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000023/moderna10-q3312019.htm"
+ },
+ "0001682852-19-000021": {
+  "form": "8-K/A",
+  "filingDate": "2019-05-09",
+  "reportDate": "2019-05-08",
+  "items": "2.02,9.01",
+  "primary": "moderna8-kx1q195x9x2019ame.htm",
+  "files": [
+   "filings/8-K_A/2019-05-09_0001682852-19-000021/exhibit9911q19pressrelease.htm",
+   "filings/8-K_A/2019-05-09_0001682852-19-000021/moderna8-kx1q195x9x2019ame.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000021/moderna8-kx1q195x9x2019ame.htm"
+ },
+ "0001193125-19-148153": {
+  "form": "DEF 14A",
+  "filingDate": "2019-05-15",
+  "reportDate": "2019-06-27",
+  "items": "",
+  "primary": "d689184ddef14a.htm",
+  "files": [
+   "filings/DEF 14A/2019-05-15_0001193125-19-148153/d689184ddef14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519148153/d689184ddef14a.htm"
+ },
+ "0001193125-19-163337": {
+  "form": "8-K",
+  "filingDate": "2019-06-03",
+  "reportDate": "2019-06-01",
+  "items": "7.01,9.01",
+  "primary": "d754931d8k.htm",
+  "files": [
+   "filings/8-K/2019-06-03_0001193125-19-163337/d754931d8k.htm",
+   "filings/8-K/2019-06-03_0001193125-19-163337/d754931dex991.htm",
+   "filings/8-K/2019-06-03_0001193125-19-163337/d754931dex992.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519163337/d754931d8k.htm"
+ },
+ "0001193125-19-184305": {
+  "form": "8-K",
+  "filingDate": "2019-06-27",
+  "reportDate": "2019-06-27",
+  "items": "5.07",
+  "primary": "d767680d8k.htm",
+  "files": [
+   "filings/8-K/2019-06-27_0001193125-19-184305/d767680d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519184305/d767680d8k.htm"
+ },
+ "0001682852-19-000028": {
+  "form": "8-K",
+  "filingDate": "2019-08-07",
+  "reportDate": "2019-08-07",
+  "items": "9.01",
+  "primary": "moderna8-kx2q198x14x2019.htm",
+  "files": [
+   "filings/8-K/2019-08-07_0001682852-19-000028/exhibit9912q19pressrelease.htm",
+   "filings/8-K/2019-08-07_0001682852-19-000028/moderna8-kx2q198x14x2019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000028/moderna8-kx2q198x14x2019.htm"
+ },
+ "0001682852-19-000031": {
+  "form": "10-Q",
+  "filingDate": "2019-08-08",
+  "reportDate": "2019-06-30",
+  "items": "",
+  "primary": "moderna10-q6302019.htm",
+  "files": [
+   "filings/10-Q/2019-08-08_0001682852-19-000031/0001682852-19-000031-index-headers.html",
+   "filings/10-Q/2019-08-08_0001682852-19-000031/0001682852-19-000031-index.html",
+   "filings/10-Q/2019-08-08_0001682852-19-000031/exhibit101.htm",
+   "filings/10-Q/2019-08-08_0001682852-19-000031/exhibit3116302019.htm",
+   "filings/10-Q/2019-08-08_0001682852-19-000031/exhibit31206302019.htm",
+   "filings/10-Q/2019-08-08_0001682852-19-000031/exhibit3216302019.htm",
+   "filings/10-Q/2019-08-08_0001682852-19-000031/moderna10-q6302019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000031/moderna10-q6302019.htm"
+ },
+ "0001193125-19-243385": {
+  "form": "8-K",
+  "filingDate": "2019-09-12",
+  "reportDate": "2019-09-12",
+  "items": "7.01,9.01",
+  "primary": "d796420d8k.htm",
+  "files": [
+   "filings/8-K/2019-09-12_0001193125-19-243385/d796420d8k.htm",
+   "filings/8-K/2019-09-12_0001193125-19-243385/d796420dex991.htm",
+   "filings/8-K/2019-09-12_0001193125-19-243385/d796420dex992.htm",
+   "filings/8-K/2019-09-12_0001193125-19-243385/d796420dex993.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519243385/d796420d8k.htm"
+ },
+ "0001682852-19-000036": {
+  "form": "10-Q",
+  "filingDate": "2019-11-06",
+  "reportDate": "2019-09-30",
+  "items": "",
+  "primary": "moderna10-q9302019.htm",
+  "files": [
+   "filings/10-Q/2019-11-06_0001682852-19-000036/0001682852-19-000036-index-headers.html",
+   "filings/10-Q/2019-11-06_0001682852-19-000036/0001682852-19-000036-index.html",
+   "filings/10-Q/2019-11-06_0001682852-19-000036/a101fifthamendmentto200tec.htm",
+   "filings/10-Q/2019-11-06_0001682852-19-000036/exhibit3119302019.htm",
+   "filings/10-Q/2019-11-06_0001682852-19-000036/exhibit3129302019.htm",
+   "filings/10-Q/2019-11-06_0001682852-19-000036/exhibit3219302019.htm",
+   "filings/10-Q/2019-11-06_0001682852-19-000036/moderna10-q9302019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285219000036/moderna10-q9302019.htm"
+ },
+ "0001193125-19-285279": {
+  "form": "8-K",
+  "filingDate": "2019-11-06",
+  "reportDate": "2019-11-06",
+  "items": "2.02,9.01",
+  "primary": "d827457d8k.htm",
+  "files": [
+   "filings/8-K/2019-11-06_0001193125-19-285279/d827457d8k.htm",
+   "filings/8-K/2019-11-06_0001193125-19-285279/d827457dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519285279/d827457d8k.htm"
+ },
+ "0001193125-19-311662": {
+  "form": "8-K",
+  "filingDate": "2019-12-11",
+  "reportDate": "2019-12-09",
+  "items": "5.02",
+  "primary": "d842317d8k.htm",
+  "files": [
+   "filings/8-K/2019-12-11_0001193125-19-311662/d842317d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312519311662/d842317d8k.htm"
+ },
+ "0001193125-20-001732": {
+  "form": "8-K",
+  "filingDate": "2020-01-06",
+  "reportDate": "2020-01-06",
+  "items": "2.02,7.01",
+  "primary": "d117801d8k.htm",
+  "files": [
+   "filings/8-K/2020-01-06_0001193125-20-001732/d117801d8k.htm",
+   "filings/8-K/2020-01-06_0001193125-20-001732/d117801dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520001732/d117801d8k.htm"
+ },
+ "0001193125-20-011410": {
+  "form": "8-K",
+  "filingDate": "2020-01-22",
+  "reportDate": "2020-01-21",
+  "items": "7.01",
+  "primary": "d873538d8k.htm",
+  "files": [
+   "filings/8-K/2020-01-22_0001193125-20-011410/d873538d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520011410/d873538d8k.htm"
+ },
+ "0001193125-20-022272": {
+  "form": "8-K",
+  "filingDate": "2020-02-03",
+  "reportDate": "2020-02-03",
+  "items": "8.01,9.01",
+  "primary": "d875699d8k.htm",
+  "files": [
+   "filings/8-K/2020-02-03_0001193125-20-022272/d875699d8k.htm",
+   "filings/8-K/2020-02-03_0001193125-20-022272/d875699dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520022272/d875699d8k.htm"
+ },
+ "0001193125-20-022273": {
+  "form": "DEFA14A",
+  "filingDate": "2020-02-03",
+  "reportDate": "",
+  "items": "",
+  "primary": "d875699d8k.htm",
+  "files": [
+   "filings/DEFA14A/2020-02-03_0001193125-20-022273/d875699d8k.htm",
+   "filings/DEFA14A/2020-02-03_0001193125-20-022273/d875699dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520022273/d875699d8k.htm"
+ },
+ "0001193125-20-030003": {
+  "form": "FWP",
+  "filingDate": "2020-02-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "d856515dfwp.htm",
+  "files": [
+   "filings/FWP/2020-02-10_0001193125-20-030003/d856515dfwp.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520030003/d856515dfwp.htm"
+ },
+ "0001193125-20-030000": {
+  "form": "FWP",
+  "filingDate": "2020-02-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "d856515dfwp.htm",
+  "files": [
+   "filings/FWP/2020-02-10_0001193125-20-030000/d856515dfwp.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520030000/d856515dfwp.htm"
+ },
+ "0001193125-20-029948": {
+  "form": "424B5",
+  "filingDate": "2020-02-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "d871325d424b5.htm",
+  "files": [
+   "filings/424B5/2020-02-10_0001193125-20-029948/d871325d424b5.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520029948/d871325d424b5.htm"
+ },
+ "0001193125-20-029743": {
+  "form": "S-3ASR",
+  "filingDate": "2020-02-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "d856515ds3asr.htm",
+  "files": [
+   "filings/S-3ASR/2020-02-10_0001193125-20-029743/d856515dex231.htm",
+   "filings/S-3ASR/2020-02-10_0001193125-20-029743/d856515dex43.htm",
+   "filings/S-3ASR/2020-02-10_0001193125-20-029743/d856515dex44.htm",
+   "filings/S-3ASR/2020-02-10_0001193125-20-029743/d856515dex51.htm",
+   "filings/S-3ASR/2020-02-10_0001193125-20-029743/d856515ds3asr.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520029743/d856515ds3asr.htm"
+ },
+ "0001193125-20-033357": {
+  "form": "8-K",
+  "filingDate": "2020-02-12",
+  "reportDate": "2020-02-11",
+  "items": "1.01,8.01,9.01",
+  "primary": "d877577d8k.htm",
+  "files": [
+   "filings/8-K/2020-02-12_0001193125-20-033357/d877577d8k.htm",
+   "filings/8-K/2020-02-12_0001193125-20-033357/d877577dex11.htm",
+   "filings/8-K/2020-02-12_0001193125-20-033357/d877577dex51.htm",
+   "filings/8-K/2020-02-12_0001193125-20-033357/d877577dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520033357/d877577d8k.htm"
+ },
+ "0001193125-20-033353": {
+  "form": "424B5",
+  "filingDate": "2020-02-12",
+  "reportDate": "",
+  "items": "",
+  "primary": "d871325d424b5.htm",
+  "files": [
+   "filings/424B5/2020-02-12_0001193125-20-033353/d871325d424b5.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520033353/d871325d424b5.htm"
+ },
+ "0001193125-20-035587": {
+  "form": "8-K",
+  "filingDate": "2020-02-13",
+  "reportDate": "2020-02-12",
+  "items": "5.08",
+  "primary": "d885338d8k.htm",
+  "files": [
+   "filings/8-K/2020-02-13_0001193125-20-035587/d885338d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520035587/d885338d8k.htm"
+ },
+ "0001193125-20-049112": {
+  "form": "8-K",
+  "filingDate": "2020-02-26",
+  "reportDate": "2020-02-26",
+  "items": "2.02,9.01",
+  "primary": "d891209d8k.htm",
+  "files": [
+   "filings/8-K/2020-02-26_0001193125-20-049112/d891209d8k.htm",
+   "filings/8-K/2020-02-26_0001193125-20-049112/d891209dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520049112/d891209d8k.htm"
+ },
+ "0001193125-20-052884": {
+  "form": "S-8",
+  "filingDate": "2020-02-27",
+  "reportDate": "",
+  "items": "",
+  "primary": "d885907ds8.htm",
+  "files": [
+   "filings/S-8/2020-02-27_0001193125-20-052884/d885907dex231.htm",
+   "filings/S-8/2020-02-27_0001193125-20-052884/d885907dex51.htm",
+   "filings/S-8/2020-02-27_0001193125-20-052884/d885907ds8.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520052884/d885907ds8.htm"
+ },
+ "0001682852-20-000006": {
+  "form": "10-K",
+  "filingDate": "2020-02-27",
+  "reportDate": "2019-12-31",
+  "items": "",
+  "primary": "moderna10-k12312019.htm",
+  "files": [
+   "filings/10-K/2020-02-27_0001682852-20-000006/0001682852-20-000006-index-headers.html",
+   "filings/10-K/2020-02-27_0001682852-20-000006/0001682852-20-000006-index.html",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit102512312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit102612312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit21subsidiaries1.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit23112312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit31112312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit31212312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit32112312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit32212312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/exhibit4312312019.htm",
+   "filings/10-K/2020-02-27_0001682852-20-000006/moderna10-k12312019.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285220000006/moderna10-k12312019.htm"
+ },
+ "0001193125-20-061064": {
+  "form": "8-K",
+  "filingDate": "2020-03-04",
+  "reportDate": "2020-03-04",
+  "items": "7.01",
+  "primary": "d858700d8k.htm",
+  "files": [
+   "filings/8-K/2020-03-04_0001193125-20-061064/d858700d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520061064/d858700d8k.htm"
+ },
+ "0001193125-20-074867": {
+  "form": "8-K",
+  "filingDate": "2020-03-16",
+  "reportDate": "2020-03-16",
+  "items": "7.01,8.01,9.01",
+  "primary": "d884510d8k.htm",
+  "files": [
+   "filings/8-K/2020-03-16_0001193125-20-074867/d884510d8k.htm",
+   "filings/8-K/2020-03-16_0001193125-20-074867/d884510dex991.htm",
+   "filings/8-K/2020-03-16_0001193125-20-074867/d884510dex992.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520074867/d884510d8k.htm"
+ },
+ "0001193125-20-073721": {
+  "form": "DEF 14A",
+  "filingDate": "2020-03-16",
+  "reportDate": "2020-04-29",
+  "items": "",
+  "primary": "d831877ddef14a.htm",
+  "files": [
+   "filings/DEF 14A/2020-03-16_0001193125-20-073721/d831877ddef14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520073721/d831877ddef14a.htm"
+ },
+ "0001193125-20-081621": {
+  "form": "8-K",
+  "filingDate": "2020-03-23",
+  "reportDate": "2020-03-23",
+  "items": "7.01,8.01",
+  "primary": "d895385d8k.htm",
+  "files": [
+   "filings/8-K/2020-03-23_0001193125-20-081621/d895385d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520081621/d895385d8k.htm"
+ },
+ "0001193125-20-089933": {
+  "form": "8-K",
+  "filingDate": "2020-03-30",
+  "reportDate": "2020-03-29",
+  "items": "5.02,8.01,9.01",
+  "primary": "d905037d8k.htm",
+  "files": [
+   "filings/8-K/2020-03-30_0001193125-20-089933/d905037d8k.htm",
+   "filings/8-K/2020-03-30_0001193125-20-089933/d905037dex101.htm",
+   "filings/8-K/2020-03-30_0001193125-20-089933/d905037dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520089933/d905037d8k.htm"
+ },
+ "0001193125-20-091743": {
+  "form": "8-K",
+  "filingDate": "2020-03-31",
+  "reportDate": "2020-03-31",
+  "items": "7.01",
+  "primary": "d35200d8k.htm",
+  "files": [
+   "filings/8-K/2020-03-31_0001193125-20-091743/d35200d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520091743/d35200d8k.htm"
+ },
+ "0001193125-20-103908": {
+  "form": "DEFA14A",
+  "filingDate": "2020-04-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "d915867ddefa14a.htm",
+  "files": [
+   "filings/DEFA14A/2020-04-10_0001193125-20-103908/d915867ddefa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520103908/d915867ddefa14a.htm"
+ },
+ "0001193125-20-105789": {
+  "form": "8-K",
+  "filingDate": "2020-04-14",
+  "reportDate": "2020-04-14",
+  "items": "7.01,9.01",
+  "primary": "d853787d8k.htm",
+  "files": [
+   "filings/8-K/2020-04-14_0001193125-20-105789/d853787d8k.htm",
+   "filings/8-K/2020-04-14_0001193125-20-105789/d853787dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520105789/d853787d8k.htm"
+ },
+ "0001193125-20-109482": {
+  "form": "8-K",
+  "filingDate": "2020-04-17",
+  "reportDate": "2020-04-16",
+  "items": "1.01,7.01,9.01",
+  "primary": "d870934d8k.htm",
+  "files": [
+   "filings/8-K/2020-04-17_0001193125-20-109482/d870934d8k.htm",
+   "filings/8-K/2020-04-17_0001193125-20-109482/d870934dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520109482/d870934d8k.htm"
+ },
+ "0001193125-20-129235": {
+  "form": "8-K",
+  "filingDate": "2020-05-01",
+  "reportDate": "2020-04-29",
+  "items": "5.07",
+  "primary": "d923587d8k.htm",
+  "files": [
+   "filings/8-K/2020-05-01_0001193125-20-129235/d923587d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520129235/d923587d8k.htm"
+ },
+ "0001193125-20-134266": {
+  "form": "8-K",
+  "filingDate": "2020-05-06",
+  "reportDate": "2020-05-06",
+  "items": "7.01",
+  "primary": "d922458d8k.htm",
+  "files": [
+   "filings/8-K/2020-05-06_0001193125-20-134266/d922458d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520134266/d922458d8k.htm"
+ },
+ "0001682852-20-000010": {
+  "form": "10-Q",
+  "filingDate": "2020-05-07",
+  "reportDate": "2020-03-31",
+  "items": "",
+  "primary": "moderna10-q3312020.htm",
+  "files": [
+   "filings/10-Q/2020-05-07_0001682852-20-000010/0001682852-20-000010-index-headers.html",
+   "filings/10-Q/2020-05-07_0001682852-20-000010/0001682852-20-000010-index.html",
+   "filings/10-Q/2020-05-07_0001682852-20-000010/exhibit3113312020.htm",
+   "filings/10-Q/2020-05-07_0001682852-20-000010/exhibit3123312020.htm",
+   "filings/10-Q/2020-05-07_0001682852-20-000010/exhibit3213312020.htm",
+   "filings/10-Q/2020-05-07_0001682852-20-000010/moderna10-q3312020.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285220000010/moderna10-q3312020.htm"
+ },
+ "0001193125-20-135572": {
+  "form": "8-K",
+  "filingDate": "2020-05-07",
+  "reportDate": "2020-05-05",
+  "items": "2.02,5.02,9.01",
+  "primary": "d927464d8k.htm",
+  "files": [
+   "filings/8-K/2020-05-07_0001193125-20-135572/d927464d8k.htm",
+   "filings/8-K/2020-05-07_0001193125-20-135572/d927464dex101.htm",
+   "filings/8-K/2020-05-07_0001193125-20-135572/d927464dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520135572/d927464d8k.htm"
+ },
+ "0001193125-20-143814": {
+  "form": "8-K",
+  "filingDate": "2020-05-15",
+  "reportDate": "2020-05-15",
+  "items": "5.02,7.01,9.01",
+  "primary": "d924269d8k.htm",
+  "files": [
+   "filings/8-K/2020-05-15_0001193125-20-143814/d924269d8k.htm",
+   "filings/8-K/2020-05-15_0001193125-20-143814/d924269dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520143814/d924269d8k.htm"
+ },
+ "0001193125-20-145034": {
+  "form": "S-3ASR",
+  "filingDate": "2020-05-18",
+  "reportDate": "",
+  "items": "",
+  "primary": "d934454ds3asr.htm",
+  "files": [
+   "filings/S-3ASR/2020-05-18_0001193125-20-145034/d934454dex231.htm",
+   "filings/S-3ASR/2020-05-18_0001193125-20-145034/d934454dex51.htm",
+   "filings/S-3ASR/2020-05-18_0001193125-20-145034/d934454ds3asr.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520145034/d934454ds3asr.htm"
+ },
+ "0001193125-20-144533": {
+  "form": "8-K",
+  "filingDate": "2020-05-18",
+  "reportDate": "2020-05-18",
+  "items": "8.01,9.01",
+  "primary": "d918307d8k.htm",
+  "files": [
+   "filings/8-K/2020-05-18_0001193125-20-144533/d918307d8k.htm",
+   "filings/8-K/2020-05-18_0001193125-20-144533/d918307dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520144533/d918307d8k.htm"
+ },
+ "0001193125-20-147481": {
+  "form": "8-K",
+  "filingDate": "2020-05-20",
+  "reportDate": "2020-05-18",
+  "items": "1.01,8.01,9.01",
+  "primary": "d906342d8k.htm",
+  "files": [
+   "filings/8-K/2020-05-20_0001193125-20-147481/d906342d8k.htm",
+   "filings/8-K/2020-05-20_0001193125-20-147481/d906342dex11.htm",
+   "filings/8-K/2020-05-20_0001193125-20-147481/d906342dex51.htm",
+   "filings/8-K/2020-05-20_0001193125-20-147481/d906342dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520147481/d906342d8k.htm"
+ },
+ "0001193125-20-147474": {
+  "form": "424B5",
+  "filingDate": "2020-05-20",
+  "reportDate": "",
+  "items": "",
+  "primary": "d934454d424b5.htm",
+  "files": [
+   "filings/424B5/2020-05-20_0001193125-20-147474/d934454d424b5.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520147474/d934454d424b5.htm"
+ },
+ "0001193125-20-160690": {
+  "form": "8-K",
+  "filingDate": "2020-06-04",
+  "reportDate": "2020-06-04",
+  "items": "5.02,7.01,9.01",
+  "primary": "d912066d8k.htm",
+  "files": [
+   "filings/8-K/2020-06-04_0001193125-20-160690/d912066d8k.htm",
+   "filings/8-K/2020-06-04_0001193125-20-160690/d912066dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520160690/d912066d8k.htm"
+ },
+ "0001193125-20-164749": {
+  "form": "8-K/A",
+  "filingDate": "2020-06-09",
+  "reportDate": "2020-06-04",
+  "items": "5.02",
+  "primary": "d939114d8ka.htm",
+  "files": [
+   "filings/8-K_A/2020-06-09_0001193125-20-164749/d939114d8ka.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520164749/d939114d8ka.htm"
+ },
+ "0001193125-20-167244": {
+  "form": "8-K",
+  "filingDate": "2020-06-12",
+  "reportDate": "2020-06-12",
+  "items": "7.01",
+  "primary": "d944165d8k.htm",
+  "files": [
+   "filings/8-K/2020-06-12_0001193125-20-167244/d944165d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520167244/d944165d8k.htm"
+ },
+ "0001193125-20-186935": {
+  "form": "8-K",
+  "filingDate": "2020-07-02",
+  "reportDate": "2020-07-02",
+  "items": "7.01",
+  "primary": "d79413d8k.htm",
+  "files": [
+   "filings/8-K/2020-07-02_0001193125-20-186935/d79413d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520186935/d79413d8k.htm"
+ },
+ "0001193125-20-186885": {
+  "form": "8-K",
+  "filingDate": "2020-07-02",
+  "reportDate": "2020-06-29",
+  "items": "5.02",
+  "primary": "d947796d8k.htm",
+  "files": [
+   "filings/8-K/2020-07-02_0001193125-20-186885/d947796d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520186885/d947796d8k.htm"
+ },
+ "0001193125-20-192966": {
+  "form": "8-K",
+  "filingDate": "2020-07-15",
+  "reportDate": "2020-07-14",
+  "items": "8.01,9.01",
+  "primary": "d911748d8k.htm",
+  "files": [
+   "filings/8-K/2020-07-15_0001193125-20-192966/d911748d8k.htm",
+   "filings/8-K/2020-07-15_0001193125-20-192966/d911748dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520192966/d911748d8k.htm"
+ },
+ "0001193125-20-199192": {
+  "form": "8-K",
+  "filingDate": "2020-07-27",
+  "reportDate": "2020-07-25",
+  "items": "1.01,7.01,9.01",
+  "primary": "d13301d8k.htm",
+  "files": [
+   "filings/8-K/2020-07-27_0001193125-20-199192/d13301d8k.htm",
+   "filings/8-K/2020-07-27_0001193125-20-199192/d13301dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520199192/d13301d8k.htm"
+ },
+ "0001193125-20-201199": {
+  "form": "8-K",
+  "filingDate": "2020-07-29",
+  "reportDate": "2020-07-28",
+  "items": "8.01,9.01",
+  "primary": "d71138d8k.htm",
+  "files": [
+   "filings/8-K/2020-07-29_0001193125-20-201199/d71138d8k.htm",
+   "filings/8-K/2020-07-29_0001193125-20-201199/d71138dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520201199/d71138d8k.htm"
+ },
+ "0001193125-20-204617": {
+  "form": "8-K",
+  "filingDate": "2020-07-30",
+  "reportDate": "2020-07-30",
+  "items": "5.02,7.01,9.01",
+  "primary": "d28730d8k.htm",
+  "files": [
+   "filings/8-K/2020-07-30_0001193125-20-204617/d28730d8k.htm",
+   "filings/8-K/2020-07-30_0001193125-20-204617/d28730dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520204617/d28730d8k.htm"
+ },
+ "0001193125-20-209861": {
+  "form": "8-K",
+  "filingDate": "2020-08-05",
+  "reportDate": "2020-08-05",
+  "items": "2.02,9.01",
+  "primary": "d152816d8k.htm",
+  "files": [
+   "filings/8-K/2020-08-05_0001193125-20-209861/d152816d8k.htm",
+   "filings/8-K/2020-08-05_0001193125-20-209861/d152816dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520209861/d152816d8k.htm"
+ },
+ "0001682852-20-000017": {
+  "form": "10-Q",
+  "filingDate": "2020-08-06",
+  "reportDate": "2020-06-30",
+  "items": "",
+  "primary": "mrna-20200630.htm",
+  "files": [
+   "filings/10-Q/2020-08-06_0001682852-20-000017/0001682852-20-000017-index-headers.html",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/0001682852-20-000017-index.html",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/a4exhibit3116302020.htm",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/a5exhibit3126302020.htm",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/a6exhibit3216302020.htm",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/bardav3.htm",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/exhibit1026302020.htm",
+   "filings/10-Q/2020-08-06_0001682852-20-000017/mrna-20200630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285220000017/mrna-20200630.htm"
+ },
+ "0001193125-20-216923": {
+  "form": "8-K",
+  "filingDate": "2020-08-12",
+  "reportDate": "2020-08-11",
+  "items": "1.01,7.01,9.01",
+  "primary": "d45471d8k.htm",
+  "files": [
+   "filings/8-K/2020-08-12_0001193125-20-216923/d45471d8k.htm",
+   "filings/8-K/2020-08-12_0001193125-20-216923/d45471dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520216923/d45471d8k.htm"
+ },
+ "0001682852-20-000019": {
+  "form": "8-K",
+  "filingDate": "2020-09-18",
+  "reportDate": "2020-09-18",
+  "items": "7.01",
+  "primary": "mrna-20200918.htm",
+  "files": [
+   "filings/8-K/2020-09-18_0001682852-20-000019/mrna-20200918.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285220000019/mrna-20200918.htm"
+ },
+ "0001193125-20-280422": {
+  "form": "8-K",
+  "filingDate": "2020-10-29",
+  "reportDate": "2020-10-29",
+  "items": "2.02,9.01",
+  "primary": "d134701d8k.htm",
+  "files": [
+   "filings/8-K/2020-10-29_0001193125-20-280422/d134701d8k.htm",
+   "filings/8-K/2020-10-29_0001193125-20-280422/d134701dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520280422/d134701d8k.htm"
+ },
+ "0001682852-20-000023": {
+  "form": "10-Q",
+  "filingDate": "2020-10-30",
+  "reportDate": "2020-09-30",
+  "items": "",
+  "primary": "mrna-20200930.htm",
+  "files": [
+   "filings/10-Q/2020-10-30_0001682852-20-000023/0001682852-20-000023-index-headers.html",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/0001682852-20-000023-index.html",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/a4exhibit3119302020.htm",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/a5exhibit3129302020.htm",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/a6exhibit3219302020.htm",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/exhibit101.htm",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/exhibit103.htm",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/lonzamodernagltafullye.htm",
+   "filings/10-Q/2020-10-30_0001682852-20-000023/mrna-20200930.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285220000023/mrna-20200930.htm"
+ },
+ "0001193125-20-293735": {
+  "form": "8-K",
+  "filingDate": "2020-11-16",
+  "reportDate": "2020-11-16",
+  "items": "7.01,9.01",
+  "primary": "d53512d8k.htm",
+  "files": [
+   "filings/8-K/2020-11-16_0001193125-20-293735/d53512d8k.htm",
+   "filings/8-K/2020-11-16_0001193125-20-293735/d53512dex991.htm",
+   "filings/8-K/2020-11-16_0001193125-20-293735/d53512dex992.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520293735/d53512d8k.htm"
+ },
+ "0001193125-20-304907": {
+  "form": "8-K",
+  "filingDate": "2020-11-30",
+  "reportDate": "2020-11-30",
+  "items": "7.01,9.01",
+  "primary": "d76031d8k.htm",
+  "files": [
+   "filings/8-K/2020-11-30_0001193125-20-304907/d76031d8k.htm",
+   "filings/8-K/2020-11-30_0001193125-20-304907/d76031dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520304907/d76031d8k.htm"
+ },
+ "0001682852-20-000026": {
+  "form": "8-K",
+  "filingDate": "2020-12-11",
+  "reportDate": "2020-12-11",
+  "items": "7.01,9.01",
+  "primary": "mrna-20201211.htm",
+  "files": [
+   "filings/8-K/2020-12-11_0001682852-20-000026/mrna-20201211.htm",
+   "filings/8-K/2020-12-11_0001682852-20-000026/usgannouncementedgarve.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285220000026/mrna-20201211.htm"
+ },
+ "0001193125-20-322279": {
+  "form": "8-K",
+  "filingDate": "2020-12-21",
+  "reportDate": "2020-12-18",
+  "items": "7.01,9.01",
+  "primary": "d20652d8k.htm",
+  "files": [
+   "filings/8-K/2020-12-21_0001193125-20-322279/d20652d8k.htm",
+   "filings/8-K/2020-12-21_0001193125-20-322279/d20652dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520322279/d20652d8k.htm"
+ },
+ "0001193125-20-325251": {
+  "form": "8-K",
+  "filingDate": "2020-12-23",
+  "reportDate": "2020-12-23",
+  "items": "7.01",
+  "primary": "d96981d8k.htm",
+  "files": [
+   "filings/8-K/2020-12-23_0001193125-20-325251/d96981d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312520325251/d96981d8k.htm"
+ },
+ "0001193125-21-000332": {
+  "form": "8-K",
+  "filingDate": "2021-01-04",
+  "reportDate": "2021-01-04",
+  "items": "2.02,7.01,9.01",
+  "primary": "d101641d8k.htm",
+  "files": [
+   "filings/8-K/2021-01-04_0001193125-21-000332/d101641d8k.htm",
+   "filings/8-K/2021-01-04_0001193125-21-000332/d101641dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521000332/d101641d8k.htm"
+ },
+ "0001193125-21-055687": {
+  "form": "8-K",
+  "filingDate": "2021-02-25",
+  "reportDate": "2021-02-25",
+  "items": "2.02,9.01",
+  "primary": "d118084d8k.htm",
+  "files": [
+   "filings/8-K/2021-02-25_0001193125-21-055687/d118084d8k.htm",
+   "filings/8-K/2021-02-25_0001193125-21-055687/d118084dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521055687/d118084d8k.htm"
+ },
+ "0001682852-21-000006": {
+  "form": "10-K",
+  "filingDate": "2021-02-26",
+  "reportDate": "2020-12-31",
+  "items": "",
+  "primary": "mrna-20201231.htm",
+  "files": [
+   "filings/10-K/2021-02-26_0001682852-21-000006/0001682852-21-000006-index-headers.html",
+   "filings/10-K/2021-02-26_0001682852-21-000006/0001682852-21-000006-index.html",
+   "filings/10-K/2021-02-26_0001682852-21-000006/a2312020consentforincorpra.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit1017moderna.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit1027supplycontrac.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit21subsidiaries1.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit31112312020.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit31212312020.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit32112312020.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit32212312020.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/exhibit4312312020.htm",
+   "filings/10-K/2021-02-26_0001682852-21-000006/mrna-20201231.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285221000006/mrna-20201231.htm"
+ },
+ "0001308179-21-000032": {
+  "form": "DEFA14A",
+  "filingDate": "2021-03-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "lmrna2021_defa14a.htm",
+  "files": [
+   "filings/DEFA14A/2021-03-10_0001308179-21-000032/lmrna2021_defa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817921000032/lmrna2021_defa14a.htm"
+ },
+ "0001308179-21-000031": {
+  "form": "DEF 14A",
+  "filingDate": "2021-03-10",
+  "reportDate": "2021-04-28",
+  "items": "",
+  "primary": "lmrn2021_def14a.htm",
+  "files": [
+   "filings/DEF 14A/2021-03-10_0001308179-21-000031/lmrn2021_def14a.htm",
+   "filings/DEF 14A/2021-03-10_0001308179-21-000031/lmrn2021_def14a.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817921000031/lmrn2021_def14a.htm"
+ },
+ "0001682852-21-000010": {
+  "form": "8-K",
+  "filingDate": "2021-03-10",
+  "reportDate": "2021-03-10",
+  "items": "5.02",
+  "primary": "mrna-20210310.htm",
+  "files": [
+   "filings/8-K/2021-03-10_0001682852-21-000010/mrna-20210310.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285221000010/mrna-20210310.htm"
+ },
+ "9999999997-21-000465": {
+  "form": "SEC STAFF LETTER",
+  "filingDate": "2021-03-19",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/SEC STAFF LETTER/2021-03-19_9999999997-21-000465/filename1.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/999999999721000465/filename1.pdf"
+ },
+ "0001193125-21-114845": {
+  "form": "8-K",
+  "filingDate": "2021-04-13",
+  "reportDate": "2021-04-13",
+  "items": "2.02,9.01",
+  "primary": "d113560d8k.htm",
+  "files": [
+   "filings/8-K/2021-04-13_0001193125-21-114845/d113560d8k.htm",
+   "filings/8-K/2021-04-13_0001193125-21-114845/d113560dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521114845/d113560d8k.htm"
+ },
+ "0001193125-21-114200": {
+  "form": "8-K",
+  "filingDate": "2021-04-13",
+  "reportDate": "2021-04-13",
+  "items": "7.01",
+  "primary": "d60310d8k.htm",
+  "files": [
+   "filings/8-K/2021-04-13_0001193125-21-114200/d60310d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521114200/d60310d8k.htm"
+ },
+ "9999999997-21-001255": {
+  "form": "SEC STAFF LETTER",
+  "filingDate": "2021-04-16",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/SEC STAFF LETTER/2021-04-16_9999999997-21-001255/filename1.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/999999999721001255/filename1.pdf"
+ },
+ "0001193125-21-135412": {
+  "form": "8-K",
+  "filingDate": "2021-04-28",
+  "reportDate": "2021-04-18",
+  "items": "8.01",
+  "primary": "d165928d8k.htm",
+  "files": [
+   "filings/8-K/2021-04-28_0001193125-21-135412/d165928d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521135412/d165928d8k.htm"
+ },
+ "0001193125-21-140463": {
+  "form": "8-K",
+  "filingDate": "2021-04-29",
+  "reportDate": "2021-04-28",
+  "items": "5.07",
+  "primary": "d171743d8k.htm",
+  "files": [
+   "filings/8-K/2021-04-29_0001193125-21-140463/d171743d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521140463/d171743d8k.htm"
+ },
+ "0001682852-21-000017": {
+  "form": "10-Q",
+  "filingDate": "2021-05-06",
+  "reportDate": "2021-03-31",
+  "items": "",
+  "primary": "mrna-20210331.htm",
+  "files": [
+   "filings/10-Q/2021-05-06_0001682852-21-000017/0001682852-21-000017-index-headers.html",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/0001682852-21-000017-index.html",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/a4exhibit31103312021.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/a5exhibit31203312021.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/a6exhibit32103312021.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/exhibit101amendmentno6toba.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/exhibit102amendmentno7toba.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/exhibit103formofpsuagreeme.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/exhibit104directorcompensa.htm",
+   "filings/10-Q/2021-05-06_0001682852-21-000017/mrna-20210331.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285221000017/mrna-20210331.htm"
+ },
+ "0001193125-21-152536": {
+  "form": "8-K",
+  "filingDate": "2021-05-06",
+  "reportDate": "2021-05-06",
+  "items": "2.02,9.01",
+  "primary": "d343911d8k.htm",
+  "files": [
+   "filings/8-K/2021-05-06_0001193125-21-152536/d343911d8k.htm",
+   "filings/8-K/2021-05-06_0001193125-21-152536/d343911dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521152536/d343911d8k.htm"
+ },
+ "0001682852-21-000022": {
+  "form": "10-Q",
+  "filingDate": "2021-08-05",
+  "reportDate": "2021-06-30",
+  "items": "",
+  "primary": "mrna-20210630.htm",
+  "files": [
+   "filings/10-Q/2021-08-05_0001682852-21-000022/0001682852-21-000022-index-headers.html",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/0001682852-21-000022-index.html",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/a4exhibit3116302021.htm",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/a5exhibit3126302021.htm",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/a6exhibit3216302021.htm",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/exhibit101amendmentsnos4to.htm",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/exhibit102amendmentnos8and.htm",
+   "filings/10-Q/2021-08-05_0001682852-21-000022/mrna-20210630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285221000022/mrna-20210630.htm"
+ },
+ "0001193125-21-236922": {
+  "form": "8-K",
+  "filingDate": "2021-08-05",
+  "reportDate": "2021-08-05",
+  "items": "2.02,9.01",
+  "primary": "d209372d8k.htm",
+  "files": [
+   "filings/8-K/2021-08-05_0001193125-21-236922/d209372d8k.htm",
+   "filings/8-K/2021-08-05_0001193125-21-236922/d209372dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521236922/d209372d8k.htm"
+ },
+ "0001682852-21-000027": {
+  "form": "10-Q",
+  "filingDate": "2021-11-04",
+  "reportDate": "2021-09-30",
+  "items": "",
+  "primary": "mrna-20210930.htm",
+  "files": [
+   "filings/10-Q/2021-11-04_0001682852-21-000027/0001682852-21-000027-index-headers.html",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/0001682852-21-000027-index.html",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/a4exhibit3119302021.htm",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/a5exhibit3129302021.htm",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/a6exhibit3219302021.htm",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/exhibit101amendmentsnos12t.htm",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/exhibit102amendmentno10bar.htm",
+   "filings/10-Q/2021-11-04_0001682852-21-000027/mrna-20210930.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285221000027/mrna-20210930.htm"
+ },
+ "0001193125-21-319285": {
+  "form": "8-K",
+  "filingDate": "2021-11-04",
+  "reportDate": "2021-11-04",
+  "items": "2.02,9.01",
+  "primary": "d603727d8k.htm",
+  "files": [
+   "filings/8-K/2021-11-04_0001193125-21-319285/d603727d8k.htm",
+   "filings/8-K/2021-11-04_0001193125-21-319285/d603727dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312521319285/d603727d8k.htm"
+ },
+ "0001682852-22-000004": {
+  "form": "8-K",
+  "filingDate": "2022-01-04",
+  "reportDate": "2022-01-04",
+  "items": "2.02,7.01,9.01",
+  "primary": "mrna-20220104.htm",
+  "files": [
+   "filings/8-K/2022-01-04_0001682852-22-000004/exhibit991lettertosharehol.htm",
+   "filings/8-K/2022-01-04_0001682852-22-000004/mrna-20220104.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000004/mrna-20220104.htm"
+ },
+ "0001682852-22-000007": {
+  "form": "8-K",
+  "filingDate": "2022-01-10",
+  "reportDate": "2022-01-10",
+  "items": "2.02,7.01,9.01",
+  "primary": "mrna-20220110.htm",
+  "files": [
+   "filings/8-K/2022-01-10_0001682852-22-000007/exhibit991-jpmjan2022.htm",
+   "filings/8-K/2022-01-10_0001682852-22-000007/mrna-20220110.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000007/mrna-20220110.htm"
+ },
+ "0001193125-22-051058": {
+  "form": "8-K",
+  "filingDate": "2022-02-24",
+  "reportDate": "2022-02-24",
+  "items": "2.02,9.01",
+  "primary": "d318366d8k.htm",
+  "files": [
+   "filings/8-K/2022-02-24_0001193125-22-051058/d318366d8k.htm",
+   "filings/8-K/2022-02-24_0001193125-22-051058/d318366dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312522051058/d318366d8k.htm"
+ },
+ "0001682852-22-000012": {
+  "form": "10-K",
+  "filingDate": "2022-02-25",
+  "reportDate": "2021-12-31",
+  "items": "",
+  "primary": "mrna-20211231.htm",
+  "files": [
+   "filings/10-K/2022-02-25_0001682852-22-000012/0001682852-22-000012-index-headers.html",
+   "filings/10-K/2022-02-25_0001682852-22-000012/0001682852-22-000012-index.html",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1012-norwoodleaseam.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1016-legoffcorinneo.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1017-executivesepar.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1018-consultingagre.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1019-offerlettersha.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1024-modernarsuagre.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1025-nqsoagreementf.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1026-modernarsuagre.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1027-nqsoagreementf.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1034-bardaamenmdent.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit1040-dodamendments.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit211subsidiaries.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit23112312021.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit31112312021.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit31212312021.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit32112312021.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/exhibit32212312021.htm",
+   "filings/10-K/2022-02-25_0001682852-22-000012/mrna-20211231.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000012/mrna-20211231.htm"
+ },
+ "0001308179-22-000042": {
+  "form": "DEFA14A",
+  "filingDate": "2022-03-09",
+  "reportDate": "",
+  "items": "",
+  "primary": "lmrna2022_def14a.htm",
+  "files": [
+   "filings/DEFA14A/2022-03-09_0001308179-22-000042/lmrna2022_def14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817922000042/lmrna2022_def14a.htm"
+ },
+ "0001308179-22-000041": {
+  "form": "DEF 14A",
+  "filingDate": "2022-03-09",
+  "reportDate": "2022-04-28",
+  "items": "",
+  "primary": "lmrna2022_def14a.htm",
+  "files": [
+   "filings/DEF 14A/2022-03-09_0001308179-22-000041/lmrna2022_def14a.htm",
+   "filings/DEF 14A/2022-03-09_0001308179-22-000041/lmrna2022_def14a.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817922000041/lmrna2022_def14a.htm"
+ },
+ "0001214659-22-004157": {
+  "form": "PX14A6G",
+  "filingDate": "2022-03-21",
+  "reportDate": "",
+  "items": "",
+  "primary": "g321222px14a6g.htm",
+  "files": [
+   "filings/PX14A6G/2022-03-21_0001214659-22-004157/g321222px14a6g.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000121465922004157/g321222px14a6g.htm"
+ },
+ "0001214659-22-004361": {
+  "form": "PX14A6G",
+  "filingDate": "2022-03-25",
+  "reportDate": "",
+  "items": "",
+  "primary": "b325220px14a6g.htm",
+  "files": [
+   "filings/PX14A6G/2022-03-25_0001214659-22-004361/b325220px14a6g.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000121465922004361/b325220px14a6g.htm"
+ },
+ "0001193125-22-101074": {
+  "form": "8-K",
+  "filingDate": "2022-04-11",
+  "reportDate": "2022-04-06",
+  "items": "5.02,7.01,9.01",
+  "primary": "d520384d8k.htm",
+  "files": [
+   "filings/8-K/2022-04-11_0001193125-22-101074/d520384d8k.htm",
+   "filings/8-K/2022-04-11_0001193125-22-101074/d520384dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312522101074/d520384d8k.htm"
+ },
+ "0001682852-22-000016": {
+  "form": "8-K",
+  "filingDate": "2022-05-03",
+  "reportDate": "2022-04-28",
+  "items": "5.07",
+  "primary": "mrna-20220428.htm",
+  "files": [
+   "filings/8-K/2022-05-03_0001682852-22-000016/mrna-20220428.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000016/mrna-20220428.htm"
+ },
+ "0001682852-22-000025": {
+  "form": "10-Q",
+  "filingDate": "2022-05-04",
+  "reportDate": "2022-03-31",
+  "items": "",
+  "primary": "mrna-20220331.htm",
+  "files": [
+   "filings/10-Q/2022-05-04_0001682852-22-000025/0001682852-22-000025-index-headers.html",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/0001682852-22-000025-index.html",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit101gomezofferletter.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit102melinetransition.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit104-bardaamendment.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit105-dodagreementame.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit3113312022.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit3123312022.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/exhibit3213312022.htm",
+   "filings/10-Q/2022-05-04_0001682852-22-000025/mrna-20220331.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000025/mrna-20220331.htm"
+ },
+ "0001682852-22-000020": {
+  "form": "8-K",
+  "filingDate": "2022-05-04",
+  "reportDate": "2022-05-04",
+  "items": "2.02,9.01",
+  "primary": "mrna-20220504.htm",
+  "files": [
+   "filings/8-K/2022-05-04_0001682852-22-000020/exhibit9912022q1pressrelea.htm",
+   "filings/8-K/2022-05-04_0001682852-22-000020/mrna-20220504.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000020/mrna-20220504.htm"
+ },
+ "0001193125-22-146929": {
+  "form": "8-K",
+  "filingDate": "2022-05-11",
+  "reportDate": "2022-05-10",
+  "items": "5.02",
+  "primary": "d315485d8k.htm",
+  "files": [
+   "filings/8-K/2022-05-11_0001193125-22-146929/d315485d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312522146929/d315485d8k.htm"
+ },
+ "0001682852-22-000029": {
+  "form": "8-K/A",
+  "filingDate": "2022-05-13",
+  "reportDate": "2022-05-10",
+  "items": "5.02,9.01",
+  "primary": "mrna-20220510.htm",
+  "files": [
+   "filings/8-K_A/2022-05-13_0001682852-22-000029/exhibit10151022.htm",
+   "filings/8-K_A/2022-05-13_0001682852-22-000029/mrna-20220510.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000029/mrna-20220510.htm"
+ },
+ "0001682852-22-000033": {
+  "form": "8-K",
+  "filingDate": "2022-05-24",
+  "reportDate": "2022-05-24",
+  "items": "7.01,9.01",
+  "primary": "mrna-20220524.htm",
+  "files": [
+   "filings/8-K/2022-05-24_0001682852-22-000033/a991blogpostentitledstocko.htm",
+   "filings/8-K/2022-05-24_0001682852-22-000033/mrna-20220524.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000033/mrna-20220524.htm"
+ },
+ "0001193125-22-165220": {
+  "form": "8-K/A",
+  "filingDate": "2022-06-01",
+  "reportDate": "2022-05-10",
+  "items": "5.02,9.01",
+  "primary": "d364287d8ka.htm",
+  "files": [
+   "filings/8-K_A/2022-06-01_0001193125-22-165220/d364287d8ka.htm",
+   "filings/8-K_A/2022-06-01_0001193125-22-165220/d364287dex101.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312522165220/d364287d8ka.htm"
+ },
+ "0001682852-22-000042": {
+  "form": "10-Q",
+  "filingDate": "2022-08-03",
+  "reportDate": "2022-06-30",
+  "items": "",
+  "primary": "mrna-20220630.htm",
+  "files": [
+   "filings/10-Q/2022-08-03_0001682852-22-000042/0001682852-22-000042-index-headers.html",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/0001682852-22-000042-index.html",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/exhibit101-arnonxemployeed.htm",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/exhibit104-bardaamendmentn.htm",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/exhibit106-dodno24.htm",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/exhibit3116302022.htm",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/exhibit3126302022.htm",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/exhibit3216302022.htm",
+   "filings/10-Q/2022-08-03_0001682852-22-000042/mrna-20220630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000042/mrna-20220630.htm"
+ },
+ "0001682852-22-000040": {
+  "form": "8-K",
+  "filingDate": "2022-08-03",
+  "reportDate": "2022-08-03",
+  "items": "2.02,9.01",
+  "primary": "mrna-20220803.htm",
+  "files": [
+   "filings/8-K/2022-08-03_0001682852-22-000040/exhibit9912022q2pressrelea.htm",
+   "filings/8-K/2022-08-03_0001682852-22-000040/mrna-20220803.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000040/mrna-20220803.htm"
+ },
+ "0001193125-22-223286": {
+  "form": "8-K",
+  "filingDate": "2022-08-17",
+  "reportDate": "2022-08-15",
+  "items": "5.02,7.01,9.01",
+  "primary": "d390105d8k.htm",
+  "files": [
+   "filings/8-K/2022-08-17_0001193125-22-223286/d390105d8k.htm",
+   "filings/8-K/2022-08-17_0001193125-22-223286/d390105dex991.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312522223286/d390105d8k.htm"
+ },
+ "0001682852-22-000045": {
+  "form": "8-K",
+  "filingDate": "2022-09-29",
+  "reportDate": "2022-09-29",
+  "items": "5.02,7.01,9.01",
+  "primary": "mrna-20220929.htm",
+  "files": [
+   "filings/8-K/2022-09-29_0001682852-22-000045/exhibit991-ctoqotransition.htm",
+   "filings/8-K/2022-09-29_0001682852-22-000045/mrna-20220929.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000045/mrna-20220929.htm"
+ },
+ "0001682852-22-000051": {
+  "form": "10-Q",
+  "filingDate": "2022-11-03",
+  "reportDate": "2022-09-30",
+  "items": "",
+  "primary": "mrna-20220930.htm",
+  "files": [
+   "filings/10-Q/2022-11-03_0001682852-22-000051/0001682852-22-000051-index-headers.html",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/0001682852-22-000051-index.html",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/exhibit101-directorcompens.htm",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/exhibit102-mockofferletter.htm",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/exhibit103-pz0025andp00026.htm",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/exhibit3119302022.htm",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/exhibit3129302022.htm",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/exhibit3219302022.htm",
+   "filings/10-Q/2022-11-03_0001682852-22-000051/mrna-20220930.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000051/mrna-20220930.htm"
+ },
+ "0001682852-22-000049": {
+  "form": "8-K",
+  "filingDate": "2022-11-03",
+  "reportDate": "2022-11-03",
+  "items": "9.01",
+  "primary": "mrna-20221103.htm",
+  "files": [
+   "filings/8-K/2022-11-03_0001682852-22-000049/exhibit9912022q3pressrelea.htm",
+   "filings/8-K/2022-11-03_0001682852-22-000049/mrna-20221103.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000049/mrna-20221103.htm"
+ },
+ "0001682852-22-000055": {
+  "form": "8-K",
+  "filingDate": "2022-12-13",
+  "reportDate": "2022-12-13",
+  "items": "7.01,9.01",
+  "primary": "mrna-20221213.htm",
+  "files": [
+   "filings/8-K/2022-12-13_0001682852-22-000055/exhibit991-12122022pcv.htm",
+   "filings/8-K/2022-12-13_0001682852-22-000055/mrna-20221213.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285222000055/mrna-20221213.htm"
+ },
+ "0001682852-23-000002": {
+  "form": "8-K",
+  "filingDate": "2023-01-03",
+  "reportDate": "2023-01-03",
+  "items": "7.01,9.01",
+  "primary": "mrna-20230103.htm",
+  "files": [
+   "filings/8-K/2023-01-03_0001682852-23-000002/exhibit991-01032023lettert.htm",
+   "filings/8-K/2023-01-03_0001682852-23-000002/mrna-20230103.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000002/mrna-20230103.htm"
+ },
+ "0001682852-23-000004": {
+  "form": "8-K",
+  "filingDate": "2023-01-09",
+  "reportDate": "2023-01-09",
+  "items": "2.02,7.01,9.01",
+  "primary": "mrna-20230109.htm",
+  "files": [
+   "filings/8-K/2023-01-09_0001682852-23-000004/exhibit991-jpmjan2023.htm",
+   "filings/8-K/2023-01-09_0001682852-23-000004/mrna-20230109.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000004/mrna-20230109.htm"
+ },
+ "0001682852-23-000008": {
+  "form": "8-K",
+  "filingDate": "2023-02-23",
+  "reportDate": "2023-02-23",
+  "items": "2.02,9.01",
+  "primary": "mrna-20230223.htm",
+  "files": [
+   "filings/8-K/2023-02-23_0001682852-23-000008/exhibit9912022q4pressrelea.htm",
+   "filings/8-K/2023-02-23_0001682852-23-000008/mrna-20230223.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000008/mrna-20230223.htm"
+ },
+ "0001682852-23-000011": {
+  "form": "10-K",
+  "filingDate": "2023-02-24",
+  "reportDate": "2022-12-31",
+  "items": "",
+  "primary": "mrna-20221231.htm",
+  "files": [
+   "filings/10-K/2023-02-24_0001682852-23-000011/0001682852-23-000011-index-headers.html",
+   "filings/10-K/2023-02-24_0001682852-23-000011/0001682852-23-000011-index.html",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit1011-amendedandrest.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit1016-arpaofferletter.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit211subsidiaries2022.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit23112312022.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit311123120221.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit312123120221.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit321123120221.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/exhibit322123120221.htm",
+   "filings/10-K/2023-02-24_0001682852-23-000011/mrna-20221231.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000011/mrna-20221231.htm"
+ },
+ "0001308179-23-000065": {
+  "form": "ARS",
+  "filingDate": "2023-02-27",
+  "reportDate": "2022-12-31",
+  "items": "",
+  "primary": "lmrna2023_ars.pdf",
+  "files": [
+   "filings/ARS/2023-02-27_0001308179-23-000065/lmrna2023_ars.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817923000065/lmrna2023_ars.pdf"
+ },
+ "0001308179-23-000185": {
+  "form": "DEFA14A",
+  "filingDate": "2023-03-15",
+  "reportDate": "",
+  "items": "",
+  "primary": "lmrna2023_defa14a.htm",
+  "files": [
+   "filings/DEFA14A/2023-03-15_0001308179-23-000185/lmrna2023_defa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817923000185/lmrna2023_defa14a.htm"
+ },
+ "0001308179-23-000184": {
+  "form": "DEF 14A",
+  "filingDate": "2023-03-15",
+  "reportDate": "",
+  "items": "",
+  "primary": "lmrna2023_def14a.htm",
+  "files": [
+   "filings/DEF 14A/2023-03-15_0001308179-23-000184/lmrna2023_def14a.htm",
+   "filings/DEF 14A/2023-03-15_0001308179-23-000184/lmrna2023_def14a.pdf",
+   "filings/DEF 14A/2023-03-15_0001308179-23-000184/lmrna2023_def14a_htm.xml"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817923000184/lmrna2023_def14a.htm"
+ },
+ "0001214659-23-005362": {
+  "form": "PX14A6G",
+  "filingDate": "2023-04-13",
+  "reportDate": "",
+  "items": "",
+  "primary": "x413233px14a6g.htm",
+  "files": [
+   "filings/PX14A6G/2023-04-13_0001214659-23-005362/x413233px14a6g.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000121465923005362/x413233px14a6g.htm"
+ },
+ "0001193125-23-101626": {
+  "form": "DEFA14A",
+  "filingDate": "2023-04-14",
+  "reportDate": "",
+  "items": "",
+  "primary": "d496901ddefa14a.htm",
+  "files": [
+   "filings/DEFA14A/2023-04-14_0001193125-23-101626/d496901ddefa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312523101626/d496901ddefa14a.htm"
+ },
+ "0000000000-23-003940": {
+  "form": "UPLOAD",
+  "filingDate": "2023-04-20",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/UPLOAD/2023-04-20_0000000000-23-003940/filename1.pdf",
+   "filings/UPLOAD/2023-04-20_0000000000-23-003940/filename2.txt"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000000000023003940/filename1.pdf"
+ },
+ "0001682852-23-000014": {
+  "form": "CORRESP",
+  "filingDate": "2023-04-28",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.htm",
+  "files": [
+   "filings/CORRESP/2023-04-28_0001682852-23-000014/filename1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000014/filename1.htm"
+ },
+ "0001682852-23-000021": {
+  "form": "10-Q",
+  "filingDate": "2023-05-04",
+  "reportDate": "2023-03-31",
+  "items": "",
+  "primary": "mrna-20230331.htm",
+  "files": [
+   "filings/10-Q/2023-05-04_0001682852-23-000021/0001682852-23-000021-index-headers.html",
+   "filings/10-Q/2023-05-04_0001682852-23-000021/0001682852-23-000021-index.html",
+   "filings/10-Q/2023-05-04_0001682852-23-000021/exhibit31133123.htm",
+   "filings/10-Q/2023-05-04_0001682852-23-000021/exhibit3123312023.htm",
+   "filings/10-Q/2023-05-04_0001682852-23-000021/exhibit3213312023.htm",
+   "filings/10-Q/2023-05-04_0001682852-23-000021/mrna-20230331.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000021/mrna-20230331.htm"
+ },
+ "0001682852-23-000018": {
+  "form": "8-K",
+  "filingDate": "2023-05-04",
+  "reportDate": "2023-05-04",
+  "items": "2.02,9.01",
+  "primary": "mrna-20230504.htm",
+  "files": [
+   "filings/8-K/2023-05-04_0001682852-23-000018/exhibit9912023q1pressrelea.htm",
+   "filings/8-K/2023-05-04_0001682852-23-000018/mrna-20230504.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000018/mrna-20230504.htm"
+ },
+ "0001193125-23-137079": {
+  "form": "8-K",
+  "filingDate": "2023-05-05",
+  "reportDate": "2023-05-03",
+  "items": "5.07",
+  "primary": "d415922d8k.htm",
+  "files": [
+   "filings/8-K/2023-05-05_0001193125-23-137079/d415922d8k.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312523137079/d415922d8k.htm"
+ },
+ "0001193125-23-136568": {
+  "form": "S-3ASR",
+  "filingDate": "2023-05-05",
+  "reportDate": "",
+  "items": "",
+  "primary": "d490088ds3asr.htm",
+  "files": [
+   "filings/S-3ASR/2023-05-05_0001193125-23-136568/d490088dex231.htm",
+   "filings/S-3ASR/2023-05-05_0001193125-23-136568/d490088dex43.htm",
+   "filings/S-3ASR/2023-05-05_0001193125-23-136568/d490088dex44.htm",
+   "filings/S-3ASR/2023-05-05_0001193125-23-136568/d490088dex51.htm",
+   "filings/S-3ASR/2023-05-05_0001193125-23-136568/d490088dexfilingfees.htm",
+   "filings/S-3ASR/2023-05-05_0001193125-23-136568/d490088ds3asr.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312523136568/d490088ds3asr.htm"
+ },
+ "0000000000-23-004680": {
+  "form": "UPLOAD",
+  "filingDate": "2023-05-05",
+  "reportDate": "",
+  "items": "",
+  "primary": "filename1.pdf",
+  "files": [
+   "filings/UPLOAD/2023-05-05_0000000000-23-004680/filename1.pdf",
+   "filings/UPLOAD/2023-05-05_0000000000-23-004680/filename2.txt"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000000000023004680/filename1.pdf"
+ },
+ "0001682852-23-000027": {
+  "form": "10-Q",
+  "filingDate": "2023-08-03",
+  "reportDate": "2023-06-30",
+  "items": "",
+  "primary": "mrna-20230630.htm",
+  "files": [
+   "filings/10-Q/2023-08-03_0001682852-23-000027/0001682852-23-000027-index-headers.html",
+   "filings/10-Q/2023-08-03_0001682852-23-000027/0001682852-23-000027-index.html",
+   "filings/10-Q/2023-08-03_0001682852-23-000027/exhibit3116302023.htm",
+   "filings/10-Q/2023-08-03_0001682852-23-000027/exhibit3126302023.htm",
+   "filings/10-Q/2023-08-03_0001682852-23-000027/exhibit3216302023.htm",
+   "filings/10-Q/2023-08-03_0001682852-23-000027/mrna-20230630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000027/mrna-20230630.htm"
+ },
+ "0001682852-23-000025": {
+  "form": "8-K",
+  "filingDate": "2023-08-03",
+  "reportDate": "2023-08-03",
+  "items": "2.02,9.01",
+  "primary": "mrna-20230803.htm",
+  "files": [
+   "filings/8-K/2023-08-03_0001682852-23-000025/exhibit9912023q2pressrelea.htm",
+   "filings/8-K/2023-08-03_0001682852-23-000025/mrna-20230803.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000025/mrna-20230803.htm"
+ },
+ "0001682852-23-000030": {
+  "form": "8-K",
+  "filingDate": "2023-09-11",
+  "reportDate": "2023-09-11",
+  "items": "7.01,9.01",
+  "primary": "mrna-20230911.htm",
+  "files": [
+   "filings/8-K/2023-09-11_0001682852-23-000030/exhibit991-9112023ibex.htm",
+   "filings/8-K/2023-09-11_0001682852-23-000030/mrna-20230911.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000030/mrna-20230911.htm"
+ },
+ "0001682852-23-000033": {
+  "form": "8-K",
+  "filingDate": "2023-10-16",
+  "reportDate": "2023-10-16",
+  "items": "7.01",
+  "primary": "mrna-20231016.htm",
+  "files": [
+   "filings/8-K/2023-10-16_0001682852-23-000033/mrna-20231016.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000033/mrna-20231016.htm"
+ },
+ "0001682852-23-000038": {
+  "form": "8-K",
+  "filingDate": "2023-11-02",
+  "reportDate": "2023-11-02",
+  "items": "2.02,9.01",
+  "primary": "mrna-20231102.htm",
+  "files": [
+   "filings/8-K/2023-11-02_0001682852-23-000038/exhibit9912023q3pressrelea.htm",
+   "filings/8-K/2023-11-02_0001682852-23-000038/mrna-20231102.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000038/mrna-20231102.htm"
+ },
+ "0001682852-23-000042": {
+  "form": "10-Q",
+  "filingDate": "2023-11-03",
+  "reportDate": "2023-09-30",
+  "items": "",
+  "primary": "mrna-20230930.htm",
+  "files": [
+   "filings/10-Q/2023-11-03_0001682852-23-000042/0001682852-23-000042-index-headers.html",
+   "filings/10-Q/2023-11-03_0001682852-23-000042/0001682852-23-000042-index.html",
+   "filings/10-Q/2023-11-03_0001682852-23-000042/exhibit3119302023.htm",
+   "filings/10-Q/2023-11-03_0001682852-23-000042/exhibit3129302023.htm",
+   "filings/10-Q/2023-11-03_0001682852-23-000042/exhibit3219302023.htm",
+   "filings/10-Q/2023-11-03_0001682852-23-000042/mrna-20230930.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000042/mrna-20230930.htm"
+ },
+ "0001682852-23-000044": {
+  "form": "8-K",
+  "filingDate": "2023-11-06",
+  "reportDate": "2023-11-06",
+  "items": "7.01",
+  "primary": "mrna-20231106.htm",
+  "files": [
+   "filings/8-K/2023-11-06_0001682852-23-000044/mrna-20231106.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000044/mrna-20231106.htm"
+ },
+ "0001682852-23-000049": {
+  "form": "8-K",
+  "filingDate": "2023-12-12",
+  "reportDate": "2023-12-08",
+  "items": "5.02",
+  "primary": "mrna-20231208.htm",
+  "files": [
+   "filings/8-K/2023-12-12_0001682852-23-000049/mrna-20231208.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285223000049/mrna-20231208.htm"
+ },
+ "0001682852-24-000004": {
+  "form": "8-K",
+  "filingDate": "2024-01-08",
+  "reportDate": "2024-01-08",
+  "items": "2.02,7.01,9.01",
+  "primary": "mrna-20240108.htm",
+  "files": [
+   "filings/8-K/2024-01-08_0001682852-24-000004/exhibit991-01082024jpm.htm",
+   "filings/8-K/2024-01-08_0001682852-24-000004/mrna-20240108.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000004/mrna-20240108.htm"
+ },
+ "0001682852-24-000010": {
+  "form": "8-K",
+  "filingDate": "2024-02-22",
+  "reportDate": "2024-02-22",
+  "items": "2.02,9.01",
+  "primary": "mrna-20240222.htm",
+  "files": [
+   "filings/8-K/2024-02-22_0001682852-24-000010/exhibit9912023q4pressrelea.htm",
+   "filings/8-K/2024-02-22_0001682852-24-000010/mrna-20240222.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000010/mrna-20240222.htm"
+ },
+ "0001682852-24-000017": {
+  "form": "S-8",
+  "filingDate": "2024-02-23",
+  "reportDate": "",
+  "items": "",
+  "primary": "modernas-82024filing.htm",
+  "files": [
+   "filings/S-8/2024-02-23_0001682852-24-000017/exhibit107.htm",
+   "filings/S-8/2024-02-23_0001682852-24-000017/exhibit231.htm",
+   "filings/S-8/2024-02-23_0001682852-24-000017/exhibit51.htm",
+   "filings/S-8/2024-02-23_0001682852-24-000017/modernas-82024filing.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000017/modernas-82024filing.htm"
+ },
+ "0001682852-24-000015": {
+  "form": "10-K",
+  "filingDate": "2024-02-23",
+  "reportDate": "2023-12-31",
+  "items": "",
+  "primary": "mrna-20231231.htm",
+  "files": [
+   "filings/10-K/2024-02-23_0001682852-24-000015/0001682852-24-000015-index-headers.html",
+   "filings/10-K/2024-02-23_0001682852-24-000015/0001682852-24-000015-index.html",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit1015redactedgarayar.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit10212018employeesto.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit1022formofemployeer.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit1023formofemployeen.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit211subsidiaries2023.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit23112312023.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit31112312023.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit31212312023.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit32112312023.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit32212312023.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit32secondamendedandr.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/exhibit97modernaincpolicyf.htm",
+   "filings/10-K/2024-02-23_0001682852-24-000015/mrna-20231231.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000015/mrna-20231231.htm"
+ },
+ "0001308179-24-000091": {
+  "form": "PRE 14A",
+  "filingDate": "2024-03-11",
+  "reportDate": "2024-05-06",
+  "items": "",
+  "primary": "lmrna2024_pre14a.htm",
+  "files": [
+   "filings/PRE 14A/2024-03-11_0001308179-24-000091/lmrna2024_pre14a.htm",
+   "filings/PRE 14A/2024-03-11_0001308179-24-000091/lmrna2024_pre14a_htm.xml"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817924000091/lmrna2024_pre14a.htm"
+ },
+ "0001308179-24-000168": {
+  "form": "ARS",
+  "filingDate": "2024-03-15",
+  "reportDate": "2023-12-31",
+  "items": "",
+  "primary": "lmrna2023_ars.pdf",
+  "files": [
+   "filings/ARS/2024-03-15_0001308179-24-000168/lmrna2023_ars.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817924000168/lmrna2023_ars.pdf"
+ },
+ "0001308179-24-000209": {
+  "form": "DEFA14A",
+  "filingDate": "2024-03-21",
+  "reportDate": "",
+  "items": "",
+  "primary": "lmrna2024_defa14a.htm",
+  "files": [
+   "filings/DEFA14A/2024-03-21_0001308179-24-000209/lmrna2024_defa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817924000209/lmrna2024_defa14a.htm"
+ },
+ "0001308179-24-000208": {
+  "form": "DEF 14A",
+  "filingDate": "2024-03-21",
+  "reportDate": "2024-05-06",
+  "items": "",
+  "primary": "lmrna2024_def14a.htm",
+  "files": [
+   "filings/DEF 14A/2024-03-21_0001308179-24-000208/lmrna2024_def14a.htm",
+   "filings/DEF 14A/2024-03-21_0001308179-24-000208/lmrna2024_def14a.pdf",
+   "filings/DEF 14A/2024-03-21_0001308179-24-000208/lmrna2024_def14a_htm.xml"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817924000208/lmrna2024_def14a.htm"
+ },
+ "0001682852-24-000027": {
+  "form": "10-Q",
+  "filingDate": "2024-05-02",
+  "reportDate": "2024-03-31",
+  "items": "",
+  "primary": "mrna-20240331.htm",
+  "files": [
+   "filings/10-Q/2024-05-02_0001682852-24-000027/0001682852-24-000027-index-headers.html",
+   "filings/10-Q/2024-05-02_0001682852-24-000027/0001682852-24-000027-index.html",
+   "filings/10-Q/2024-05-02_0001682852-24-000027/exhibit3113312024.htm",
+   "filings/10-Q/2024-05-02_0001682852-24-000027/exhibit3123312024.htm",
+   "filings/10-Q/2024-05-02_0001682852-24-000027/exhibit3213312024.htm",
+   "filings/10-Q/2024-05-02_0001682852-24-000027/mrna-20240331.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000027/mrna-20240331.htm"
+ },
+ "0001682852-24-000023": {
+  "form": "8-K",
+  "filingDate": "2024-05-02",
+  "reportDate": "2024-05-02",
+  "items": "2.02,9.01",
+  "primary": "mrna-20240502.htm",
+  "files": [
+   "filings/8-K/2024-05-02_0001682852-24-000023/exhibit9912024q1pressrelea.htm",
+   "filings/8-K/2024-05-02_0001682852-24-000023/mrna-20240502.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000023/mrna-20240502.htm"
+ },
+ "0001682852-24-000031": {
+  "form": "8-K",
+  "filingDate": "2024-05-09",
+  "reportDate": "2024-05-06",
+  "items": "5.03,5.07,9.01",
+  "primary": "mrna-20240506.htm",
+  "files": [
+   "filings/8-K/2024-05-09_0001682852-24-000031/exhibit3158248-k.htm",
+   "filings/8-K/2024-05-09_0001682852-24-000031/exhibit325820248-k.htm",
+   "filings/8-K/2024-05-09_0001682852-24-000031/mrna-20240506.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000031/mrna-20240506.htm"
+ },
+ "0001682852-24-000035": {
+  "form": "8-K",
+  "filingDate": "2024-07-23",
+  "reportDate": "2024-07-19",
+  "items": "5.02,7.01,9.01",
+  "primary": "mrna-20240719.htm",
+  "files": [
+   "filings/8-K/2024-07-23_0001682852-24-000035/exhibit991-07232024.htm",
+   "filings/8-K/2024-07-23_0001682852-24-000035/mrna-20240719.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000035/mrna-20240719.htm"
+ },
+ "0001682852-24-000046": {
+  "form": "10-Q",
+  "filingDate": "2024-08-01",
+  "reportDate": "2024-06-30",
+  "items": "",
+  "primary": "mrna-20240630.htm",
+  "files": [
+   "filings/10-Q/2024-08-01_0001682852-24-000046/0001682852-24-000046-index-headers.html",
+   "filings/10-Q/2024-08-01_0001682852-24-000046/0001682852-24-000046-index.html",
+   "filings/10-Q/2024-08-01_0001682852-24-000046/exhibit3116302024.htm",
+   "filings/10-Q/2024-08-01_0001682852-24-000046/exhibit3126302024.htm",
+   "filings/10-Q/2024-08-01_0001682852-24-000046/exhibit3216302024.htm",
+   "filings/10-Q/2024-08-01_0001682852-24-000046/mrna-20240630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000046/mrna-20240630.htm"
+ },
+ "0001682852-24-000043": {
+  "form": "8-K",
+  "filingDate": "2024-08-01",
+  "reportDate": "2024-08-01",
+  "items": "2.02,9.01",
+  "primary": "mrna-20240801.htm",
+  "files": [
+   "filings/8-K/2024-08-01_0001682852-24-000043/exhibit9912024q2pressrelea.htm",
+   "filings/8-K/2024-08-01_0001682852-24-000043/mrna-20240801.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000043/mrna-20240801.htm"
+ },
+ "0001682852-24-000049": {
+  "form": "8-K",
+  "filingDate": "2024-09-12",
+  "reportDate": "2024-09-12",
+  "items": "7.01,9.01",
+  "primary": "mrna-20240912.htm",
+  "files": [
+   "filings/8-K/2024-09-12_0001682852-24-000049/exhibit991-09122024.htm",
+   "filings/8-K/2024-09-12_0001682852-24-000049/mrna-20240912.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000049/mrna-20240912.htm"
+ },
+ "0001682852-24-000052": {
+  "form": "8-K",
+  "filingDate": "2024-10-02",
+  "reportDate": "2024-09-28",
+  "items": "5.02,7.01,9.01",
+  "primary": "mrna-20240928.htm",
+  "files": [
+   "filings/8-K/2024-10-02_0001682852-24-000052/exhibit991-1022024.htm",
+   "filings/8-K/2024-10-02_0001682852-24-000052/mrna-20240928.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000052/mrna-20240928.htm"
+ },
+ "0001682852-24-000060": {
+  "form": "10-Q",
+  "filingDate": "2024-11-07",
+  "reportDate": "2024-09-30",
+  "items": "",
+  "primary": "mrna-20240930.htm",
+  "files": [
+   "filings/10-Q/2024-11-07_0001682852-24-000060/0001682852-24-000060-index-headers.html",
+   "filings/10-Q/2024-11-07_0001682852-24-000060/0001682852-24-000060-index.html",
+   "filings/10-Q/2024-11-07_0001682852-24-000060/exhibit1019302024.htm",
+   "filings/10-Q/2024-11-07_0001682852-24-000060/exhibit3119302024.htm",
+   "filings/10-Q/2024-11-07_0001682852-24-000060/exhibit3129302024.htm",
+   "filings/10-Q/2024-11-07_0001682852-24-000060/exhibit3219302024.htm",
+   "filings/10-Q/2024-11-07_0001682852-24-000060/mrna-20240930.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000060/mrna-20240930.htm"
+ },
+ "0001682852-24-000057": {
+  "form": "8-K",
+  "filingDate": "2024-11-07",
+  "reportDate": "2024-11-07",
+  "items": "2.02,9.01",
+  "primary": "mrna-20241107.htm",
+  "files": [
+   "filings/8-K/2024-11-07_0001682852-24-000057/exhibit9912024q3pressrelea.htm",
+   "filings/8-K/2024-11-07_0001682852-24-000057/mrna-20241107.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285224000057/mrna-20241107.htm"
+ },
+ "0001682852-25-000002": {
+  "form": "8-K",
+  "filingDate": "2025-01-13",
+  "reportDate": "2025-01-13",
+  "items": "2.02,7.01,9.01",
+  "primary": "mrna-20250113.htm",
+  "files": [
+   "filings/8-K/2025-01-13_0001682852-25-000002/exhibit991-01132025.htm",
+   "filings/8-K/2025-01-13_0001682852-25-000002/mrna-20250113.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000002/mrna-20250113.htm"
+ },
+ "0001682852-25-000006": {
+  "form": "8-K",
+  "filingDate": "2025-02-14",
+  "reportDate": "2025-02-14",
+  "items": "2.02,9.01",
+  "primary": "mrna-20250214.htm",
+  "files": [
+   "filings/8-K/2025-02-14_0001682852-25-000006/exhibit9912024q4pressrelea.htm",
+   "filings/8-K/2025-02-14_0001682852-25-000006/mrna-20250214.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000006/mrna-20250214.htm"
+ },
+ "0001682852-25-000023": {
+  "form": "S-8",
+  "filingDate": "2025-02-21",
+  "reportDate": "",
+  "items": "",
+  "primary": "modernaforms-8feb2025.htm",
+  "files": [
+   "filings/S-8/2025-02-21_0001682852-25-000023/exfilingfees.htm",
+   "filings/S-8/2025-02-21_0001682852-25-000023/exfilingfees_htm.xml",
+   "filings/S-8/2025-02-21_0001682852-25-000023/exhibit231eys-8consent.htm",
+   "filings/S-8/2025-02-21_0001682852-25-000023/exhibit51opinionfors-8gp21.htm",
+   "filings/S-8/2025-02-21_0001682852-25-000023/modernaforms-8feb2025.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000023/modernaforms-8feb2025.htm"
+ },
+ "0001682852-25-000022": {
+  "form": "10-K",
+  "filingDate": "2025-02-21",
+  "reportDate": "2024-12-31",
+  "items": "",
+  "primary": "mrna-20241231.htm",
+  "files": [
+   "filings/10-K/2025-02-21_0001682852-25-000022/0001682852-25-000022-index-headers.html",
+   "filings/10-K/2025-02-21_0001682852-25-000022/0001682852-25-000022-index.html",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit19insidertradingpol.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit211subsidiaries2024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit23112312024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit31112312024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit31212312024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit32112312024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit32212312024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/exhibit4212312024.htm",
+   "filings/10-K/2025-02-21_0001682852-25-000022/mrna-20241231.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000022/mrna-20241231.htm"
+ },
+ "0001308179-25-000083": {
+  "form": "DEFA14A",
+  "filingDate": "2025-03-11",
+  "reportDate": "",
+  "items": "",
+  "primary": "moderna2025defa14a.htm",
+  "files": [
+   "filings/DEFA14A/2025-03-11_0001308179-25-000083/moderna2025defa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817925000083/moderna2025defa14a.htm"
+ },
+ "0001308179-25-000082": {
+  "form": "DEF 14A",
+  "filingDate": "2025-03-11",
+  "reportDate": "2025-04-30",
+  "items": "",
+  "primary": "mrna-20250310.htm",
+  "files": [
+   "filings/DEF 14A/2025-03-11_0001308179-25-000082/mrna-20250310.htm",
+   "filings/DEF 14A/2025-03-11_0001308179-25-000082/mrna-20250310_htm.xml",
+   "filings/DEF 14A/2025-03-11_0001308179-25-000082/mrna_courtesy-pdfa.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817925000082/mrna-20250310.htm"
+ },
+ "0001308179-25-000081": {
+  "form": "ARS",
+  "filingDate": "2025-03-11",
+  "reportDate": "2024-12-31",
+  "items": "",
+  "primary": "mrna013406-ars.pdf",
+  "files": [
+   "filings/ARS/2025-03-11_0001308179-25-000081/mrna013406-ars.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817925000081/mrna013406-ars.pdf"
+ },
+ "0001682852-25-000034": {
+  "form": "10-Q",
+  "filingDate": "2025-05-01",
+  "reportDate": "2025-03-31",
+  "items": "",
+  "primary": "mrna-20250331.htm",
+  "files": [
+   "filings/10-Q/2025-05-01_0001682852-25-000034/0001682852-25-000034-index-headers.html",
+   "filings/10-Q/2025-05-01_0001682852-25-000034/0001682852-25-000034-index.html",
+   "filings/10-Q/2025-05-01_0001682852-25-000034/exhibit3113312025.htm",
+   "filings/10-Q/2025-05-01_0001682852-25-000034/exhibit3123312025.htm",
+   "filings/10-Q/2025-05-01_0001682852-25-000034/exhibit3213312025.htm",
+   "filings/10-Q/2025-05-01_0001682852-25-000034/mrna-20250331.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000034/mrna-20250331.htm"
+ },
+ "0001682852-25-000031": {
+  "form": "8-K",
+  "filingDate": "2025-05-01",
+  "reportDate": "2025-05-01",
+  "items": "2.02,9.01",
+  "primary": "mrna-20250501.htm",
+  "files": [
+   "filings/8-K/2025-05-01_0001682852-25-000031/exhibit9912025q1pressrelea.htm",
+   "filings/8-K/2025-05-01_0001682852-25-000031/mrna-20250501.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000031/mrna-20250501.htm"
+ },
+ "0001682852-25-000036": {
+  "form": "8-K",
+  "filingDate": "2025-05-05",
+  "reportDate": "2025-04-30",
+  "items": "5.07",
+  "primary": "mrna-20250430.htm",
+  "files": [
+   "filings/8-K/2025-05-05_0001682852-25-000036/mrna-20250430.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000036/mrna-20250430.htm"
+ },
+ "0001682852-25-000044": {
+  "form": "10-Q",
+  "filingDate": "2025-08-01",
+  "reportDate": "2025-06-30",
+  "items": "",
+  "primary": "mrna-20250630.htm",
+  "files": [
+   "filings/10-Q/2025-08-01_0001682852-25-000044/0001682852-25-000044-index-headers.html",
+   "filings/10-Q/2025-08-01_0001682852-25-000044/0001682852-25-000044-index.html",
+   "filings/10-Q/2025-08-01_0001682852-25-000044/exhibit3116302025.htm",
+   "filings/10-Q/2025-08-01_0001682852-25-000044/exhibit3126302025.htm",
+   "filings/10-Q/2025-08-01_0001682852-25-000044/exhibit3216302025.htm",
+   "filings/10-Q/2025-08-01_0001682852-25-000044/mrna-20250630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000044/mrna-20250630.htm"
+ },
+ "0001682852-25-000041": {
+  "form": "8-K",
+  "filingDate": "2025-08-01",
+  "reportDate": "2025-08-01",
+  "items": "2.02,9.01",
+  "primary": "mrna-20250801.htm",
+  "files": [
+   "filings/8-K/2025-08-01_0001682852-25-000041/exhibit9912025q2pressrelea.htm",
+   "filings/8-K/2025-08-01_0001682852-25-000041/mrna-20250801.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000041/mrna-20250801.htm"
+ },
+ "0001140361-25-037166": {
+  "form": "SC TO-C",
+  "filingDate": "2025-10-03",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x1_sctoc.htm",
+  "files": [
+   "filings/SC TO-C/2025-10-03_0001140361-25-037166/ny20056248x1_ex99-2.htm",
+   "filings/SC TO-C/2025-10-03_0001140361-25-037166/ny20056248x1_ex99-3.htm",
+   "filings/SC TO-C/2025-10-03_0001140361-25-037166/ny20056248x1_ex99-4.htm",
+   "filings/SC TO-C/2025-10-03_0001140361-25-037166/ny20056248x1_ex99-5.htm",
+   "filings/SC TO-C/2025-10-03_0001140361-25-037166/ny20056248x1_sctoc.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125037166/ny20056248x1_sctoc.htm"
+ },
+ "0001682852-25-000055": {
+  "form": "PRE 14A",
+  "filingDate": "2025-10-03",
+  "reportDate": "2025-11-12",
+  "items": "",
+  "primary": "mrna-optionexchangeprelimi.htm",
+  "files": [
+   "filings/PRE 14A/2025-10-03_0001682852-25-000055/mrna-optionexchangeprelimi.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000055/mrna-optionexchangeprelimi.htm"
+ },
+ "0001140361-25-037854": {
+  "form": "SC TO-C",
+  "filingDate": "2025-10-10",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x2_sctoc.htm",
+  "files": [
+   "filings/SC TO-C/2025-10-10_0001140361-25-037854/ny20056248x2_ex99-1.htm",
+   "filings/SC TO-C/2025-10-10_0001140361-25-037854/ny20056248x2_sctoc.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125037854/ny20056248x2_sctoc.htm"
+ },
+ "0001682852-25-000062": {
+  "form": "DEF 14A",
+  "filingDate": "2025-10-15",
+  "reportDate": "2025-11-12",
+  "items": "",
+  "primary": "mrna-optionexchangedefinit.htm",
+  "files": [
+   "filings/DEF 14A/2025-10-15_0001682852-25-000062/mrna-optionexchangedefinit.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000062/mrna-optionexchangedefinit.htm"
+ },
+ "0001682852-25-000065": {
+  "form": "DEFA14A",
+  "filingDate": "2025-10-20",
+  "reportDate": "",
+  "items": "",
+  "primary": "factsheet.htm",
+  "files": [
+   "filings/DEFA14A/2025-10-20_0001682852-25-000065/factsheet.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000065/factsheet.htm"
+ },
+ "0001140361-25-038820": {
+  "form": "SC TO-C",
+  "filingDate": "2025-10-21",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x3_sctoc.htm",
+  "files": [
+   "filings/SC TO-C/2025-10-21_0001140361-25-038820/ny20056248x3_ex99-1.htm",
+   "filings/SC TO-C/2025-10-21_0001140361-25-038820/ny20056248x3_ex99-2.htm",
+   "filings/SC TO-C/2025-10-21_0001140361-25-038820/ny20056248x3_ex99-3.htm",
+   "filings/SC TO-C/2025-10-21_0001140361-25-038820/ny20056248x3_ex99-4.htm",
+   "filings/SC TO-C/2025-10-21_0001140361-25-038820/ny20056248x3_sctoc.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125038820/ny20056248x3_sctoc.htm"
+ },
+ "0001140361-25-040821": {
+  "form": "SC TO-C",
+  "filingDate": "2025-11-06",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x4_sctoc.htm",
+  "files": [
+   "filings/SC TO-C/2025-11-06_0001140361-25-040821/ny20056248x4_ex99-1.htm",
+   "filings/SC TO-C/2025-11-06_0001140361-25-040821/ny20056248x4_sctoc.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125040821/ny20056248x4_sctoc.htm"
+ },
+ "0001682852-25-000075": {
+  "form": "10-Q",
+  "filingDate": "2025-11-06",
+  "reportDate": "2025-09-30",
+  "items": "",
+  "primary": "mrna-20250930.htm",
+  "files": [
+   "filings/10-Q/2025-11-06_0001682852-25-000075/0001682852-25-000075-index-headers.html",
+   "filings/10-Q/2025-11-06_0001682852-25-000075/0001682852-25-000075-index.html",
+   "filings/10-Q/2025-11-06_0001682852-25-000075/exhibit3119302025.htm",
+   "filings/10-Q/2025-11-06_0001682852-25-000075/exhibit3129302025.htm",
+   "filings/10-Q/2025-11-06_0001682852-25-000075/exhibit3219302025.htm",
+   "filings/10-Q/2025-11-06_0001682852-25-000075/mrna-20250930.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000075/mrna-20250930.htm"
+ },
+ "0001682852-25-000073": {
+  "form": "8-K",
+  "filingDate": "2025-11-06",
+  "reportDate": "2025-11-06",
+  "items": "2.02,9.01",
+  "primary": "mrna-20251106.htm",
+  "files": [
+   "filings/8-K/2025-11-06_0001682852-25-000073/exhibit9912025q3pressrelea.htm",
+   "filings/8-K/2025-11-06_0001682852-25-000073/mrna-20251106.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000073/mrna-20251106.htm"
+ },
+ "0001140361-25-041712": {
+  "form": "SC TO-C",
+  "filingDate": "2025-11-12",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x6_sctoc.htm",
+  "files": [
+   "filings/SC TO-C/2025-11-12_0001140361-25-041712/ny20056248x6_ex99-1.htm",
+   "filings/SC TO-C/2025-11-12_0001140361-25-041712/ny20056248x6_sctoc.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125041712/ny20056248x6_sctoc.htm"
+ },
+ "0001628280-25-052055": {
+  "form": "8-K",
+  "filingDate": "2025-11-13",
+  "reportDate": "2025-11-12",
+  "items": "5.07",
+  "primary": "mrna-20251112.htm",
+  "files": [
+   "filings/8-K/2025-11-13_0001628280-25-052055/mrna-20251112.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000162828025052055/mrna-20251112.htm"
+ },
+ "0001140361-25-041814": {
+  "form": "SC TO-I",
+  "filingDate": "2025-11-13",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x5_sctoi.htm",
+  "files": [
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_ex107.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_ex107_htm.xml",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1a.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1b.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1c.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1d.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1e.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1f.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_exa1g.htm",
+   "filings/SC TO-I/2025-11-13_0001140361-25-041814/ny20056248x5_sctoi.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125041814/ny20056248x5_sctoi.htm"
+ },
+ "0001140361-25-042601": {
+  "form": "SC TO-I/A",
+  "filingDate": "2025-11-18",
+  "reportDate": "",
+  "items": "",
+  "primary": "ny20056248x7_sctoia.htm",
+  "files": [
+   "filings/SC TO-I_A/2025-11-18_0001140361-25-042601/ny20056248x7_a1h.htm",
+   "filings/SC TO-I_A/2025-11-18_0001140361-25-042601/ny20056248x7_sctoia.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000114036125042601/ny20056248x7_sctoia.htm"
+ },
+ "0001628280-25-053318": {
+  "form": "8-K",
+  "filingDate": "2025-11-20",
+  "reportDate": "2025-11-20",
+  "items": "7.01,9.01",
+  "primary": "mrna-20251120.htm",
+  "files": [
+   "filings/8-K/2025-11-20_0001628280-25-053318/exhibit9912025analystday.htm",
+   "filings/8-K/2025-11-20_0001628280-25-053318/mrna-20251120.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000162828025053318/mrna-20251120.htm"
+ },
+ "0001628280-25-053816": {
+  "form": "8-K",
+  "filingDate": "2025-11-24",
+  "reportDate": "2025-11-19",
+  "items": "1.01,2.03,9.01",
+  "primary": "mrna-20251119.htm",
+  "files": [
+   "filings/8-K/2025-11-24_0001628280-25-053816/moderna-creditandguarantya.htm",
+   "filings/8-K/2025-11-24_0001628280-25-053816/mrna-20251119.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000162828025053816/mrna-20251119.htm"
+ },
+ "0001682852-25-000098": {
+  "form": "SC TO-I/A",
+  "filingDate": "2025-12-16",
+  "reportDate": "",
+  "items": "",
+  "primary": "scto-ia12152025.htm",
+  "files": [
+   "filings/SC TO-I_A/2025-12-16_0001682852-25-000098/scto-ia12152025.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285225000098/scto-ia12152025.htm"
+ },
+ "0001682852-26-000003": {
+  "form": "8-K",
+  "filingDate": "2026-01-05",
+  "reportDate": "2026-01-05",
+  "items": "7.01,9.01",
+  "primary": "mrna-20260105.htm",
+  "files": [
+   "filings/8-K/2026-01-05_0001682852-26-000003/exhibit991-01052026lettert.htm",
+   "filings/8-K/2026-01-05_0001682852-26-000003/mrna-20260105.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000003/mrna-20260105.htm"
+ },
+ "0001682852-26-000007": {
+  "form": "8-K",
+  "filingDate": "2026-01-12",
+  "reportDate": "2026-01-12",
+  "items": "2.02,7.01,9.01",
+  "primary": "mrna-20260112.htm",
+  "files": [
+   "filings/8-K/2026-01-12_0001682852-26-000007/exhibit991-01122026.htm",
+   "filings/8-K/2026-01-12_0001682852-26-000007/mrna-20260112.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000007/mrna-20260112.htm"
+ },
+ "0001682852-26-000012": {
+  "form": "8-K",
+  "filingDate": "2026-02-11",
+  "reportDate": "2026-02-03",
+  "items": "7.01,8.01,9.01",
+  "primary": "mrna-20260203.htm",
+  "files": [
+   "filings/8-K/2026-02-11_0001682852-26-000012/exhibit991-02102026.htm",
+   "filings/8-K/2026-02-11_0001682852-26-000012/mrna-20260203.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000012/mrna-20260203.htm"
+ },
+ "0001682852-26-000015": {
+  "form": "8-K",
+  "filingDate": "2026-02-13",
+  "reportDate": "2026-02-13",
+  "items": "2.02,9.01",
+  "primary": "mrna-20260213.htm",
+  "files": [
+   "filings/8-K/2026-02-13_0001682852-26-000015/exhibit9912025q4pressrelea.htm",
+   "filings/8-K/2026-02-13_0001682852-26-000015/mrna-20260213.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000015/mrna-20260213.htm"
+ },
+ "0001682852-26-000034": {
+  "form": "S-8",
+  "filingDate": "2026-02-20",
+  "reportDate": "",
+  "items": "",
+  "primary": "modernaforms-8feb2026.htm",
+  "files": [
+   "filings/S-8/2026-02-20_0001682852-26-000034/exfilingfees022026.htm",
+   "filings/S-8/2026-02-20_0001682852-26-000034/exfilingfees022026_htm.xml",
+   "filings/S-8/2026-02-20_0001682852-26-000034/exhibit231eys-8consent22026.htm",
+   "filings/S-8/2026-02-20_0001682852-26-000034/exhibit51opinionfors-8gp22.htm",
+   "filings/S-8/2026-02-20_0001682852-26-000034/modernaforms-8feb2026.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000034/modernaforms-8feb2026.htm"
+ },
+ "0001682852-26-000033": {
+  "form": "10-K",
+  "filingDate": "2026-02-20",
+  "reportDate": "2025-12-31",
+  "items": "",
+  "primary": "mrna-20251231.htm",
+  "files": [
+   "filings/10-K/2026-02-20_0001682852-26-000033/0001682852-26-000033-index-headers.html",
+   "filings/10-K/2026-02-20_0001682852-26-000033/0001682852-26-000033-index.html",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit1016esppplan.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit19insidertradingpol.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit211subsidiaries1231.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit23112312025.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit31112312025.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit31212312025.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit32112312025.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit32212312025.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/exhibit4212312025.htm",
+   "filings/10-K/2026-02-20_0001682852-26-000033/mrna-20251231.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000033/mrna-20251231.htm"
+ },
+ "0001682852-26-000047": {
+  "form": "8-K",
+  "filingDate": "2026-03-05",
+  "reportDate": "2026-03-03",
+  "items": "1.01",
+  "primary": "mrna-20260303.htm",
+  "files": [
+   "filings/8-K/2026-03-05_0001682852-26-000047/mrna-20260303.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000047/mrna-20260303.htm"
+ },
+ "0001308179-26-000083": {
+  "form": "DEFA14A",
+  "filingDate": "2026-03-16",
+  "reportDate": "",
+  "items": "",
+  "primary": "moderna2026defa14a.htm",
+  "files": [
+   "filings/DEFA14A/2026-03-16_0001308179-26-000083/moderna2026defa14a.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817926000083/moderna2026defa14a.htm"
+ },
+ "0001308179-26-000081": {
+  "form": "DEF 14A",
+  "filingDate": "2026-03-16",
+  "reportDate": "2026-05-06",
+  "items": "",
+  "primary": "mrna-20260316.htm",
+  "files": [
+   "filings/DEF 14A/2026-03-16_0001308179-26-000081/mrna-20260316.htm",
+   "filings/DEF 14A/2026-03-16_0001308179-26-000081/mrna-20260316_htm.xml",
+   "filings/DEF 14A/2026-03-16_0001308179-26-000081/mrna-courtesy-pdf.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817926000081/mrna-20260316.htm"
+ },
+ "0001308179-26-000080": {
+  "form": "ARS",
+  "filingDate": "2026-03-16",
+  "reportDate": "2025-12-31",
+  "items": "",
+  "primary": "mrna014719-ars.pdf",
+  "files": [
+   "filings/ARS/2026-03-16_0001308179-26-000080/mrna014719-ars.pdf"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000130817926000080/mrna014719-ars.pdf"
+ },
+ "0001682852-26-000060": {
+  "form": "10-Q",
+  "filingDate": "2026-05-01",
+  "reportDate": "2026-03-31",
+  "items": "",
+  "primary": "mrna-20260331.htm",
+  "files": [
+   "filings/10-Q/2026-05-01_0001682852-26-000060/0001682852-26-000060-index-headers.html",
+   "filings/10-Q/2026-05-01_0001682852-26-000060/0001682852-26-000060-index.html",
+   "filings/10-Q/2026-05-01_0001682852-26-000060/exhibit10133126.htm",
+   "filings/10-Q/2026-05-01_0001682852-26-000060/exhibit31133126.htm",
+   "filings/10-Q/2026-05-01_0001682852-26-000060/exhibit31233126.htm",
+   "filings/10-Q/2026-05-01_0001682852-26-000060/exhibit32133126.htm",
+   "filings/10-Q/2026-05-01_0001682852-26-000060/mrna-20260331.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000060/mrna-20260331.htm"
+ },
+ "0001682852-26-000057": {
+  "form": "8-K",
+  "filingDate": "2026-05-01",
+  "reportDate": "2026-05-01",
+  "items": "2.02,9.01",
+  "primary": "mrna-20260501.htm",
+  "files": [
+   "filings/8-K/2026-05-01_0001682852-26-000057/exhibit9912026q1pressrelea.htm",
+   "filings/8-K/2026-05-01_0001682852-26-000057/mrna-20260501.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000057/mrna-20260501.htm"
+ },
+ "0001682852-26-000101": {
+  "form": "8-K",
+  "filingDate": "2026-05-11",
+  "reportDate": "2026-05-06",
+  "items": "5.03,5.07,9.01",
+  "primary": "mrna-20260506.htm",
+  "files": [
+   "filings/8-K/2026-05-11_0001682852-26-000101/by-lawamendment5626.htm",
+   "filings/8-K/2026-05-11_0001682852-26-000101/mrna-20260506.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000101/mrna-20260506.htm"
+ },
+ "0001682852-26-000134": {
+  "form": "8-K",
+  "filingDate": "2026-07-08",
+  "reportDate": "2026-07-06",
+  "items": "5.02,7.01,9.01",
+  "primary": "mrna-20260706.htm",
+  "files": [
+   "filings/8-K/2026-07-08_0001682852-26-000134/exhibit991-07082026.htm",
+   "filings/8-K/2026-07-08_0001682852-26-000134/mrna-20260706.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000134/mrna-20260706.htm"
+ },
+ "0001682852-26-000150": {
+  "form": "10-Q",
+  "filingDate": "2026-07-31",
+  "reportDate": "2026-06-30",
+  "items": "",
+  "primary": "mrna-20260630.htm",
+  "files": [
+   "filings/10-Q/2026-07-31_0001682852-26-000150/0001682852-26-000150-index-headers.html",
+   "filings/10-Q/2026-07-31_0001682852-26-000150/0001682852-26-000150-index.html",
+   "filings/10-Q/2026-07-31_0001682852-26-000150/exhibit31163026.htm",
+   "filings/10-Q/2026-07-31_0001682852-26-000150/exhibit31263026.htm",
+   "filings/10-Q/2026-07-31_0001682852-26-000150/exhibit31arby-laws.htm",
+   "filings/10-Q/2026-07-31_0001682852-26-000150/exhibit32163026.htm",
+   "filings/10-Q/2026-07-31_0001682852-26-000150/mrna-20260630.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000150/mrna-20260630.htm"
+ },
+ "0001682852-26-000147": {
+  "form": "8-K",
+  "filingDate": "2026-07-31",
+  "reportDate": "2026-07-31",
+  "items": "2.02,9.01",
+  "primary": "mrna-20260731.htm",
+  "files": [
+   "filings/8-K/2026-07-31_0001682852-26-000147/exhibit9912026q2pressrelea.htm",
+   "filings/8-K/2026-07-31_0001682852-26-000147/mrna-20260731.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000168285226000147/mrna-20260731.htm"
+ },
+ "0001193125-26-378505": {
+  "form": "8-K",
+  "filingDate": "2026-09-01",
+  "reportDate": "2026-08-27",
+  "items": "1.01,2.03,3.02,8.01,9.01",
+  "primary": "d108896d8k.htm",
+  "files": [
+   "filings/8-K/2026-09-01_0001193125-26-378505/d108896d8k.htm",
+   "filings/8-K/2026-09-01_0001193125-26-378505/d108896dex101.htm",
+   "filings/8-K/2026-09-01_0001193125-26-378505/d108896dex41.htm",
+   "filings/8-K/2026-09-01_0001193125-26-378505/d108896dex991.htm",
+   "filings/8-K/2026-09-01_0001193125-26-378505/d108896dex992.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/1682852/000119312526378505/d108896d8k.htm"
+ }
+}

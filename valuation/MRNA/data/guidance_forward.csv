@@ -1,0 +1,12 @@
+id,metric,period,issued,source,guide_low,guide_high,base_actual,note
+F01,Revenue 2026 ($B),FY2026,2026-07-31,8-K 2026-07-31 EX-99.1 (Q2-26),1.944,2.14,1.944,"'up to 10% growth' from $1.944B; H1 = $0.534B"
+F02,Cost of sales 2026 ($B) incl. $0.9B settlement,FY2026,2026-07-31,8-K 2026-07-31 EX-99.1 (Q2-26),1.7,1.7,0.868,
+F03,R&D 2026 ($B),FY2026,2026-07-31,8-K 2026-07-31 EX-99.1 (Q2-26),2.9,2.9,3.132,
+F04,SG&A 2026 ($B),FY2026,2026-07-31,8-K 2026-07-31 EX-99.1 (Q2-26),1.0,1.0,1.018,
+F05,Capex 2026 ($B),FY2026,2026-07-31,8-K 2026-07-31 EX-99.1 (Q2-26),0.2,0.3,0.192,
+F06,Year-end cash 2026 ($B) ex further draws ex convert,FY2026,2026-07-31,8-K 2026-07-31 EX-99.1 (Q2-26),4.7,5.2,8.135,"Before $2.63B net convert proceeds (Sep-26)"
+F07,GAAP opex 2027 ($B),FY2027,2026-01-12,8-K 2026-01-12 EX-99.1 (JPM),4.2,4.6,4.9,
+F08,Cash cost 2027 ($B),FY2027,2025-11-20,8-K 2025-11-20 EX-99.1 (Analyst Day),3.5,3.9,4.2,
+F09,Gross margin +10pts over 3 yrs,FY2028,2025-11-20,8-K 2025-11-20 EX-99.1 (Analyst Day),0.10,0.10,,
+F10,Cash breakeven,FY2028,2025-11-20,8-K 2025-11-20 EX-99.1 (Analyst Day),1,1,,"Sep-24 version: breakeven at ~$6B revenue"
+F11,Up to six approved seasonal vaccines,FY2028,2025-11-20,8-K 2025-11-20 EX-99.1 (Analyst Day),6,6,3,"Now 5 (Spikevax, mNEXSPIKE, mRESVIA, mCOMBRIAX-EU, mFLUSIVA)"

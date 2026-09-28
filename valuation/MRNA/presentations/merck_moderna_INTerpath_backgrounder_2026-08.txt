@@ -1,0 +1,108 @@
+Intismeran Autogene
+INTerpath late-stage clinical development program
+Exploring an individualized approach to
+Neoantigen
+cancer care
+Intismeran autogene (V940/mRNA-4157) is a novel, potential
+first-in-class investigational messenger RNA (mRNA)-based
+individualized neoantigen therapy (INT) being jointly developed
+Major
+by Merck and Moderna. Intismeran is designed using a patient’s
+Histocompatibility
+Complex tumor sample to identify the unique mutational signature, or
+“fingerprint,” of their cancer. This information is then used to create
+a personalized synthetic mRNA coding for up to 34 neoantigens
+— abnormal proteins that arise from mutations in cancer cells and
+are not found in healthy cells. Since these tumor-specific mutations are unique to each individual, they could provide a
+personalized therapy tailored to generate anti-cancer immunity.
+INTs are designed to train and activate an anti-tumor immune response by generating specific T-cell responses based on
+the unique mutational signature of a patient’s tumor. Upon administration, the mRNA-encoded neoantigen sequences
+are translated in the body and presented to the immune system, a key step in generating specific T-cell responses against
+cancer cells. The mRNA sequences are transient and are not incorporated into the DNA.
+Intismeran was developed through a strategic collaboration combining Merck’s established leadership in immuno-oncology
+with Moderna’s pioneering mRNA technology and manufacturing capabilities.
+INTerpath is Merck and Moderna’s global clinical development program evaluating the safety and efficacy of intismeran in
+combination with pembrolizumab, with other anti-cancer therapies and as a monotherapy across multiple tumor types and
+stages of disease, including melanoma, non-small cell lung cancer (NSCLC), bladder cancer and renal cell carcinoma (RCC).
+The program currently comprises nine total Phase 2 and Phase 3 clinical trials, with plans for continued expansion.
+SKIN CANCERS
+Primary Estimated
+Study Study Estimated
+Disease setting Treatment arms outcome primary
+phase design enrollment
+measure completion
+INTerpath-001 High-risk (stage IIB-IV) Phase 3 • Randomized • Intismeran + • RFS 1089 October
+NCT05933577 resected cutaneous • Placebo- and pembrolizumab 2029
+melanoma active-controlled • Placebo + pembrolizumab
+• Double-blind
+INTerpath-012 First-line advanced Phase 2 • Randomized • Intismeran + • PFS 160 July
+NCT06961006 melanoma • Placebo- and pembrolizumab 2028
+active-controlled • Placebo + pembrolizumab
+• Double-blind
+LUNG CANCERS
+Primary Estimated
+Study Study Estimated
+Disease setting Treatment arms outcome primary
+phase design enrollment
+measure completion
+INTerpath-002 Margin negative, Phase 3 • Randomized • Intismeran + • DFS 868 June
+NCT06077760 completely resected stage • Placebo- and pembrolizumab 2030
+II, IIIA, IIIB (with nodal active-controlled • Placebo + pembrolizumab
+involvement) NSCLC • Double-blind
+INTerpath-009 Resectable stage II, Phase 3 • Randomized • Intismeran + • DFS 680 May
+NCT06623422 IIIA, IIIB (N2) NSCLC, • Placebo- and pembrolizumab 2033
+previously treated with active-controlled • Placebo + pembrolizumab
+chemotherapy and • Double-blind
+pembrolizumab in the
+neoadjuvant setting
+without achieving pCR
+INTerpath-013 Metastatic Phase 2 • Randomized • Intismeran + • PFS 180 July
+NCT07221474 treatment-naïve • Placebo- and pembrolizumab + • OS 2029
+squamous NSCLC active-controlled chemotherapy
+• Double-blind • Placebo + pembrolizumab +
+chemotherapy
+INTerpath-014 Completely Phase 3 • Randomized • Intismeran + • DFS 876 August
+NCT07513376 resected high-risk • Placebo-controlled pembrolizumab and 2034
+stage I NSCLC • Two double blind berahyaluronidase alfa
+arms and one open (open-label)
+label combination • Intismeran
+arm • Placebo
+RENAL CANCERS
+Primary Estimated
+Study Study Estimated
+Disease setting Treatment arms outcome primary
+phase design enrollment
+measure completion
+INTerpath-004 Intermediate-high-risk, Phase 2 • Randomized • Intismeran + • DFS 272 April
+NCT06307431 high-risk or M1 NED RCC • Placebo- and pembrolizumab 2027
+active-controlled • Placebo + pembrolizumab
+• Double-blind
+BLADDER CANCERS
+Primary Estimated
+Study Study Estimated
+Disease setting Treatment arms outcome primary
+phase design enrollment
+measure completion
+INTerpath-005 High-risk muscle-invasive Phase 1/2 • Randomized • Intismeran + • DFS 230 October
+NCT06305767 urothelial carcinoma post- • Placebo- and pembrolizumab (Phase 2) • AEs 2029
+radical resection active-controlled • Placebo + pembrolizumab (Perioperative
+• Double-blind (Phase 2) cohort only)
+• Intismeran +
+pembrolizumab +
+enfortumab vedotin +
+surgery (perioperative,
+Phase 1)
+INTerpath-011 High-risk NMIBC Phase 2 • Randomized • Intismeran + BCG • EFS 308 September
+NCT06833073 • Active-controlled • BCG 2031
+• Open-label • Intismeran (cohort B, non-
+comparative, exploratory
+arm)
+Abbreviations
+AE BCG DFS EFS INT
+adverse event bacillus Calmette-Guérin disease-free survival event-free survival individualized neoantigen therapy
+mRNA NED NMIBC NSCLC OS
+messenger RNA no evidence of disease non-muscle invasive bladder non-small cell lung cancer overall survival
+cancer
+pCR PFS RCC RFS
+pathological complete response progression-free survival renal cell carcinoma recurrence-free survival
+Copyright © 2026 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.

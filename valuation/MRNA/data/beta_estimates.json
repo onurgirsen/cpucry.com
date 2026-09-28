@@ -1,0 +1,23 @@
+{
+ "2y": {
+  "beta": 0.82,
+  "beta_ex_aug19": 1.31,
+  "ann_vol": 1.16,
+  "n": 104,
+  "blume_adj": 1.21
+ },
+ "3y": {
+  "beta": 0.94,
+  "beta_ex_aug19": 1.32,
+  "ann_vol": 1.02,
+  "n": 156,
+  "blume_adj": 1.22
+ },
+ "5y": {
+  "beta": 1.01,
+  "beta_ex_aug19": 1.17,
+  "ann_vol": 0.89,
+  "n": 260,
+  "blume_adj": 1.11
+ }
+}

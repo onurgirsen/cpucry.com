@@ -1,0 +1,455 @@
+filed,date,owner,title,code,shares,price,acq_disp,post,plan_10b5_1
+2024-01-09,2024-01-05,Mock James M,Chief Financial Officer,M,1452,,A,4404,False
+2024-01-09,2024-01-08,Mock James M,Chief Financial Officer,S,772,109.7546,D,3632,False
+2024-01-17,2024-01-16,Hoge Stephen,President,S,15000,103.90,D,1516063,True
+2024-02-13,2024-02-09,Hoge Stephen,President,M,522,,A,1516585,False
+2024-02-13,2024-02-12,Hoge Stephen,President,S,304,86.2292,D,1516281,False
+2024-02-16,2024-02-14,Hoge Stephen,President,A,22694,0,A,1538975,False
+2024-02-16,2024-02-16,Hoge Stephen,President,S,10542,88.8808,D,1528433,False
+2024-02-16,2024-02-14,Bancel Stephane,Chief Executive Officer,A,56736,0,A,5486575,False
+2024-02-16,2024-02-16,Bancel Stephane,Chief Executive Officer,S,26351,88.8808,D,5460224,False
+2024-02-23,2024-02-22,Hoge Stephen,President,S,15000,100.00,D,1513433,True
+2024-03-01,2024-02-28,Mock James M,Chief Financial Officer,M,1315,,A,4947,False
+2024-03-01,2024-02-29,Mock James M,Chief Financial Officer,S,647,94.572,D,4300,False
+2024-03-01,2024-02-28,Klinger Shannon Thyme,Chief Legal Officer,M,1315,,A,9227,False
+2024-03-01,2024-02-29,Klinger Shannon Thyme,Chief Legal Officer,S,670,94.572,D,8557,False
+2024-03-01,2024-02-28,Hoge Stephen,President,M,2411,,A,1515844,False
+2024-03-01,2024-02-28,Hoge Stephen,President,M,2442,,A,1518286,False
+2024-03-01,2024-02-29,Hoge Stephen,President,S,2388,94.572,D,1515898,False
+2024-03-05,2024-03-01,Klinger Shannon Thyme,Chief Legal Officer,M,233,,A,8790,False
+2024-03-05,2024-03-04,Klinger Shannon Thyme,Chief Legal Officer,S,117,94.3383,D,8673,False
+2024-03-05,2024-03-01,Hoge Stephen,President,M,652,,A,1516550,False
+2024-03-05,2024-03-04,Hoge Stephen,President,S,309,94.3383,D,1516241,False
+2024-03-11,2024-03-07,Klinger Shannon Thyme,Chief Legal Officer,M,1138,,A,9811,False
+2024-03-11,2024-03-08,Klinger Shannon Thyme,Chief Legal Officer,S,544,99.0509,D,9267,False
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,6281,106.5956,D,2140650,True
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,2300,107.6595,D,2138350,True
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,600,108.5150,D,2137750,True
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,412,109.4976,D,2137338,True
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,3803,110.8001,D,2133535,True
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,1404,111.6851,D,2132131,True
+2024-03-15,2024-03-13,AFEYAN NOUBAR,Director,S,200,112.4350,D,2131931,True
+2024-03-19,2024-03-15,Hoge Stephen,President,S,15000,103.17,D,1501241,True
+2024-03-22,2024-03-20,AFEYAN NOUBAR,Director,S,2113,101.0480,D,2129818,True
+2024-03-22,2024-03-20,AFEYAN NOUBAR,Director,S,7109,102.1464,D,2122709,True
+2024-03-22,2024-03-20,AFEYAN NOUBAR,Director,S,5778,103.1753,D,2116931,True
+2024-03-29,2024-03-27,AFEYAN NOUBAR,Director,S,1817,105.7269,D,2115114,True
+2024-03-29,2024-03-27,AFEYAN NOUBAR,Director,S,1100,106.7057,D,2114014,True
+2024-03-29,2024-03-27,AFEYAN NOUBAR,Director,S,1466,107.7898,D,2112548,True
+2024-03-29,2024-03-27,AFEYAN NOUBAR,Director,S,3100,109.0889,D,2109448,True
+2024-03-29,2024-03-27,AFEYAN NOUBAR,Director,S,4544,110.2401,D,2104904,True
+2024-03-29,2024-03-27,AFEYAN NOUBAR,Director,S,2973,110.7486,D,2101931,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,200,97.47,D,2101731,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,1499,99.3996,D,2100232,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,3167,100.6552,D,2097065,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,3832,101.328,D,2093233,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,3500,102.6433,D,2089733,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,2702,103.6431,D,2087031,True
+2024-04-05,2024-04-03,AFEYAN NOUBAR,Director,S,100,104.15,D,2086931,True
+2024-04-09,2024-04-05,Mock James M,Chief Financial Officer,M,1453,,A,5753,False
+2024-04-09,2024-04-08,Mock James M,Chief Financial Officer,S,705,101.9281,D,5048,False
+2024-04-12,2024-04-10,AFEYAN NOUBAR,Director,S,6351,106.5945,D,2080580,True
+2024-04-12,2024-04-10,AFEYAN NOUBAR,Director,S,7512,107.3131,D,2073068,True
+2024-04-12,2024-04-10,AFEYAN NOUBAR,Director,S,748,108.5631,D,2072320,True
+2024-04-12,2024-04-10,AFEYAN NOUBAR,Director,S,389,109.3628,D,2071931,True
+2024-04-16,2024-04-15,Hoge Stephen,President,S,15000,105.02,D,1486241,True
+2024-04-19,2024-04-17,AFEYAN NOUBAR,Director,S,8243,103.0983,D,2063688,True
+2024-04-19,2024-04-17,AFEYAN NOUBAR,Director,S,6475,103.6908,D,2057213,True
+2024-04-19,2024-04-17,AFEYAN NOUBAR,Director,S,282,104.4896,D,2056931,True
+2024-04-26,2024-04-24,AFEYAN NOUBAR,Director,S,3926,107.1573,D,2053005,True
+2024-04-26,2024-04-24,AFEYAN NOUBAR,Director,S,5821,108.2955,D,2047184,True
+2024-04-26,2024-04-24,AFEYAN NOUBAR,Director,S,4153,109.041,D,2043031,True
+2024-04-26,2024-04-24,AFEYAN NOUBAR,Director,S,1100,109.91,D,2041931,True
+2024-05-03,2024-05-01,AFEYAN NOUBAR,Director,S,3982,109.6974,D,2037949,True
+2024-05-03,2024-05-01,AFEYAN NOUBAR,Director,S,4572,110.4243,D,2033377,True
+2024-05-03,2024-05-01,AFEYAN NOUBAR,Director,S,4246,111.5520,D,2029131,True
+2024-05-03,2024-05-01,AFEYAN NOUBAR,Director,S,1500,112.7673,D,2027631,True
+2024-05-03,2024-05-01,AFEYAN NOUBAR,Director,S,700,113.3986,D,2026931,True
+2024-05-07,2024-05-03,Berenson Stephen,Director,M,732,,A,22203,False
+2024-05-07,2024-05-03,NABEL ELIZABETH G,Director,M,732,,A,2105,False
+2024-05-10,2024-05-08,AFEYAN NOUBAR,Director,S,2000,120.3705,D,2024931,True
+2024-05-10,2024-05-08,AFEYAN NOUBAR,Director,S,5004,121.5860,D,2019927,True
+2024-05-10,2024-05-08,AFEYAN NOUBAR,Director,S,7996,122.0689,D,2011931,True
+2024-05-13,2024-05-09,Hoge Stephen,President,M,522,,A,1486763,False
+2024-05-13,2024-05-10,Hoge Stephen,President,S,255,120.9573,D,1486508,False
+2024-05-17,2024-05-15,AFEYAN NOUBAR,Director,S,4488,125.5251,D,2007443,True
+2024-05-17,2024-05-15,AFEYAN NOUBAR,Director,S,2001,126.6208,D,2005442,True
+2024-05-17,2024-05-15,AFEYAN NOUBAR,Director,S,2600,127.7063,D,2002842,True
+2024-05-17,2024-05-15,AFEYAN NOUBAR,Director,S,5711,128.7466,D,1997131,True
+2024-05-17,2024-05-15,AFEYAN NOUBAR,Director,S,200,129.1500,D,1996931,True
+2024-05-17,2024-05-15,Hoge Stephen,President,S,15000,127.49,D,1471508,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,100,142.95,D,1996831,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,200,144.3950,D,1996631,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,100,145.03,D,1996531,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,300,147.0633,D,1996231,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,600,148.2067,D,1995631,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,300,149.4533,D,1995331,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,400,150.5950,D,1994931,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,700,151.7329,D,1994231,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,800,152.9200,D,1993431,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,200,153.8400,D,1993231,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,600,155.6600,D,1992631,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,1802,157.4117,D,1990829,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,1923,158.2529,D,1988906,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,2200,159.5683,D,1986706,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,825,160.2355,D,1985881,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,1005,162.1918,D,1984876,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,2223,163.0236,D,1982653,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,625,163.9212,D,1982028,True
+2024-05-24,2024-05-22,AFEYAN NOUBAR,Director,S,97,164.67,D,1981931,True
+2024-05-29,2024-05-24,Mock James M,Chief Financial Officer,M,1326,,A,6374,False
+2024-05-29,2024-05-28,Mock James M,Chief Financial Officer,S,648,162.4736,D,5726,False
+2024-05-29,2024-05-24,Klinger Shannon Thyme,Chief Legal Officer,M,2652,,A,11919,False
+2024-05-29,2024-05-28,Klinger Shannon Thyme,Chief Legal Officer,S,1296,162.4736,D,10623,False
+2024-05-30,2024-05-28,Mock James M,Chief Financial Officer,M,328,,A,6054,False
+2024-05-30,2024-05-29,Mock James M,Chief Financial Officer,S,183,144.5047,D,5871,False
+2024-05-30,2024-05-28,Klinger Shannon Thyme,Chief Legal Officer,M,328,,A,10951,False
+2024-05-30,2024-05-29,Klinger Shannon Thyme,Chief Legal Officer,S,183,144.5047,D,10768,False
+2024-05-30,2024-05-28,Hoge Stephen,President,M,610,,A,1472118,False
+2024-05-30,2024-05-29,Hoge Stephen,President,S,341,144.5047,D,1471777,False
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,1000,141.01,D,1980931,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,3013,141.725,D,1977918,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,1100,142.82,D,1976818,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,1500,143.942,D,1975318,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,2400,144.9858,D,1972918,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,5581,146.0198,D,1967337,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,2229,146.8197,D,1965108,True
+2024-05-31,2024-05-29,AFEYAN NOUBAR,Director,S,3177,148.0575,D,1961931,True
+2024-06-04,2024-05-31,Mock James M,Chief Financial Officer,M,1326,,A,7197,False
+2024-06-04,2024-06-03,Mock James M,Chief Financial Officer,S,691,140.7198,D,6506,False
+2024-06-04,2024-05-31,Hoge Stephen,President,M,651,,A,1472428,False
+2024-06-04,2024-06-03,Hoge Stephen,President,S,339,140.7198,D,1472089,False
+2024-06-04,2024-05-31,Klinger Shannon Thyme,Chief Legal Officer,M,232,,A,11000,False
+2024-06-04,2024-06-03,Klinger Shannon Thyme,Chief Legal Officer,S,122,140.7198,D,10878,False
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,900,145.9144,D,1961031,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,700,147.7754,D,1960331,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,1800,148.571,D,1958531,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,300,149.35,D,1958231,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,2840,151.0679,D,1955391,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,3902,151.7612,D,1951489,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,2437,152.8954,D,1949052,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,400,153.71,D,1948652,True
+2024-06-07,2024-06-05,AFEYAN NOUBAR,Director,S,1721,154.8577,D,1946931,True
+2024-06-11,2024-06-11,AFEYAN NOUBAR,Director,S,163649,148.2944,D,7937145,False
+2024-06-11,2024-06-11,AFEYAN NOUBAR,Director,S,31531,148.2944,D,1529789,False
+2024-06-11,2024-06-11,AFEYAN NOUBAR,Director,S,6420,149.4038,D,7930725,False
+2024-06-11,2024-06-11,AFEYAN NOUBAR,Director,S,1232,149.4038,D,1528557,False
+2024-06-11,2024-06-07,Klinger Shannon Thyme,Chief Legal Officer,M,1139,,A,12017,False
+2024-06-11,2024-06-07,Klinger Shannon Thyme,Chief Legal Officer,M,9108,,A,21125,False
+2024-06-11,2024-06-10,Klinger Shannon Thyme,Chief Legal Officer,S,5178,148.0851,D,15947,False
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,700,142.9696,D,2328315,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,408,144.4619,D,2327907,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,1263,145.5748,D,2326644,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,3031,146.5483,D,2323613,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,6397,147.5498,D,2317216,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,1601,148.613,D,2315615,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,1400,149.3927,D,2314215,True
+2024-06-14,2024-06-12,AFEYAN NOUBAR,Director,S,200,150.24,D,2314015,True
+2024-06-17,2024-06-14,Bancel Stephane,Chief Executive Officer,J,26840,0,A,5487064,False
+2024-06-18,2024-06-17,Hoge Stephen,President,S,15000,138.16,D,1457089,True
+2024-06-21,2024-06-18,AFEYAN NOUBAR,Director,S,1700,132.2245,D,2312315,True
+2024-06-21,2024-06-18,AFEYAN NOUBAR,Director,S,6160,133.2609,D,2306155,True
+2024-06-21,2024-06-18,AFEYAN NOUBAR,Director,S,6840,134.0932,D,2299315,True
+2024-06-21,2024-06-18,AFEYAN NOUBAR,Director,S,200,135.0150,D,2299115,True
+2024-06-21,2024-06-18,AFEYAN NOUBAR,Director,S,100,136.92,D,2299015,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,2460,122.6887,D,2296555,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,1600,123.7363,D,2294955,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,1500,124.9015,D,2293455,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,1100,125.7064,D,2292355,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,1100,127.5035,D,2291255,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,1435,128.7789,D,2289820,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,2300,129.8397,D,2287520,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,2705,130.7560,D,2284815,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,700,131.5557,D,2284115,True
+2024-06-28,2024-06-26,AFEYAN NOUBAR,Director,S,100,134.05,D,2284015,True
+2024-07-09,2024-07-05,Mock James M,Chief Financial Officer,M,1452,,A,7958,False
+2024-07-09,2024-07-08,Mock James M,Chief Financial Officer,S,689,118.2371,D,7269,False
+2024-07-12,2024-07-10,AFEYAN NOUBAR,Director,S,6121,116.0086,D,2277894,True
+2024-07-12,2024-07-10,AFEYAN NOUBAR,Director,S,4279,117.1812,D,2273615,True
+2024-07-12,2024-07-10,AFEYAN NOUBAR,Director,S,3000,117.8276,D,2270615,True
+2024-07-12,2024-07-10,AFEYAN NOUBAR,Director,S,1100,119.2829,D,2269515,True
+2024-07-12,2024-07-10,AFEYAN NOUBAR,Director,S,500,119.9520,D,2269015,True
+2024-07-16,2024-07-15,Hoge Stephen,President,S,15000,121.12,D,1442089,True
+2024-07-19,2024-07-17,AFEYAN NOUBAR,Director,S,2601,120.8564,D,2266414,True
+2024-07-19,2024-07-17,AFEYAN NOUBAR,Director,S,2100,121.5699,D,2264314,True
+2024-07-19,2024-07-17,AFEYAN NOUBAR,Director,S,2900,122.8614,D,2261414,True
+2024-07-19,2024-07-17,AFEYAN NOUBAR,Director,S,6699,123.8212,D,2254715,True
+2024-07-19,2024-07-17,AFEYAN NOUBAR,Director,S,700,124.6143,D,2254015,True
+2024-07-26,2024-07-24,AFEYAN NOUBAR,Director,S,2668,116.3275,D,2251347,True
+2024-07-26,2024-07-24,AFEYAN NOUBAR,Director,S,3500,117.2504,D,2247847,True
+2024-07-26,2024-07-24,AFEYAN NOUBAR,Director,S,6832,118.2974,D,2241015,True
+2024-07-26,2024-07-24,AFEYAN NOUBAR,Director,S,2000,119.013,D,2239015,True
+2024-08-02,2024-07-31,AFEYAN NOUBAR,Director,S,4599,118.9622,D,2234416,True
+2024-08-02,2024-07-31,AFEYAN NOUBAR,Director,S,5664,119.8365,D,2228752,True
+2024-08-02,2024-07-31,AFEYAN NOUBAR,Director,S,3428,120.8802,D,2225324,True
+2024-08-02,2024-07-31,AFEYAN NOUBAR,Director,S,1309,121.6229,D,2224015,True
+2024-08-13,2024-08-09,Hoge Stephen,President,M,522,,A,1442611,False
+2024-08-13,2024-08-12,Hoge Stephen,President,S,254,84.1047,D,1442357,False
+2024-08-29,2024-08-27,Mock James M,Chief Financial Officer,M,1326,,A,8595,False
+2024-08-29,2024-08-27,Mock James M,Chief Financial Officer,M,1326,,A,9921,False
+2024-08-29,2024-08-28,Mock James M,Chief Financial Officer,S,1321,79.3949,D,8600,False
+2024-08-29,2024-08-27,Klinger Shannon Thyme,Chief Legal Officer,M,2652,,A,18599,False
+2024-08-29,2024-08-28,Klinger Shannon Thyme,Chief Legal Officer,S,1319,79.3949,D,17280,False
+2024-08-30,2024-08-28,Mock James M,Chief Financial Officer,M,329,,A,8929,False
+2024-08-30,2024-08-29,Mock James M,Chief Financial Officer,S,162,78.026,D,8767,False
+2024-08-30,2024-08-28,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,17609,False
+2024-08-30,2024-08-29,Klinger Shannon Thyme,Chief Legal Officer,S,162,78.026,D,17447,False
+2024-08-30,2024-08-28,Hoge Stephen,President,M,611,,A,1442968,False
+2024-08-30,2024-08-29,Hoge Stephen,President,S,300,78.026,D,1442668,False
+2024-09-04,2024-08-30,Klinger Shannon Thyme,Chief Legal Officer,M,233,,A,17680,False
+2024-09-04,2024-09-03,Klinger Shannon Thyme,Chief Legal Officer,S,114,76.989,D,17566,False
+2024-09-04,2024-08-30,Hoge Stephen,President,M,652,,A,1443320,False
+2024-09-04,2024-09-03,Hoge Stephen,President,S,318,76.989,D,1443002,False
+2024-09-10,2024-09-06,Klinger Shannon Thyme,Chief Legal Officer,M,1139,,A,18705,False
+2024-09-10,2024-09-09,Klinger Shannon Thyme,Chief Legal Officer,S,551,73.5731,D,18154,False
+2024-10-08,2024-10-04,Mock James M,Chief Financial Officer,M,1453,,A,10220,False
+2024-10-08,2024-10-07,Mock James M,Chief Financial Officer,S,715,60.12,D,9505,False
+2024-11-12,2024-11-08,Hoge Stephen,President,M,523,,A,1443525,False
+2024-11-12,2024-11-11,Hoge Stephen,President,S,277,46.1047,D,1443248,False
+2024-12-02,2024-11-27,Mock James M,Chief Financial Officer,M,1326,,A,10831,False
+2024-12-02,2024-11-27,Mock James M,Chief Financial Officer,M,329,,A,11160,False
+2024-12-02,2024-11-27,Mock James M,Chief Financial Officer,M,1326,,A,12486,False
+2024-12-02,2024-11-29,Mock James M,Chief Financial Officer,S,1420,42.7891,D,11066,False
+2024-12-02,2024-11-27,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,18483,False
+2024-12-02,2024-11-27,Klinger Shannon Thyme,Chief Legal Officer,M,2652,,A,21135,False
+2024-12-02,2024-11-29,Klinger Shannon Thyme,Chief Legal Officer,S,1418,42.7891,D,19717,False
+2024-12-02,2024-11-27,Hoge Stephen,President,M,610,,A,1443858,False
+2024-12-02,2024-11-29,Hoge Stephen,President,S,291,42.7891,D,1443567,False
+2024-12-04,2024-12-02,Klinger Shannon Thyme,Chief Legal Officer,M,232,,A,19949,False
+2024-12-04,2024-12-03,Klinger Shannon Thyme,Chief Legal Officer,S,112,43.2971,D,19837,False
+2024-12-04,2024-12-02,Hoge Stephen,President,M,651,,A,1444218,False
+2024-12-04,2024-12-03,Hoge Stephen,President,S,314,43.2971,D,1443904,False
+2024-12-10,2024-12-06,Klinger Shannon Thyme,Chief Legal Officer,M,1138,,A,20975,False
+2024-12-10,2024-12-09,Klinger Shannon Thyme,Chief Legal Officer,S,529,44.683,D,20446,False
+2025-01-06,2025-01-03,Mock James M,Chief Financial Officer,M,1453,,A,12519,False
+2025-01-06,2025-01-03,Mock James M,Chief Financial Officer,F,780,42.00,D,11739,False
+2025-02-10,2025-02-07,Hoge Stephen,President,M,523,,A,1444427,False
+2025-02-10,2025-02-07,Hoge Stephen,President,F,281,33.61,D,1444146,False
+2025-02-14,2025-02-12,Klinger Shannon Thyme,Chief Legal Officer,A,2047,0,A,22493,False
+2025-02-14,2025-02-12,Klinger Shannon Thyme,Chief Legal Officer,F,1068,30.93,D,21425,False
+2025-02-14,2025-02-12,Hoge Stephen,President,A,5734,0,A,1449880,False
+2025-02-14,2025-02-12,Hoge Stephen,President,F,2771,30.93,D,1447109,False
+2025-02-14,2025-02-12,Bancel Stephane,Chief Executive Officer,A,13233,0,A,5500297,False
+2025-02-14,2025-02-12,Bancel Stephane,Chief Executive Officer,F,6400,30.93,D,5493897,False
+2025-02-28,2025-02-27,Mock James M,Chief Financial Officer,M,1326,,A,13065,False
+2025-02-28,2025-02-27,Mock James M,Chief Financial Officer,F,642,33.58,D,12423,False
+2025-02-28,2025-02-27,Mock James M,Chief Financial Officer,M,3094,,A,15517,False
+2025-02-28,2025-02-27,Mock James M,Chief Financial Officer,F,1496,33.58,D,14021,False
+2025-02-28,2025-02-27,Mock James M,Chief Financial Officer,M,1326,,A,15347,False
+2025-02-28,2025-02-27,Mock James M,Chief Financial Officer,F,642,33.58,D,14705,False
+2025-02-28,2025-02-27,Klinger Shannon Thyme,Chief Legal Officer,M,3094,,A,24861,False
+2025-02-28,2025-02-27,Klinger Shannon Thyme,Chief Legal Officer,F,1496,33.58,D,23365,False
+2025-02-28,2025-02-27,Klinger Shannon Thyme,Chief Legal Officer,M,2653,,A,26018,False
+2025-02-28,2025-02-27,Klinger Shannon Thyme,Chief Legal Officer,F,1283,33.58,D,24735,False
+2025-02-28,2025-02-27,Hoge Stephen,President,M,5746,,A,1452855,False
+2025-02-28,2025-02-27,Hoge Stephen,President,F,2779,33.58,D,1450076,False
+2025-03-03,2025-02-28,Mock James M,Chief Financial Officer,M,329,,A,15034,False
+2025-03-03,2025-02-28,Mock James M,Chief Financial Officer,F,160,31.09,D,14874,False
+2025-03-03,2025-02-28,Klinger Shannon Thyme,Chief Legal Officer,M,233,,A,24968,False
+2025-03-03,2025-02-28,Klinger Shannon Thyme,Chief Legal Officer,F,113,31.09,D,24855,False
+2025-03-03,2025-02-28,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,25184,False
+2025-03-03,2025-02-28,Klinger Shannon Thyme,Chief Legal Officer,F,160,31.09,D,25024,False
+2025-03-03,2025-02-28,Hoge Stephen,President,M,652,,A,1450728,False
+2025-03-03,2025-02-28,Hoge Stephen,President,F,316,31.09,D,1450412,False
+2025-03-03,2025-02-28,Hoge Stephen,President,M,611,,A,1451023,False
+2025-03-03,2025-02-28,Hoge Stephen,President,F,296,31.09,D,1450727,False
+2025-03-04,2025-03-03,Bancel Stephane,Chief Executive Officer,P,102821,31.04,A,9153193,False
+2025-03-04,2025-03-03,Bancel Stephane,Chief Executive Officer,P,57493,31.53,A,9210686,False
+2025-03-04,2025-03-03,SAGAN PAUL,Director,P,31620,31.76,A,312027,False
+2025-03-10,2025-03-07,Klinger Shannon Thyme,Chief Legal Officer,M,1139,,A,26163,False
+2025-03-10,2025-03-07,Klinger Shannon Thyme,Chief Legal Officer,F,551,34.30,D,25612,False
+2025-04-07,2025-04-04,Mock James M,Chief Financial Officer,M,1452,,A,16326,False
+2025-04-07,2025-04-04,Mock James M,Chief Financial Officer,F,703,25.73,D,15623,False
+2025-05-01,2025-04-30,Rubenstein David M.,Director,M,677,,A,677,False
+2025-05-01,2025-04-30,NABEL ELIZABETH G,Director,M,979,,A,3084,False
+2025-05-01,2025-04-30,Hussain Abbas,Director,M,892,,A,892,False
+2025-05-01,2025-04-30,Horning Sandra,Director,M,979,,A,2352,False
+2025-05-29,2025-05-27,Mock James M,Chief Financial Officer,M,773,,A,16396,False
+2025-05-29,2025-05-27,Mock James M,Chief Financial Officer,F,374,26.26,D,16022,False
+2025-05-29,2025-05-28,Mock James M,Chief Financial Officer,M,328,,A,16350,False
+2025-05-29,2025-05-28,Mock James M,Chief Financial Officer,F,159,26.76,D,16191,False
+2025-05-29,2025-05-27,Klinger Shannon Thyme,Chief Legal Officer,M,773,,A,26385,False
+2025-05-29,2025-05-27,Klinger Shannon Thyme,Chief Legal Officer,F,374,26.26,D,26011,False
+2025-05-29,2025-05-28,Klinger Shannon Thyme,Chief Legal Officer,M,328,,A,26339,False
+2025-05-29,2025-05-28,Klinger Shannon Thyme,Chief Legal Officer,F,159,26.76,D,26180,False
+2025-05-29,2025-05-27,Hoge Stephen,President,M,1436,,A,1452163,False
+2025-05-29,2025-05-27,Hoge Stephen,President,F,695,26.26,D,1451468,False
+2025-05-29,2025-05-28,Hoge Stephen,President,M,610,,A,1452078,False
+2025-05-29,2025-05-28,Hoge Stephen,President,F,295,26.76,D,1451783,False
+2025-06-02,2025-05-30,Hoge Stephen,President,M,652,,A,1452435,False
+2025-06-02,2025-05-30,Hoge Stephen,President,F,316,26.93,D,1452119,False
+2025-06-02,2025-05-30,Klinger Shannon Thyme,Chief Legal Officer,M,233,,A,26413,False
+2025-06-02,2025-05-30,Klinger Shannon Thyme,Chief Legal Officer,F,113,26.93,D,26300,False
+2025-06-09,2025-06-06,Klinger Shannon Thyme,Chief Legal Officer,M,1139,,A,28034,False
+2025-06-09,2025-06-06,Klinger Shannon Thyme,Chief Legal Officer,F,551,26.12,D,27483,False
+2025-06-12,2025-06-11,Hussain Abbas,Director,S,312,28.00,D,580,True
+2025-07-07,2025-07-03,Mock James M,Chief Financial Officer,M,1453,,A,17644,False
+2025-07-07,2025-07-03,Mock James M,Chief Financial Officer,F,703,30.28,D,16941,False
+2025-08-06,2025-08-05,Rubenstein David M.,Director,M,850,,A,1527,False
+2025-08-29,2025-08-27,Mock James M,Chief Financial Officer,M,774,,A,17715,False
+2025-08-29,2025-08-27,Mock James M,Chief Financial Officer,F,375,24.73,D,17340,False
+2025-08-29,2025-08-28,Mock James M,Chief Financial Officer,M,329,,A,17669,False
+2025-08-29,2025-08-28,Mock James M,Chief Financial Officer,F,160,25.10,D,17509,False
+2025-08-29,2025-08-27,Klinger Shannon Thyme,Chief Legal Officer,M,774,,A,28257,False
+2025-08-29,2025-08-27,Klinger Shannon Thyme,Chief Legal Officer,F,375,24.73,D,27882,False
+2025-08-29,2025-08-28,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,28211,False
+2025-08-29,2025-08-28,Klinger Shannon Thyme,Chief Legal Officer,F,160,25.10,D,28051,False
+2025-08-29,2025-08-27,Hoge Stephen,President,M,1437,,A,1453556,False
+2025-08-29,2025-08-27,Hoge Stephen,President,F,695,24.73,D,1452861,False
+2025-08-29,2025-08-28,Hoge Stephen,President,M,611,,A,1453472,False
+2025-08-29,2025-08-28,Hoge Stephen,President,F,296,25.10,D,1453176,False
+2025-09-02,2025-08-29,Klinger Shannon Thyme,Chief Legal Officer,M,232,,A,28283,False
+2025-09-02,2025-08-29,Klinger Shannon Thyme,Chief Legal Officer,F,113,24.47,D,28170,False
+2025-09-02,2025-08-29,Hoge Stephen,President,M,651,,A,1453827,False
+2025-09-02,2025-08-29,Hoge Stephen,President,F,315,24.47,D,1453512,False
+2025-10-06,2025-10-03,Mock James M,Chief Financial Officer,M,1453,,A,18962,False
+2025-10-06,2025-10-03,Mock James M,Chief Financial Officer,F,703,28.37,D,18259,False
+2025-10-06,2025-10-02,Hussain Abbas,Director,M,1439,,A,2019,False
+2025-12-01,2025-11-26,Mock James M,Chief Financial Officer,M,773,,A,19032,False
+2025-12-01,2025-11-26,Mock James M,Chief Financial Officer,F,374,24.75,D,18658,False
+2025-12-01,2025-11-28,Mock James M,Chief Financial Officer,M,329,,A,18987,False
+2025-12-01,2025-11-28,Mock James M,Chief Financial Officer,F,160,25.01,D,18827,False
+2025-12-01,2025-11-26,Klinger Shannon Thyme,Chief Legal Officer,M,773,,A,28943,False
+2025-12-01,2025-11-26,Klinger Shannon Thyme,Chief Legal Officer,F,374,24.75,D,28569,False
+2025-12-01,2025-11-28,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,28898,False
+2025-12-01,2025-11-28,Klinger Shannon Thyme,Chief Legal Officer,F,160,25.01,D,28738,False
+2025-12-01,2025-11-26,Hoge Stephen,President,M,1437,,A,1454949,False
+2025-12-01,2025-11-26,Hoge Stephen,President,F,695,24.75,D,1454254,False
+2025-12-01,2025-11-28,Hoge Stephen,President,M,610,,A,1454864,False
+2025-12-01,2025-11-28,Hoge Stephen,President,F,295,25.01,D,1454569,False
+2025-12-02,2025-12-01,Klinger Shannon Thyme,Chief Legal Officer,M,233,,A,28971,False
+2025-12-02,2025-12-01,Klinger Shannon Thyme,Chief Legal Officer,F,113,25.98,D,28858,False
+2025-12-02,2025-12-01,Hoge Stephen,President,M,652,,A,1455221,False
+2025-12-02,2025-12-01,Hoge Stephen,President,F,316,25.98,D,1454905,False
+2025-12-08,2025-12-05,Mock James M,Chief Financial Officer,M,47190,,A,66017,False
+2025-12-08,2025-12-05,Mock James M,Chief Financial Officer,F,22817,25.49,D,43200,False
+2025-12-08,2025-12-05,Klinger Shannon Thyme,Chief Legal Officer,M,47190,,A,76048,False
+2025-12-08,2025-12-05,Klinger Shannon Thyme,Chief Legal Officer,F,22817,25.49,D,53231,False
+2025-12-11,2025-12-09,Hussain Abbas,Director,S,504,27.60,D,1515,True
+2025-12-15,2025-12-11,AFEYAN NOUBAR,Director,M,23853,10.90,A,27777,False
+2025-12-15,2025-12-11,AFEYAN NOUBAR,Director,S,23853,29.485,D,3924,False
+2025-12-15,2025-12-11,Bancel Stephane,Chief Executive Officer,M,688073,10.90,A,6181970,False
+2026-01-06,2026-01-05,Mock James M,Chief Financial Officer,M,1452,,A,44652,False
+2026-01-06,2026-01-05,Mock James M,Chief Financial Officer,F,780,30.86,D,43872,False
+2026-02-13,2026-02-11,Mock James M,Chief Financial Officer,A,2630,0,A,46502,False
+2026-02-13,2026-02-11,Mock James M,Chief Financial Officer,F,1278,41.99,D,45224,False
+2026-02-13,2026-02-11,Klinger Shannon Thyme,Chief Legal Officer,A,2630,0,A,55861,False
+2026-02-13,2026-02-11,Klinger Shannon Thyme,Chief Legal Officer,F,1334,41.99,D,54527,False
+2026-02-13,2026-02-11,Hoge Stephen,President,A,4884,0,A,1459789,False
+2026-02-13,2026-02-11,Hoge Stephen,President,F,2362,41.99,D,1457427,False
+2026-02-13,2026-02-11,Bancel Stephane,Chief Executive Officer,A,11271,0,A,6193241,False
+2026-02-13,2026-02-11,Bancel Stephane,Chief Executive Officer,F,5450,41.99,D,6187791,False
+2026-02-25,2026-02-23,Hoge Stephen,President,M,111679,19.15,A,1569106,True
+2026-02-25,2026-02-23,Hoge Stephen,President,M,48330,19.15,A,1617436,True
+2026-02-25,2026-02-23,Hoge Stephen,President,S,160009,48.84,D,1457427,True
+2026-03-03,2026-02-27,Hoge Stephen,President,M,652,,A,1458079,False
+2026-03-03,2026-02-27,Hoge Stephen,President,F,316,51.71,D,1457763,False
+2026-03-03,2026-02-27,Hoge Stephen,President,M,611,,A,1458374,False
+2026-03-03,2026-02-27,Hoge Stephen,President,F,296,51.71,D,1458078,False
+2026-03-03,2026-02-27,Hoge Stephen,President,M,1436,,A,1459514,False
+2026-03-03,2026-02-27,Hoge Stephen,President,F,695,51.71,D,1458819,False
+2026-03-03,2026-02-27,Hoge Stephen,President,M,37131,,A,1495950,False
+2026-03-03,2026-02-27,Hoge Stephen,President,F,17953,51.71,D,1477997,False
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,M,233,,A,54760,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,F,113,51.71,D,54647,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,54976,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,F,160,51.71,D,54816,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,M,774,,A,55590,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,F,375,51.71,D,55215,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,M,8663,,A,63878,True
+2026-03-03,2026-02-27,Klinger Shannon Thyme,Chief Legal Officer,F,4189,51.71,D,59689,True
+2026-03-03,2026-03-02,Klinger Shannon Thyme,Chief Legal Officer,M,13885,30.96,A,73574,True
+2026-03-03,2026-03-02,Klinger Shannon Thyme,Chief Legal Officer,S,13885,52.29,D,59689,True
+2026-03-03,2026-02-27,Mock James M,Chief Financial Officer,M,329,,A,45553,False
+2026-03-03,2026-02-27,Mock James M,Chief Financial Officer,F,160,51.71,D,45393,False
+2026-03-03,2026-02-27,Mock James M,Chief Financial Officer,M,774,,A,46167,False
+2026-03-03,2026-02-27,Mock James M,Chief Financial Officer,F,375,51.71,D,45792,False
+2026-03-03,2026-02-27,Mock James M,Chief Financial Officer,M,9901,,A,55693,False
+2026-03-03,2026-02-27,Mock James M,Chief Financial Officer,F,4788,51.71,D,50905,False
+2026-03-06,2026-03-05,Klinger Shannon Thyme,Chief Legal Officer,M,11797,,A,71486,False
+2026-03-06,2026-03-05,Klinger Shannon Thyme,Chief Legal Officer,F,5704,57.80,D,65782,False
+2026-03-06,2026-03-05,Mock James M,Chief Financial Officer,M,11797,,A,62702,False
+2026-03-06,2026-03-05,Mock James M,Chief Financial Officer,F,5704,57.80,D,56998,False
+2026-04-06,2026-04-02,Mock James M,Chief Financial Officer,M,1453,,A,58451,False
+2026-04-06,2026-04-02,Mock James M,Chief Financial Officer,F,703,50.03,D,57748,False
+2026-05-04,2026-04-30,Horning Sandra,Director,M,16233,,A,18585,False
+2026-05-04,2026-04-30,Rubenstein David M.,Director,M,8116,,A,9643,False
+2026-05-04,2026-04-30,Hussain Abbas,Director,M,16233,,A,17748,True
+2026-05-04,2026-05-01,Hussain Abbas,Director,S,5682,46.63,D,12066,True
+2026-05-04,2026-04-30,NABEL ELIZABETH G,Director,M,16233,,A,19317,False
+2026-05-04,2026-04-30,Nader Francois,Director,M,12174,,A,32781,False
+2026-05-04,2026-04-30,Tallett Elizabeth E,Director,M,4058,,A,4761,False
+2026-05-18,2026-05-15,Hoge Stephen,President,M,37226,19.15,A,1515223,True
+2026-05-18,2026-05-15,Hoge Stephen,President,M,16110,19.15,A,1531333,True
+2026-05-18,2026-05-15,Hoge Stephen,President,S,53336,48.40,D,1477997,True
+2026-05-22,2026-05-21,AFEYAN NOUBAR,Director,M,9263,19.15,A,13187,False
+2026-05-22,2026-05-21,AFEYAN NOUBAR,Director,S,9263,46.84,D,3924,False
+2026-05-29,2026-05-27,Mock James M,Chief Financial Officer,M,773,,A,58521,False
+2026-05-29,2026-05-27,Mock James M,Chief Financial Officer,F,374,47.03,D,58147,False
+2026-05-29,2026-05-28,Mock James M,Chief Financial Officer,M,328,,A,58475,False
+2026-05-29,2026-05-28,Mock James M,Chief Financial Officer,F,159,47.61,D,58316,False
+2026-05-29,2026-05-27,Klinger Shannon Thyme,Chief Legal Officer,M,773,,A,66555,False
+2026-05-29,2026-05-27,Klinger Shannon Thyme,Chief Legal Officer,F,374,47.03,D,66181,False
+2026-05-29,2026-05-28,Klinger Shannon Thyme,Chief Legal Officer,M,328,,A,66509,False
+2026-05-29,2026-05-28,Klinger Shannon Thyme,Chief Legal Officer,F,159,47.61,D,66350,False
+2026-05-29,2026-05-27,Hoge Stephen,President,M,1437,,A,1479434,False
+2026-05-29,2026-05-27,Hoge Stephen,President,F,695,47.03,D,1478739,False
+2026-05-29,2026-05-28,Hoge Stephen,President,M,610,,A,1479349,False
+2026-05-29,2026-05-28,Hoge Stephen,President,F,295,47.61,D,1479054,False
+2026-06-03,2026-06-01,Mock James M,Chief Financial Officer,M,2475,,A,60791,False
+2026-06-03,2026-06-01,Mock James M,Chief Financial Officer,F,1197,47.19,D,59594,False
+2026-06-03,2026-06-01,Klinger Shannon Thyme,Chief Legal Officer,M,2165,,A,68515,False
+2026-06-03,2026-06-01,Klinger Shannon Thyme,Chief Legal Officer,F,1047,47.19,D,67468,False
+2026-06-03,2026-06-01,Hoge Stephen,President,M,9282,,A,1488336,False
+2026-06-03,2026-06-01,Hoge Stephen,President,F,4488,47.19,D,1483848,False
+2026-06-08,2026-06-04,Klinger Shannon Thyme,Chief Legal Officer,M,3471,30.96,A,70939,True
+2026-06-08,2026-06-04,Klinger Shannon Thyme,Chief Legal Officer,S,3471,50.00,D,67468,True
+2026-06-08,2026-06-05,Klinger Shannon Thyme,Chief Legal Officer,M,11798,,A,79266,True
+2026-06-08,2026-06-05,Klinger Shannon Thyme,Chief Legal Officer,F,5705,51.59,D,73561,True
+2026-06-08,2026-06-05,Mock James M,Chief Financial Officer,M,11798,,A,71392,False
+2026-06-08,2026-06-05,Mock James M,Chief Financial Officer,F,5705,51.59,D,65687,False
+2026-06-17,2026-06-15,Hoge Stephen,President,M,37226,19.15,A,1521074,True
+2026-06-17,2026-06-15,Hoge Stephen,President,M,16110,19.15,A,1537184,True
+2026-06-17,2026-06-15,Hoge Stephen,President,S,53336,51.37,D,1483848,True
+2026-07-06,2026-07-02,Mock James M,Chief Financial Officer,M,1452,,A,67139,False
+2026-07-06,2026-07-02,Mock James M,Chief Financial Officer,F,703,72.50,D,66436,False
+2026-07-16,2026-07-15,Hoge Stephen,President,M,37226,19.15,A,1521074,True
+2026-07-16,2026-07-15,Hoge Stephen,President,M,16110,19.15,A,1537184,True
+2026-07-16,2026-07-15,Hoge Stephen,President,S,53336,67.60,D,1483848,True
+2026-08-07,2026-08-05,Bancel Stephane,Chief Executive Officer,M,499246,19.15,A,6687037,True
+2026-08-07,2026-08-05,Bancel Stephane,Chief Executive Officer,S,147473,56.21,D,6539564,True
+2026-08-07,2026-08-05,Bancel Stephane,Chief Executive Officer,S,124838,56.96,D,6414726,True
+2026-08-07,2026-08-05,Bancel Stephane,Chief Executive Officer,S,39891,58.12,D,6374835,True
+2026-08-07,2026-08-05,Bancel Stephane,Chief Executive Officer,S,187044,58.79,D,6187791,True
+2026-08-07,2026-08-06,Bancel Stephane,Chief Executive Officer,M,252469,19.15,A,6440260,True
+2026-08-31,2026-08-27,Hoge Stephen,President,M,1437,,A,1485285,False
+2026-08-31,2026-08-27,Hoge Stephen,President,F,695,149.66,D,1484590,False
+2026-08-31,2026-08-28,Hoge Stephen,President,M,611,,A,1485201,False
+2026-08-31,2026-08-28,Hoge Stephen,President,F,296,142.77,D,1484905,False
+2026-08-31,2026-08-27,Klinger Shannon Thyme,Chief Legal Officer,M,774,,A,74335,False
+2026-08-31,2026-08-27,Klinger Shannon Thyme,Chief Legal Officer,F,375,149.66,D,73960,False
+2026-08-31,2026-08-28,Klinger Shannon Thyme,Chief Legal Officer,M,329,,A,74289,False
+2026-08-31,2026-08-28,Klinger Shannon Thyme,Chief Legal Officer,F,160,142.77,D,74129,False
+2026-08-31,2026-08-27,Mock James M,Chief Financial Officer,M,774,,A,67210,False
+2026-08-31,2026-08-27,Mock James M,Chief Financial Officer,F,375,149.66,D,66835,False
+2026-08-31,2026-08-28,Mock James M,Chief Financial Officer,M,329,,A,67164,False
+2026-08-31,2026-08-28,Mock James M,Chief Financial Officer,F,160,142.77,D,67004,False
+2026-09-03,2026-09-01,Klinger Shannon Thyme,Chief Legal Officer,M,3471,30.96,A,77600,True
+2026-09-03,2026-09-01,Klinger Shannon Thyme,Chief Legal Officer,S,3471,139.95,D,74129,True
+2026-09-03,2026-09-01,Klinger Shannon Thyme,Chief Legal Officer,M,2166,,A,76295,True
+2026-09-03,2026-09-01,Klinger Shannon Thyme,Chief Legal Officer,F,1048,140.34,D,75247,True
+2026-09-03,2026-09-01,Mock James M,Chief Financial Officer,M,2475,,A,69479,False
+2026-09-03,2026-09-01,Mock James M,Chief Financial Officer,F,1197,140.34,D,68282,False
+2026-09-03,2026-09-01,Hoge Stephen,President,M,9283,,A,1494188,False
+2026-09-03,2026-09-01,Hoge Stephen,President,F,4489,140.34,D,1489699,False
+2026-09-08,2026-09-04,Mock James M,Chief Financial Officer,M,11797,,A,80079,False
+2026-09-08,2026-09-04,Mock James M,Chief Financial Officer,F,5704,148.87,D,74375,False
+2026-09-08,2026-09-04,Klinger Shannon Thyme,Chief Legal Officer,M,11797,,A,87044,False
+2026-09-08,2026-09-04,Klinger Shannon Thyme,Chief Legal Officer,F,5704,148.87,D,81340,False
+2026-09-14,2026-09-10,Mock James M,Chief Financial Officer,M,19836,30.96,A,94211,True
+2026-09-14,2026-09-10,Mock James M,Chief Financial Officer,S,19836,134.49,D,74375,True
+2026-09-14,2026-09-10,Mock James M,Chief Financial Officer,S,15000,134.49,D,59375,True
+2026-09-16,2026-09-14,Hoge Stephen,President,M,76453,12.21,A,1566152,True
+2026-09-16,2026-09-14,Hoge Stephen,President,S,40294,144.13,D,1525858,True
+2026-09-16,2026-09-15,Hoge Stephen,President,M,76452,12.21,A,1602310,True
+2026-09-16,2026-09-15,Hoge Stephen,President,S,40281,146.07,D,1562029,True

@@ -1,0 +1,202 @@
+[
+ {
+  "status": "PASS",
+  "check": "recalc",
+  "message": "5635 formulas, 0 errors"
+ },
+ {
+  "status": "PASS",
+  "check": "engine-match",
+  "message": "max relative deviation 2.94e-15 across 5 scenarios x (value, EV); blended $33.09"
+ },
+ {
+  "status": "PASS",
+  "check": "tv-share",
+  "message": "failure: EV <= 0 (value floored), TV share not meaningful"
+ },
+ {
+  "status": "PASS",
+  "check": "tv-share",
+  "message": "bear: EV <= 0 (value floored), TV share not meaningful"
+ },
+ {
+  "status": "PASS",
+  "check": "tv-share",
+  "message": "base: PV(TV)/EV = 19%"
+ },
+ {
+  "status": "PASS",
+  "check": "tv-share",
+  "message": "bull: PV(TV)/EV = 19%"
+ },
+ {
+  "status": "PASS",
+  "check": "tv-share",
+  "message": "blue_sky: PV(TV)/EV = 41%"
+ },
+ {
+  "status": "PASS",
+  "check": "wacc",
+  "message": "failure uses build-up WACC 10.43%"
+ },
+ {
+  "status": "PASS",
+  "check": "wacc",
+  "message": "bear uses build-up WACC 10.43%"
+ },
+ {
+  "status": "PASS",
+  "check": "wacc",
+  "message": "base uses build-up WACC 10.43%"
+ },
+ {
+  "status": "PASS",
+  "check": "wacc",
+  "message": "bull uses build-up WACC 10.43%"
+ },
+ {
+  "status": "PASS",
+  "check": "wacc",
+  "message": "blue-sky ceiling test uses 8.00% by design (unweighted)"
+ },
+ {
+  "status": "PASS",
+  "check": "per-share",
+  "message": "M_Failure: per-share formula divides equity by Drivers share-count cells (24 Drivers refs)"
+ },
+ {
+  "status": "PASS",
+  "check": "per-share",
+  "message": "M_Bear: per-share formula divides equity by Drivers share-count cells (24 Drivers refs)"
+ },
+ {
+  "status": "PASS",
+  "check": "per-share",
+  "message": "M_Base: per-share formula divides equity by Drivers share-count cells (24 Drivers refs)"
+ },
+ {
+  "status": "PASS",
+  "check": "per-share",
+  "message": "M_Bull: per-share formula divides equity by Drivers share-count cells (24 Drivers refs)"
+ },
+ {
+  "status": "PASS",
+  "check": "per-share",
+  "message": "M_BlueSky: per-share formula divides equity by Drivers share-count cells (24 Drivers refs)"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Cash & investments, est. x1.1: base $26.48 -> $28.43"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "NOL / deduction pool x0.4: base $26.48 -> $25.30"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Flu peak revenue x1.5: base $26.48 -> $29.87"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Combo peak revenue x1.5: base $26.48 -> $31.63"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Corporate G&A 2027 x1.5: base $26.48 -> $20.78"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Profit-pool margin at launch x2.0: base $26.48 -> $26.91"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Respiratory S&M % revenue x1.5: base $26.48 -> $21.03"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "PA peak sales x3.0: base $26.48 -> $27.59"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Moderna share of profit pool x1.2: base $26.48 -> $29.84"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Options WAEP x0.5: base $26.48 -> $26.05"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "COVID revenue path 2027-32 x1.2: base $26.48 -> $27.00"
+ },
+ {
+  "status": "PASS",
+  "check": "dead-driver",
+  "message": "Adjuvant NSCLC II-IIIB x1.5: base $26.48 -> $28.25"
+ },
+ {
+  "status": "WARN",
+  "check": "liquidity",
+  "message": "failure: cash would fall to $-9.4B (2045); value already floored at liquidation value (restructuring/asset sale assumed)"
+ },
+ {
+  "status": "WARN",
+  "check": "liquidity",
+  "message": "bear: cash would fall to $-4.3B (2045); value already floored at liquidation value (restructuring/asset sale assumed)"
+ },
+ {
+  "status": "WARN",
+  "check": "liquidity",
+  "message": "base: cash would fall to $-0.1B (2032) -> needs ~$0.6B new capital or deeper cost cuts; dilution not modelled"
+ },
+ {
+  "status": "PASS",
+  "check": "liquidity",
+  "message": "bull: minimum cash $4.6B (2030) after debt repayment"
+ },
+ {
+  "status": "PASS",
+  "check": "liquidity",
+  "message": "blue_sky: minimum cash $5.2B (2028) after debt repayment"
+ },
+ {
+  "status": "PASS",
+  "check": "multiples",
+  "message": "fitted EV/Sales 4.9x within commercial-peer range 2.3x-13.8x"
+ },
+ {
+  "status": "PASS",
+  "check": "multiples",
+  "message": "fitted x0.75 3.7x within commercial-peer range 2.3x-13.8x"
+ },
+ {
+  "status": "PASS",
+  "check": "multiples",
+  "message": "fitted x1.25 6.1x within commercial-peer range 2.3x-13.8x"
+ },
+ {
+  "status": "PASS",
+  "check": "multiples",
+  "message": "transaction EV/risk-adj. peak 2.5-4.5x is a judgment range (deal denominators not retrieved) - disclosed in report"
+ },
+ {
+  "status": "PASS",
+  "check": "weights",
+  "message": "scenario probabilities sum 100.00%"
+ },
+ {
+  "status": "PASS",
+  "check": "weights",
+  "message": "method weights sum 100.00%"
+ }
+]

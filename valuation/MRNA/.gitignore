@@ -1,0 +1,10 @@
+# Raw downloads (~250 MB) - re-create with scripts/fetch_edgar.py, fetch_fda.py, fetch_insiders.py
+filings/
+text/
+fda/**/*.pdf
+data/peers/*_companyfacts.json
+data/trials/ctgov_moderna.json
+data/spy_nasdaq.json
+data/mrna_price_nasdaq.json
+data/fetch_*.txt
+__pycache__/

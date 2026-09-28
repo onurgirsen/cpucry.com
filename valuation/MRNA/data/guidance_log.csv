@@ -1,0 +1,24 @@
+id,metric,category,period,issued,source,guide_low,guide_high,base_actual,actual,status,horizon_months,note
+G01,Product sales 2022 ($B),revenue,FY2022,2022-01-10,8-K 2022-01-10 EX-99.1 (JPM),18.5,18.5,17.7,18.4,resolved,12,"APAs ~$18.5B signed at JPM; raised to ~$21B May-22; cut to $18-19B Nov-22"
+G02,Product sales 2022 ($B),revenue,FY2022,2022-05-04,8-K 2022-05-04 EX-99.1 (Q1-22),21.0,21.0,17.7,18.4,resolved,8,"Peak guide; deliveries slipped into 2023"
+G03,Product sales 2023 ($B),revenue,FY2023,2023-01-09,8-K 2023-01-09 EX-99.1 (JPM),5.0,5.0,18.4,6.67,resolved,12,"'minimum ~$5B' from signed APAs (floor, not a point)"
+G04,Product sales 2023 ($B),revenue,FY2023,2023-08-03,8-K 2023-08-03 EX-99.1 (Q2-23),6.0,8.0,18.4,6.67,resolved,5,
+G05,Product sales 2024 ($B),revenue,FY2024,2023-11-02,8-K 2023-11-02 EX-99.1 (Q3-23),4.0,4.0,6.67,3.11,resolved,14,"~$4B; reaffirmed Jan/Feb/May-24; cut to $3.0-3.5B Aug-24"
+G06,Product sales 2024 ($B),revenue,FY2024,2024-08-01,8-K 2024-08-01 EX-99.1 (Q2-24),3.0,3.5,6.67,3.11,resolved,5,
+G07,Revenue 2025 ($B),revenue,FY2025,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),2.5,3.5,3.24,1.944,resolved,15,
+G08,Revenue 2025 ($B),revenue,FY2025,2025-01-13,8-K 2025-01-13 EX-99.1 (JPM),1.5,2.5,3.24,1.944,resolved,12,
+G09,Revenue 2025 ($B),revenue,FY2025,2025-08-01,8-K 2025-08-01 EX-99.1 (Q2-25),1.5,2.2,3.24,1.944,resolved,5,
+G10,Revenue CAGR 2026-2028 (>25%),revenue,FY2026-28,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),0.25,0.25,,,retired,40,"Replaced Nov-25 by 'up to 10% growth in 2026'; counted as a miss"
+G11,Operating cash breakeven 2026,profitability,FY2026,2024-01-08,8-K 2024-01-08 EX-99.1 (JPM),1,1,,0,retired,24,"Moved to 2028 at Sep-24 R&D Day; counted as a miss"
+G12,R&D expense 2025 ($B) [cost],cost,FY2025,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),4.2,4.5,4.54,3.132,resolved,15,"Lower is better"
+G13,GAAP opex 2025 ($B) [cost],cost,FY2025,2025-08-01,8-K 2025-08-01 EX-99.1 (Q2-25),5.9,6.1,7.18,5.018,resolved,5,"Lower is better"
+G14,Year-end cash 2025 ($B),cash,FY2025,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),6.0,6.0,9.5,7.535,resolved,15,"Actual $8.135B incl. $0.6B loan draw -> $7.535B like-for-like"
+G15,Year-end cash 2024 ($B),cash,FY2024,2024-11-07,8-K 2024-11-07 EX-99.1 (Q3-24),9.0,9.0,13.3,9.519,resolved,2,
+G16,R&D expense 2024 ($B) [cost],cost,FY2024,2024-02-22,8-K 2024-02-22 EX-99.1 (Q4-23),4.5,4.5,4.85,4.543,resolved,10,"Raised to ~$4.8B Sep-24 incl. PRV purchase"
+G17,Flu vaccine accelerated approval in 2023,pipeline,2023,2023-01-03,8-K 2023-01-03 EX-99.1 (shareholder letter),1,1,,0,resolved,12,"Approved Aug 5 2026 (US) -> 31 months late; miss"
+G18,CMV vaccine launch readiness,pipeline,2025,2023-01-03,8-K 2023-01-03 EX-99.1 (shareholder letter),1,1,,0,resolved,30,"Phase 3 failed Oct-25; miss"
+G19,Next-gen COVID mRNA-1283 approval,pipeline,2025,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),1,1,,1,resolved,9,"Approved May-25 (mNEXSPIKE); hit"
+G20,Flu+COVID mRNA-1083 filing 2024 / approval,pipeline,2026,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),1,1,,0.5,resolved,19,"Filed Nov-24; US withdrawn/awaiting FDA; EU approved Apr-26; half credit"
+G21,RSV 18-59 high-risk sBLA 2024 -> approval,pipeline,2025,2024-09-12,8-K 2024-09-12 EX-99.1 (R&D Day),1,1,,1,resolved,9,"Approved Jun-25; hit"
+G22,Intismeran Ph3 melanoma data 2026,pipeline,2026,2025-11-20,8-K 2025-11-20 EX-99.1 (Analyst Day),1,1,,1,resolved,9,"Positive topline Aug 19 2026; hit"
+G23,Norovirus Ph3 interim 2026,pipeline,2026,2025-11-20,8-K 2025-11-20 EX-99.1 (Analyst Day),1,1,,0,resolved,8,"Interim did not meet early-success criteria Jul-26; extra cohort; miss"

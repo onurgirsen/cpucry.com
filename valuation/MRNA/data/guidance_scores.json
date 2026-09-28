@@ -1,0 +1,92 @@
+{
+ "revenue": {
+  "n": 10,
+  "retired": 1,
+  "hit_rate": 0.6,
+  "dispersion": 0.178,
+  "mean_level_error": -0.049,
+  "confidence_1y": 64.6,
+  "confidence_2y": 54.9,
+  "confidence_3y": 46.7
+ },
+ "cost": {
+  "n": 3,
+  "retired": 0,
+  "hit_rate": 1.0,
+  "dispersion": 0.119,
+  "mean_level_error": -0.145,
+  "confidence_1y": 92.0,
+  "confidence_2y": 78.2,
+  "confidence_3y": 66.5
+ },
+ "cash": {
+  "n": 2,
+  "retired": 0,
+  "hit_rate": 1.0,
+  "dispersion": 0.099,
+  "mean_level_error": 0.157,
+  "confidence_1y": 90.9,
+  "confidence_2y": 77.2,
+  "confidence_3y": 65.6
+ },
+ "pipeline": {
+  "n": 7,
+  "retired": 0,
+  "hit_rate": 0.5,
+  "dispersion": 0.463,
+  "mean_level_error": null,
+  "confidence_1y": 55.9,
+  "confidence_2y": 47.5,
+  "confidence_3y": 40.4
+ },
+ "profitability": {
+  "n": 1,
+  "retired": 1,
+  "hit_rate": 0.0,
+  "dispersion": 0.5,
+  "mean_level_error": null,
+  "confidence_1y": 14.2,
+  "confidence_2y": 12.0,
+  "confidence_3y": 10.2
+ },
+ "revenue_first_guide_by_year": [
+  {
+   "period": "FY2022",
+   "issued": "2022-01-10",
+   "guided_mid": 18.5,
+   "actual": 18.4,
+   "level_accuracy": 0.995,
+   "guided_growth": 0.045,
+   "actual_growth": 0.04
+  },
+  {
+   "period": "FY2023",
+   "issued": "2023-01-09",
+   "guided_mid": 5.0,
+   "actual": 6.67,
+   "level_accuracy": 1.334,
+   "guided_growth": -0.728,
+   "actual_growth": -0.637
+  },
+  {
+   "period": "FY2024",
+   "issued": "2023-11-02",
+   "guided_mid": 4.0,
+   "actual": 3.11,
+   "level_accuracy": 0.777,
+   "guided_growth": -0.4,
+   "actual_growth": -0.534
+  },
+  {
+   "period": "FY2025",
+   "issued": "2024-09-12",
+   "guided_mid": 3.0,
+   "actual": 1.944,
+   "level_accuracy": 0.648,
+   "guided_growth": -0.074,
+   "actual_growth": -0.4
+  }
+ ],
+ "revenue_mean_level_accuracy_first_guide": 0.939,
+ "revenue_worst_level_accuracy_first_guide": 0.648
+}
