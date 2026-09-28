@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Başkan Koltuğu</title>
+    <meta name="description" content="Merkez bankası başkanı simülasyonu: faizi, likiditeyi, rezervleri ve iletişimi yönet; enflasyon, kur ve hükümet baskısı arasında görev süreni tamamla.">
+    <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Başkan">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="color-scheme" content="light dark">
+    <link rel="apple-touch-icon" href="icon-180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="baskan.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Başlangıç ekranı -->
+        <section id="screen-start" class="screen" aria-label="Başlangıç"></section>
+
+        <!-- Senaryo seçimi -->
+        <section id="screen-setup" class="screen" aria-label="Senaryo seçimi" hidden></section>
+
+        <!-- Oyun -->
+        <section id="screen-game" class="screen" aria-label="Oyun" hidden>
+            <header class="topbar">
+                <div class="topbar-row">
+                    <div class="topbar-title">
+                        <div class="tb-month" id="tbMonth"></div>
+                        <div class="tb-sub" id="tbSub"></div>
+                    </div>
+                    <button class="icon-btn" id="menuBtn" aria-label="Menü">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>
+                    </button>
+                </div>
+                <div class="meters" id="meters"></div>
+            </header>
+
+            <main class="panels">
+                <div class="panel" id="tab-ozet" role="tabpanel"></div>
+                <div class="panel" id="tab-ekip" role="tabpanel" hidden></div>
+                <div class="panel" id="tab-karar" role="tabpanel" hidden></div>
+                <div class="panel" id="tab-grafik" role="tabpanel" hidden></div>
+                <div class="panel" id="tab-gunluk" role="tabpanel" hidden></div>
+            </main>
+
+            <div class="decide-bar" id="decideBar" hidden>
+                <button class="btn btn-primary btn-block" id="decideBtn">Kararı Açıkla</button>
+            </div>
+
+            <nav class="tabbar" role="tablist" aria-label="Bölümler">
+                <button role="tab" data-tab="ozet" aria-selected="true">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></svg>
+                    <span>Özet</span>
+                </button>
+                <button role="tab" data-tab="ekip" aria-selected="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.9 0 5 1.9 5 4.8"/></svg>
+                    <span>Ekip</span>
+                </button>
+                <button role="tab" data-tab="karar" aria-selected="false" class="tab-main">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+                    <span>Karar</span>
+                </button>
+                <button role="tab" data-tab="grafik" aria-selected="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16"/><path d="M7 15l4-5 3 3 5-6"/></svg>
+                    <span>Grafik</span>
+                </button>
+                <button role="tab" data-tab="gunluk" aria-selected="false">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1.2"/><circle cx="4" cy="12" r="1.2"/><circle cx="4" cy="18" r="1.2"/></svg>
+                    <span>Günlük</span>
+                </button>
+            </nav>
+        </section>
+
+        <div id="sheet-root"></div>
+        <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    </div>
+
+    <noscript><p class="noscript">Bu oyun JavaScript gerektirir.</p></noscript>
+    <script src="engine.js"></script>
+    <script src="ui.js"></script>
+</body>
+
+</html>
