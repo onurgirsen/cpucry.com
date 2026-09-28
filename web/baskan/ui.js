@@ -13,6 +13,7 @@
   const ACH_KEY = 'bk.ach.v1';
   const THEME_KEY = 'bk.theme';
   const BEST_KEY = 'bk.best.v1';
+  const FS_KEY = 'bk.fullsupport';
 
   const store = {
     get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -25,7 +26,7 @@
   let tab = 'ozet';
   let busy = false;
   let projCache = null;
-  let setupChoice = { scenario: 'sakin', difficulty: 'normal' };
+  let setupChoice = { scenario: 'sakin', difficulty: 'normal', fullSupport: store.get(FS_KEY, false) === true };
 
   // ---------- Tema ----------
   // Sayfayı barındıran ortam kök öğeye tema koyduysa "Otomatik" onu korur
@@ -71,7 +72,7 @@
         </div>
         <div class="start-actions">
           ${valid ? `<button class="btn btn-primary btn-block" id="continueBtn">
-              <span>Devam et <span class="continue-meta">· ${esc(sc ? sc.name : '')}, ${save.month + 1}. ay</span></span>
+              <span>Devam et <span class="continue-meta">· ${esc(sc ? sc.name : '')}, ${save.month + 1}. ay${save.fullSupport ? ' · Full destek' : ''}</span></span>
             </button>` : ''}
           <button class="btn ${valid ? '' : 'btn-primary'} btn-block" id="newBtn">Yeni görev</button>
           <button class="btn btn-ghost btn-block" id="howBtn">Nasıl oynanır?</button>
@@ -115,6 +116,11 @@
         <div class="section-label">Zorluk</div>
         <div class="seg" id="diffSeg">${diffs}</div>
         <p class="help-text">Zorluk; piyasa oynaklığını, olay sıklığını ve hükümetin sabrını değiştirir.</p>
+        <div class="section-label">Mod</div>
+        <button class="toggle-row" id="fsToggle" role="switch" aria-checked="${setupChoice.fullSupport}">
+          <span class="toggle-text"><b>Full destek modu</b><small>Hiçbir koşulda görevden alınmazsın. Krizler ve dolan görev süresi oyunu bitirmez; oyunu istediğin an menüden bitirirsin. Bu modda başarım ve rekor kaydedilmez.</small></span>
+          <span class="switch" aria-hidden="true"><span></span></span>
+        </button>
       </div>
       <div class="setup-foot"><button class="btn btn-primary btn-block" id="startBtn">Göreve başla</button></div>`;
     $('#setupBack').onclick = () => { renderStart(); show('screen-start'); };
@@ -126,10 +132,15 @@
       setupChoice.difficulty = b.dataset.diff;
       $$('#diffSeg button').forEach((x) => x.setAttribute('aria-pressed', x === b));
     });
+    $('#fsToggle').onclick = () => {
+      setupChoice.fullSupport = !setupChoice.fullSupport;
+      store.set(FS_KEY, setupChoice.fullSupport);
+      $('#fsToggle').setAttribute('aria-checked', setupChoice.fullSupport);
+    };
     $('#startBtn').onclick = () => {
       const existing = store.get(SAVE_KEY, null);
       const go = () => {
-        S = BK.newGame(setupChoice.scenario, setupChoice.difficulty, (Math.random() * 2 ** 31) | 0);
+        S = BK.newGame(setupChoice.scenario, setupChoice.difficulty, (Math.random() * 2 ** 31) | 0, { fullSupport: setupChoice.fullSupport });
         save();
         enterGame(true);
       };
@@ -172,9 +183,11 @@
 
   function renderTopbar() {
     const sc = BK.scenario(S);
-    const m = Math.min(S.month, S.totalMonths - 1);
-    $('#tbMonth').textContent = BK.monthLabel(S, m);
-    $('#tbSub').textContent = S.gameOver ? `${sc.name} · Görev sona erdi` : `${sc.name} · ${S.month + 1}/${S.totalMonths}. toplantı · ${BK.DIFFICULTY[S.difficulty].label}`;
+    $('#tbMonth').textContent = BK.monthLabel(S, labelMonth(S.month));
+    const fs = S.fullSupport ? ' · Full destek' : '';
+    $('#tbSub').textContent = S.gameOver ? `${sc.name} · Görev sona erdi${fs}`
+      : S.month >= S.totalMonths ? `${sc.name} · ${S.month + 1}. toplantı (ek süre)${fs}`
+        : `${sc.name} · ${S.month + 1}/${S.totalMonths}. toplantı · ${BK.DIFFICULTY[S.difficulty].label}${fs}`;
     const meters = [
       { k: 'cred', name: 'Güven', v: S.cred },
       { k: 'gov', name: 'Hükümet', v: S.gov },
@@ -190,6 +203,9 @@
     }).join('');
     $$('#meters .meter').forEach((b) => b.onclick = () => openMeterInfo(b.dataset.meter));
   }
+
+  // Normal modda oyun sonu son ayı gösterir; Full destek modunda ek süre ayları da gerçek adıyla görünür
+  function labelMonth(m) { return S.fullSupport ? m : Math.min(m, S.totalMonths - 1); }
 
   function renderTab() {
     if (!S) return;
@@ -243,7 +259,7 @@
       { k: 'infl', label: 'Yıllık enflasyon', value: `%${fmt(S.infl)}`, sub: `aylık ${pct(mi)}`, cls: 'c-infl', d: deltaHtml(S.infl, prev && prev.infl, -1) },
       { k: 'rate', label: 'Politika faizi', value: `%${fmt(S.rate)}`, sub: `reel ${pct(S.rr)}`, cls: 'c-rate', d: '' },
       { k: 'exp', label: 'Beklenti (12 ay)', value: `%${fmt(S.exp)}`, sub: '', cls: 'c-exp', d: deltaHtml(S.exp, prev && prev.exp, -1) },
-      { k: 'fx', label: 'Dolar/TL', value: fmt(S.fx, S.fx < 100 ? 2 : 1), sub: S.month ? `aylık ${S.dep >= 0 ? '+' : ''}${pct(S.dep)}` : 'göreve başlarken', cls: 'c-fx', d: '' },
+      { k: 'fx', label: 'Dolar/TL', value: fmt(S.fx, S.fx < 100 ? 2 : S.fx < 10000 ? 1 : 0), sub: S.month ? `aylık ${S.dep >= 0 ? '+' : ''}${pct(S.dep)}` : 'göreve başlarken', cls: 'c-fx', d: '' },
       { k: 'res', label: 'Net rezerv', value: `${fmt(S.reserves)} mr $`, sub: '', cls: 'c-res', d: deltaHtml(S.reserves, prev && prev.res, 1) },
       { k: 'gdp', label: 'Büyüme (yıllık)', value: pct(S.growth), sub: '', cls: 'c-gdp', d: deltaHtml(S.growth, prev && prev.gdp, 1) },
       { k: 'u', label: 'İşsizlik', value: `%${fmt(S.unemp)}`, sub: '', cls: 'c-u', d: deltaHtml(S.unemp, prev && prev.u, -1) },
@@ -253,14 +269,16 @@
       <button class="kpi" data-kpi="${t.k}">
         <div class="kpi-label">${t.label}</div>
         ${spark(t.k, t.cls)}
-        <div class="kpi-value">${t.value}</div>
+        <div class="kpi-value${t.value.length > 9 ? ' long' : ''}">${t.value}</div>
         <div class="kpi-sub">${t.d ? t.d + (t.sub ? ' · ' : '') : ''}${t.sub}</div>
       </button>`).join('');
     const warn = [];
-    if (S.gov < 25) warn.push({ c: 'bad', i: '🚨', t: `Hükümet desteği ${Math.round(S.gov)}/100. Sıfıra inerse görevden alınırsın.` });
-    if (S.reserves < 10) warn.push({ c: 'bad', i: '🏦', t: `Net rezerv ${fmt(S.reserves)} milyar $. −35’in altına düşerse döviz krizi çıkar.` });
+    const F = S.fullSupport;
+    if (F && !S.gameOver && S.month >= S.totalMonths) warn.push({ c: 'good', i: '⏱️', t: `Görev süren doldu, ek süredesin (${S.month - S.totalMonths + 1}. ay). İstediğin kadar devam edebilirsin. <button class="link-btn" id="finishNow">Görevi bitir, karneyi al</button>` });
+    if (S.gov < 25) warn.push({ c: 'bad', i: '🚨', t: F ? `Hükümet desteği ${Math.round(S.gov)}/100. Full destek modunda görevden alınmazsın.` : `Hükümet desteği ${Math.round(S.gov)}/100. Sıfıra inerse görevden alınırsın.` });
+    if (S.reserves < 10) warn.push({ c: 'bad', i: '🏦', t: F ? `Net rezerv ${fmt(S.reserves)} milyar $. Full destek modunda döviz krizi oyunu bitirmez ama kur baskısı sürer.` : `Net rezerv ${fmt(S.reserves)} milyar $. −35’in altına düşerse döviz krizi çıkar.` });
     if (S.bank < 25) warn.push({ c: 'bad', i: '🏧', t: `Bankacılık sistemi kırılgan (${Math.round(S.bank)}/100).` });
-    if (S.infl > 120) warn.push({ c: 'bad', i: '🎈', t: 'Enflasyon %200’ü aşarsa hiperenflasyon oyunu bitirir.' });
+    if (S.infl > 120) warn.push({ c: 'bad', i: '🎈', t: F ? 'Enflasyon kontrolden çıktı. Full destek modunda oyun sürüyor; toparlamak senin elinde.' : 'Enflasyon %200’ü aşarsa hiperenflasyon oyunu bitirir.' });
     if (S.flags.promiseCut) warn.push({ c: '', i: '🤝', t: 'Hükümete faiz indirimi sözü verdin. Bu ay en az 100 baz puan indirmezsen tepki sert olacak.' });
 
     const lastDec = S.log.slice().reverse().find((l) => l.type === 'decision');
@@ -271,7 +289,7 @@
         <div class="goal-emoji">${sc.emoji}</div>
         <div><h3>${esc(sc.name)}</h3><p>${esc(sc.goalText)}</p></div>
         <div class="goal-status">${goals.map((g) => `<span class="pill ${g.ok ? 'ok' : 'no'}">${g.ok ? '✓' : '✗'} ${esc(g.text)}</span>`).join('')}</div>
-        <div class="progress" aria-label="Görev ilerlemesi"><div style="width:${(S.month / S.totalMonths * 100).toFixed(1)}%"></div></div>
+        <div class="progress" aria-label="Görev ilerlemesi"><div style="width:${Math.min(100, S.month / S.totalMonths * 100).toFixed(1)}%"></div></div>
       </div>
       <div class="kpis">${tileHtml}</div>
       <div class="card">
@@ -294,6 +312,7 @@
       ${lastDec ? `<p class="small muted" style="text-align:center">Son karar: ${esc(lastDec.text)}</p>` : ''}
       ${!S.gameOver ? `<button class="btn btn-primary btn-block" id="goDecide">Bu ayın kararına geç →</button>` : ''}`;
     const gd = $('#goDecide'); if (gd) gd.onclick = () => setTab('karar');
+    const fn = $('#finishNow'); if (fn) fn.onclick = () => finishGame();
     const se = $('#seeEnd'); if (se) se.onclick = () => openEnd();
     const ne = $('#newFromEnd'); if (ne) ne.onclick = () => { renderSetup(); show('screen-setup'); };
     $$('#tab-ozet .kpi').forEach((b) => b.onclick = () => openKpiInfo(b.dataset.kpi));
@@ -615,7 +634,7 @@
     const icon = { decision: '⚖️', note: '💬', info: 'ℹ️', end: '🏁' };
     let html = '';
     groups.forEach((items, m) => {
-      html += `<div class="log-group"><h4>${esc(BK.monthLabel(S, Math.min(m, S.totalMonths - 1)))}</h4>` +
+      html += `<div class="log-group"><h4>${esc(BK.monthLabel(S, labelMonth(m)))}</h4>` +
         items.map((l) => {
           let text = l.text, ic = icon[l.type] || '•';
           if (l.type === 'event') { const sp = text.indexOf(' '); ic = text.slice(0, sp); text = text.slice(sp + 1); }
@@ -719,11 +738,11 @@
       busy = false;
     }
     save();
-    const newAch = recordAchievements();
+    const newAch = S.fullSupport ? [] : recordAchievements();
     resetDraft();
     renderTopbar();
     await openResult(result);
-    if (S.gameOver) { recordBest(); await openEnd(newAch); }
+    if (S.gameOver) { if (!S.fullSupport) recordBest(); await openEnd(newAch); }
     else {
       if (newAch.length) await openNewAch(newAch);
       setTab('ozet');
@@ -778,6 +797,7 @@
       icon: sc.emoji, kicker: 'Görev başlıyor', title: sc.name,
       html: `<p>${esc(sc.blurb)}</p>
         <p><b>Hedef:</b> ${esc(sc.goalText)}</p>
+        ${S.fullSupport ? '<p><b>Full destek modu açık.</b> Hiçbir kriz ya da gösterge oyunu bitirmez; görev süresi dolunca ek sürede devam edersin. Bitirmek istediğinde menüden “Görevi bitir”e dokun.</p>' : ''}
         <p class="muted small">Her ay bir Para Politikası Kurulu toplantısı yapılır. <b>Ekip</b> sekmesinde danışmanlarını dinle, <b>Karar</b> sekmesinde araçlarını ayarla ve kararı açıkla. Göstergelerin üzerine dokunarak ne anlama geldiklerini öğrenebilirsin.</p>`,
       actions: [{ label: 'Hadi başlayalım', primary: true }],
     }).then(() => processPending());
@@ -817,7 +837,7 @@
     const bars = [['Enflasyon', p.infl], ['Büyüme', p.growth], ['Güvenilirlik', p.cred], ['Rezervler', p.res], ['Kamuoyu', p.appr], ['Finansal istikrar', p.stab]];
     const peakInfl = Math.max(...S.history.filter((h) => h.m >= 0).map((h) => h.infl));
     const achList = (newAch || []).map((id) => BK.ACHIEVEMENTS.find((a) => a.id === id)).filter(Boolean);
-    const icon = go.reason === 'complete' ? (go.score.goalMet ? '🏆' : '🏁') : go.reason === 'fired' ? '📠' : go.reason === 'hyper' ? '🎈' : go.reason === 'fxcrisis' ? '💥' : '🏚️';
+    const icon = go.reason === 'complete' ? (go.score.goalMet ? '🏆' : '🏁') : go.reason === 'resigned' ? '🏳️' : go.reason === 'fired' ? '📠' : go.reason === 'hyper' ? '🎈' : go.reason === 'fxcrisis' ? '💥' : '🏚️';
     const html = `
       <p>${esc(et.text)}</p>
       <div class="grade">
@@ -833,11 +853,12 @@
         <tr><td>Dolar/TL</td><td>${fmt(S.start.fx, 2)} → ${fmt(S.fx, 2)}</td><td></td></tr>
         <tr><td>Net rezerv</td><td>${fmt(S.start.reserves)} → ${fmt(S.reserves)} mr $</td><td></td></tr>
         <tr><td>Ortalama büyüme</td><td>${pct(go.score.avgGrowth)}</td><td></td></tr>
-        <tr><td>Görevde kalınan</td><td>${S.month} / ${S.totalMonths} ay</td><td></td></tr>
+        <tr><td>Görevde kalınan</td><td>${S.month} / ${S.totalMonths} ay${S.month > S.totalMonths ? ` (+${S.month - S.totalMonths} ek süre)` : ''}</td><td></td></tr>
       </table>
+      ${S.fullSupport ? '<p class="muted small">Full destek modunda oynandı; başarım ve rekor kaydedilmedi.</p>' : ''}
       ${achList.length ? `<div class="card-title" style="margin-top:12px">Yeni başarımlar</div><div class="ach-grid">${achList.map((a) => `<div class="ach new"><div class="ach-icon">${a.icon}</div><b>${esc(a.name)}</b>${esc(a.desc)}</div>`).join('')}</div>` : ''}`;
     return openSheet({
-      icon, kicker: `${sc.name} · ${BK.DIFFICULTY[S.difficulty].label}`, title: et.title, html,
+      icon, kicker: `${sc.name} · ${BK.DIFFICULTY[S.difficulty].label}${S.fullSupport ? ' · Full destek' : ''}`, title: et.title, html,
       actions: [{ label: 'Sonucu paylaş', value: 'share' }, { label: 'Yeni görev', primary: true, value: 'new' }, { label: 'Grafikleri incele', value: 'charts' }],
     }).then((v) => {
       if (v === 'share') { share(); return openEnd(); }
@@ -847,10 +868,31 @@
     });
   }
 
+  // Full destek modunda oyunu yalnızca oyuncu bitirir
+  function finishGame() {
+    if (!S || S.gameOver) return;
+    const early = S.month < S.totalMonths;
+    openSheet({
+      icon: '🏁', title: 'Görev bitsin mi?',
+      html: `<p>${early
+        ? `Görev süren henüz dolmadı (${S.month}/${S.totalMonths} ay). Şimdi bitirirsen görevi bırakmış sayılırsın ve karnen görevde kaldığın süreye göre hesaplanır.`
+        : 'Karnen şu anki göstergelere göre hesaplanacak. Bitirdikten sonra bu görevde yeni karar alamazsın.'}</p>`,
+      actions: [{ label: 'Görevi bitir', primary: true, value: 'ok' }, { label: 'Devam et', value: null }],
+    }).then((v) => {
+      if (v !== 'ok') return;
+      BK.endGame(S);
+      save();
+      resetDraft();
+      setTab('ozet');
+      renderGame();
+      openEnd();
+    });
+  }
+
   function share() {
     const sc = BK.scenario(S);
     const go = S.gameOver;
-    const text = `Başkan Koltuğu 🏛️ ${sc.name} (${BK.DIFFICULTY[S.difficulty].label}): ${go.score.grade} notu, ${go.score.total}/100. Enflasyon %${fmt(S.start.infl)} → %${fmt(S.infl)}, ${S.month} ay görevde kaldım.`;
+    const text = `Başkan Koltuğu 🏛️ ${sc.name} (${BK.DIFFICULTY[S.difficulty].label}${S.fullSupport ? ', Full destek' : ''}): ${go.score.grade} notu, ${go.score.total}/100. Enflasyon %${fmt(S.start.infl)} → %${fmt(S.infl)}, ${S.month} ay görevde kaldım.`;
     const url = location.href.split('#')[0];
     const copy = () => {
       if (!navigator.clipboard) { toast('Kopyalanamadı'); return; }
@@ -879,15 +921,23 @@
     cds: ['Risk primi (CDS)', 'Ülkenin borç ödeyememe riskinin piyasa fiyatı. Düşük güvenilirlik, zayıf rezerv, yüksek enflasyon ve mali gevşeklik CDS’i yükseltir. Yüksek CDS nötr faizi artırır ve sermayeyi kaçırır.'],
   };
 
+  const FS_NOTE = {
+    gov: 'Full destek modundasın: destek sıfıra inse de görevden alınmazsın.',
+    bank: 'Full destek modundasın: sağlık sıfıra inse de oyun bitmez.',
+    res: 'Full destek modundasın: rezervler ne kadar düşerse düşsün oyun bitmez.',
+    infl: 'Full destek modundasın: hiperenflasyon oyunu bitirmez.',
+  };
+  const fsNote = (k) => (S && S.fullSupport && FS_NOTE[k] ? `<p><b>${esc(FS_NOTE[k])}</b></p>` : '');
+
   function openMeterInfo(k) {
     const [t, d] = METER_INFO[k];
-    openSheet({ title: t, html: `<p>${esc(d)}</p>`, actions: [{ label: 'Tamam', primary: true }] });
+    openSheet({ title: t, html: `<p>${esc(d)}</p>${fsNote(k)}`, actions: [{ label: 'Tamam', primary: true }] });
   }
 
   function openKpiInfo(k) {
     const info = KPI_INFO[k];
     if (!info) return;
-    openSheet({ title: info[0], html: `<p>${esc(info[1])}</p>`, actions: [{ label: 'Grafiklere git', value: 'g' }, { label: 'Tamam', primary: true }] })
+    openSheet({ title: info[0], html: `<p>${esc(info[1])}</p>${fsNote(k)}`, actions: [{ label: 'Grafiklere git', value: 'g' }, { label: 'Tamam', primary: true }] })
       .then((v) => { if (v === 'g') setTab('grafik'); });
   }
 
@@ -920,6 +970,12 @@
           <li>Görev süren dolarsa karne alırsın. Senaryo hedefini tutturmak ek puan kazandırır.</li>
           <li>Hükümet desteği 0’a inerse görevden alınırsın.</li>
           <li>Net rezerv −35 milyar $’ın altına düşerse döviz krizi, enflasyon %200’ü aşarsa hiperenflasyon, bankacılık sağlığı sıfırlanırsa bankacılık krizi olur.</li>
+        </ul>
+        <h3>Full destek modu</h3>
+        <ul>
+          <li>Yeni görev ekranındaki anahtarla açılır. Görevden alınmazsın; döviz krizi, hiperenflasyon ya da bankacılık krizi oyunu bitirmez.</li>
+          <li>Görev süresi dolunca ek sürede oynamaya devam edersin. Oyunu bitirmek senin elinde: menüden “Görevi bitir”e dokunduğunda karnen hesaplanır.</li>
+          <li>Bu modda başarım ve rekor kaydedilmez.</li>
         </ul>
         <h3>İpuçları</h3>
         <ul>
@@ -984,6 +1040,7 @@
             <button data-t="dark" aria-pressed="${theme === 'dark'}">Koyu</button>
           </div>
           <div class="section-label" style="margin:12px 4px 4px">Görev</div>
+          ${S && S.fullSupport && !S.gameOver ? '<button class="btn btn-primary btn-block" data-m="finish">🏁 Görevi bitir, karneyi al</button>' : ''}
           <button class="btn btn-block" data-m="home">🏠 Ana ekrana dön</button>
           <button class="btn btn-danger btn-block" data-m="new">Görevi bırak, yeni görev başlat</button>
         </div>`,
@@ -1000,6 +1057,7 @@
       if (v === 'help') openHelp();
       else if (v === 'gloss') openGlossary();
       else if (v === 'ach') openAchievements();
+      else if (v === 'finish') finishGame();
       else if (v === 'home') { renderStart(); show('screen-start'); }
       else if (v === 'new') {
         if (S && S.gameOver) { store.del(SAVE_KEY); renderSetup(); show('screen-setup'); }

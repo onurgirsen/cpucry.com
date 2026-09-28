@@ -453,6 +453,69 @@ button {
     z-index: 5;
 }
 
+/* ---------- Açma/kapama anahtarı ---------- */
+
+.toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 14px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    text-align: left;
+    cursor: pointer;
+}
+
+.toggle-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.toggle-text b {
+    display: block;
+    font-size: 16px;
+}
+
+.toggle-text small {
+    display: block;
+    margin-top: 3px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.switch {
+    position: relative;
+    flex: 0 0 auto;
+    width: 51px;
+    height: 31px;
+    border-radius: 99px;
+    background: var(--surface-3);
+    transition: background-color .2s ease;
+}
+
+.switch span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    transition: transform .2s ease;
+}
+
+.toggle-row[aria-checked="true"] .switch {
+    background: var(--accent);
+}
+
+.toggle-row[aria-checked="true"] .switch span {
+    transform: translateX(20px);
+}
+
 /* ---------- Segment kontrolü ---------- */
 
 .seg {
@@ -754,6 +817,10 @@ button {
     font-variant-numeric: tabular-nums;
     line-height: 1.2;
     margin-top: 2px;
+}
+
+.kpi-value.long {
+    font-size: 18px;
 }
 
 .kpi-sub {

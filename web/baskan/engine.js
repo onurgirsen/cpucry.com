@@ -145,13 +145,15 @@
   }
 
   // ---------- Yeni oyun ----------
-  function newGame(scenarioId, difficulty, seed) {
+  // opts.fullSupport: oyun hiçbir koşulda kendiliğinden bitmez; yalnızca endGame ile biter
+  function newGame(scenarioId, difficulty, seed, opts) {
     const sc = SCENARIOS.find((x) => x.id === scenarioId) || SCENARIOS[0];
     const s = { version: 1, rng: (seed >>> 0) || ((Date.now() ^ 0x5bd1e995) >>> 0) };
     const init = sc.random ? randomInit(s) : sc.init;
     Object.assign(s, {
       scenarioId: sc.id,
       difficulty: DIFFICULTY[difficulty] ? difficulty : 'normal',
+      fullSupport: !!(opts && opts.fullSupport),
       month: 0,
       totalMonths: sc.months,
       calStart: sc.random ? Math.floor(rand(s) * 12) : sc.calStart,
@@ -297,6 +299,7 @@
     const surprise = newRate - expRate;
     const prevGuidance = s.guidance;
     const sale = clamp(Math.round(d.fx || 0), -10, maxSale(s));
+    const notesPre = [];
 
     s.rate = newRate;
     s.liquidity = clamp(d.liquidity | 0, -1, 1);
@@ -355,6 +358,14 @@
     dep = clamp(dep, -5, 40);
     s.fx *= 1 + dep / 100;
     s.dep = dep;
+    // Kur okunamaz hale gelirse paradan altı sıfır atılır (geçmiş de aynı ölçeğe çekilir)
+    if (s.fx > 1e6 && !s._quiet) {
+      s.fx /= 1e6;
+      s.start.fx /= 1e6;
+      s.history.forEach((h) => { if (h.fx != null) h.fx /= 1e6; });
+      s.flags.redenom = (s.flags.redenom || 0) + 1;
+      notesPre.push('Paradan altı sıfır atıldı: 1.000.000 eski lira artık 1 yeni lira. Kur ve geçmiş veriler yeni birimle gösteriliyor.');
+    }
     const depExcess = dep - drift;
 
     // Enflasyon
@@ -395,7 +406,7 @@
     s.cds = clamp(s.cds + 0.25 * (cdsT - s.cds) + sh.cds + randn(s) * 12 * diff.noise, 60, 1800);
 
     // Güvenilirlik
-    const notes = [];
+    const notes = notesPre;
     const dev = rr - (need - 3);
     let dc = 0;
     if (dev >= 0) { s.flags.streak = (s.flags.streak || 0) + 1; dc += 0.6 + Math.min(1.2, 0.1 * s.flags.streak); }
@@ -492,17 +503,27 @@
 
   // ---------- Oyun sonu ----------
   function checkGameOver(s) {
+    if (s.fullSupport) return;
     let reason = null;
     if (s.gov <= 0) reason = 'fired';
     else if (s.reserves < -35) reason = 'fxcrisis';
     else if (s.infl > 200) reason = 'hyper';
     else if (s.bank <= 0) reason = 'bankcrisis';
     else if (s.month >= s.totalMonths) reason = 'complete';
-    if (reason) {
-      s.gameOver = { reason, score: computeScore(s, reason) };
-      s.pending = [];
-      addLog(s, 'end', END_TEXT[reason].title);
-    }
+    if (reason) finish(s, reason);
+  }
+
+  function finish(s, reason) {
+    s.gameOver = { reason, score: computeScore(s, reason) };
+    s.pending = [];
+    addLog(s, 'end', END_TEXT[reason].title);
+    return s.gameOver;
+  }
+
+  // Oyuncunun kendi isteğiyle bitirmesi (Full destek modunda tek çıkış yolu)
+  function endGame(s) {
+    if (s.gameOver) return s.gameOver;
+    return finish(s, s.month >= s.totalMonths ? 'complete' : 'resigned');
   }
 
   const END_TEXT = {
@@ -511,6 +532,7 @@
     fxcrisis: { title: 'Döviz krizi', text: 'Net rezervler tükendi, lira serbest düşüşe geçti. Ülke acil dış finansman masasına oturdu; sen ise istifa ettin.' },
     hyper: { title: 'Hiperenflasyon', text: 'Fiyatlar her gün değişiyor, dükkânlar etiket basmaktan vazgeçti. Enflasyon kontrolden çıktı ve görevin sona erdi.' },
     bankcrisis: { title: 'Bankacılık krizi', text: 'Mevduat kaçışı sistemi kilitledi, birkaç banka kapılarını kapattı. Olağanüstü tedbirlerle birlikte görevden ayrıldın.' },
+    resigned: { title: 'Görevi bıraktın', text: 'Görev süren dolmadan kendi kararınla koltuğu devrettin. Karnen görevde kaldığın süreye göre hesaplandı.' },
   };
 
   function goalMet(s) {
@@ -566,6 +588,7 @@
 
   function earnedAchievements(s) {
     const out = [];
+    if (s.fullSupport) return out; // Full destek modunda başarım kazanılmaz
     const f = s.flags;
     if (f.maxRate > 50) out.push('demir');
     if (f.defy >= 3) out.push('bagimsiz');
@@ -870,10 +893,10 @@
   function forcedEvents(s) {
     const out = [];
     const cm = calMonth(s);
-    if (s.month > 0 && s.month % 3 === 0 && s.month <= s.totalMonths - 3) out.push(inflationReportEvent(s));
+    if (s.month > 0 && s.month % 3 === 0 && (s.fullSupport || s.month <= s.totalMonths - 3)) out.push(inflationReportEvent(s));
     if ((cm === 0 || cm === 6) && s.month > 0) out.push(wageEvent(s));
     if (s.electionMonth && s.month === s.electionMonth && !s.flags.electionDone) out.push(electionEvent(s));
-    if (s.gov < 18 && !s.flags.crisisWarned) out.push(warningEvent(s));
+    if (s.gov < 18 && !s.flags.crisisWarned && !s.fullSupport) out.push(warningEvent(s));
     return out;
   }
 
@@ -1048,7 +1071,7 @@
 
   const API = {
     SCENARIOS, DIFFICULTY, ACHIEVEMENTS, END_TEXT, MONTHS, MONTHS_SHORT,
-    newGame, step, resolveEvent, advisors, project, recommendedPolicy, marketExpectation, taylorRate, gradualRate, effectiveRate, neutralRate,
+    newGame, step, endGame, resolveEvent, advisors, project, recommendedPolicy, marketExpectation, taylorRate, gradualRate, effectiveRate, neutralRate,
     fisherReal, maxSale, scenario, monthLabel, calMonth, yearOf, goalMet, earnedAchievements, computeScore, fmt, bp, pct, clamp,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = API;
