@@ -28,9 +28,12 @@
   let setupChoice = { scenario: 'sakin', difficulty: 'normal' };
 
   // ---------- Tema ----------
+  // Sayfayı barındıran ortam kök öğeye tema koyduysa "Otomatik" onu korur
+  const hostTheme = document.documentElement.getAttribute('data-theme');
   function applyTheme(t) {
     const root = document.documentElement;
     if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t);
+    else if (hostTheme) root.setAttribute('data-theme', hostTheme);
     else root.removeAttribute('data-theme');
   }
   applyTheme(store.get(THEME_KEY, 'auto'));
@@ -849,8 +852,12 @@
     const go = S.gameOver;
     const text = `Başkan Koltuğu 🏛️ ${sc.name} (${BK.DIFFICULTY[S.difficulty].label}): ${go.score.grade} notu, ${go.score.total}/100. Enflasyon %${fmt(S.start.infl)} → %${fmt(S.infl)}, ${S.month} ay görevde kaldım.`;
     const url = location.href.split('#')[0];
-    if (navigator.share) navigator.share({ title: 'Başkan Koltuğu', text, url }).catch(() => {});
-    else if (navigator.clipboard) navigator.clipboard.writeText(`${text} ${url}`).then(() => toast('Panoya kopyalandı'), () => toast('Kopyalanamadı'));
+    const copy = () => {
+      if (!navigator.clipboard) { toast('Kopyalanamadı'); return; }
+      navigator.clipboard.writeText(`${text} ${url}`).then(() => toast('Sonuç panoya kopyalandı'), () => toast('Kopyalanamadı'));
+    };
+    if (navigator.share) navigator.share({ title: 'Başkan Koltuğu', text, url }).catch((e) => { if (!e || e.name !== 'AbortError') copy(); });
+    else copy();
   }
 
   // ---------- Bilgi sayfaları ----------
