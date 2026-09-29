@@ -26,8 +26,11 @@
 **Ana bulgu.** 19 Ağustos 2026'da Merck ile ortak geliştirilen kişiye özel kanser tedavisi **intismeran otojen (mRNA-4157/V940)** melanomda Faz 3'te (INTerpath-001) birincil sonlanım noktasını tutturdu ve hisse tek günde %177 yükseldi (63 $ → 174 $); o zamandan beri 199 $'a çıktı. Bu gerçek ve önemli bir bilimsel başarı; modelimizde melanomun onay olasılığı %88, "gelecek tümörler" dahil 10 endikasyon için risk-ayarlı zirve intismeran satışı **7,3 milyar $** (ayarsız 22 milyar $). Ama Moderna bu satışların **kârının yalnızca %50'sini** alıyor ve bugün yılda ~3 milyar $ nakit yakan bir maliyet tabanını taşıyor.
 
 **Ters DCF ne diyor?** 199 $'ı haklı çıkarmak için:
-- Diğer tüm varsayımlar baz senaryoda kalırsa, **risk-ayarlı** intismeran zirve satışının ~**81 milyar $** olması gerekir (bizim baz: 7,3 milyar $; ~11 kat).
-- **On endikasyonun hepsi %100 başarılı** olsa ve boğa ticari koşulları (ABD'de ~420 bin $ net fiyat, %62 marj, güçlü solunum franchise'ı) gerçekleşse bile, gereken ayarsız zirve satış **~51 milyar $**'dır. Yayımlanmış en iyimser analist tahminleri 9–17 milyar $ aralığında (Wolfe 9,2; Goldman melanom+akciğer 10,9; Morningstar 2035'te 16,8 milyar $).
+- Diğer tüm varsayımlar baz senaryoda kalırsa, intismeran zirve satışlarının baz senaryonun **~11 katı** olması gerekir (risk-ayarlı, fiyat çarpanı öncesi 7,3 → ~81 milyar $).
+- **On endikasyonun hepsi %100 başarılı** olsa ve boğa ticari koşulları (ABD'de ~420 bin $ net fiyat, %62 marj, güçlü solunum franchise'ı) gerçekleşse bile, gereken zirve **yıllık intismeran satışı ~69 milyar $**'dır (AOSM %9 ile ~52 milyar $). Yayımlanmış en iyimser analist tahminleri 9–17 milyar $ aralığında (Wolfe 9,2; Goldman melanom+akciğer 10,9; Morningstar 2035'te 16,8 milyar $).
+- Sinerji yaratabilen bir alıcı (Merck tipi; kurumsal maliyetleri keser, %7,5 sermaye maliyeti) için bile, her endikasyon başarılıyken gereken zirve satış **~34 milyar $** — yayımlanmış en iyimser tahminin ~2 katı.
+
+*Düzeltme notu (29.09.2026): ilk sürümde bu satırlar fiyat çarpanı öncesi model girdisini (~51 milyar $) raporluyordu; gerçek satış dolarıyla karşılığı ~69 milyar $'dır. Düzeltme farkı büyütür, sonucu değiştirmez.*
 - Baz nakit akışlarında ima edilen iskonto oranı **%2** (bizim AOSM: %10,4).
 - Fiyat, boğa (72 $) ile tavan testi (273 $) arasında ~%63 tavan olasılığı ima ediyor.
 
@@ -261,8 +264,9 @@ Aynı model üzerinde: 10 intismeran endikasyonu için korelasyonlu başarı (Ga
 | Soru | Cevap |
 |---|---|
 | Diğer her şey baz iken gereken risk-ayarlı INT zirve satışı | **~81 milyar $** (baz 7,3; 11,1x) |
-| Tüm 10 endikasyon %100 başarılı, baz ticari koşullar → gereken ayarsız INT zirvesi | **~93 milyar $** |
-| Tüm endikasyonlar başarılı + boğa fiyat/marj/solunum → gereken ayarsız INT zirvesi | **~51 milyar $** (baz 22; en iyimser analist 9–17) |
+| Tüm 10 endikasyon %100 başarılı, baz ticari koşullar → gereken zirve yıllık INT satışı | **~91 milyar $** |
+| Tüm endikasyonlar başarılı + boğa fiyat/marj/solunum → gereken zirve yıllık INT satışı | **~69 milyar $** (AOSM %9 ile ~52; en iyimser analist 9–17) |
+| Aynısı, sinerjili alıcı gözüyle (%7,5 AOSM, kurumsal maliyetlerin çoğu elenmiş) | **~34 milyar $** |
 | Yalnızca melanom zirvesiyle kapatmak için | ~67 milyar $ (anlamsız; ABD'de uygun hasta ~14 bin/yıl) |
 | Baz nakit akışlarında ima edilen AOSM | **%2,0** |
 | Boğa (72 $) ile tavan (273 $) arasında ima edilen tavan olasılığı | **%63** |
@@ -332,11 +336,35 @@ Bu değerlemenin yanlış olabileceği en güçlü senaryo:
 3. **Maliyet tabanı esnek.** Yönetim maliyet rehberliğini hep aşarak tutturdu (güven 92/100); Ar-Ge 4,8 → 2,9 milyar $'a indi, daha da inebilir.
 4. **Stratejik seçenek.** Merck'in Moderna'yı satın alarak intismeranın %100'üne sahip olması, kontrol primiyle çok daha yüksek bir değer ima edebilir.
 
-**Neden hâlâ ikna edici değil (sayılarla):** Bu dört maddenin **hepsini** tavan testinde birlikte varsaydık (tüm endikasyonlar başarılı, 475 bin $, %62 marj, %8 AOSM, güçlü solunum, Ar-Ge'nin tam değer yaratması) — sonuç 273 $. 199 $, bu uç dünyaya ~%63 olasılık vermek demek. İşlem referansı (sinerjiler dahil) bile 52–86 $. Ayrıca platform argümanının bir kısmı (gelecek tümörler, %10 PoS × 6 milyar $) ve Ar-Ge'nin yaratacağı gelecek değer (5,2 milyar $) baz senaryoda zaten var.
+**Neden hâlâ ikna edici değil (sayılarla):** Bu dört maddenin **hepsini** tavan testinde birlikte varsaydık (tüm endikasyonlar başarılı, 475 bin $, %62 marj, %8 AOSM, güçlü solunum, Ar-Ge'nin tam değer yaratması) — sonuç 273 $. 199 $, bu uç dünyaya ~%63 olasılık vermek demek. İşlem referansı (sinerjiler dahil) bile 52–86 $; sinerjili alıcı modeli baz 59 $, boğa 126 $. Ayrıca platform argümanının bir kısmı (gelecek tümörler, %10 PoS × 6 milyar $) ve Ar-Ge'nin yaratacağı gelecek değer (5,2 milyar $) baz senaryoda zaten var.
 
 **Bu analizi yanlışlayacak kanıtlar:** (a) ESMO'da HR ≤0,5 ve genel sağkalımda erken ayrışma; (b) Merck/Moderna'nın ABD fiyatını ≥400 bin $ açıklaması ve geri ödeme kapsamı; (c) KHDAK Faz 3'lerden birinin ara analizde erken başarısı; (d) solunum gelirinin yönetimin 2028 başabaş patikasına (4–6 milyar $) oturması; (e) bir satın alma teklifi. Bunlardan ikisi veya üçü gerçekleşirse değer aralığımız boğa senaryosuna (70–110 $) kayar — yine de fiyatın altında.
 
 ---
+
+## 11b. "Piyasa aptal değil" — kaçırdığım bir şey var mı? (29.09.2026 sorgulaması)
+
+Fiyat ile model arasındaki fark bu büyüklükte olunca önce modelden şüphelenmek gerekir. Aşağıdakileri tek tek aradım ve sayısal olarak test ettim:
+
+| Hipotez | Bulgu | Farkı kapatıyor mu? |
+|---|---|---|
+| Yeni bir haber/veri var (HR sızdı, anlaşma açıklandı) | Hayır. HR hâlâ açıklanmadı; ESMO'da **Başkanlık Sempozyumu (LBA1, 24 Ekim)** — güçlü veriye işaret eden prestijli bir slot. Analist beklentisi HR ~0,65. BAE görüşmesinde rakam/anlaşma yok. | Kısmen (baz senaryom zaten HR <0,75 varsayıyor) |
+| Satış tarafı fiyatın üstünde | Konsensüs hedef ~77 $ (Motley Fool, 28.09); bulunan en yüksek güncel hedef Argus 180 $. "Deutsche Bank 225 $" haberi 2023 tarihli. | Hayır |
+| Merck satın alması | Görüş yazısı (Motley Fool) 210–215 $ önerdi; tahmin piyasası (Polymarket, Ağustos) 2026'da anlaşma olmayacağına %98 fiyat verdi. **Sinerjili alıcı modeli: baz 59 $, boğa 126 $, tavan 319 $.** | Kısmen — ancak boğanın da üstünde bir dünya gerekiyor |
+| İskonto oranım fazla yüksek | AOSM %9 → baz 33 $; boğa koşulları + %9 → 92 $; + %8 → 107 $ | Hayır |
+| Fiyat/marj varsayımım muhafazakâr | 475 bin $ ve %62 marj tavan testinde var (273 $) | Yalnızca her şey birlikte tutarsa |
+| Platform (tüm solid tümörler) tezi | Baz senaryoda "gelecek tümörler" = 6 milyar $ × %10. Fiyatı açıklamak için gereken zirve satış ~52–69 milyar $/yıl (sinerjili alıcıda ~34). Karşılaştırma: Keytruda ~30 milyar $/yıl (yaklaşık, hafızadan) | **Evet — tek açıklayıcı bu** |
+| Piyasa mRNA onkolojisine genel prim veriyor | BioNTech (bireyselleştirilmiş neoantijen programı dahil) FD ~8 milyar $ (piyasa değeri 25, nakit 17). Moderna FD ~75 milyar $. | Hayır — prim şirkete özel |
+| Pozisyon/akım etkileri | Açığa satış 52,8 M → 32,9 M hisse (14.08 → 15.09); Eylül'de alım opsiyonu/satım 3:1; 11–28 Eylül'de yeni veri olmadan +%46 | Fiyatın bir kısmını açıklar (temel değil) |
+
+**Sonuç:** Kaçırdığım somut bir olgu bulamadım. Fiyatı açıklayabilen tek şey bir **inanç farkı**: intismeranın birçok tümör tipinde standart tedavi hâline gelip Keytruda ölçeğine (yılda onlarca milyar $) ulaşacağına dair yüksek bir olasılık. Bu imkânsız değil — tavan testi 273 $ — ama bugün elimizde tek bir tümörde tek bir ara analiz var ve risk oranı bile bilinmiyor.
+
+**Piyasa neden yine de bu fiyatı verebilir?**
+1. Fiyat ortalama yatırımcıyı değil **marjinal alıcıyı** yansıtır. Açığa satanlar pozisyon kapatıp çekildikten sonra fiyatı en iyimser katılımcılar belirleyebilir (fikir ayrılığı + açığa satış kısıtı, Miller 1977).
+2. Aynı piyasa 19 Ağustos'ta +%177, ertesi gün −%24 (~16 milyar $) fiyatladı; yani "piyasa" tek bir görüş değil.
+3. Moderna'nın kendi geçmişi: 9 Ağustos 2021'de 484 $ (piyasa değeri ~190 milyar $), 20 Kasım 2025'te 22 $ (−%95). Piyasa uzun vadede tartar, kısa vadede oy sayar.
+
+**Benim yanıldığım senaryo:** ESMO'da HR ≤0,5 + genel sağkalımda erken ayrışma, akciğer çalışmalarından erken sinyal ve Merck'in agresif genişleme/fiyat planı. Bu durumda değer aralığım boğa–sinerjili alıcı bölgesine (70–130 $) kayar. 199 $ ise bunun da ötesinde, platformun birden çok büyük tümörde tutmasını gerektirir.
 
 ## 12. Denetim bulguları (Faz 8)
 
@@ -394,6 +422,7 @@ Yeniden çalıştırma: `python scripts/valuation_engine.py && python scripts/bu
 - [Merck & Moderna INTerpath-001 bülteni (19.08.2026)](https://news.modernatx.com/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-plus-keytruda-met-endpoints-of-rfs-and-dmfs-in-melanoma); [Merck INTerpath program belgesi](https://www.merck.com/wp-content/uploads/sites/124/2026/08/Merck-Moderna_INTerpath_Clinical-Program-Backgrounder.pdf).
 - [ClinicalTrials.gov API v2](https://clinicaltrials.gov/api/v2/studies?query.spons=ModernaTX).
 - [ABD Hazinesi getiri eğrisi](https://home.treasury.gov/resource-center/data-chart-center/interest-rates); Nasdaq fiyat verisi; ECB döviz (frankfurter.dev).
+- Ek sorgulama kaynakları (29.09.2026): [Motley Fool — 550% yükseliş, konsensüs ~77 $](https://www.fool.com/investing/2026/09/28/up-over-550-in-2026-is-it-too-late-to-buy-moderna-stock/), [Motley Fool — Merck neden satın almalı](https://www.fool.com/investing/breakfast-news/2026/09/16/breakfast-news-why-merck-should-buy-moderna/), [MedPath — ESMO Başkanlık Sempozyumu](https://trial.medpath.com/news/moderna-to-present-phase-3-intismeran-autogene-data-in-adjuvant-melanoma-at-esmo-presidential-symposium), [Polymarket — Merck/Moderna birleşme](https://polymarket.com/event/merck-moderna-mergeracquisition-announced-in-2026), [Option Beast — opsiyon akışı](https://wp.optionbeast.com/2026/09/18/moderna-keeps-climbing-esmo-is-the-next-test/), Nasdaq açığa satış verisi.
 - Basın: [BioPharma Dive](https://www.biopharmadive.com/news/moderna-merck-intismeran-melanoma-vaccine-stock-reaction/828332/), [Clinical Trials Arena](https://www.clinicaltrialsarena.com/news/msd-moderna-intismeran-autogene-cancer-vaccine-melanoma/), [Motley Fool (19.08.2026)](https://www.fool.com/coverage/stock-market-today/2026/08/19/stock-market-today-aug-19-moderna-skyrockets-177-on-positive-phase-3-melanoma-data/), [StocksToTrade (21.09.2026)](https://stockstotrade.com/news/moderna-inc-mrna-news-2026_09_21/), [Healthcare Dive — mFLUSIVA onayı](https://www.healthcaredive.com/news/moderna-fda-approve-mflusiva-seasonal-influenza/827180/), [JUVE Patent — EP'949 iptali](https://www.juve-patent.com/people-and-business/epo-revokes-key-moderna-patent-for-mrna-vaccines/), [BigGo Finance — William Blair fiyat varsayımı](https://finance.biggo.com/news/74730371-5f44-47af-9ecf-df6ee565643b), [Zawya — BAE görüşmeleri](https://www.zawya.com/en/press-release/government-news/al-hajeri-discusses-investment-and-cooperation-opportunities-with-moderna-in-advanced-pharmaceuticals-1202312).
 
 ---

@@ -237,7 +237,11 @@
   "base_riskadj_int_peak": 7.329000000000001,
   "implied_prob_blue_sky_vs_bull": 0.6323872333365619,
   "bull_value": 72.17958625823287,
-  "blue_sky_value": 272.7219233839291
+  "blue_sky_value": 272.7219233839291,
+  "certainty_required_peak_annual_sales": 90.5252282661938,
+  "certainty_bullterms_required_peak_annual_sales": 69.43693028158201,
+  "acquirer_required_peak_annual_sales": 33.6447731203745,
+  "note": "*_unadjusted_int_peak are model inputs before the price factor; *_peak_annual_sales are actual dollars (compare with sell-side peak-sales estimates)"
  },
  "epv": {
   "revenue": 2.04,
@@ -268,6 +272,12 @@
   "high": 85.65244688321562,
   "riskadj_peak_attrib_revenue": 7.4334700951232,
   "mid": 68.80796445601598
+ },
+ "acquirer_view": {
+  "base": 59.30411536815348,
+  "bull": 125.50724844378722,
+  "blue_sky": 318.6673298833068,
+  "note": "Value per Moderna share to a synergistic buyer (80% G&A, 60% unallocated R&D, 50% respiratory S&M removed; no future-pipeline credit; 7.5% WACC). Not a minority-holder intrinsic value."
  },
  "asset_floor": {
   "equity": 2.755809381508648,

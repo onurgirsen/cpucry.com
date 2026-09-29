@@ -629,13 +629,20 @@ for k in ("P5", "P10", "P25", "P50", "P75", "P90", "P95", "P99", "mean"):
 put(SM, f"A{r}", "P(value > market price)"); put(SM, f"B{r}", mc["prob_above_price"], BLUE, "0.00%"); r += 2
 rv = RES["reverse_dcf"]
 put(SM, f"A{r}", "Reverse DCF (engine output)", BOLD); r += 1
-for lab, k, fm in (("Implied INT risk-adj. peak sales ($B), all else base", "implied_riskadj_int_peak", NUM),
-                   ("Required unadjusted INT peak if every indication succeeds, base terms ($B)", "certainty_required_unadjusted_int_peak", NUM),
-                   ("...and with bull price/margin/respiratory ($B)", "certainty_bullterms_required_unadjusted_int_peak", NUM),
-                   ("Base-case unadjusted INT peak (10 indications, $B)", "base_unadjusted_int_peak", NUM),
+for lab, k, fm in (("Implied INT risk-adj. peak sales ($B, before price factor), all else base", "implied_riskadj_int_peak", NUM),
+                   ("Every indication succeeds, base terms: required peak annual INT sales ($B, actual)", "certainty_required_peak_annual_sales", NUM),
+                   ("...with bull price/margin/respiratory: required peak annual INT sales ($B, actual)", "certainty_bullterms_required_peak_annual_sales", NUM),
+                   ("...synergistic acquirer at 7.5% WACC: required peak annual INT sales ($B, actual)", "acquirer_required_peak_annual_sales", NUM),
+                   ("Base-case unadjusted INT peak (10 indications, $B, before price factor)", "base_unadjusted_int_peak", NUM),
                    ("Implied WACC on base cash flows", "implied_wacc", PCT),
                    ("Implied probability of Blue-sky vs Bull", "implied_prob_blue_sky_vs_bull", PCT)):
     put(SM, f"A{r}", lab); put(SM, f"B{r}", rv[k], BLUE, fm); r += 1
+r += 1
+aq = RES["acquirer_view"]
+put(SM, f"A{r}", "Acquirer (Merck-style) view, $/share - engine output; not a minority intrinsic value", BOLD); r += 1
+for lab, k in (("Base", "base"), ("Bull", "bull"), ("Blue-sky", "blue_sky")):
+    put(SM, f"A{r}", lab); put(SM, f"B{r}", aq[k], BLUE, USD); r += 1
+put(SM, f"A{r}", aq["note"], Font(name=F, size=8, italic=True)); r += 1
 SM.column_dimensions["A"].width = 58
 for col in "BCDEF":
     SM.column_dimensions[col].width = 13

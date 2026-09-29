@@ -398,6 +398,29 @@ def reverse_dcf(A, price):
                  int_melanoma_peak=A2["intismeran"]["indications"][0]["peak"])
         return float(model(A2, S)["per_share"]) - price
     k_cb = solve(v_cert_bull, 0.1, 60)
+
+    def max_sales(k, S_extra, A_=A, scen="bull"):
+        """Peak annual INT sales in actual dollars (after the price factor) at a solved scale k."""
+        A2 = copy.deepcopy(A_)
+        for ind in A2["intismeran"]["indications"]:
+            ind["peak"] *= k
+        S = dict(scenario(A2, scen), int_melanoma_pos=1.0, int_other_pos_mult=10.0,
+                 int_melanoma_peak=A2["intismeran"]["indications"][0]["peak"], **S_extra)
+        return float(model(A2, S)["int_sales"].max())
+    cert_sales = max_sales(k_cert, {}, scen="base")
+    cb_sales = max_sales(k_cb, dict(int_peak_mult=1.0, int_margin_override=0.62))
+    # (g) acquirer (Merck) view: synergies + lower cost of capital, every indication succeeds, bull terms
+    Aq = acquirer_assumptions(A)
+
+    def v_acq(k):
+        A2 = copy.deepcopy(Aq)
+        for ind in A2["intismeran"]["indications"]:
+            ind["peak"] *= k
+        S = dict(Sb, int_melanoma_pos=1.0, int_other_pos_mult=10.0, int_peak_mult=1.0, int_margin_override=0.62,
+                 int_melanoma_peak=A2["intismeran"]["indications"][0]["peak"], early_pipeline_factor=0.0, wacc=ACQ_WACC)
+        return float(model(A2, S)["per_share"]) - price
+    k_acq = solve(v_acq, 0.1, 60)
+    acq_sales = max_sales(k_acq, dict(int_peak_mult=1.0, int_margin_override=0.62, early_pipeline_factor=0.0, wacc=ACQ_WACC), A_=Aq)
     # (f) implied probability of blue-sky vs bull: price = p*blue + (1-p)*bull
     vb = float(model(A, scenario(A, "bull"))["per_share"])
     vs = float(model(A, scenario(A, "blue_sky"))["per_share"])
@@ -407,7 +430,33 @@ def reverse_dcf(A, price):
                 certainty_required_unadjusted_int_peak=k_cert * base_int_peak,
                 certainty_bullterms_required_unadjusted_int_peak=k_cb * base_int_peak,
                 base_unadjusted_int_peak=base_int_peak, base_riskadj_int_peak=ra_peak,
-                implied_prob_blue_sky_vs_bull=p_blue, bull_value=vb, blue_sky_value=vs)
+                implied_prob_blue_sky_vs_bull=p_blue, bull_value=vb, blue_sky_value=vs,
+                certainty_required_peak_annual_sales=cert_sales, certainty_bullterms_required_peak_annual_sales=cb_sales,
+                acquirer_required_peak_annual_sales=acq_sales,
+                note="*_unadjusted_int_peak are model inputs before the price factor; *_peak_annual_sales are actual dollars (compare with sell-side peak-sales estimates)")
+
+
+ACQ_WACC = 0.075
+
+
+def acquirer_assumptions(A):
+    """Merck-style buyer: eliminates 80% of corporate G&A, 60% of unallocated R&D, 50% of respiratory S&M."""
+    Aq = copy.deepcopy(A)
+    Aq["corporate"]["ga"] *= 0.2
+    Aq["corporate"]["unallocated_rd"] = [x * 0.4 for x in Aq["corporate"]["unallocated_rd"]]
+    Aq["respiratory"]["sm_pct"] *= 0.5
+    Aq["respiratory"]["sm_floor"] *= 0.5
+    return Aq
+
+
+def acquirer_view(A):
+    Aq = acquirer_assumptions(A)
+    out = {}
+    for s in ("base", "bull", "blue_sky"):
+        S = dict(scenario(Aq, s), early_pipeline_factor=0.0, wacc=ACQ_WACC if s != "blue_sky" else min(ACQ_WACC, 0.08))
+        out[s] = float(model(Aq, S)["per_share"])
+    out["note"] = "Value per Moderna share to a synergistic buyer (80% G&A, 60% unallocated R&D, 50% respiratory S&M removed; no future-pipeline credit; 7.5% WACC). Not a minority-holder intrinsic value."
+    return out
 
 
 def epv(A):
@@ -533,6 +582,7 @@ def main():
     res["epv"] = epv(A)
     res["forward_multiple"] = forward_multiple(A, runs["base"])
     res["transactions"] = transactions(A, runs["base"])
+    res["acquirer_view"] = acquirer_view(A)
     res["asset_floor"] = asset_floor(A)
     res["tornado"] = tornado(A, scen["base"]["per_share"])
     # method table and credibility weights (Phase 7)
